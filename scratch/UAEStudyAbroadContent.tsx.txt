@@ -1,0 +1,3 @@
+=== UAEStudyAbroadContent.tsx ===
+  L549: ['🇦', '🇪'] -> 🇦🇪
+  L1150: ['✓'] -> ✓

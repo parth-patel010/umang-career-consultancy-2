@@ -1,0 +1,235 @@
+
+=== AustraliaStudyAbroadContent.tsx ===
+  L412: ['🏠'] -> icon: "🏠",
+  L418: ['🛒'] -> icon: "🛒",
+  L424: ['🚆'] -> icon: "🚆",
+  L430: ['📱'] -> icon: "📱",
+  L436: ['💡'] -> icon: "💡",
+  L442: ['🏄'] -> icon: "🏄",
+  L687: ['✓'] -> ✓
+  L902: ['📍'] -> 📍 {uni.state}
+  L976: ['⚠'] -> <span>⚠️</span> Student Visa (Subclass 500) Financial Capacity Requirement
+  L1205: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1209: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1213: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1217: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1240: ['✓'] -> ✓
+
+=== GermanyStudyAbroadContent.tsx ===
+  L392: ['🏠'] -> icon: "🏠",
+  L398: ['🥗'] -> icon: "🥗",
+  L404: ['🚆'] -> icon: "🚆",
+  L410: ['📱'] -> icon: "📱",
+  L416: ['💡'] -> icon: "💡",
+  L422: ['☕'] -> icon: "☕",
+  L675: ['✓'] -> ✓
+  L979: ['📍'] -> 📍 {uni.city}
+  L1059: ['🏦'] -> <span>🏦</span> 2026 German Blocked Account Requirement (Sperrkonto)
+  L1222: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1226: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1230: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1234: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1257: ['✓'] -> ✓
+
+=== USAStudyAbroadContent.tsx ===
+  L308: ['🏠'] -> { item: "Accommodation (On-Campus Dorm / Flatshare)", cost: "$800 – $2,500", desc: "Campus dorms or off-campus shared apartments depending on city.", icon: "🏠" },
+  L309: ['🛒'] -> { item: "Food & Groceries", cost: "$100 – $500", desc: "University meal plans and local supermarkets (Trader Joe's, Costco, Walmart).", icon: "🛒" },
+  L310: ['📚'] -> { item: "Educational Materials & Books", cost: "$50 – $100", desc: "Textbooks, software subscriptions, laboratory materials & supplies.", icon: "📚" },
+  L311: ['🚆'] -> { item: "Transportation", cost: "$50 – $970", desc: "Campus shuttle buses, city subways, or vehicle insurance & fuel.", icon: "🚆" },
+  L312: ['👕'] -> { item: "Personal Expenses", cost: "$100 – $300", desc: "Clothing, personal grooming, laundry, and leisure activities.", icon: "👕" },
+  L313: ['💡'] -> { item: "Utilities (Electricity, Water, Heating)", cost: "$100 – $200", desc: "Shared utilities in private apartments; included in on-campus dorms.", icon: "💡" },
+  L314: ['🏥'] -> { item: "Health Insurance (Mandatory)", cost: "$100 – $300", desc: "University-approved international student health insurance policy.", icon: "🏥" },
+  L538: ['✓'] -> ✓
+  L737: ['📍'] -> 📍 {uni.state}
+  L994: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L998: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1002: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1006: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1029: ['✓'] -> ✓
+
+=== CzechRepublicStudyAbroadContent.tsx ===
+  L342: ['🏠'] -> icon: "🏠",
+  L348: ['🍲'] -> icon: "🍲",
+  L354: ['🚋'] -> icon: "🚋",
+  L360: ['📱'] -> icon: "📱",
+  L366: ['💡'] -> icon: "💡",
+  L372: ['☕'] -> icon: "☕",
+  L625: ['✓'] -> ✓
+  L833: ['📍'] -> 📍 {uni.city}
+  L1136: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1140: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1144: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1148: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1171: ['✓'] -> ✓
+
+=== PolandStudyAbroadContent.tsx ===
+  L370: ['🏠'] -> icon: "🏠",
+  L376: ['🥗'] -> icon: "🥗",
+  L382: ['🚋'] -> icon: "🚋",
+  L388: ['📱'] -> icon: "📱",
+  L394: ['💡'] -> icon: "💡",
+  L400: ['☕'] -> icon: "☕",
+  L653: ['✓'] -> ✓
+  L861: ['📍'] -> 📍 {uni.city}
+  L1160: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1164: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1168: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1172: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1195: ['✓'] -> ✓
+
+=== IrelandStudyAbroadContent.tsx ===
+  L377: ['🏠'] -> icon: "🏠",
+  L383: ['🥗'] -> icon: "🥗",
+  L389: ['🚌'] -> icon: "🚌",
+  L395: ['📱'] -> icon: "📱",
+  L401: ['💡'] -> icon: "💡",
+  L407: ['☕'] -> icon: "☕",
+  L621: ['✓'] -> ✓
+  L840: ['📍'] -> 📍 {uni.city}
+  L916: ['💼'] -> <span>💼</span> Stamp 2 Student Part-Time Work Permission
+  L1103: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1107: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1111: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1115: ['✓'] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1138: ['✓'] -> ✓
+
+=== ItalyStudyAbroadContent.tsx ===
+  L549: ['🇮', '🇹'] -> 🇮🇹
+  L594: ['📍'] -> 📍
+  L604: ['🗺'] -> 🗺️
+  L614: ['🇪', '🇺'] -> 🇪🇺
+  L624: ['💰'] -> 💰
+  L634: ['🚅'] -> 🚅
+  L644: ['🏛'] -> 🏛️
+  L654: ['☀'] -> ☀️
+  L843: ['📍'] -> <span>📍</span>
+  L1161: ['✓'] -> ✓
+  L1262: ['🔒'] -> 🔒 100% Confidential. Official Italian education partner counseling.
+
+=== DenmarkStudyAbroadContent.tsx ===
+  L590: ['🇩', '🇰'] -> 🇩🇰
+  L635: ['📍'] -> 📍
+  L645: ['❄'] -> ❄️
+  L655: ['🌱'] -> 🌱
+  L665: ['🛡'] -> 🛡️
+  L675: ['⚖'] -> ⚖️
+  L685: ['⛅'] -> ⛅
+  L900: ['📍'] -> <span>📍</span>
+  L1214: ['✓'] -> ✓
+  L1316: ['🔒'] -> 🔒 100% Confidential. Zero spam. Official counseling support.
+
+=== MalaysiaStudyAbroadContent.tsx ===
+  L616: ['📍'] -> 📍
+  L626: ['🌐'] -> 🌐
+  L636: ['💰'] -> 💰
+  L646: ['🏙'] -> 🏙️
+  L656: ['📈'] -> 📈
+  L666: ['🛡'] -> 🛡️
+  L676: ['🎓'] -> 🎓
+  L686: ['🌦'] -> 🌦️
+  L872: ['📍'] -> <span>📍</span>
+  L1190: ['✓'] -> ✓
+  L1292: ['🔒'] -> 🔒 100% Confidential. Official Malaysian partner counseling.
+
+=== NewZealandStudyAbroadContent.tsx ===
+  L553: ['🇳', '🇿'] -> 🇳🇿
+  L598: ['🌊'] -> 🌊
+  L608: ['🗣'] -> 🗣️
+  L618: ['🌾'] -> 🌾
+  L628: ['🕊'] -> 🕊️
+  L638: ['💻'] -> 💻
+  L648: ['⭐'] -> ⭐
+  L833: ['📍'] -> <span>📍</span>
+  L1151: ['✓'] -> ✓
+  L1254: ['🔒'] -> 🔒 100% Confidential. Official NZ education partner counseling.
+
+=== SingaporeStudyAbroadContent.tsx ===
+  L490: ['🇸', '🇬'] -> 🇸🇬
+  L535: ['📍'] -> 📍
+  L545: ['🏙'] -> 🏙️
+  L555: ['💡'] -> 💡
+  L565: ['🚇'] -> 🚇
+  L575: ['📈'] -> 📈
+  L585: ['🛡'] -> 🛡️
+  L743: ['📍'] -> <span>📍</span>
+  L895: ['☀'] -> <span>☀️</span> Tropical Sunshine
+  L903: ['🌧'] -> <span>🌧️</span> Monsoon Showers & Air-Conditioning
+  L1078: ['✓'] -> ✓
+  L1181: ['🔒'] -> 🔒 100% Confidential. Official partner university counseling.
+
+=== SwitzerlandStudyAbroadContent.tsx ===
+  L177: ['🎓'] -> icon: "🎓",
+  L182: ['🌍'] -> icon: "🌍",
+  L187: ['🗣'] -> icon: "🗣️",
+  L192: ['⭐'] -> icon: "⭐",
+  L197: ['💳'] -> icon: "💳",
+  L202: ['💼'] -> icon: "💼",
+  L207: ['🚀'] -> icon: "🚀",
+  L212: ['🏆'] -> icon: "🏆",
+  L221: ['📍'] -> icon: "📍",
+  L227: ['🏔'] -> icon: "🏔️",
+  L233: ['🛂'] -> icon: "🛂",
+  L239: ['📈'] -> icon: "📈",
+  L245: ['🏞'] -> icon: "🏞️",
+  L251: ['💬'] -> icon: "💬",
+  L257: ['🏢'] -> icon: "🏢",
+  L263: ['🛡'] -> icon: "🛡️",
+  L269: ['✨'] -> icon: "✨",
+  L275: ['☀'] -> icon: "☀️",
+  L670: ['🇨', '🇭'] -> 🇨🇭
+  L817: ['✓'] -> <span>✓ Swiss Standard Advantage</span>
+  L844: ['📍'] -> 📍 {uni.campuses}
+  L1018: ['💡'] -> 💡 <span className="font-bold">Student Cost Saving Tip:</span> Enrolling in student flatshares (WG - Wohngemeinschaft), using student canteen (mensa) subsidised meal plans, and holding an SBB Half-Fare travelcard cuts living expenses by 30% to 40%.
+  L1215: ['🇨', '🇭'] -> <span>🇨🇭 HASSLE-FREE STUDY IN SWITZERLAND</span>
+  L1229: ['✓'] -> ✓
+  L1239: ['✓'] -> ✓
+  L1249: ['✓'] -> ✓
+  L1284: ['✓'] -> ✓
+  L1392: ['🔒'] -> 🔒 100% Confidential. Official Swiss university and visa guidance.
+
+=== LithuaniaStudyAbroadContent.tsx ===
+  L171: ['🎓'] -> icon: "🎓",
+  L176: ['🔬'] -> icon: "🔬",
+  L181: ['💶'] -> icon: "💶",
+  L186: ['🌍'] -> icon: "🌍",
+  L191: ['💼'] -> icon: "💼",
+  L196: ['🚀'] -> icon: "🚀",
+  L201: ['🏆'] -> icon: "🏆",
+  L206: ['🤝'] -> icon: "🤝",
+  L211: ['🛡'] -> icon: "🛡️",
+  L216: ['🌲'] -> icon: "🌲",
+  L221: ['⚡'] -> icon: "⚡",
+  L230: ['📍'] -> icon: "📍",
+  L236: ['🇪', '🇺'] -> icon: "🇪🇺",
+  L242: ['⚡'] -> icon: "⚡",
+  L248: ['📈'] -> icon: "📈",
+  L254: ['🌱'] -> icon: "🌱",
+  L260: ['💻'] -> icon: "💻",
+  L266: ['✨'] -> icon: "✨",
+  L272: ['💰'] -> icon: "💰",
+  L278: ['🗣'] -> icon: "🗣️",
+  L284: ['❄'] -> icon: "❄️",
+  L604: ['🇱', '🇹'] -> 🇱🇹
+  L751: ['✓'] -> <span>✓ European Advantage</span>
+  L778: ['📍'] -> 📍 {uni.location}
+  L908: ['💡'] -> 💡 <span className="font-bold">Student Advantage:</span> International students in Lithuania receive an official Lithuanian Student Identity Card (LSIC / ISIC) providing an **80% discount** on urban public transportation (monthly pass is just €5.80 in Vilnius) and 50% discount on long-distance trains and intercity buses!
+  L1105: ['🇱', '🇹'] -> <span>🇱🇹 HASSLE-FREE STUDY IN LITHUANIA</span>
+  L1119: ['✓'] -> ✓
+  L1129: ['✓'] -> ✓
+  L1139: ['✓'] -> ✓
+  L1174: ['✓'] -> ✓
+  L1280: ['🔒'] -> 🔒 100% Confidential. Official European university counseling.
+
+=== UAEStudyAbroadContent.tsx ===
+  L549: ['🇦', '🇪'] -> 🇦🇪
+  L594: ['📍'] -> 📍
+  L604: ['🏢'] -> 🏢
+  L614: ['💡'] -> 💡
+  L624: ['🌱'] -> 🌱
+  L634: ['🚇'] -> 🚇
+  L644: ['🌍'] -> 🌍
+  L654: ['📈'] -> 📈
+  L664: ['☀'] -> ☀️
+  L848: ['📍'] -> <span>📍</span>
+  L1166: ['✓'] -> ✓
+  L1269: ['🔒'] -> 🔒 100% Confidential. Official UAE partner university counseling.

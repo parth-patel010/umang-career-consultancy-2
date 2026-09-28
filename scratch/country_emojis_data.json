@@ -1,0 +1,2068 @@
+{
+  "AustraliaStudyAbroadContent.tsx": [
+    {
+      "line": 412,
+      "emojis": [
+        "'\ud83c\udfe0'"
+      ],
+      "text": "icon: \"\ud83c\udfe0\","
+    },
+    {
+      "line": 418,
+      "emojis": [
+        "'\ud83d\uded2'"
+      ],
+      "text": "icon: \"\ud83d\uded2\","
+    },
+    {
+      "line": 424,
+      "emojis": [
+        "'\ud83d\ude86'"
+      ],
+      "text": "icon: \"\ud83d\ude86\","
+    },
+    {
+      "line": 430,
+      "emojis": [
+        "'\ud83d\udcf1'"
+      ],
+      "text": "icon: \"\ud83d\udcf1\","
+    },
+    {
+      "line": 436,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "icon: \"\ud83d\udca1\","
+    },
+    {
+      "line": 442,
+      "emojis": [
+        "'\ud83c\udfc4'"
+      ],
+      "text": "icon: \"\ud83c\udfc4\","
+    },
+    {
+      "line": 687,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 902,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.state}"
+    },
+    {
+      "line": 976,
+      "emojis": [
+        "'\u26a0'"
+      ],
+      "text": "<span>\u26a0\ufe0f</span> Student Visa (Subclass 500) Financial Capacity Requirement"
+    },
+    {
+      "line": 1205,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1209,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1213,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1217,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1240,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    }
+  ],
+  "CanadaStudyAbroadContent.tsx": [
+    {
+      "line": 249,
+      "emojis": [
+        "'\ud83c\udde8'",
+        "'\ud83c\udde6'"
+      ],
+      "text": "<span>\ud83c\udde8\ud83c\udde6</span>"
+    },
+    {
+      "line": 568,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">Admissions & PGWP Guidance:</span> Admission requirements, tuition fees, and program availability vary by institution. Our certified Canadian counselors verify current DLI numbers and PGWP eligibility for every application."
+    },
+    {
+      "line": 623,
+      "emojis": [
+        "'\ud83d\udcca'"
+      ],
+      "text": "\ud83d\udcca <span className=\"font-semibold text-slate-900\">Statistics Canada Benchmark:</span> Statistics Canada reported an average international undergraduate tuition of CAD 41,746 for 2025/26, with substantial variations between colleges, polytechnics, and research universities."
+    },
+    {
+      "line": 719,
+      "emojis": [
+        "'\ud83d\udcbc'"
+      ],
+      "text": "\ud83d\udcbc"
+    },
+    {
+      "line": 729,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold mt-0.5\">\u2713</span>"
+    },
+    {
+      "line": 733,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold mt-0.5\">\u2713</span>"
+    },
+    {
+      "line": 737,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold mt-0.5\">\u2713</span>"
+    },
+    {
+      "line": 746,
+      "emojis": [
+        "'\ud83c\udf93'"
+      ],
+      "text": "\ud83c\udf93"
+    },
+    {
+      "line": 756,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold mt-0.5\">\u2713</span>"
+    },
+    {
+      "line": 760,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold mt-0.5\">\u2713</span>"
+    },
+    {
+      "line": 764,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold mt-0.5\">\u2713</span>"
+    },
+    {
+      "line": 918,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 922,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 926,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 953,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1070,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Free Initial Assessment. Certified Canadian immigration & admission counselors."
+    }
+  ],
+  "CzechRepublicStudyAbroadContent.tsx": [
+    {
+      "line": 342,
+      "emojis": [
+        "'\ud83c\udfe0'"
+      ],
+      "text": "icon: \"\ud83c\udfe0\","
+    },
+    {
+      "line": 348,
+      "emojis": [
+        "'\ud83c\udf72'"
+      ],
+      "text": "icon: \"\ud83c\udf72\","
+    },
+    {
+      "line": 354,
+      "emojis": [
+        "'\ud83d\ude8b'"
+      ],
+      "text": "icon: \"\ud83d\ude8b\","
+    },
+    {
+      "line": 360,
+      "emojis": [
+        "'\ud83d\udcf1'"
+      ],
+      "text": "icon: \"\ud83d\udcf1\","
+    },
+    {
+      "line": 366,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "icon: \"\ud83d\udca1\","
+    },
+    {
+      "line": 372,
+      "emojis": [
+        "'\u2615'"
+      ],
+      "text": "icon: \"\u2615\","
+    },
+    {
+      "line": 625,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 833,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.city}"
+    },
+    {
+      "line": 1136,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1140,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1144,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1148,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1171,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    }
+  ],
+  "DenmarkStudyAbroadContent.tsx": [
+    {
+      "line": 590,
+      "emojis": [
+        "'\ud83c\udde9'",
+        "'\ud83c\uddf0'"
+      ],
+      "text": "\ud83c\udde9\ud83c\uddf0"
+    },
+    {
+      "line": 635,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd"
+    },
+    {
+      "line": 645,
+      "emojis": [
+        "'\u2744'"
+      ],
+      "text": "\u2744\ufe0f"
+    },
+    {
+      "line": 655,
+      "emojis": [
+        "'\ud83c\udf31'"
+      ],
+      "text": "\ud83c\udf31"
+    },
+    {
+      "line": 665,
+      "emojis": [
+        "'\ud83d\udee1'"
+      ],
+      "text": "\ud83d\udee1\ufe0f"
+    },
+    {
+      "line": 675,
+      "emojis": [
+        "'\u2696'"
+      ],
+      "text": "\u2696\ufe0f"
+    },
+    {
+      "line": 685,
+      "emojis": [
+        "'\u26c5'"
+      ],
+      "text": "\u26c5"
+    },
+    {
+      "line": 900,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "<span>\ud83d\udccd</span>"
+    },
+    {
+      "line": 1214,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1316,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Zero spam. Official counseling support."
+    }
+  ],
+  "FranceStudyAbroadContent.tsx": [
+    {
+      "line": 249,
+      "emojis": [
+        "'\ud83c\uddeb'",
+        "'\ud83c\uddf7'"
+      ],
+      "text": "<span>\ud83c\uddeb\ud83c\uddf7</span>"
+    },
+    {
+      "line": 566,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">Personalized Matching:</span> Instead of claiming a fixed &ldquo;Top 10,&rdquo; Umang Career Consultancy presents selected institutions based on the student&apos;s course, academic profile, budget, and specific career goals."
+    },
+    {
+      "line": 629,
+      "emojis": [
+        "'\ud83c\udfdb'"
+      ],
+      "text": "<span className=\"text-xl\">\ud83c\udfdb\ufe0f</span>"
+    },
+    {
+      "line": 719,
+      "emojis": [
+        "'\ud83d\udccc'"
+      ],
+      "text": "\ud83d\udccc <span className=\"font-semibold text-white\">Umang Tip:</span> Students are advised to prepare a city-specific budget before finalizing their university choice. Our counselors assist you with personalized financial planning."
+    },
+    {
+      "line": 741,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "icon: \"\u2600\ufe0f\","
+    },
+    {
+      "line": 747,
+      "emojis": [
+        "'\ud83c\udf42'"
+      ],
+      "text": "icon: \"\ud83c\udf42\","
+    },
+    {
+      "line": 753,
+      "emojis": [
+        "'\u2744'"
+      ],
+      "text": "icon: \"\u2744\ufe0f\","
+    },
+    {
+      "line": 759,
+      "emojis": [
+        "'\ud83c\udf38'"
+      ],
+      "text": "icon: \"\ud83c\udf38\","
+    },
+    {
+      "line": 911,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 915,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 919,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 946,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1061,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Free Initial Assessment. Certified France & Campus France counselors."
+    }
+  ],
+  "GermanyStudyAbroadContent.tsx": [
+    {
+      "line": 392,
+      "emojis": [
+        "'\ud83c\udfe0'"
+      ],
+      "text": "icon: \"\ud83c\udfe0\","
+    },
+    {
+      "line": 398,
+      "emojis": [
+        "'\ud83e\udd57'"
+      ],
+      "text": "icon: \"\ud83e\udd57\","
+    },
+    {
+      "line": 404,
+      "emojis": [
+        "'\ud83d\ude86'"
+      ],
+      "text": "icon: \"\ud83d\ude86\","
+    },
+    {
+      "line": 410,
+      "emojis": [
+        "'\ud83d\udcf1'"
+      ],
+      "text": "icon: \"\ud83d\udcf1\","
+    },
+    {
+      "line": 416,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "icon: \"\ud83d\udca1\","
+    },
+    {
+      "line": 422,
+      "emojis": [
+        "'\u2615'"
+      ],
+      "text": "icon: \"\u2615\","
+    },
+    {
+      "line": 675,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 979,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.city}"
+    },
+    {
+      "line": 1059,
+      "emojis": [
+        "'\ud83c\udfe6'"
+      ],
+      "text": "<span>\ud83c\udfe6</span> 2026 German Blocked Account Requirement (Sperrkonto)"
+    },
+    {
+      "line": 1222,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1226,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1230,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1234,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1257,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    }
+  ],
+  "HungaryStudyAbroadContent.tsx": [
+    {
+      "line": 225,
+      "emojis": [
+        "'\ud83c\udded'",
+        "'\ud83c\uddfa'"
+      ],
+      "text": "<span>\ud83c\udded\ud83c\uddfa</span>"
+    },
+    {
+      "line": 529,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">Stipendium Hungaricum Partner:</span> Umang Career Consultancy guides you through university choices, direct entrance test coaching, and scholarship dossier applications."
+    },
+    {
+      "line": 589,
+      "emojis": [
+        "'\ud83e\ude7a'"
+      ],
+      "text": "\ud83e\ude7a <span className=\"font-semibold text-slate-900\">Medical Degree Note:</span> General Medicine (MD), Dentistry, and Pharmacy programs at Semmelweis, Debrecen, P\u00e9cs, and Szeged range between \u20ac12,000 and \u20ac18,000 annually, with high global licensing pass rates."
+    },
+    {
+      "line": 658,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">Total Living Budget:</span> The typical monthly budget for an international student in Hungary is only <span className=\"text-[#22c55e] font-bold\">\u20ac370 to \u20ac820</span>, offering unmatched European value for money."
+    },
+    {
+      "line": 680,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "icon: \"\u2600\ufe0f\","
+    },
+    {
+      "line": 686,
+      "emojis": [
+        "'\ud83c\udf42'"
+      ],
+      "text": "icon: \"\ud83c\udf42\","
+    },
+    {
+      "line": 692,
+      "emojis": [
+        "'\u2744'"
+      ],
+      "text": "icon: \"\u2744\ufe0f\","
+    },
+    {
+      "line": 698,
+      "emojis": [
+        "'\ud83c\udf38'"
+      ],
+      "text": "icon: \"\ud83c\udf38\","
+    },
+    {
+      "line": 855,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 859,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 863,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 890,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1003,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Free Initial Assessment. Certified European admission & visa specialists."
+    }
+  ],
+  "IrelandStudyAbroadContent.tsx": [
+    {
+      "line": 377,
+      "emojis": [
+        "'\ud83c\udfe0'"
+      ],
+      "text": "icon: \"\ud83c\udfe0\","
+    },
+    {
+      "line": 383,
+      "emojis": [
+        "'\ud83e\udd57'"
+      ],
+      "text": "icon: \"\ud83e\udd57\","
+    },
+    {
+      "line": 389,
+      "emojis": [
+        "'\ud83d\ude8c'"
+      ],
+      "text": "icon: \"\ud83d\ude8c\","
+    },
+    {
+      "line": 395,
+      "emojis": [
+        "'\ud83d\udcf1'"
+      ],
+      "text": "icon: \"\ud83d\udcf1\","
+    },
+    {
+      "line": 401,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "icon: \"\ud83d\udca1\","
+    },
+    {
+      "line": 407,
+      "emojis": [
+        "'\u2615'"
+      ],
+      "text": "icon: \"\u2615\","
+    },
+    {
+      "line": 621,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 840,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.city}"
+    },
+    {
+      "line": 916,
+      "emojis": [
+        "'\ud83d\udcbc'"
+      ],
+      "text": "<span>\ud83d\udcbc</span> Stamp 2 Student Part-Time Work Permission"
+    },
+    {
+      "line": 1103,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1107,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1111,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1115,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1138,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    }
+  ],
+  "ItalyStudyAbroadContent.tsx": [
+    {
+      "line": 549,
+      "emojis": [
+        "'\ud83c\uddee'",
+        "'\ud83c\uddf9'"
+      ],
+      "text": "\ud83c\uddee\ud83c\uddf9"
+    },
+    {
+      "line": 594,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd"
+    },
+    {
+      "line": 604,
+      "emojis": [
+        "'\ud83d\uddfa'"
+      ],
+      "text": "\ud83d\uddfa\ufe0f"
+    },
+    {
+      "line": 614,
+      "emojis": [
+        "'\ud83c\uddea'",
+        "'\ud83c\uddfa'"
+      ],
+      "text": "\ud83c\uddea\ud83c\uddfa"
+    },
+    {
+      "line": 624,
+      "emojis": [
+        "'\ud83d\udcb0'"
+      ],
+      "text": "\ud83d\udcb0"
+    },
+    {
+      "line": 634,
+      "emojis": [
+        "'\ud83d\ude85'"
+      ],
+      "text": "\ud83d\ude85"
+    },
+    {
+      "line": 644,
+      "emojis": [
+        "'\ud83c\udfdb'"
+      ],
+      "text": "\ud83c\udfdb\ufe0f"
+    },
+    {
+      "line": 654,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "\u2600\ufe0f"
+    },
+    {
+      "line": 843,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "<span>\ud83d\udccd</span>"
+    },
+    {
+      "line": 1161,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1262,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Official Italian education partner counseling."
+    }
+  ],
+  "LatviaStudyAbroadContent.tsx": [
+    {
+      "line": 233,
+      "emojis": [
+        "'\ud83c\uddf1'",
+        "'\ud83c\uddfb'"
+      ],
+      "text": "<span>\ud83c\uddf1\ud83c\uddfb</span>"
+    },
+    {
+      "line": 548,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">Objective Guidance:</span> Umang Career Consultancy assesses entry criteria, academic credentials, and tuition budgets to short-list the exact universities best matched to your profile."
+    },
+    {
+      "line": 672,
+      "emojis": [
+        "'\ud83d\udccc'"
+      ],
+      "text": "\ud83d\udccc <span className=\"font-semibold text-white\">Budget Recommendation:</span> Total average monthly living expenses in Latvia typically range from <span className=\"text-[#22c55e] font-bold\">\u20ac450 to \u20ac750</span>, making it one of Europe&apos;s most economical student destinations."
+    },
+    {
+      "line": 694,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "icon: \"\u2600\ufe0f\","
+    },
+    {
+      "line": 700,
+      "emojis": [
+        "'\ud83c\udf42'"
+      ],
+      "text": "icon: \"\ud83c\udf42\","
+    },
+    {
+      "line": 706,
+      "emojis": [
+        "'\u2744'"
+      ],
+      "text": "icon: \"\u2744\ufe0f\","
+    },
+    {
+      "line": 712,
+      "emojis": [
+        "'\ud83c\udf38'"
+      ],
+      "text": "icon: \"\ud83c\udf38\","
+    },
+    {
+      "line": 864,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 868,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 872,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 899,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1013,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Free Initial Assessment. Certified European admission counselors."
+    }
+  ],
+  "LithuaniaStudyAbroadContent.tsx": [
+    {
+      "line": 171,
+      "emojis": [
+        "'\ud83c\udf93'"
+      ],
+      "text": "icon: \"\ud83c\udf93\","
+    },
+    {
+      "line": 176,
+      "emojis": [
+        "'\ud83d\udd2c'"
+      ],
+      "text": "icon: \"\ud83d\udd2c\","
+    },
+    {
+      "line": 181,
+      "emojis": [
+        "'\ud83d\udcb6'"
+      ],
+      "text": "icon: \"\ud83d\udcb6\","
+    },
+    {
+      "line": 186,
+      "emojis": [
+        "'\ud83c\udf0d'"
+      ],
+      "text": "icon: \"\ud83c\udf0d\","
+    },
+    {
+      "line": 191,
+      "emojis": [
+        "'\ud83d\udcbc'"
+      ],
+      "text": "icon: \"\ud83d\udcbc\","
+    },
+    {
+      "line": 196,
+      "emojis": [
+        "'\ud83d\ude80'"
+      ],
+      "text": "icon: \"\ud83d\ude80\","
+    },
+    {
+      "line": 201,
+      "emojis": [
+        "'\ud83c\udfc6'"
+      ],
+      "text": "icon: \"\ud83c\udfc6\","
+    },
+    {
+      "line": 206,
+      "emojis": [
+        "'\ud83e\udd1d'"
+      ],
+      "text": "icon: \"\ud83e\udd1d\","
+    },
+    {
+      "line": 211,
+      "emojis": [
+        "'\ud83d\udee1'"
+      ],
+      "text": "icon: \"\ud83d\udee1\ufe0f\","
+    },
+    {
+      "line": 216,
+      "emojis": [
+        "'\ud83c\udf32'"
+      ],
+      "text": "icon: \"\ud83c\udf32\","
+    },
+    {
+      "line": 221,
+      "emojis": [
+        "'\u26a1'"
+      ],
+      "text": "icon: \"\u26a1\","
+    },
+    {
+      "line": 230,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "icon: \"\ud83d\udccd\","
+    },
+    {
+      "line": 236,
+      "emojis": [
+        "'\ud83c\uddea'",
+        "'\ud83c\uddfa'"
+      ],
+      "text": "icon: \"\ud83c\uddea\ud83c\uddfa\","
+    },
+    {
+      "line": 242,
+      "emojis": [
+        "'\u26a1'"
+      ],
+      "text": "icon: \"\u26a1\","
+    },
+    {
+      "line": 248,
+      "emojis": [
+        "'\ud83d\udcc8'"
+      ],
+      "text": "icon: \"\ud83d\udcc8\","
+    },
+    {
+      "line": 254,
+      "emojis": [
+        "'\ud83c\udf31'"
+      ],
+      "text": "icon: \"\ud83c\udf31\","
+    },
+    {
+      "line": 260,
+      "emojis": [
+        "'\ud83d\udcbb'"
+      ],
+      "text": "icon: \"\ud83d\udcbb\","
+    },
+    {
+      "line": 266,
+      "emojis": [
+        "'\u2728'"
+      ],
+      "text": "icon: \"\u2728\","
+    },
+    {
+      "line": 272,
+      "emojis": [
+        "'\ud83d\udcb0'"
+      ],
+      "text": "icon: \"\ud83d\udcb0\","
+    },
+    {
+      "line": 278,
+      "emojis": [
+        "'\ud83d\udde3'"
+      ],
+      "text": "icon: \"\ud83d\udde3\ufe0f\","
+    },
+    {
+      "line": 284,
+      "emojis": [
+        "'\u2744'"
+      ],
+      "text": "icon: \"\u2744\ufe0f\","
+    },
+    {
+      "line": 604,
+      "emojis": [
+        "'\ud83c\uddf1'",
+        "'\ud83c\uddf9'"
+      ],
+      "text": "\ud83c\uddf1\ud83c\uddf9"
+    },
+    {
+      "line": 751,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span>\u2713 European Advantage</span>"
+    },
+    {
+      "line": 778,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.location}"
+    },
+    {
+      "line": 908,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-bold\">Student Advantage:</span> International students in Lithuania receive an official Lithuanian Student Identity Card (LSIC / ISIC) providing an **80% discount** on urban public transportation (monthly pass is just \u20ac5.80 in Vilnius) and 50% discount on long-distance trains and intercity buses!"
+    },
+    {
+      "line": 1105,
+      "emojis": [
+        "'\ud83c\uddf1'",
+        "'\ud83c\uddf9'"
+      ],
+      "text": "<span>\ud83c\uddf1\ud83c\uddf9 HASSLE-FREE STUDY IN LITHUANIA</span>"
+    },
+    {
+      "line": 1119,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1129,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1139,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1174,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1280,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Official European university counseling."
+    }
+  ],
+  "MalaysiaStudyAbroadContent.tsx": [
+    {
+      "line": 616,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd"
+    },
+    {
+      "line": 626,
+      "emojis": [
+        "'\ud83c\udf10'"
+      ],
+      "text": "\ud83c\udf10"
+    },
+    {
+      "line": 636,
+      "emojis": [
+        "'\ud83d\udcb0'"
+      ],
+      "text": "\ud83d\udcb0"
+    },
+    {
+      "line": 646,
+      "emojis": [
+        "'\ud83c\udfd9'"
+      ],
+      "text": "\ud83c\udfd9\ufe0f"
+    },
+    {
+      "line": 656,
+      "emojis": [
+        "'\ud83d\udcc8'"
+      ],
+      "text": "\ud83d\udcc8"
+    },
+    {
+      "line": 666,
+      "emojis": [
+        "'\ud83d\udee1'"
+      ],
+      "text": "\ud83d\udee1\ufe0f"
+    },
+    {
+      "line": 676,
+      "emojis": [
+        "'\ud83c\udf93'"
+      ],
+      "text": "\ud83c\udf93"
+    },
+    {
+      "line": 686,
+      "emojis": [
+        "'\ud83c\udf26'"
+      ],
+      "text": "\ud83c\udf26\ufe0f"
+    },
+    {
+      "line": 872,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "<span>\ud83d\udccd</span>"
+    },
+    {
+      "line": 1190,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1292,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Official Malaysian partner counseling."
+    }
+  ],
+  "MaltaStudyAbroadContent.tsx": [
+    {
+      "line": 257,
+      "emojis": [
+        "'\ud83c\uddf2'",
+        "'\ud83c\uddf9'"
+      ],
+      "text": "<span>\ud83c\uddf2\ud83c\uddf9</span>"
+    },
+    {
+      "line": 579,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">Admissions & Visa Advantage:</span> Malta offers fast-track admission turnarounds and streamlined visa assessment through VFS Global and Identity Malta."
+    },
+    {
+      "line": 639,
+      "emojis": [
+        "'\ud83d\udccc'"
+      ],
+      "text": "\ud83d\udccc <span className=\"font-semibold text-slate-900\">Flexible Rolling Intakes:</span> Unlike many European countries with only one or two intakes, Malta offers four rolling intakes (January, March, June, and September), enabling students to start without losing academic time."
+    },
+    {
+      "line": 708,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">Student Budget:</span> Average monthly student expenses in Malta typically range between <span className=\"text-[#22c55e] font-bold\">\u20ac500 and \u20ac800</span> for shared accommodation, easily manageable with part-time work."
+    },
+    {
+      "line": 730,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "icon: \"\u2600\ufe0f\","
+    },
+    {
+      "line": 736,
+      "emojis": [
+        "'\ud83c\udf42'"
+      ],
+      "text": "icon: \"\ud83c\udf42\","
+    },
+    {
+      "line": 742,
+      "emojis": [
+        "'\ud83c\udf24'"
+      ],
+      "text": "icon: \"\ud83c\udf24\ufe0f\","
+    },
+    {
+      "line": 748,
+      "emojis": [
+        "'\ud83c\udf38'"
+      ],
+      "text": "icon: \"\ud83c\udf38\","
+    },
+    {
+      "line": 900,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 904,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 908,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 935,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1053,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Free Initial Assessment. Certified Malta student visa counselors."
+    }
+  ],
+  "NewZealandStudyAbroadContent.tsx": [
+    {
+      "line": 553,
+      "emojis": [
+        "'\ud83c\uddf3'",
+        "'\ud83c\uddff'"
+      ],
+      "text": "\ud83c\uddf3\ud83c\uddff"
+    },
+    {
+      "line": 598,
+      "emojis": [
+        "'\ud83c\udf0a'"
+      ],
+      "text": "\ud83c\udf0a"
+    },
+    {
+      "line": 608,
+      "emojis": [
+        "'\ud83d\udde3'"
+      ],
+      "text": "\ud83d\udde3\ufe0f"
+    },
+    {
+      "line": 618,
+      "emojis": [
+        "'\ud83c\udf3e'"
+      ],
+      "text": "\ud83c\udf3e"
+    },
+    {
+      "line": 628,
+      "emojis": [
+        "'\ud83d\udd4a'"
+      ],
+      "text": "\ud83d\udd4a\ufe0f"
+    },
+    {
+      "line": 638,
+      "emojis": [
+        "'\ud83d\udcbb'"
+      ],
+      "text": "\ud83d\udcbb"
+    },
+    {
+      "line": 648,
+      "emojis": [
+        "'\u2b50'"
+      ],
+      "text": "\u2b50"
+    },
+    {
+      "line": 833,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "<span>\ud83d\udccd</span>"
+    },
+    {
+      "line": 1151,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1254,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Official NZ education partner counseling."
+    }
+  ],
+  "PolandStudyAbroadContent.tsx": [
+    {
+      "line": 370,
+      "emojis": [
+        "'\ud83c\udfe0'"
+      ],
+      "text": "icon: \"\ud83c\udfe0\","
+    },
+    {
+      "line": 376,
+      "emojis": [
+        "'\ud83e\udd57'"
+      ],
+      "text": "icon: \"\ud83e\udd57\","
+    },
+    {
+      "line": 382,
+      "emojis": [
+        "'\ud83d\ude8b'"
+      ],
+      "text": "icon: \"\ud83d\ude8b\","
+    },
+    {
+      "line": 388,
+      "emojis": [
+        "'\ud83d\udcf1'"
+      ],
+      "text": "icon: \"\ud83d\udcf1\","
+    },
+    {
+      "line": 394,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "icon: \"\ud83d\udca1\","
+    },
+    {
+      "line": 400,
+      "emojis": [
+        "'\u2615'"
+      ],
+      "text": "icon: \"\u2615\","
+    },
+    {
+      "line": 653,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 861,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.city}"
+    },
+    {
+      "line": 1160,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1164,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1168,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1172,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1195,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    }
+  ],
+  "SingaporeStudyAbroadContent.tsx": [
+    {
+      "line": 490,
+      "emojis": [
+        "'\ud83c\uddf8'",
+        "'\ud83c\uddec'"
+      ],
+      "text": "\ud83c\uddf8\ud83c\uddec"
+    },
+    {
+      "line": 535,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd"
+    },
+    {
+      "line": 545,
+      "emojis": [
+        "'\ud83c\udfd9'"
+      ],
+      "text": "\ud83c\udfd9\ufe0f"
+    },
+    {
+      "line": 555,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1"
+    },
+    {
+      "line": 565,
+      "emojis": [
+        "'\ud83d\ude87'"
+      ],
+      "text": "\ud83d\ude87"
+    },
+    {
+      "line": 575,
+      "emojis": [
+        "'\ud83d\udcc8'"
+      ],
+      "text": "\ud83d\udcc8"
+    },
+    {
+      "line": 585,
+      "emojis": [
+        "'\ud83d\udee1'"
+      ],
+      "text": "\ud83d\udee1\ufe0f"
+    },
+    {
+      "line": 743,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "<span>\ud83d\udccd</span>"
+    },
+    {
+      "line": 895,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "<span>\u2600\ufe0f</span> Tropical Sunshine"
+    },
+    {
+      "line": 903,
+      "emojis": [
+        "'\ud83c\udf27'"
+      ],
+      "text": "<span>\ud83c\udf27\ufe0f</span> Monsoon Showers & Air-Conditioning"
+    },
+    {
+      "line": 1078,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1181,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Official partner university counseling."
+    }
+  ],
+  "SwitzerlandStudyAbroadContent.tsx": [
+    {
+      "line": 177,
+      "emojis": [
+        "'\ud83c\udf93'"
+      ],
+      "text": "icon: \"\ud83c\udf93\","
+    },
+    {
+      "line": 182,
+      "emojis": [
+        "'\ud83c\udf0d'"
+      ],
+      "text": "icon: \"\ud83c\udf0d\","
+    },
+    {
+      "line": 187,
+      "emojis": [
+        "'\ud83d\udde3'"
+      ],
+      "text": "icon: \"\ud83d\udde3\ufe0f\","
+    },
+    {
+      "line": 192,
+      "emojis": [
+        "'\u2b50'"
+      ],
+      "text": "icon: \"\u2b50\","
+    },
+    {
+      "line": 197,
+      "emojis": [
+        "'\ud83d\udcb3'"
+      ],
+      "text": "icon: \"\ud83d\udcb3\","
+    },
+    {
+      "line": 202,
+      "emojis": [
+        "'\ud83d\udcbc'"
+      ],
+      "text": "icon: \"\ud83d\udcbc\","
+    },
+    {
+      "line": 207,
+      "emojis": [
+        "'\ud83d\ude80'"
+      ],
+      "text": "icon: \"\ud83d\ude80\","
+    },
+    {
+      "line": 212,
+      "emojis": [
+        "'\ud83c\udfc6'"
+      ],
+      "text": "icon: \"\ud83c\udfc6\","
+    },
+    {
+      "line": 221,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "icon: \"\ud83d\udccd\","
+    },
+    {
+      "line": 227,
+      "emojis": [
+        "'\ud83c\udfd4'"
+      ],
+      "text": "icon: \"\ud83c\udfd4\ufe0f\","
+    },
+    {
+      "line": 233,
+      "emojis": [
+        "'\ud83d\udec2'"
+      ],
+      "text": "icon: \"\ud83d\udec2\","
+    },
+    {
+      "line": 239,
+      "emojis": [
+        "'\ud83d\udcc8'"
+      ],
+      "text": "icon: \"\ud83d\udcc8\","
+    },
+    {
+      "line": 245,
+      "emojis": [
+        "'\ud83c\udfde'"
+      ],
+      "text": "icon: \"\ud83c\udfde\ufe0f\","
+    },
+    {
+      "line": 251,
+      "emojis": [
+        "'\ud83d\udcac'"
+      ],
+      "text": "icon: \"\ud83d\udcac\","
+    },
+    {
+      "line": 257,
+      "emojis": [
+        "'\ud83c\udfe2'"
+      ],
+      "text": "icon: \"\ud83c\udfe2\","
+    },
+    {
+      "line": 263,
+      "emojis": [
+        "'\ud83d\udee1'"
+      ],
+      "text": "icon: \"\ud83d\udee1\ufe0f\","
+    },
+    {
+      "line": 269,
+      "emojis": [
+        "'\u2728'"
+      ],
+      "text": "icon: \"\u2728\","
+    },
+    {
+      "line": 275,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "icon: \"\u2600\ufe0f\","
+    },
+    {
+      "line": 670,
+      "emojis": [
+        "'\ud83c\udde8'",
+        "'\ud83c\udded'"
+      ],
+      "text": "\ud83c\udde8\ud83c\udded"
+    },
+    {
+      "line": 817,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span>\u2713 Swiss Standard Advantage</span>"
+    },
+    {
+      "line": 844,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.campuses}"
+    },
+    {
+      "line": 1018,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-bold\">Student Cost Saving Tip:</span> Enrolling in student flatshares (WG - Wohngemeinschaft), using student canteen (mensa) subsidised meal plans, and holding an SBB Half-Fare travelcard cuts living expenses by 30% to 40%."
+    },
+    {
+      "line": 1215,
+      "emojis": [
+        "'\ud83c\udde8'",
+        "'\ud83c\udded'"
+      ],
+      "text": "<span>\ud83c\udde8\ud83c\udded HASSLE-FREE STUDY IN SWITZERLAND</span>"
+    },
+    {
+      "line": 1229,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1239,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1249,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1284,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1392,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Official Swiss university and visa guidance."
+    }
+  ],
+  "UAEStudyAbroadContent.tsx": [
+    {
+      "line": 549,
+      "emojis": [
+        "'\ud83c\udde6'",
+        "'\ud83c\uddea'"
+      ],
+      "text": "\ud83c\udde6\ud83c\uddea"
+    },
+    {
+      "line": 594,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd"
+    },
+    {
+      "line": 604,
+      "emojis": [
+        "'\ud83c\udfe2'"
+      ],
+      "text": "\ud83c\udfe2"
+    },
+    {
+      "line": 614,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1"
+    },
+    {
+      "line": 624,
+      "emojis": [
+        "'\ud83c\udf31'"
+      ],
+      "text": "\ud83c\udf31"
+    },
+    {
+      "line": 634,
+      "emojis": [
+        "'\ud83d\ude87'"
+      ],
+      "text": "\ud83d\ude87"
+    },
+    {
+      "line": 644,
+      "emojis": [
+        "'\ud83c\udf0d'"
+      ],
+      "text": "\ud83c\udf0d"
+    },
+    {
+      "line": 654,
+      "emojis": [
+        "'\ud83d\udcc8'"
+      ],
+      "text": "\ud83d\udcc8"
+    },
+    {
+      "line": 664,
+      "emojis": [
+        "'\u2600'"
+      ],
+      "text": "\u2600\ufe0f"
+    },
+    {
+      "line": 848,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "<span>\ud83d\udccd</span>"
+    },
+    {
+      "line": 1166,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1269,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Confidential. Official UAE partner university counseling."
+    }
+  ],
+  "UKStudyAbroadContent.tsx": [
+    {
+      "line": 268,
+      "emojis": [
+        "'\ud83c\uddec'",
+        "'\ud83c\udde7'"
+      ],
+      "text": "<span>\ud83c\uddec\ud83c\udde7</span>"
+    },
+    {
+      "line": 345,
+      "emojis": [
+        "'\ud83d\udcb0'"
+      ],
+      "text": "icon: \"\ud83d\udcb0\","
+    },
+    {
+      "line": 351,
+      "emojis": [
+        "'\ud83d\udcc8'"
+      ],
+      "text": "icon: \"\ud83d\udcc8\","
+    },
+    {
+      "line": 357,
+      "emojis": [
+        "'\ud83c\udf93'"
+      ],
+      "text": "icon: \"\ud83c\udf93\","
+    },
+    {
+      "line": 522,
+      "emojis": [
+        "'\ud83c\udf93'"
+      ],
+      "text": "<span className=\"text-xl\">\ud83c\udf93</span>"
+    },
+    {
+      "line": 534,
+      "emojis": [
+        "'\ud83e\udd1d'"
+      ],
+      "text": "<span className=\"text-xl\">\ud83e\udd1d</span>"
+    },
+    {
+      "line": 546,
+      "emojis": [
+        "'\ud83d\udcbc'"
+      ],
+      "text": "<span className=\"text-xl\">\ud83d\udcbc</span>"
+    },
+    {
+      "line": 609,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "\ud83d\udca1 <span className=\"font-semibold text-white\">University Selection:</span> No single factor determines suitability. Umang Career Consultancy helps you balance academic prestige, fee structures, scholarships, city cost of living, and graduate career outcomes."
+    },
+    {
+      "line": 855,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 859,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 863,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold\">\u2713</span>"
+    },
+    {
+      "line": 890,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 1007,
+      "emojis": [
+        "'\ud83d\udd12'"
+      ],
+      "text": "\ud83d\udd12 100% Free Initial Assessment. Certified British Council & UKVI counselors."
+    }
+  ],
+  "USAStudyAbroadContent.tsx": [
+    {
+      "line": 308,
+      "emojis": [
+        "'\ud83c\udfe0'"
+      ],
+      "text": "{ item: \"Accommodation (On-Campus Dorm / Flatshare)\", cost: \"$800 \u2013 $2,500\", desc: \"Campus dorms or off-campus shared apartments depending on city.\", icon: \"\ud83c\udfe0\" },"
+    },
+    {
+      "line": 309,
+      "emojis": [
+        "'\ud83d\uded2'"
+      ],
+      "text": "{ item: \"Food & Groceries\", cost: \"$100 \u2013 $500\", desc: \"University meal plans and local supermarkets (Trader Joe's, Costco, Walmart).\", icon: \"\ud83d\uded2\" },"
+    },
+    {
+      "line": 310,
+      "emojis": [
+        "'\ud83d\udcda'"
+      ],
+      "text": "{ item: \"Educational Materials & Books\", cost: \"$50 \u2013 $100\", desc: \"Textbooks, software subscriptions, laboratory materials & supplies.\", icon: \"\ud83d\udcda\" },"
+    },
+    {
+      "line": 311,
+      "emojis": [
+        "'\ud83d\ude86'"
+      ],
+      "text": "{ item: \"Transportation\", cost: \"$50 \u2013 $970\", desc: \"Campus shuttle buses, city subways, or vehicle insurance & fuel.\", icon: \"\ud83d\ude86\" },"
+    },
+    {
+      "line": 312,
+      "emojis": [
+        "'\ud83d\udc55'"
+      ],
+      "text": "{ item: \"Personal Expenses\", cost: \"$100 \u2013 $300\", desc: \"Clothing, personal grooming, laundry, and leisure activities.\", icon: \"\ud83d\udc55\" },"
+    },
+    {
+      "line": 313,
+      "emojis": [
+        "'\ud83d\udca1'"
+      ],
+      "text": "{ item: \"Utilities (Electricity, Water, Heating)\", cost: \"$100 \u2013 $200\", desc: \"Shared utilities in private apartments; included in on-campus dorms.\", icon: \"\ud83d\udca1\" },"
+    },
+    {
+      "line": 314,
+      "emojis": [
+        "'\ud83c\udfe5'"
+      ],
+      "text": "{ item: \"Health Insurance (Mandatory)\", cost: \"$100 \u2013 $300\", desc: \"University-approved international student health insurance policy.\", icon: \"\ud83c\udfe5\" },"
+    },
+    {
+      "line": 538,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    },
+    {
+      "line": 737,
+      "emojis": [
+        "'\ud83d\udccd'"
+      ],
+      "text": "\ud83d\udccd {uni.state}"
+    },
+    {
+      "line": 994,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 998,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1002,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1006,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "<span className=\"text-[#22c55e] font-bold text-base\">\u2713</span>"
+    },
+    {
+      "line": 1029,
+      "emojis": [
+        "'\u2713'"
+      ],
+      "text": "\u2713"
+    }
+  ]
+}

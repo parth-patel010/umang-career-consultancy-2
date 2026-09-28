@@ -1,0 +1,4 @@
+=== LatviaStudyAbroadContent.tsx ===
+  L864: ['✓'] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L868: ['✓'] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L872: ['✓'] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>

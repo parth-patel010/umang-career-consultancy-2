@@ -1,0 +1,3 @@
+=== ItalyStudyAbroadContent.tsx ===
+  L549: ['🇮', '🇹'] -> 🇮🇹
+  L1147: ['✓'] -> ✓

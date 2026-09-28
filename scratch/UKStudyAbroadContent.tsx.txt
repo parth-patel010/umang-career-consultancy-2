@@ -1,0 +1,5 @@
+=== UKStudyAbroadContent.tsx ===
+  L855: ['✓'] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L859: ['✓'] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L863: ['✓'] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L1005: ['🔒'] -> 🔒 100% Free Initial Assessment. Certified British Council & UKVI counselors.

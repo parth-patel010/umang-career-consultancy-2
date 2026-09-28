@@ -1,0 +1,5 @@
+=== MalaysiaStudyAbroadContent.tsx ===
+  L656: ['🛡'] -> 🛡️
+  L666: ['🎓'] -> 🎓
+  L676: ['🌦'] -> 🌦️
+  L1180: ['✓'] -> ✓

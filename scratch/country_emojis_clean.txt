@@ -1,0 +1,327 @@
+
+=== AustraliaStudyAbroadContent.tsx (14) ===
+  L412: ["'🏠'"] -> icon: "🏠",
+  L418: ["'🛒'"] -> icon: "🛒",
+  L424: ["'🚆'"] -> icon: "🚆",
+  L430: ["'📱'"] -> icon: "📱",
+  L436: ["'💡'"] -> icon: "💡",
+  L442: ["'🏄'"] -> icon: "🏄",
+  L687: ["'✓'"] -> ✓
+  L902: ["'📍'"] -> 📍 {uni.state}
+  L976: ["'⚠'"] -> <span>⚠️</span> Student Visa (Subclass 500) Financial Capacity Requirement
+  L1205: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1209: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1213: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1217: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1240: ["'✓'"] -> ✓
+
+=== CanadaStudyAbroadContent.tsx (16) ===
+  L249: ["'🇨'", "'🇦'"] -> <span>🇨🇦</span>
+  L568: ["'💡'"] -> 💡 <span className="font-semibold text-white">Admissions & PGWP Guidance:</span> Admission requirements, tuition fees, and program availability vary by institution. Our certified Canadian counselors verify current DLI numbers and PGWP eligibility for every application.
+  L623: ["'📊'"] -> 📊 <span className="font-semibold text-slate-900">Statistics Canada Benchmark:</span> Statistics Canada reported an average international undergraduate tuition of CAD 41,746 for 2025/26, with substantial variations between colleges, polytechnics, and research universities.
+  L719: ["'💼'"] -> 💼
+  L729: ["'✓'"] -> <span className="text-[#22c55e] font-bold mt-0.5">✓</span>
+  L733: ["'✓'"] -> <span className="text-[#22c55e] font-bold mt-0.5">✓</span>
+  L737: ["'✓'"] -> <span className="text-[#22c55e] font-bold mt-0.5">✓</span>
+  L746: ["'🎓'"] -> 🎓
+  L756: ["'✓'"] -> <span className="text-[#22c55e] font-bold mt-0.5">✓</span>
+  L760: ["'✓'"] -> <span className="text-[#22c55e] font-bold mt-0.5">✓</span>
+  L764: ["'✓'"] -> <span className="text-[#22c55e] font-bold mt-0.5">✓</span>
+  L918: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L922: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L926: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L953: ["'✓'"] -> ✓
+  L1070: ["'🔒'"] -> 🔒 100% Free Initial Assessment. Certified Canadian immigration & admission counselors.
+
+=== CzechRepublicStudyAbroadContent.tsx (13) ===
+  L342: ["'🏠'"] -> icon: "🏠",
+  L348: ["'🍲'"] -> icon: "🍲",
+  L354: ["'🚋'"] -> icon: "🚋",
+  L360: ["'📱'"] -> icon: "📱",
+  L366: ["'💡'"] -> icon: "💡",
+  L372: ["'☕'"] -> icon: "☕",
+  L625: ["'✓'"] -> ✓
+  L833: ["'📍'"] -> 📍 {uni.city}
+  L1136: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1140: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1144: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1148: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1171: ["'✓'"] -> ✓
+
+=== DenmarkStudyAbroadContent.tsx (10) ===
+  L590: ["'🇩'", "'🇰'"] -> 🇩🇰
+  L635: ["'📍'"] -> 📍
+  L645: ["'❄'"] -> ❄️
+  L655: ["'🌱'"] -> 🌱
+  L665: ["'🛡'"] -> 🛡️
+  L675: ["'⚖'"] -> ⚖️
+  L685: ["'⛅'"] -> ⛅
+  L900: ["'📍'"] -> <span>📍</span>
+  L1214: ["'✓'"] -> ✓
+  L1316: ["'🔒'"] -> 🔒 100% Confidential. Zero spam. Official counseling support.
+
+=== FranceStudyAbroadContent.tsx (13) ===
+  L249: ["'🇫'", "'🇷'"] -> <span>🇫🇷</span>
+  L566: ["'💡'"] -> 💡 <span className="font-semibold text-white">Personalized Matching:</span> Instead of claiming a fixed &ldquo;Top 10,&rdquo; Umang Career Consultancy presents selected institutions based on the student&apos;s course, academic profile, budget, and specific career goals.
+  L629: ["'🏛'"] -> <span className="text-xl">🏛️</span>
+  L719: ["'📌'"] -> 📌 <span className="font-semibold text-white">Umang Tip:</span> Students are advised to prepare a city-specific budget before finalizing their university choice. Our counselors assist you with personalized financial planning.
+  L741: ["'☀'"] -> icon: "☀️",
+  L747: ["'🍂'"] -> icon: "🍂",
+  L753: ["'❄'"] -> icon: "❄️",
+  L759: ["'🌸'"] -> icon: "🌸",
+  L911: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L915: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L919: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L946: ["'✓'"] -> ✓
+  L1061: ["'🔒'"] -> 🔒 100% Free Initial Assessment. Certified France & Campus France counselors.
+
+=== GermanyStudyAbroadContent.tsx (14) ===
+  L392: ["'🏠'"] -> icon: "🏠",
+  L398: ["'🥗'"] -> icon: "🥗",
+  L404: ["'🚆'"] -> icon: "🚆",
+  L410: ["'📱'"] -> icon: "📱",
+  L416: ["'💡'"] -> icon: "💡",
+  L422: ["'☕'"] -> icon: "☕",
+  L675: ["'✓'"] -> ✓
+  L979: ["'📍'"] -> 📍 {uni.city}
+  L1059: ["'🏦'"] -> <span>🏦</span> 2026 German Blocked Account Requirement (Sperrkonto)
+  L1222: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1226: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1230: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1234: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1257: ["'✓'"] -> ✓
+
+=== HungaryStudyAbroadContent.tsx (13) ===
+  L225: ["'🇭'", "'🇺'"] -> <span>🇭🇺</span>
+  L529: ["'💡'"] -> 💡 <span className="font-semibold text-white">Stipendium Hungaricum Partner:</span> Umang Career Consultancy guides you through university choices, direct entrance test coaching, and scholarship dossier applications.
+  L589: ["'🩺'"] -> 🩺 <span className="font-semibold text-slate-900">Medical Degree Note:</span> General Medicine (MD), Dentistry, and Pharmacy programs at Semmelweis, Debrecen, Pécs, and Szeged range between €12,000 and €18,000 annually, with high global licensing pass rates.
+  L658: ["'💡'"] -> 💡 <span className="font-semibold text-white">Total Living Budget:</span> The typical monthly budget for an international student in Hungary is only <span className="text-[#22c55e] font-bold">€370 to €820</span>, offering unmatched European value for money.
+  L680: ["'☀'"] -> icon: "☀️",
+  L686: ["'🍂'"] -> icon: "🍂",
+  L692: ["'❄'"] -> icon: "❄️",
+  L698: ["'🌸'"] -> icon: "🌸",
+  L855: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L859: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L863: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L890: ["'✓'"] -> ✓
+  L1003: ["'🔒'"] -> 🔒 100% Free Initial Assessment. Certified European admission & visa specialists.
+
+=== IrelandStudyAbroadContent.tsx (14) ===
+  L377: ["'🏠'"] -> icon: "🏠",
+  L383: ["'🥗'"] -> icon: "🥗",
+  L389: ["'🚌'"] -> icon: "🚌",
+  L395: ["'📱'"] -> icon: "📱",
+  L401: ["'💡'"] -> icon: "💡",
+  L407: ["'☕'"] -> icon: "☕",
+  L621: ["'✓'"] -> ✓
+  L840: ["'📍'"] -> 📍 {uni.city}
+  L916: ["'💼'"] -> <span>💼</span> Stamp 2 Student Part-Time Work Permission
+  L1103: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1107: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1111: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1115: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1138: ["'✓'"] -> ✓
+
+=== ItalyStudyAbroadContent.tsx (11) ===
+  L549: ["'🇮'", "'🇹'"] -> 🇮🇹
+  L594: ["'📍'"] -> 📍
+  L604: ["'🗺'"] -> 🗺️
+  L614: ["'🇪'", "'🇺'"] -> 🇪🇺
+  L624: ["'💰'"] -> 💰
+  L634: ["'🚅'"] -> 🚅
+  L644: ["'🏛'"] -> 🏛️
+  L654: ["'☀'"] -> ☀️
+  L843: ["'📍'"] -> <span>📍</span>
+  L1161: ["'✓'"] -> ✓
+  L1262: ["'🔒'"] -> 🔒 100% Confidential. Official Italian education partner counseling.
+
+=== LatviaStudyAbroadContent.tsx (12) ===
+  L233: ["'🇱'", "'🇻'"] -> <span>🇱🇻</span>
+  L548: ["'💡'"] -> 💡 <span className="font-semibold text-white">Objective Guidance:</span> Umang Career Consultancy assesses entry criteria, academic credentials, and tuition budgets to short-list the exact universities best matched to your profile.
+  L672: ["'📌'"] -> 📌 <span className="font-semibold text-white">Budget Recommendation:</span> Total average monthly living expenses in Latvia typically range from <span className="text-[#22c55e] font-bold">€450 to €750</span>, making it one of Europe&apos;s most economical student destinations.
+  L694: ["'☀'"] -> icon: "☀️",
+  L700: ["'🍂'"] -> icon: "🍂",
+  L706: ["'❄'"] -> icon: "❄️",
+  L712: ["'🌸'"] -> icon: "🌸",
+  L864: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L868: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L872: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L899: ["'✓'"] -> ✓
+  L1013: ["'🔒'"] -> 🔒 100% Free Initial Assessment. Certified European admission counselors.
+
+=== LithuaniaStudyAbroadContent.tsx (31) ===
+  L171: ["'🎓'"] -> icon: "🎓",
+  L176: ["'🔬'"] -> icon: "🔬",
+  L181: ["'💶'"] -> icon: "💶",
+  L186: ["'🌍'"] -> icon: "🌍",
+  L191: ["'💼'"] -> icon: "💼",
+  L196: ["'🚀'"] -> icon: "🚀",
+  L201: ["'🏆'"] -> icon: "🏆",
+  L206: ["'🤝'"] -> icon: "🤝",
+  L211: ["'🛡'"] -> icon: "🛡️",
+  L216: ["'🌲'"] -> icon: "🌲",
+  L221: ["'⚡'"] -> icon: "⚡",
+  L230: ["'📍'"] -> icon: "📍",
+  L236: ["'🇪'", "'🇺'"] -> icon: "🇪🇺",
+  L242: ["'⚡'"] -> icon: "⚡",
+  L248: ["'📈'"] -> icon: "📈",
+  L254: ["'🌱'"] -> icon: "🌱",
+  L260: ["'💻'"] -> icon: "💻",
+  L266: ["'✨'"] -> icon: "✨",
+  L272: ["'💰'"] -> icon: "💰",
+  L278: ["'🗣'"] -> icon: "🗣️",
+  L284: ["'❄'"] -> icon: "❄️",
+  L604: ["'🇱'", "'🇹'"] -> 🇱🇹
+  L751: ["'✓'"] -> <span>✓ European Advantage</span>
+  L778: ["'📍'"] -> 📍 {uni.location}
+  L908: ["'💡'"] -> 💡 <span className="font-bold">Student Advantage:</span> International students in Lithuania receive an official Lithuanian Student Identity Card (LSIC / ISIC) providing an **80% discount** on urban public transportation (monthly pass is just €5.80 in Vilnius) and 50% discount on long-distance trains and intercity buses!
+  L1105: ["'🇱'", "'🇹'"] -> <span>🇱🇹 HASSLE-FREE STUDY IN LITHUANIA</span>
+  L1119: ["'✓'"] -> ✓
+  L1129: ["'✓'"] -> ✓
+  L1139: ["'✓'"] -> ✓
+  L1174: ["'✓'"] -> ✓
+  L1280: ["'🔒'"] -> 🔒 100% Confidential. Official European university counseling.
+
+=== MalaysiaStudyAbroadContent.tsx (11) ===
+  L616: ["'📍'"] -> 📍
+  L626: ["'🌐'"] -> 🌐
+  L636: ["'💰'"] -> 💰
+  L646: ["'🏙'"] -> 🏙️
+  L656: ["'📈'"] -> 📈
+  L666: ["'🛡'"] -> 🛡️
+  L676: ["'🎓'"] -> 🎓
+  L686: ["'🌦'"] -> 🌦️
+  L872: ["'📍'"] -> <span>📍</span>
+  L1190: ["'✓'"] -> ✓
+  L1292: ["'🔒'"] -> 🔒 100% Confidential. Official Malaysian partner counseling.
+
+=== MaltaStudyAbroadContent.tsx (13) ===
+  L257: ["'🇲'", "'🇹'"] -> <span>🇲🇹</span>
+  L579: ["'💡'"] -> 💡 <span className="font-semibold text-white">Admissions & Visa Advantage:</span> Malta offers fast-track admission turnarounds and streamlined visa assessment through VFS Global and Identity Malta.
+  L639: ["'📌'"] -> 📌 <span className="font-semibold text-slate-900">Flexible Rolling Intakes:</span> Unlike many European countries with only one or two intakes, Malta offers four rolling intakes (January, March, June, and September), enabling students to start without losing academic time.
+  L708: ["'💡'"] -> 💡 <span className="font-semibold text-white">Student Budget:</span> Average monthly student expenses in Malta typically range between <span className="text-[#22c55e] font-bold">€500 and €800</span> for shared accommodation, easily manageable with part-time work.
+  L730: ["'☀'"] -> icon: "☀️",
+  L736: ["'🍂'"] -> icon: "🍂",
+  L742: ["'🌤'"] -> icon: "🌤️",
+  L748: ["'🌸'"] -> icon: "🌸",
+  L900: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L904: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L908: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L935: ["'✓'"] -> ✓
+  L1053: ["'🔒'"] -> 🔒 100% Free Initial Assessment. Certified Malta student visa counselors.
+
+=== NewZealandStudyAbroadContent.tsx (10) ===
+  L553: ["'🇳'", "'🇿'"] -> 🇳🇿
+  L598: ["'🌊'"] -> 🌊
+  L608: ["'🗣'"] -> 🗣️
+  L618: ["'🌾'"] -> 🌾
+  L628: ["'🕊'"] -> 🕊️
+  L638: ["'💻'"] -> 💻
+  L648: ["'⭐'"] -> ⭐
+  L833: ["'📍'"] -> <span>📍</span>
+  L1151: ["'✓'"] -> ✓
+  L1254: ["'🔒'"] -> 🔒 100% Confidential. Official NZ education partner counseling.
+
+=== PolandStudyAbroadContent.tsx (13) ===
+  L370: ["'🏠'"] -> icon: "🏠",
+  L376: ["'🥗'"] -> icon: "🥗",
+  L382: ["'🚋'"] -> icon: "🚋",
+  L388: ["'📱'"] -> icon: "📱",
+  L394: ["'💡'"] -> icon: "💡",
+  L400: ["'☕'"] -> icon: "☕",
+  L653: ["'✓'"] -> ✓
+  L861: ["'📍'"] -> 📍 {uni.city}
+  L1160: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1164: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1168: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1172: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1195: ["'✓'"] -> ✓
+
+=== SingaporeStudyAbroadContent.tsx (12) ===
+  L490: ["'🇸'", "'🇬'"] -> 🇸🇬
+  L535: ["'📍'"] -> 📍
+  L545: ["'🏙'"] -> 🏙️
+  L555: ["'💡'"] -> 💡
+  L565: ["'🚇'"] -> 🚇
+  L575: ["'📈'"] -> 📈
+  L585: ["'🛡'"] -> 🛡️
+  L743: ["'📍'"] -> <span>📍</span>
+  L895: ["'☀'"] -> <span>☀️</span> Tropical Sunshine
+  L903: ["'🌧'"] -> <span>🌧️</span> Monsoon Showers & Air-Conditioning
+  L1078: ["'✓'"] -> ✓
+  L1181: ["'🔒'"] -> 🔒 100% Confidential. Official partner university counseling.
+
+=== SwitzerlandStudyAbroadContent.tsx (28) ===
+  L177: ["'🎓'"] -> icon: "🎓",
+  L182: ["'🌍'"] -> icon: "🌍",
+  L187: ["'🗣'"] -> icon: "🗣️",
+  L192: ["'⭐'"] -> icon: "⭐",
+  L197: ["'💳'"] -> icon: "💳",
+  L202: ["'💼'"] -> icon: "💼",
+  L207: ["'🚀'"] -> icon: "🚀",
+  L212: ["'🏆'"] -> icon: "🏆",
+  L221: ["'📍'"] -> icon: "📍",
+  L227: ["'🏔'"] -> icon: "🏔️",
+  L233: ["'🛂'"] -> icon: "🛂",
+  L239: ["'📈'"] -> icon: "📈",
+  L245: ["'🏞'"] -> icon: "🏞️",
+  L251: ["'💬'"] -> icon: "💬",
+  L257: ["'🏢'"] -> icon: "🏢",
+  L263: ["'🛡'"] -> icon: "🛡️",
+  L269: ["'✨'"] -> icon: "✨",
+  L275: ["'☀'"] -> icon: "☀️",
+  L670: ["'🇨'", "'🇭'"] -> 🇨🇭
+  L817: ["'✓'"] -> <span>✓ Swiss Standard Advantage</span>
+  L844: ["'📍'"] -> 📍 {uni.campuses}
+  L1018: ["'💡'"] -> 💡 <span className="font-bold">Student Cost Saving Tip:</span> Enrolling in student flatshares (WG - Wohngemeinschaft), using student canteen (mensa) subsidised meal plans, and holding an SBB Half-Fare travelcard cuts living expenses by 30% to 40%.
+  L1215: ["'🇨'", "'🇭'"] -> <span>🇨🇭 HASSLE-FREE STUDY IN SWITZERLAND</span>
+  L1229: ["'✓'"] -> ✓
+  L1239: ["'✓'"] -> ✓
+  L1249: ["'✓'"] -> ✓
+  L1284: ["'✓'"] -> ✓
+  L1392: ["'🔒'"] -> 🔒 100% Confidential. Official Swiss university and visa guidance.
+
+=== UAEStudyAbroadContent.tsx (12) ===
+  L549: ["'🇦'", "'🇪'"] -> 🇦🇪
+  L594: ["'📍'"] -> 📍
+  L604: ["'🏢'"] -> 🏢
+  L614: ["'💡'"] -> 💡
+  L624: ["'🌱'"] -> 🌱
+  L634: ["'🚇'"] -> 🚇
+  L644: ["'🌍'"] -> 🌍
+  L654: ["'📈'"] -> 📈
+  L664: ["'☀'"] -> ☀️
+  L848: ["'📍'"] -> <span>📍</span>
+  L1166: ["'✓'"] -> ✓
+  L1269: ["'🔒'"] -> 🔒 100% Confidential. Official UAE partner university counseling.
+
+=== UKStudyAbroadContent.tsx (13) ===
+  L268: ["'🇬'", "'🇧'"] -> <span>🇬🇧</span>
+  L345: ["'💰'"] -> icon: "💰",
+  L351: ["'📈'"] -> icon: "📈",
+  L357: ["'🎓'"] -> icon: "🎓",
+  L522: ["'🎓'"] -> <span className="text-xl">🎓</span>
+  L534: ["'🤝'"] -> <span className="text-xl">🤝</span>
+  L546: ["'💼'"] -> <span className="text-xl">💼</span>
+  L609: ["'💡'"] -> 💡 <span className="font-semibold text-white">University Selection:</span> No single factor determines suitability. Umang Career Consultancy helps you balance academic prestige, fee structures, scholarships, city cost of living, and graduate career outcomes.
+  L855: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L859: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L863: ["'✓'"] -> <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">✓</span>
+  L890: ["'✓'"] -> ✓
+  L1007: ["'🔒'"] -> 🔒 100% Free Initial Assessment. Certified British Council & UKVI counselors.
+
+=== USAStudyAbroadContent.tsx (14) ===
+  L308: ["'🏠'"] -> { item: "Accommodation (On-Campus Dorm / Flatshare)", cost: "$800 – $2,500", desc: "Campus dorms or off-campus shared apartments depending on city.", icon: "🏠" },
+  L309: ["'🛒'"] -> { item: "Food & Groceries", cost: "$100 – $500", desc: "University meal plans and local supermarkets (Trader Joe's, Costco, Walmart).", icon: "🛒" },
+  L310: ["'📚'"] -> { item: "Educational Materials & Books", cost: "$50 – $100", desc: "Textbooks, software subscriptions, laboratory materials & supplies.", icon: "📚" },
+  L311: ["'🚆'"] -> { item: "Transportation", cost: "$50 – $970", desc: "Campus shuttle buses, city subways, or vehicle insurance & fuel.", icon: "🚆" },
+  L312: ["'👕'"] -> { item: "Personal Expenses", cost: "$100 – $300", desc: "Clothing, personal grooming, laundry, and leisure activities.", icon: "👕" },
+  L313: ["'💡'"] -> { item: "Utilities (Electricity, Water, Heating)", cost: "$100 – $200", desc: "Shared utilities in private apartments; included in on-campus dorms.", icon: "💡" },
+  L314: ["'🏥'"] -> { item: "Health Insurance (Mandatory)", cost: "$100 – $300", desc: "University-approved international student health insurance policy.", icon: "🏥" },
+  L538: ["'✓'"] -> ✓
+  L737: ["'📍'"] -> 📍 {uni.state}
+  L994: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L998: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1002: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1006: ["'✓'"] -> <span className="text-[#22c55e] font-bold text-base">✓</span>
+  L1029: ["'✓'"] -> ✓
