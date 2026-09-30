@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import Link from "next/link";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 
 interface ServiceItem {
   id: string;
@@ -11,7 +12,7 @@ interface ServiceItem {
   icon: (props: { className?: string }) => React.JSX.Element;
 }
 
-const services: ServiceItem[] = [
+const defaultServices: ServiceItem[] = [
   {
     id: "career-counseling",
     title: "Career Counseling",
@@ -227,7 +228,17 @@ function ServiceRow({
   );
 }
 
-export default function ServicesSection() {
+export default function ServicesSection({
+  heading = homepageContent.services.heading,
+  items = homepageContent.services.items,
+}: {
+  heading?: string;
+  items?: HomepageContent["services"]["items"];
+}) {
+  const services: ServiceItem[] = items.map((item) => {
+    const match = defaultServices.find((service) => service.id === item.id) ?? defaultServices[0];
+    return { ...match, ...item, icon: match.icon };
+  });
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -271,7 +282,7 @@ export default function ServicesSection() {
           }`}
         >
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white tracking-tight">
-            Our Value Added Services
+            {heading}
           </h2>
           <div className="w-20 h-1 bg-[#e52928] mx-auto mt-4 rounded-full" />
         </div>

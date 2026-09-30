@@ -1,75 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import CmsImage from "@/components/CmsImage";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 
-interface SlideData {
-  id: number;
-  title: string;
-  subtitle: string;
-  miniTitle: string;
-  imageSrc: string;
-  imageAlt: string;
-}
-
-const slides: SlideData[] = [
-  {
-    id: 1,
-    title: "Want to Become an Eminent Doctor",
-    subtitle: "at Affordable Fees?",
-    miniTitle: "Explore India / Abroad options",
-    imageSrc: "/hero-doctor.png",
-    imageAlt: "Professional Doctor",
-  },
-  {
-    id: 2,
-    title: "Study in UK",
-    subtitle: "₹ 12 Lakhs*",
-    miniTitle: "Scholarship Upto £ 7,000*",
-    imageSrc:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Study in UK Students",
-  },
-  {
-    id: 3,
-    title: "Study in USA & Canada",
-    subtitle: "World-Class Education",
-    miniTitle: "STEM Programs & 3-Year Post-Study Work Visa",
-    imageSrc:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Study in USA & Canada",
-  },
-  {
-    id: 4,
-    title: "MBBS in Georgia & Russia",
-    subtitle: "₹ 15 Lakhs* Complete Package",
-    miniTitle: "NMC & WHO Recognized Medical Universities",
-    imageSrc:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "MBBS in Georgia and Russia",
-  },
-  {
-    id: 5,
-    title: "Study in Australia & Europe",
-    subtitle: "High PR Prospects",
-    miniTitle: "Up to 50% Merit Scholarships Available*",
-    imageSrc:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Study in Australia & Europe",
-  },
-  {
-    id: 6,
-    title: "Direct Admission in India",
-    subtitle: "B.Tech, MBA & Medical",
-    miniTitle: "Top NAAC 'A++' & NIRF Ranked Colleges",
-    imageSrc:
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
-    imageAlt: "Direct Admission in India",
-  },
-];
-
-export default function HeroSlider() {
+export default function HeroSlider({ hero = homepageContent.hero }: { hero?: HomepageContent["hero"] }) {
+  const slides = hero.slides;
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Continuous infinite autoplay - loops forever 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 1 ...
@@ -79,7 +16,7 @@ export default function HeroSlider() {
     }, 5500);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
     <section className="relative w-full max-w-full min-h-[780px] lg:min-h-[860px] h-[92vh] max-h-[960px] overflow-hidden overflow-x-hidden bg-gradient-to-r from-[#071f43] via-[#0b2b5c] to-[#0f3870] font-sans select-none">
@@ -151,10 +88,10 @@ export default function HeroSlider() {
                     }`}
                   >
                     <Link
-                      href="/contact-us"
+                      href={hero.contactButtonHref}
                       className="inline-flex items-center gap-3.5 px-7 py-3.5 bg-[#e52928] hover:bg-[#c91e1d] text-white font-semibold rounded-full shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-200 transform hover:scale-105 group"
                     >
-                      <span className="text-base sm:text-lg font-bold">Contact Now</span>
+                      <span className="text-base sm:text-lg font-bold">{hero.contactButtonLabel}</span>
                       <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center text-[#0f2e5a] shadow-sm transition-transform duration-200 group-hover:translate-x-0.5 shrink-0">
                         <svg className="w-3.5 h-3.5 fill-[#0f2e5a]" viewBox="0 0 24 24">
                           <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
@@ -167,7 +104,7 @@ export default function HeroSlider() {
                 {/* Right Column: Visual with Submerge Ken-Burns Zoom & Dissolve Animation */}
                 <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center items-center">
                   <div className="relative w-full max-w-[460px] h-[380px] sm:h-[460px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 bg-[#082247]/60">
-                    <Image
+                    <CmsImage
                       src={slide.imageSrc}
                       alt={slide.imageAlt}
                       fill

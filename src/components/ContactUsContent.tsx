@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import CmsImage from "@/components/CmsImage";
+import { contactContent, siteContent, type ContactContent, type SiteContent } from "@/content/cmsDefaults";
+import { submitWebsiteInquiry } from "@/lib/inquiries/submitInquiry";
 
 /* -------------------------------------------------------------
    SVG ICONS
@@ -58,40 +60,15 @@ function ExternalLinkIcon() {
 /* -------------------------------------------------------------
    ADVISOR DIRECTORY DATA
 ------------------------------------------------------------- */
-const ADVISORS = [
-  { country: "Canada", number: "+91 6355 600 204", raw: "+916355600204", flag: "CA" },
-  { country: "UK", number: "+91 7990 359 721", raw: "+917990359721", flag: "UK" },
-  { country: "Europe", number: "+91 7874 030 174", raw: "+917874030174", flag: "EU" },
-  { country: "Coaching", number: "+91 9724 913 620", raw: "+919724913620", flag: "COACH" },
-  { country: "MBBS In India", number: "+91 9898 434 909", raw: "+919898434909", flag: "MBBS-IN" },
-  { country: "MBBS In Abroad", number: "+91 9998 034 909", raw: "+919998034909", flag: "MBBS-ABROAD" },
-  { country: "MBBS B2B", number: "+91 8490 090 111", raw: "+918490090111", flag: "B2B" },
-];
-
-/* -------------------------------------------------------------
-   SERVICE OPTIONS FOR DROPDOWN
-------------------------------------------------------------- */
-const SERVICE_OPTIONS = [
-  "Study in Canada",
-  "Study in UK",
-  "Study in USA",
-  "Study in Australia & New Zealand",
-  "Study in Europe (Germany, France, Ireland, Italy, Poland, Latvia, Switzerland)",
-  "Study in UAE (Dubai Campuses)",
-  "MBBS Abroad (Georgia, Uzbekistan, Kazakhstan, Russia, Philippines)",
-  "MBBS in India (NEET Guidance)",
-  "IELTS / PTE / TOEFL / Duolingo Coaching",
-  "Student Visa Filing & SOP Guidance",
-  "Visitor / Tourist Visa",
-  "Spouse / Dependent Visa",
-  "Permanent Residency (PR) & Immigration",
-  "Education Loan & Forex Assistance",
-];
-
-/* -------------------------------------------------------------
-   MAIN COMPONENT
-------------------------------------------------------------- */
-export default function ContactUsContent() {
+export default function ContactUsContent({
+  content = contactContent,
+  site = siteContent,
+}: {
+  content?: ContactContent;
+  site?: SiteContent;
+}) {
+  const advisors = content.advisors;
+  const serviceOptions = content.serviceOptions;
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -104,15 +81,27 @@ export default function ContactUsContent() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formError, setFormError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate swift server submission
-    setTimeout(() => {
+    setFormError("");
+    try {
+      await submitWebsiteInquiry({
+        fullName: formData.fullName,
+        email: formData.email,
+        mobile: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        source: "Contact page",
+      });
       setIsSubmitting(false);
       setFormSubmitted(true);
-    }, 600);
+    } catch (error) {
+      setIsSubmitting(false);
+      setFormError(error instanceof Error ? error.message : "Could not send your inquiry.");
+    }
   };
 
   return (
@@ -124,8 +113,8 @@ export default function ContactUsContent() {
         {/* Subtle Network & Silhouette Background */}
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
         <div className="absolute top-0 right-0 w-full h-full opacity-5 pointer-events-none">
-          <Image
-            src="/world-map-network.png"
+          <CmsImage
+            src={content.backgroundImage}
             alt="World Map Background"
             fill
             className="object-cover object-center"
@@ -142,11 +131,11 @@ export default function ContactUsContent() {
             <div className="inline-flex items-center justify-center gap-3 mb-2">
               <span className="h-[3px] w-8 sm:w-10 bg-[#e52928] rounded-full inline-block animate-pulse" />
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
-                Just a Call Away...
+                {content.heroTitle}
               </h1>
             </div>
             <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto mt-2 font-medium">
-              Have questions about foreign university admissions, student visas, test coaching, or MBBS abroad? Reach out to our certified advisors today.
+              {content.heroSubtitle}
             </p>
           </div>
 
@@ -163,20 +152,21 @@ export default function ContactUsContent() {
                 </div>
                 <div className="space-y-1.5 text-xs sm:text-sm text-slate-300">
                   <h3 className="text-base sm:text-lg font-black text-white tracking-wide">
-                    Head Office:
+                    {content.headOfficeLabel}
                   </h3>
                   <p className="font-bold text-slate-200">
-                    Disha Education Consultancy ( DEC ABROAD )
+                    {content.companyLine}
                   </p>
                   <p className="text-slate-300 leading-relaxed">
-                    301-305, Pinnacle Business Park,
-                    <br />
-                    Above RBL Bank, Near Tulsidham Char Rasta,
-                    <br />
-                    Manjalpur, Vadodara – 390011. Gujarat
+                    {content.headOfficeAddress.split("\n").map((line) => (
+                      <React.Fragment key={line}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </p>
                   <div className="pt-2 text-[11px] text-slate-400 border-t border-white/10">
-                    <span className="font-semibold text-slate-300">VIP Road Branch:</span> FF-25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP Road, Vadodara – 390019
+                    <span className="font-semibold text-slate-300">{content.vipBranchLabel}</span> {content.vipBranchAddress}
                   </div>
                 </div>
               </div>
@@ -188,10 +178,10 @@ export default function ContactUsContent() {
                 </div>
                 <div className="w-full space-y-2 text-xs sm:text-sm">
                   <h3 className="text-base sm:text-lg font-black text-white tracking-wide mb-3">
-                    Meet Career Advisors:
+                    {content.advisorsTitle}
                   </h3>
                   <div className="space-y-2 divide-y divide-white/5">
-                    {ADVISORS.map((adv, idx) => (
+                    {advisors.map((adv, idx) => (
                       <div
                         key={idx}
                         className="flex items-center justify-between pt-2 first:pt-0 group"
@@ -213,13 +203,13 @@ export default function ContactUsContent() {
                     <div className="flex items-center justify-between pt-2">
                       <span className="text-amber-300 font-bold flex items-center gap-1.5">
                         <svg className="w-4 h-4 fill-current inline-block text-amber-300" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.27.36-.66.25-1.02A11.36 11.36 0 019 4.27c0-.55-.45-1-1-1H4.5c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" /></svg>
-                        <span>Hotline / WhatsApp:</span>
+                        <span>{content.hotlineLabel}</span>
                       </span>
                       <a
-                        href="tel:+919173186109"
+                        href={`tel:${site.phoneRaw}`}
                         className="font-extrabold text-amber-300 hover:text-white transition-colors"
                       >
-                        +91 91731 86109
+                        {site.phoneDisplay}
                       </a>
                     </div>
                   </div>
@@ -233,23 +223,23 @@ export default function ContactUsContent() {
                 </div>
                 <div className="space-y-1.5 text-xs sm:text-sm">
                   <h3 className="text-base sm:text-lg font-black text-white tracking-wide">
-                    Mail us for information
+                    {content.mailTitle}
                   </h3>
                   <p className="text-slate-300">
-                    Send us your transcripts or queries for an immediate response:
+                    {content.mailNote}
                   </p>
                   <div className="pt-1 space-y-1">
                     <a
-                      href="mailto:umangcareer2022@gmail.com"
+                      href={`mailto:${site.email}`}
                       className="text-white hover:text-rose-400 font-semibold block transition-colors"
                     >
-                      umangcareer2022@gmail.com
+                      {site.email}
                     </a>
                     <a
-                      href="mailto:info@decabroad.com"
+                      href={`mailto:${site.secondaryEmail}`}
                       className="text-slate-300 hover:text-white block transition-colors"
                     >
-                      info@decabroad.com
+                      {site.secondaryEmail}
                     </a>
                   </div>
                 </div>
@@ -260,10 +250,10 @@ export default function ContactUsContent() {
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="font-bold text-white">Office Hours:</span>
-                  <span className="text-slate-300">Mon – Sat: 10:00 AM – 7:00 PM</span>
+                  <span className="text-slate-300">{content.officeHours}</span>
                 </div>
                 <span className="text-emerald-400 font-semibold text-xs hidden sm:inline">
-                  Sunday by Appt
+                  {content.sundayNote}
                 </span>
               </div>
 
@@ -274,10 +264,10 @@ export default function ContactUsContent() {
               <div className="bg-[#0b1f3b] rounded-3xl p-6 sm:p-8 md:p-10 border border-white/10 shadow-2xl relative">
                 <div className="mb-6">
                   <h3 className="text-xl sm:text-2xl font-black text-white">
-                    Send Us an Inquiry
+                    {content.formTitle}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 mt-1">
-                    Fill out the form below and one of our regional admissions specialists will call or WhatsApp you within 24 hours.
+                    {content.formSubtitle}
                   </p>
                 </div>
 
@@ -360,7 +350,7 @@ export default function ContactUsContent() {
                           className="w-full px-4 py-3.5 rounded-xl bg-white text-slate-900 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#e52928] shadow-sm cursor-pointer"
                         >
                           <option value="">Services (Select Service)</option>
-                          {SERVICE_OPTIONS.map((srv, idx) => (
+                          {serviceOptions.map((srv, idx) => (
                             <option key={idx} value={srv} className="text-slate-900">
                               {srv}
                             </option>
@@ -409,6 +399,7 @@ export default function ContactUsContent() {
                         <SendIcon />
                         <span>{isSubmitting ? "Sending..." : "Send now"}</span>
                       </button>
+                      {formError ? <p className="mt-3 text-sm text-rose-300">{formError}</p> : null}
                     </div>
                   </form>
                 )}
@@ -448,7 +439,7 @@ export default function ContactUsContent() {
                 <ExternalLinkIcon />
               </a>
               <a
-                href="https://wa.me/919173186109"
+                href={`https://wa.me/${site.whatsappRaw}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-xl bg-[#25D366] hover:bg-emerald-600 text-white text-xs sm:text-sm font-bold inline-flex items-center gap-2 transition-all shadow-sm"

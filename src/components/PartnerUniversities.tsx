@@ -1,48 +1,22 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import Image from "next/image";
+import CmsImage from "@/components/CmsImage";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 
-interface Partner {
-  id: string;
-  name: string;
-  imageSrc: string;
-  width: number;
-  height: number;
-}
+const partnerSizes: Record<string, { width: number; height: number }> = {
+  constructor: { width: 140, height: 60 },
+  "johns-hopkins": { width: 120, height: 70 },
+  centennial: { width: 160, height: 60 },
+  middlesex: { width: 135, height: 70 },
+};
 
-const partners: Partner[] = [
-  {
-    id: "constructor",
-    name: "Constructor University",
-    imageSrc: "/partner-constructor.png",
-    width: 140,
-    height: 60,
-  },
-  {
-    id: "johns-hopkins",
-    name: "Johns Hopkins University",
-    imageSrc: "/partner-johns-hopkins.png",
-    width: 120,
-    height: 70,
-  },
-  {
-    id: "centennial",
-    name: "Centennial College",
-    imageSrc: "/partner-centennial.png",
-    width: 160,
-    height: 60,
-  },
-  {
-    id: "middlesex",
-    name: "Middlesex University London",
-    imageSrc: "/partner-middlesex.png",
-    width: 135,
-    height: 70,
-  },
-];
-
-export default function PartnerUniversities() {
+export default function PartnerUniversities({
+  partners = homepageContent.partners,
+}: {
+  partners?: HomepageContent["partners"];
+}) {
+  const items = partners.items;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -65,11 +39,15 @@ export default function PartnerUniversities() {
   }, []);
 
   // Duplicate logos multiple times for seamless, non-stop loop
+  const sizedPartners = items.map((partner) => ({
+    ...partner,
+    ...(partnerSizes[partner.id] ?? { width: 140, height: 60 }),
+  }));
   const repeatedPartners = [
-    ...partners,
-    ...partners,
-    ...partners,
-    ...partners,
+    ...sizedPartners,
+    ...sizedPartners,
+    ...sizedPartners,
+    ...sizedPartners,
   ];
 
   return (
@@ -88,7 +66,7 @@ export default function PartnerUniversities() {
           </div>
           
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#e52928] tracking-tight">
-            Our Partner Universities
+            {partners.heading}
           </h2>
 
           <div className="flex flex-col gap-1 items-center">
@@ -112,7 +90,7 @@ export default function PartnerUniversities() {
               className="shrink-0 flex items-center justify-center px-4 py-3 cursor-pointer group/logo transition-all duration-300"
             >
               <div className="relative transform transition-all duration-300 ease-out group-hover/logo:scale-125 group-hover/logo:-translate-y-1">
-                <Image
+                <CmsImage
                   src={partner.imageSrc}
                   alt={partner.name}
                   width={partner.width}

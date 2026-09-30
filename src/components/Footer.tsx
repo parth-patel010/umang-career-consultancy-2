@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import CmsImage from "@/components/CmsImage";
+import { siteContent, type SiteContent } from "@/content/cmsDefaults";
 
-export default function Footer() {
+export default function Footer({ site = siteContent }: { site?: SiteContent }) {
   return (
     <footer className="w-full bg-[#07172b] text-white pt-16 pb-8 border-t border-slate-800/80">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
@@ -17,9 +18,9 @@ export default function Footer() {
             <div>
               {/* Umang Career Consultancy Logo */}
               <Link href="/" className="inline-block mb-6">
-                <Image
-                  src="/logo.png"
-                  alt="Umang Career Consultancy"
+                <CmsImage
+                  src={site.logo}
+                  alt={site.logoAlt}
                   width={220}
                   height={60}
                   className="h-12 w-auto object-contain brightness-105"
@@ -38,8 +39,8 @@ export default function Footer() {
                     </svg>
                   ))}
                 </div>
-                <span className="font-semibold text-white">4.9/5</span>
-                <span className="text-slate-400">(1500+ Reviews)</span>
+                <span className="font-semibold text-white">{site.rating}</span>
+                <span className="text-slate-400">{site.reviewCount}</span>
               </div>
             </div>
 
@@ -47,7 +48,7 @@ export default function Footer() {
             <div className="flex items-center gap-2.5">
               {/* Facebook */}
               <a
-                href="https://facebook.com"
+                href={site.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -60,7 +61,7 @@ export default function Footer() {
 
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href={site.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -73,7 +74,7 @@ export default function Footer() {
 
               {/* YouTube */}
               <a
-                href="https://youtube.com"
+                href={site.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -86,7 +87,7 @@ export default function Footer() {
 
               {/* Twitter / X */}
               <a
-                href="https://x.com"
+                href={site.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="X (Twitter)"
@@ -99,7 +100,7 @@ export default function Footer() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/919173186109"
+                href={`https://wa.me/${site.whatsappRaw}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -127,8 +128,8 @@ export default function Footer() {
                   <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-.99-1.11z" />
                 </svg>
                 <div>
-                  <a href="tel:+919173186109" className="hover:text-white font-semibold transition-colors block">
-                    +91 91731 86109
+                  <a href={`tel:${site.phoneRaw}`} className="hover:text-white font-semibold transition-colors block">
+                    {site.phoneDisplay}
                   </a>
                 </div>
               </div>
@@ -139,12 +140,12 @@ export default function Footer() {
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
                 </svg>
                 <a
-                  href="https://wa.me/919173186109"
+                  href={`https://wa.me/${site.whatsappRaw}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  +91 91731 86109
+                  {site.whatsappDisplay}
                 </a>
               </div>
 
@@ -153,8 +154,8 @@ export default function Footer() {
                 <svg className="w-4 h-4 fill-[#10b981] shrink-0 mt-0.5" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-                <a href="mailto:umangcareer2022@gmail.com" className="hover:text-white transition-colors">
-                  umangcareer2022@gmail.com
+                <a href={`mailto:${site.email}`} className="hover:text-white transition-colors">
+                  {site.email}
                 </a>
               </div>
 
@@ -164,7 +165,7 @@ export default function Footer() {
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                 </svg>
                 <span className="leading-relaxed">
-                  FF-25 Shree Siddeshwar Plaza, Beside Super Bakery New Vip Road, KhodiyarNagar, Vadodara Gujarat India, 390019
+                  {site.address}
                 </span>
               </div>
             </div>
@@ -279,7 +280,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-center md:text-right">
-            © 2026 <span className="text-white font-semibold">Umang Career Consultancy</span>. All Rights Reserved.
+            © {site.copyrightYear} <span className="text-white font-semibold">{site.companyName}</span>. All Rights Reserved.
           </div>
 
         </div>

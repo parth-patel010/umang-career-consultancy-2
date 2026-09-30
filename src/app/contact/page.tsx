@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import ContactUsContent from "@/components/ContactUsContent";
+import { contactContent, siteContent, type ContactContent, type SiteContent } from "@/content/cmsDefaults";
+import { getMergedPageData } from "@/lib/cms/content";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Contact Us | Meet Career Advisors & Head Office Vadodara | Umang Career Consultancy",
@@ -14,6 +18,8 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function ContactPage() {
-  return <ContactUsContent />;
+export default async function ContactPage() {
+  const content = ((await getMergedPageData("contact")) ?? contactContent) as ContactContent;
+  const site = ((await getMergedPageData("site")) ?? siteContent) as SiteContent;
+  return <ContactUsContent content={content} site={site} />;
 }

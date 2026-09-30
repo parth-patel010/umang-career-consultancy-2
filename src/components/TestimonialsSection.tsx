@@ -1,47 +1,15 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import CmsImage from "@/components/CmsImage";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 
-interface Testimonial {
-  id: string;
-  name: string;
-  rating: number;
-  review: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: "divyam-thakor",
-    name: "Divyam Thakor",
-    rating: 5,
-    review:
-      "I am very thankful to Umang Career Consultancy for great guidance & help. I got admission in Tbilisi Medical Academy. TMA is best medical university, there is no such pressure like other universities & I am very satisfied with their education system.",
-  },
-  {
-    id: "priya-patel",
-    name: "Priya Patel",
-    rating: 5,
-    review:
-      "The entire visa process was completely hassle-free with Umang Career Consultancy. They guided me step-by-step for my Canada student visa and university shortlist. Their counseling and mock interview sessions gave me huge confidence!",
-  },
-  {
-    id: "rahul-sharma",
-    name: "Rahul Sharma",
-    rating: 5,
-    review:
-      "From university selection to forex and loan orientation, team Umang Career Consultancy was always available to support me. I am now studying my Master's in the UK without any documentation stress. Highly recommended!",
-  },
-  {
-    id: "ananya-desai",
-    name: "Ananya Desai",
-    rating: 5,
-    review:
-      "Transparent advice, honest timelines, and no fake promises. Umang Career Consultancy helped me secure my Australian student visa in record time. Thank you so much for turning my study abroad dream into reality!",
-  },
-];
-
-export default function TestimonialsSection() {
+export default function TestimonialsSection({
+  testimonials = homepageContent.testimonials,
+}: {
+  testimonials?: HomepageContent["testimonials"];
+}) {
+  const items = testimonials.items;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -70,39 +38,21 @@ export default function TestimonialsSection() {
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+      setCurrentIndex((prev) => (prev + 1) % items.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, [isPaused, items.length]);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev <= 0 ? testimonials.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev <= 0 ? items.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => (prev + 1) % items.length);
   };
 
-  const current = testimonials[currentIndex];
-
-  const posters = [
-    {
-      id: "premkumar-suthar",
-      title: "Premkumar Suthar - UK Visa Approval",
-      imageSrc: "/achiever-poster-1.jpg",
-      studentName: "Premkumar Suthar",
-      university: "Bangor University, UK",
-      tag: "UK Student Visa",
-    },
-    {
-      id: "shivam-patel",
-      title: "Shivam Patel - UK Visa Approval",
-      imageSrc: "/achiever-poster-2.jpg",
-      studentName: "Shivam Patel",
-      university: "Ravensbourne University London",
-      tag: "UK Student Visa",
-    },
-  ];
+  const current = items[currentIndex];
+  const posters = testimonials.posters;
 
   return (
     <section
@@ -130,13 +80,13 @@ export default function TestimonialsSection() {
           <div className="inline-flex items-center justify-center gap-3 mb-3">
             <span className="w-6 sm:w-8 h-[2px] bg-[#e52928] rounded-full inline-block" />
             <span className="text-white text-xs sm:text-sm font-bold tracking-widest uppercase">
-              UMANG CAREER CONSULTANCY
+              {testimonials.eyebrow}
             </span>
             <span className="w-6 sm:w-8 h-[2px] bg-[#e52928] rounded-full inline-block" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-white tracking-tight">
-            Successful Achievers
+            {testimonials.heading}
           </h2>
         </div>
 
@@ -152,9 +102,9 @@ export default function TestimonialsSection() {
             }`}
           >
             <div className="relative w-full max-w-[580px]">
-              <Image
-                src="/testimonials-illustration.png"
-                alt="Successful Achievers - Umang Career Consultancy"
+              <CmsImage
+                src={testimonials.imageSrc}
+                alt={testimonials.imageAlt}
                 width={640}
                 height={427}
                 priority
@@ -183,7 +133,7 @@ export default function TestimonialsSection() {
 
                 {/* 5 Yellow Stars */}
                 <div className="flex items-center gap-1.5 mb-4 text-[#f59e0b]">
-                  {[...Array(current.rating)].map((_, i) => (
+                  {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
                       className="w-4 h-4 sm:w-5 sm:h-5 fill-current"
@@ -202,7 +152,7 @@ export default function TestimonialsSection() {
 
               {/* Progress Indicator Dots */}
               <div className="flex items-center gap-2 pt-2 border-t border-white/5">
-                {testimonials.map((_, idx) => (
+                {items.map((_, idx) => (
                   <button
                     key={idx}
                     type="button"
@@ -270,7 +220,7 @@ export default function TestimonialsSection() {
               Visa Approval Highlights
             </h3>
             <p className="text-sm text-gray-300 font-light mt-1.5">
-              Recent student visa approvals secured by Umang Career Consultancy
+              {testimonials.posterCaption}
             </p>
           </div>
 
@@ -283,7 +233,7 @@ export default function TestimonialsSection() {
               >
                 <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-[0_16px_36px_rgba(0,0,0,0.35)] group-hover:border-[#e52928]/50 group-hover:shadow-[0_20px_45px_rgba(229,41,40,0.25)] transition-all duration-300">
                   <div className="relative aspect-[3/4] w-full">
-                    <Image
+                    <CmsImage
                       src={poster.imageSrc}
                       alt={poster.title}
                       fill

@@ -1,53 +1,14 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 
-interface WhyChooseItem {
-  id: string;
-  title: string;
-  description: string;
-}
-
-const whyChoosePoints: WhyChooseItem[] = [
-  {
-    id: "student-focused",
-    title: "Student-Focused Guidance",
-    description:
-      "We understand that every student's academic background and career goal is different.",
-  },
-  {
-    id: "personalized-counselling",
-    title: "Personalized Counselling",
-    description:
-      "Our guidance is tailored to your profile, preferences, and future plans.",
-  },
-  {
-    id: "transparent-process",
-    title: "Transparent Process",
-    description:
-      "We believe in providing clear information about courses, institutions, applications, and associated processes.",
-  },
-  {
-    id: "end-to-end",
-    title: "End-to-End Assistance",
-    description:
-      "From the first counselling session to your study-abroad journey, we are here to guide you at every important step.",
-  },
-  {
-    id: "dedicated-support",
-    title: "Dedicated Support",
-    description:
-      "Get assistance whenever you need guidance throughout your application journey.",
-  },
-  {
-    id: "career-oriented",
-    title: "Career-Oriented Approach",
-    description:
-      "We focus not only on studying abroad but also on helping students make decisions aligned with their long-term career goals.",
-  },
-];
-
-export default function WhyChooseUs() {
+export default function WhyChooseUs({
+  whyChoose = homepageContent.whyChoose,
+}: {
+  whyChoose?: HomepageContent["whyChoose"];
+}) {
+  const whyChoosePoints = whyChoose.points;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -79,8 +40,8 @@ export default function WhyChooseUs() {
         {/* Header: Why Choose Umang Career Consultancy */}
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight leading-tight">
-            Why Choose{" "}
-            <span className="text-[#f5a623]">Umang Career Consultancy</span>
+            {whyChoose.headingLead}{" "}
+            <span className="text-[#f5a623]">{whyChoose.headingAccent}</span>
           </h2>
         </div>
 

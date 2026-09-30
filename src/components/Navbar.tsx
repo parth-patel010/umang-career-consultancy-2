@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import CmsImage from "@/components/CmsImage";
+import { siteContent, type SiteContent } from "@/content/cmsDefaults";
 
 // Clearly visible, crisp red downward caret arrow matching reference
 const CaretDownIcon = () => (
@@ -16,7 +17,7 @@ const CaretDownIcon = () => (
   </svg>
 );
 
-export default function Navbar() {
+export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
   const [activeItem, setActiveItem] = useState("Home");
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,9 +37,9 @@ export default function Navbar() {
             onClick={() => setActiveItem("Home")}
             className="flex-shrink-0 flex items-center py-2 transition-transform duration-200 hover:opacity-95"
           >
-            <Image
-              src="/logo.png"
-              alt="Umang Career Consultancy"
+            <CmsImage
+              src={site.logo}
+              alt={site.logoAlt}
               width={340}
               height={50}
               priority

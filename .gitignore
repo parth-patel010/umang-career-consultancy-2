@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# CMS data includes visitor inquiries
+/data/cms.json
+/public/uploads/*
+!/public/uploads/.gitkeep

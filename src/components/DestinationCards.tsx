@@ -1,69 +1,15 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import CmsImage from "@/components/CmsImage";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 
-interface Destination {
-  id: string;
-  name: string;
-  imageSrc: string;
-  flagSrc: string;
-  href: string;
-}
-
-const destinations: Destination[] = [
-  {
-    id: "europe",
-    name: "Europe",
-    imageSrc:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85",
-    flagSrc: "https://flagcdn.com/w80/eu.png",
-    href: "/study-abroad/europe",
-  },
-  {
-    id: "new-zealand",
-    name: "New-Zealand",
-    imageSrc:
-      "https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=900&q=85",
-    flagSrc: "https://flagcdn.com/w80/nz.png",
-    href: "/study-abroad/new-zealand",
-  },
-  {
-    id: "canada",
-    name: "Canada",
-    imageSrc:
-      "https://images.unsplash.com/photo-1517935706615-2717063c2225?auto=format&fit=crop&w=900&q=85",
-    flagSrc: "https://flagcdn.com/w80/ca.png",
-    href: "/study-abroad/canada",
-  },
-  {
-    id: "usa",
-    name: "USA",
-    imageSrc:
-      "https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=900&q=85",
-    flagSrc: "https://flagcdn.com/w80/us.png",
-    href: "/study-abroad/usa",
-  },
-  {
-    id: "uk",
-    name: "UK",
-    imageSrc:
-      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=85",
-    flagSrc: "https://flagcdn.com/w80/gb.png",
-    href: "/study-abroad/uk",
-  },
-  {
-    id: "australia",
-    name: "Australia",
-    imageSrc:
-      "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=900&q=85",
-    flagSrc: "https://flagcdn.com/w80/au.png",
-    href: "/study-abroad/australia",
-  },
-];
-
-export default function DestinationCards() {
+export default function DestinationCards({
+  destinations = homepageContent.destinations,
+}: {
+  destinations?: HomepageContent["destinations"];
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [offset, setOffset] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -213,7 +159,7 @@ export default function DestinationCards() {
                 <div className="relative w-full">
                   {/* Image Container with rounded corners and overflow-hidden */}
                   <div className="relative aspect-[1/1] w-full rounded-xl overflow-hidden bg-slate-100">
-                    <Image
+                    <CmsImage
                       src={dest.imageSrc}
                       alt={dest.name}
                       fill
@@ -224,7 +170,7 @@ export default function DestinationCards() {
 
                   {/* Country Flag Badge: Outside image overflow-hidden so it freely overlaps boundaries */}
                   <div className="absolute -bottom-3 right-3 w-16 h-10 sm:w-18 sm:h-11 rounded-lg shadow-lg border-[3px] border-white overflow-hidden z-20 bg-white">
-                    <Image
+                    <CmsImage
                       src={dest.flagSrc}
                       alt={`${dest.name} Flag`}
                       fill

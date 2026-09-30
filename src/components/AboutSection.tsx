@@ -1,19 +1,12 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import CmsImage from "@/components/CmsImage";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 
-const features = [
-  "Clear career counselling for students and parents",
-  "Honest timelines and realistic budget planning",
-  "Help with admissions and documentation",
-  "Student, spouse and visitor visa guidance",
-  "Education loan and forex process orientation",
-  "Vadodara office with remote counselling options",
-];
-
-export default function AboutSection() {
+export default function AboutSection({ about = homepageContent.about }: { about?: HomepageContent["about"] }) {
+  const features = about.features;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -57,9 +50,9 @@ export default function AboutSection() {
             <div className="relative w-full max-w-[620px]">
               {/* Main Visual */}
               <div className="relative p-2">
-                <Image
-                  src="/about-us-counseling.png"
-                  alt="Umang Career Consultancy Study Abroad Counseling"
+                <CmsImage
+                  src={about.imageSrc}
+                  alt={about.imageAlt}
                   width={640}
                   height={427}
                   priority
@@ -80,7 +73,7 @@ export default function AboutSection() {
           >
             {/* Red Bold Main Title - Slides from right */}
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#e52928] tracking-tight uppercase mb-6 sm:mb-8 leading-tight">
-              ABOUT UMANG CAREER CONSULTANCY
+              {about.heading}
             </h2>
 
             {/* Checklist items with red checkmarks - Staggered slide from right */}
@@ -115,7 +108,7 @@ export default function AboutSection() {
 
                   {/* Feature Text */}
                   <span className="text-[#1a2e4c] font-medium text-base sm:text-lg leading-snug">
-                    {point}
+                    {point.text}
                   </span>
                 </div>
               ))}
@@ -131,10 +124,10 @@ export default function AboutSection() {
               style={{ transitionDelay: isVisible ? "750ms" : "0ms" }}
             >
               <Link
-                href="/about-us"
+                href={about.buttonHref}
                 className="inline-flex items-center gap-2.5 px-8 py-3.5 bg-[#e52928] hover:bg-[#c91e1d] text-white font-bold text-base sm:text-lg rounded-xl shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-200 transform hover:scale-105 group"
               >
-                <span>About Us</span>
+                <span>{about.buttonLabel}</span>
                 <span className="transition-transform duration-200 group-hover:translate-x-1 font-black text-xl">
                   »
                 </span>

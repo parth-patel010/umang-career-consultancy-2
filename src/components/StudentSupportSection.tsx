@@ -1,34 +1,18 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import CmsImage from "@/components/CmsImage";
+import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
+import { submitWebsiteInquiry } from "@/lib/inquiries/submitInquiry";
 
-const availableServices = [
-  "Choose services*",
-  "Student Visa",
-  "Visitor Visa",
-  "Spouse Visa",
-  "Career Counseling",
-  "University Selection",
-  "SOP & Resume Preparation",
-  "PR & Immigration",
-  "Education Loan Support",
-  "Forex Services",
-  "Air Ticket & Travel Insurance",
-  "Pre-Departure Guidance",
-];
-
-const checklistPoints = [
-  "Accommodation Support",
-  "Local representative in each country",
-  "More than 95% visa success ratio",
-  "Faculties & Staff Members are Humble & Grounded",
-  "Transparent & Responsive",
-  "Student Satisfaction",
-];
-
-export default function StudentSupportSection() {
+export default function StudentSupportSection({
+  support = homepageContent.studentSupport,
+}: {
+  support?: HomepageContent["studentSupport"];
+}) {
+  const availableServices = support.services;
+  const checklistPoints = support.checklist;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -39,6 +23,8 @@ export default function StudentSupportSection() {
   const [message, setMessage] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -75,16 +61,36 @@ export default function StudentSupportSection() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setName("");
-      setPhone("");
-      setSelectedService("Choose services*");
-      setMessage("");
-      setIsSubmitted(false);
-    }, 4000);
+    if (selectedService === availableServices[0]) {
+      setFormError("Please choose a service.");
+      return;
+    }
+    setIsSubmitting(true);
+    setFormError("");
+    try {
+      await submitWebsiteInquiry({
+        fullName: name,
+        email: "",
+        mobile: phone,
+        service: selectedService,
+        message,
+        source: "Homepage student support",
+      });
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setName("");
+        setPhone("");
+        setSelectedService(availableServices[0] ?? "Choose services*");
+        setMessage("");
+        setIsSubmitted(false);
+      }, 4000);
+    } catch (error) {
+      setFormError(error instanceof Error ? error.message : "Could not send your inquiry.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -94,8 +100,8 @@ export default function StudentSupportSection() {
     >
       {/* Background Dotted World Map Network Image */}
       <div className="absolute inset-0 flex items-center justify-center opacity-40 pointer-events-none select-none z-0">
-        <Image
-          src="/world-map-network.png"
+        <CmsImage
+          src={support.mapImage}
           alt="Global Network Map"
           width={1300}
           height={480}
@@ -115,14 +121,14 @@ export default function StudentSupportSection() {
           <div className="inline-flex items-center justify-center gap-3 mb-2.5">
             <span className="w-5 sm:w-6 h-[2px] bg-[#e52928] rounded-full inline-block" />
             <span className="text-[#e52928] text-sm sm:text-base font-semibold tracking-wide uppercase">
-              Get in touch
+              {support.eyebrow}
             </span>
             <span className="w-5 sm:w-6 h-[2px] bg-[#0f2e5a] rounded-full inline-block" />
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight">
-            <span className="text-[#e52928]">24*7 Hours </span>
-            <span className="text-[#0f2e5a]">Student Support</span>
+            <span className="text-[#e52928]">{support.titleLead}</span>
+            <span className="text-[#0f2e5a]">{support.titleRest}</span>
           </h2>
         </div>
 
@@ -269,7 +275,8 @@ export default function StudentSupportSection() {
               >
                 <button
                   type="submit"
-                  className="inline-flex items-center gap-2.5 px-9 py-3.5 bg-[#e52928] hover:bg-[#c91e1d] text-white font-bold text-base sm:text-lg rounded-full shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-200 transform hover:scale-105 cursor-pointer active:scale-95"
+                  disabled={isSubmitting}
+                  className="inline-flex items-center gap-2.5 px-9 py-3.5 bg-[#e52928] hover:bg-[#c91e1d] text-white font-bold text-base sm:text-lg rounded-full shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-200 transform hover:scale-105 cursor-pointer active:scale-95 disabled:opacity-60"
                 >
                   <svg
                     className="w-4 h-4 fill-current"
@@ -277,8 +284,10 @@ export default function StudentSupportSection() {
                   >
                     <path d="M2.01 3L2 10l15 2-15 2 .01 7L23 12 2.01 3z" />
                   </svg>
-                  <span>Submit</span>
+                  <span>{isSubmitting ? "Sending..." : "Submit"}</span>
                 </button>
+
+                {formError ? <p className="mt-3 text-sm font-semibold text-red-600">{formError}</p> : null}
 
                 {isSubmitted && (
                   <p className="mt-3 text-sm font-semibold text-emerald-600 animate-pulse">
@@ -321,7 +330,7 @@ export default function StudentSupportSection() {
                     </svg>
                   </span>
                   <span className="text-[#1a2e4c] font-medium text-base sm:text-lg leading-snug">
-                    {point}
+                    {point.text}
                   </span>
                 </div>
               ))}
