@@ -28,14 +28,6 @@ export const homepageContent = {
     contactButtonHref: "/contact-us",
     slides: [
       {
-        id: "doctor",
-        title: "Want to Become an Eminent Doctor",
-        subtitle: "at Affordable Fees?",
-        miniTitle: "Explore India / Abroad options",
-        imageSrc: "/hero-doctor.png",
-        imageAlt: "Professional Doctor",
-      },
-      {
         id: "uk",
         title: "Study in UK",
         subtitle: "₹ 12 Lakhs*",
