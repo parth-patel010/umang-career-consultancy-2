@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import VibrantCountryFlag from "@/components/VibrantCountryFlag";
 
 /* -------------------------------------------------------------
    SVG ICONS
@@ -55,220 +56,17 @@ function CloseIcon() {
 }
 
 /* -------------------------------------------------------------
-   SVG FLAG BADGES (Crisp, High-Quality Rounded Badges)
+   SVG FLAG BADGES (Crisp, High-Quality Rounded Badges as per Umang Logo Aesthetic)
 ------------------------------------------------------------- */
-function FlagBadge({ country }: { country: string }) {
-  switch (country.toLowerCase()) {
-    case "usa":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="42" fill="#b22234" />
-          <path d="M0,6h60 M0,12h60 M0,18h60 M0,24h60 M0,30h60 M0,36h60" stroke="#fff" strokeWidth="3" />
-          <rect width="26" height="23" fill="#3c3b6e" />
-          <circle cx="6" cy="6" r="1.5" fill="#fff" />
-          <circle cx="13" cy="6" r="1.5" fill="#fff" />
-          <circle cx="20" cy="6" r="1.5" fill="#fff" />
-          <circle cx="9.5" cy="11.5" r="1.5" fill="#fff" />
-          <circle cx="16.5" cy="11.5" r="1.5" fill="#fff" />
-          <circle cx="6" cy="17" r="1.5" fill="#fff" />
-          <circle cx="13" cy="17" r="1.5" fill="#fff" />
-          <circle cx="20" cy="17" r="1.5" fill="#fff" />
-        </svg>
-      );
-    case "germany":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="14" fill="#000" />
-          <rect y="14" width="60" height="14" fill="#dd0000" />
-          <rect y="28" width="60" height="14" fill="#ffce00" />
-        </svg>
-      );
-    case "uk":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <clipPath id="uk-clip">
-            <rect width="60" height="42" />
-          </clipPath>
-          <g clipPath="url(#uk-clip)">
-            <rect width="60" height="42" fill="#012169" />
-            <path d="M0 0L60 42M60 0L0 42" stroke="#fff" strokeWidth="8" />
-            <path d="M0 0L60 42M60 0L0 42" stroke="#c8102e" strokeWidth="4" />
-            <path d="M30 0v42M0 21h60" stroke="#fff" strokeWidth="12" />
-            <path d="M30 0v42M0 21h60" stroke="#c8102e" strokeWidth="7" />
-          </g>
-        </svg>
-      );
-    case "france":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="20" height="42" fill="#002395" />
-          <rect x="20" width="20" height="42" fill="#fff" />
-          <rect x="40" width="20" height="42" fill="#ed2939" />
-        </svg>
-      );
-    case "canada":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="15" height="42" fill="#ff0000" />
-          <rect x="15" width="30" height="42" fill="#fff" />
-          <rect x="45" width="15" height="42" fill="#ff0000" />
-          {/* Stylized Maple Leaf */}
-          <path
-            d="M30 11l2 5 4-2-1 4 5 1-4 3 2 4-5-2-1 6-4-6-5 2 2-4-4-3 5-1-1-4 4 2z"
-            fill="#ff0000"
-          />
-        </svg>
-      );
-    case "australia":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="42" fill="#00008b" />
-          <rect width="30" height="21" fill="#012169" />
-          <path d="M0 0L30 21M30 0L0 21" stroke="#fff" strokeWidth="4" />
-          <path d="M0 0L30 21M30 0L0 21" stroke="#c8102e" strokeWidth="2" />
-          <path d="M15 0v21M0 10.5h30" stroke="#fff" strokeWidth="6" />
-          <path d="M15 0v21M0 10.5h30" stroke="#c8102e" strokeWidth="3.5" />
-          {/* Southern Cross stars */}
-          <circle cx="15" cy="31" r="3" fill="#fff" />
-          <circle cx="45" cy="11" r="1.5" fill="#fff" />
-          <circle cx="51" cy="18" r="1.5" fill="#fff" />
-          <circle cx="45" cy="27" r="1.5" fill="#fff" />
-          <circle cx="39" cy="20" r="1.5" fill="#fff" />
-        </svg>
-      );
-    case "new zealand":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="42" fill="#00247d" />
-          <rect width="30" height="21" fill="#012169" />
-          <path d="M0 0L30 21M30 0L0 21" stroke="#fff" strokeWidth="4" />
-          <path d="M0 0L30 21M30 0L0 21" stroke="#cc142b" strokeWidth="2" />
-          <path d="M15 0v21M0 10.5h30" stroke="#fff" strokeWidth="6" />
-          <path d="M15 0v21M0 10.5h30" stroke="#cc142b" strokeWidth="3.5" />
-          {/* Red stars with white border */}
-          <circle cx="46" cy="11" r="2.2" fill="#cc142b" stroke="#fff" strokeWidth="0.8" />
-          <circle cx="52" cy="18" r="2" fill="#cc142b" stroke="#fff" strokeWidth="0.8" />
-          <circle cx="46" cy="28" r="2.2" fill="#cc142b" stroke="#fff" strokeWidth="0.8" />
-          <circle cx="40" cy="20" r="1.8" fill="#cc142b" stroke="#fff" strokeWidth="0.8" />
-        </svg>
-      );
-    case "malta":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="30" height="42" fill="#fff" />
-          <rect x="30" width="30" height="42" fill="#cf1020" />
-          {/* George cross detail */}
-          <rect x="5" y="5" width="10" height="10" fill="#bbb" stroke="#888" strokeWidth="0.8" />
-        </svg>
-      );
-    case "poland":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="21" fill="#fff" />
-          <rect y="21" width="60" height="21" fill="#dc143c" />
-        </svg>
-      );
-    case "ireland":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="20" height="42" fill="#169b62" />
-          <rect x="20" width="20" height="42" fill="#fff" />
-          <rect x="40" width="20" height="42" fill="#ff883e" />
-        </svg>
-      );
-    case "denmark":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="42" fill="#c60c30" />
-          <path d="M20 0v42M0 21h60" stroke="#fff" strokeWidth="7" />
-        </svg>
-      );
-    case "latvia":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="17" fill="#9e3039" />
-          <rect y="17" width="60" height="8" fill="#fff" />
-          <rect y="25" width="60" height="17" fill="#9e3039" />
-        </svg>
-      );
-    case "hungary":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="14" fill="#ce2939" />
-          <rect y="14" width="60" height="14" fill="#fff" />
-          <rect y="28" width="60" height="14" fill="#477050" />
-        </svg>
-      );
-    case "czech republic":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="21" fill="#fff" />
-          <rect y="21" width="60" height="21" fill="#d7141a" />
-          <polygon points="0,0 28,21 0,42" fill="#11457e" />
-        </svg>
-      );
-    case "malaysia":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="42" fill="#cc0000" />
-          <path d="M0,6h60 M0,12h60 M0,18h60 M0,24h60 M0,30h60 M0,36h60" stroke="#fff" strokeWidth="3" />
-          <rect width="30" height="22" fill="#000066" />
-          <circle cx="14" cy="11" r="7" fill="#ffcc00" />
-          <circle cx="16" cy="11" r="6" fill="#000066" />
-          <polygon points="20,11 22,13 24,11 22,9" fill="#ffcc00" />
-        </svg>
-      );
-    case "singapore":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="21" fill="#ed2939" />
-          <rect y="21" width="60" height="21" fill="#fff" />
-          <circle cx="12" cy="10.5" r="6" fill="#fff" />
-          <circle cx="14" cy="10.5" r="5" fill="#ed2939" />
-          <circle cx="17" cy="8" r="1" fill="#fff" />
-          <circle cx="19" cy="10.5" r="1" fill="#fff" />
-          <circle cx="17" cy="13" r="1" fill="#fff" />
-        </svg>
-      );
-    case "italy":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="20" height="42" fill="#009246" />
-          <rect x="20" width="20" height="42" fill="#fff" />
-          <rect x="40" width="20" height="42" fill="#ce2b37" />
-        </svg>
-      );
-    case "united arab emirates":
-    case "uae":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="14" fill="#00732f" />
-          <rect y="14" width="60" height="14" fill="#fff" />
-          <rect y="28" width="60" height="14" fill="#000" />
-          <rect width="18" height="42" fill="#ff0000" />
-        </svg>
-      );
-    case "switzerland":
-      return (
-        <svg className="w-9 h-7 rounded shadow-md border border-white/60" viewBox="0 0 32 32">
-          <rect width="32" height="32" fill="#da291c" />
-          <rect x="13" y="6" width="6" height="20" fill="#ffffff" />
-          <rect x="6" y="13" width="20" height="6" fill="#ffffff" />
-        </svg>
-      );
-    case "lithuania":
-      return (
-        <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-          <rect width="60" height="14" fill="#fdb913" />
-          <rect y="14" width="60" height="14" fill="#006a44" />
-          <rect y="28" width="60" height="14" fill="#c1272d" />
-        </svg>
-      );
-    default:
-      return (
-        <svg className="w-8 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" strokeWidth="1.8" /><path strokeWidth="1.6" d="M3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 010 18M12 3a14 14 0 000 18" /></svg>
-      );
-  }
+function FlagBadge({ country, className = "" }: { country: string; className?: string }) {
+  return (
+    <VibrantCountryFlag
+      country={country}
+      size="md"
+      variant="badge"
+      className={className}
+    />
+  );
 }
 
 /* -------------------------------------------------------------

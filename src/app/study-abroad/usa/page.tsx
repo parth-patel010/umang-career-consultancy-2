@@ -2,20 +2,21 @@ import type { Metadata } from "next";
 import USAStudyAbroadContent from "@/components/USAStudyAbroadContent";
 
 export const metadata: Metadata = {
-  title: "Study in the USA | 3-Year STEM OPT, Top Universities & F-1 Visa | Umang Career Consultancy",
+  title: "Study in the USA & F-1 Student Visa | Umang Career Consultancy",
   description:
-    "Comprehensive guide to studying in the United States with Umang Career Consultancy. Explore top universities (Stanford, Duke, BU, Purdue, USC), 36-month STEM OPT, F-1 visa interview prep, tuition fees, monthly living costs, and scholarships.",
+    "Achieve Your American Dream: Study in the USA with Umang Career Consultancy. Expert F-1 visa coaching, meticulous financial mapping, dedicated SEVIS compliance, Form I-20, and 3-Year STEM OPT guidance.",
   keywords: [
     "Study in USA",
-    "Study in the United States",
-    "Study Abroad USA",
-    "STEM OPT USA",
+    "USA Student Visa",
     "F-1 Student Visa",
+    "Form I-20",
+    "SEVIS Fee",
+    "STEM OPT USA",
     "US Universities for Indian Students",
-    "Stanford University",
-    "Purdue University",
-    "US Higher Education System",
+    "Four-Year Authorized Cap USCIS",
+    "F-1 Visa Interview Questions",
     "Umang Career Consultancy USA",
+    "Vadodara USA Visa Consultant",
   ],
 };
 

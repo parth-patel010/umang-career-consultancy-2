@@ -2,22 +2,18 @@ import type { Metadata } from "next";
 import AustraliaStudyAbroadContent from "@/components/AustraliaStudyAbroadContent";
 
 export const metadata: Metadata = {
-  title: "Study in Australia | Go8 Universities, ECTA 4-Yr PSW & Visa | Umang Career Consultancy",
+  title: "Australian Student Visa & Study in Australia | Umang Career Consultancy",
   description:
-    "Study in Australia with Umang Career Consultancy. Comprehensive guidance on Group of Eight (Go8) universities, Subclass 500 Student Visa, Australia–India ECTA extended post-study work rights, CRICOS courses, AUD $29,710 living fund requirements, and permanent residency pathways.",
+    "Empower Your Future: Study in Australia with Umang Career Consultancy. Your dream of achieving a world-class education in Australia is closer than you think with expert guidance, transparent processing, and dedicated student visa support.",
   keywords: [
+    "Australian Student Visa",
     "Study in Australia",
-    "Study Abroad Australia",
+    "Australian Student Visa Subclass 500",
+    "Genuine Student GS Requirement",
+    "Confirmation of Enrollment CoE",
     "Group of Eight Universities",
-    "University of Melbourne",
-    "University of Sydney",
-    "UNSW Sydney",
-    "Australia Student Visa Subclass 500",
-    "Subclass 485 Temporary Graduate Visa",
-    "Australia India ECTA Post Study Work",
-    "Study in Sydney",
-    "Study in Melbourne",
     "Umang Career Consultancy Australia",
+    "Study Abroad Australia",
   ],
 };
 

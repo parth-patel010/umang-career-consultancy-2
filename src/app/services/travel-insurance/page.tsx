@@ -2,18 +2,19 @@ import { Metadata } from "next";
 import AirTicketInsuranceContent from "@/components/AirTicketInsuranceContent";
 
 export const metadata: Metadata = {
-  title: "Air Ticket Booking & Travel Insurance | Umang Career Consultancy",
+  title: "Flight Ticket Booking Services & Travel Support | Umang Career Consultancy",
   description:
-    "Expert flight booking and travel insurance guidance at Umang Career Consultancy. Student baggage discounts, flexible cancellation tickets, worldwide cashless medical insurance, and airport transfer support.",
+    "Seamless Flight Bookings & End-to-End Travel Support at Umang Career Consultancy. Highly competitive airfares for domestic & international travel, automated web check-in, boarding passes directly to WhatsApp, corporate travel management, and flexible payment options.",
   keywords: [
-    "air ticket booking",
+    "flight ticket booking",
+    "flight ticket booking services",
+    "air ticket booking vadodara",
     "student flight tickets",
-    "travel insurance",
-    "student travel insurance",
-    "overseas medical cover",
-    "Allianz travel insurance",
-    "TATA AIG travel insurance",
-    "Umang Career Consultancy",
+    "corporate travel management",
+    "automated web check-in",
+    "WhatsApp boarding pass",
+    "international flight tickets",
+    "Umang Career Consultancy flight booking",
   ],
 };
 

@@ -122,15 +122,20 @@ export default function Footer({ site = siteContent }: { site?: SiteContent }) {
               <span>Our Office</span>
             </h4>
             <div className="space-y-4 text-xs sm:text-[13px] text-slate-300">
-              {/* Phone */}
+              {/* Phones */}
               <div className="flex items-start gap-3">
                 <svg className="w-4 h-4 fill-[#10b981] shrink-0 mt-0.5" viewBox="0 0 24 24">
                   <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.99c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-.99-1.11z" />
                 </svg>
-                <div>
+                <div className="space-y-1">
                   <a href={`tel:${site.phoneRaw}`} className="hover:text-white font-semibold transition-colors block">
                     {site.phoneDisplay}
                   </a>
+                  {site.secondaryPhoneRaw && (
+                    <a href={`tel:${site.secondaryPhoneRaw}`} className="hover:text-white font-semibold transition-colors block">
+                      {site.secondaryPhoneDisplay}
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -149,14 +154,21 @@ export default function Footer({ site = siteContent }: { site?: SiteContent }) {
                 </a>
               </div>
 
-              {/* Email */}
+              {/* Emails */}
               <div className="flex items-start gap-3">
                 <svg className="w-4 h-4 fill-[#10b981] shrink-0 mt-0.5" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
-                <a href={`mailto:${site.email}`} className="hover:text-white transition-colors">
-                  {site.email}
-                </a>
+                <div className="space-y-1">
+                  <a href={`mailto:${site.email}`} className="hover:text-white transition-colors block">
+                    {site.email}
+                  </a>
+                  {site.secondaryEmail && (
+                    <a href={`mailto:${site.secondaryEmail}`} className="hover:text-white transition-colors block text-[11px] text-slate-400">
+                      {site.secondaryEmail}
+                    </a>
+                  )}
+                </div>
               </div>
 
               {/* Address */}
@@ -230,6 +242,8 @@ export default function Footer({ site = siteContent }: { site?: SiteContent }) {
               <li><Link href="/study-abroad/australia" className="hover:text-white transition-colors">Study in Australia</Link></li>
               <li><Link href="/study-abroad/new-zealand" className="hover:text-white transition-colors">Study in New Zealand</Link></li>
               <li><Link href="/study-abroad/europe" className="hover:text-white transition-colors">Study in Europe</Link></li>
+              <li><Link href="/study-abroad/dubai" className="hover:text-white transition-colors">Study in Dubai (UAE)</Link></li>
+              <li><Link href="/study-abroad/singapore" className="hover:text-white transition-colors">Study in Singapore</Link></li>
             </ul>
           </div>
 
@@ -259,7 +273,8 @@ export default function Footer({ site = siteContent }: { site?: SiteContent }) {
               <li><Link href="/services/sop-resume-preparation" className="hover:text-white transition-colors">SOP & Resume Drafting</Link></li>
               <li><Link href="/services/education-loan" className="hover:text-white transition-colors">Education Loan Support</Link></li>
               <li><Link href="/services/forex-services" className="hover:text-white transition-colors">Forex & Fee Transfer</Link></li>
-              <li><Link href="/services/air-ticket-travel-insurance" className="hover:text-white transition-colors">Air Ticket & Insurance</Link></li>
+              <li><Link href="/services/flight-ticket-booking" className="hover:text-white transition-colors">Flight Ticket Booking</Link></li>
+              <li><Link href="/services/tours-and-travels" className="hover:text-white transition-colors">Tours & Travels</Link></li>
             </ul>
           </div>
 

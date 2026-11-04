@@ -2,20 +2,21 @@ import type { Metadata } from "next";
 import NewZealandStudyAbroadContent from "@/components/NewZealandStudyAbroadContent";
 
 export const metadata: Metadata = {
-  title: "Study in New Zealand | All 8 Unis in Global Top 2%, Green List & Visas | Umang Career Consultancy",
+  title: "New Zealand Student Visa & Study in New Zealand | Umang Career Consultancy",
   description:
-    "Comprehensive guide to studying in New Zealand with Umang Career Consultancy. Explore all 8 public universities (The University of Auckland, Otago, Canterbury, AUT, Victoria Wellington), Green List fast-track PR, 3-year Post-Study Work Visas, tuition fees, and living expenses.",
+    "Build Your Global Future: Study in New Zealand with Umang Career Consultancy. Expert guidance on latest INZ rules, 25h/week Master's work hours, Green List career mapping, India-NZ FTA post-study visas (3–4 years), and FTS setup.",
   keywords: [
-    "Study in New Zealand",
-    "Study Abroad New Zealand",
-    "The University of Auckland",
-    "University of Otago",
-    "University of Canterbury",
-    "Auckland University of Technology AUT",
     "New Zealand Student Visa",
+    "Study in New Zealand",
+    "New Zealand Study Abroad",
+    "INZ Student Visa Rules",
+    "Funds Transfer Scheme FTS",
     "New Zealand Green List PR",
+    "India New Zealand FTA Work Rights",
     "Post Study Work Visa New Zealand",
+    "The University of Auckland",
     "Umang Career Consultancy New Zealand",
+    "Vadodara New Zealand Visa Consultant",
   ],
 };
 

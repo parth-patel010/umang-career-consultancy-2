@@ -123,10 +123,10 @@ const defaultServices: ServiceItem[] = [
   },
   {
     id: "air-ticket",
-    title: "Air Ticket & Travel Insurance",
+    title: "Flight Ticket Booking & Travel Support",
     description:
-      "Exclusive student flight baggage allowances, pocket-friendly airfares, and comprehensive international health cover.",
-    href: "/services/air-ticket-travel-insurance",
+      "Seamless domestic & international flight bookings, free automated web check-in, WhatsApp boarding passes, and corporate travel care.",
+    href: "/services/flight-ticket-booking",
     icon: (props) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path d="M22 10V6c0-1.11-.9-2-2-2H4c-1.1 0-1.99.89-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.5c-1.25.78-2 2.17-2 3.5s.75 2.72 2 3.5V18H4v-2.5c1.25-.78 2-2.17 2-3.5s-.75-2.72-2-3.5V6h16v2.5zM9.5 8h5v2h-5zm0 3h5v2h-5zm0 3h5v2h-5z" />

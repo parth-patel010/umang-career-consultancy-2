@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import VibrantCountryFlag from "@/components/VibrantCountryFlag";
 
 /* -------------------------------------------------------------
    SVG ICONS (No external emojis, pure crisp SVGs)
@@ -258,6 +259,100 @@ export default function StudentVisaContent() {
           <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
         </svg>
       ),
+    },
+  ];
+
+  // Top Student Visa Destinations with Vibrant Country Flags as per Umang Logo Aesthetic
+  const studentVisaDestinations = [
+    {
+      name: "Australia",
+      country: "australia",
+      visaName: "Student Visa (Subclass 500)",
+      tag: "Subclass 500",
+      description: "CoE guidance, Genuine Student (GS) preparation, and up to 5-year visa validity with flexible work rights.",
+      workRights: "48 hrs / fortnight",
+      psw: "2 to 4 Years PSWV",
+      href: "/australia-student-visa",
+    },
+    {
+      name: "United Kingdom (UK)",
+      country: "uk",
+      visaName: "UK Student Visa Route",
+      tag: "CAS Verified",
+      description: "Official CAS verification, updated financial maintenance thresholds, and direct admission into top UK universities.",
+      workRights: "20 hrs / week",
+      psw: "2 to 3 Years Graduate Route",
+      href: "/uk-student-visa",
+    },
+    {
+      name: "Canada",
+      country: "canada",
+      visaName: "Study Permit (Regular Stream)",
+      tag: "PAL & Regular Stream",
+      description: "Meticulous Regular Stream documentation, Provincial Attestation Letters (PAL), and top DLI colleges.",
+      workRights: "24 hrs / week off-campus",
+      psw: "Up to 3 Years PGWP",
+      href: "/canada-student-visa",
+    },
+    {
+      name: "United States (USA)",
+      country: "usa",
+      visaName: "F-1 Student Visa",
+      tag: "4-Year Cap & I-20",
+      description: "Form I-20 issuance, SEVIS tracking, DS-160 filing, 4-year authorized stay cap, and 1-on-1 consular mock interview drills.",
+      workRights: "20 hrs / week on-campus",
+      psw: "Up to 3-Year STEM OPT",
+      href: "/usa-student-visa",
+    },
+    {
+      name: "New Zealand",
+      country: "new zealand",
+      visaName: "Fee Paying Student Visa",
+      tag: "India-NZ FTA Perks",
+      description: "Green List occupations, unified Master's 25-hour work rules, and extended stay-back under the India-NZ FTA.",
+      workRights: "25 hrs / week",
+      psw: "Up to 3-4 Years PSWV",
+      href: "/new-zealand-student-visa",
+    },
+    {
+      name: "Europe (Schengen)",
+      country: "europe",
+      visaName: "Type D Long-Stay Visa",
+      tag: "29 Schengen Nations",
+      description: "Tuition-free public universities in Germany, blocked account Sperrkonto, and spousal work rights in Finland, Sweden & Denmark.",
+      workRights: "Full Spousal Work Rights",
+      psw: "1 to 2 Years Job Seeker",
+      href: "/europe-student-visa",
+    },
+    {
+      name: "Dubai / UAE",
+      country: "dubai",
+      visaName: "University-Sponsored Visa",
+      tag: "Zero Embassy Hassle",
+      description: "100% university-sponsored visa without tedious bank audits, English MOI pathways, and UK/AUS campus transfers.",
+      workRights: "Part-Time & Paid Internships",
+      psw: "0% Personal Income Tax",
+      href: "/dubai-student-visa",
+    },
+    {
+      name: "Germany",
+      country: "germany",
+      visaName: "German National Student Visa",
+      tag: "Tuition-Free Universities",
+      description: "APS certificate processing, Sperrkonto blocked account management, and premier technical universities.",
+      workRights: "140 Full Days / Year",
+      psw: "18-Month Job Search Visa",
+      href: "/study-abroad/germany",
+    },
+    {
+      name: "Singapore",
+      country: "singapore",
+      visaName: "Student's Pass (STP)",
+      tag: "ICA SOLAR System",
+      description: "Official SOLAR application, SGD 45/60 transparent fees, HTM/IT/SCM courses, and 1-Year LTVP post-study stay.",
+      workRights: "16 hrs/wk (Autonomous) / OJT",
+      psw: "1-Year LTVP Job Seeker",
+      href: "/singapore-student-visa",
     },
   ];
 
@@ -595,6 +690,105 @@ export default function StudentVisaContent() {
         </div>
       </section>
 
+      {/* ================= 3B. TOP STUDENT VISA DESTINATIONS (STUNNING VIBRANT FLAGS) ================= */}
+      <section className="w-full py-16 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-100 text-[#e52928] text-xs sm:text-sm font-semibold tracking-wide uppercase mb-3 shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-[#e52928] animate-ping" />
+              Global Study Hubs
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0a1e38] tracking-tight">
+              Explore Top <span className="text-[#e52928]">Student Visa</span> Destinations
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+              From prestigious Tier-1 research universities to dynamic financial hubs, explore verified student visa pathways with transparent guidance from Umang Career Consultancy.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {studentVisaDestinations.map((dest, idx) => (
+              <div
+                key={idx}
+                className="group relative bg-white rounded-2xl p-6 border border-slate-200/80 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between overflow-hidden"
+              >
+                {/* Accent top gradient line */}
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#e52928] via-[#0a1e38] to-[#e52928] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+
+                <div>
+                  {/* Flag and tag header */}
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <div className="p-1 rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200/50 shadow-inner group-hover:scale-105 transition-transform duration-300">
+                      <VibrantCountryFlag country={dest.country} size="lg" />
+                    </div>
+                    <span className="inline-block text-[11px] font-bold tracking-wider px-2.5 py-1 rounded-full bg-red-50 text-[#e52928] border border-red-100 uppercase">
+                      {dest.tag}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-black text-[#0a1e38] group-hover:text-[#e52928] transition-colors leading-snug">
+                    {dest.name}
+                  </h3>
+                  <p className="text-xs font-semibold text-slate-500 mb-3">
+                    {dest.visaName}
+                  </p>
+
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4 line-clamp-3">
+                    {dest.description}
+                  </p>
+
+                  {/* Highlights pills */}
+                  <div className="space-y-1.5 py-3 border-y border-slate-100 text-[11px] font-medium text-slate-700">
+                    <div className="flex items-center justify-between">
+                      <span className="text-slate-500 font-normal">Work Rights:</span>
+                      <span className="font-semibold text-[#0a1e38]">{dest.workRights}</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-slate-500 font-normal">Post-Study:</span>
+                      <span className="font-semibold text-emerald-700">{dest.psw}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-2">
+                  <Link
+                    href={dest.href}
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-50 hover:bg-[#0a1e38] text-[#0a1e38] hover:text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 group-hover:shadow-md"
+                  >
+                    <span>View Visa Guide</span>
+                    <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Quick link banner to all 20+ study abroad countries */}
+          <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#0a1e38] via-[#112a4c] to-[#0a1e38] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+            <div className="space-y-1 text-center md:text-left">
+              <span className="text-xs font-bold tracking-widest uppercase text-red-400">Expanding Beyond</span>
+              <h3 className="text-xl sm:text-2xl font-black">
+                Looking for Germany, France, Ireland, Singapore or 15+ more countries?
+              </h3>
+              <p className="text-slate-300 text-sm">
+                Explore our exhaustive country catalog with university shortlisting, embassy document checklists, and visa procedures.
+              </p>
+            </div>
+            <Link
+              href="/study-abroad"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#e52928] hover:bg-[#c92017] text-white font-bold text-sm tracking-wide shadow-lg transition-transform hover:scale-105 active:scale-95 flex-shrink-0"
+            >
+              <span>Explore All Destinations</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ================= 4. STUDENT VISA APPLICATION PROCESS (NAVY SECTION) ================= */}
       <section
         ref={processRef}
@@ -812,17 +1006,32 @@ export default function StudentVisaContent() {
               ctaInView ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-8"
             }`}
           >
-            <h3 className="text-white text-xl sm:text-2xl lg:text-[26px] font-bold tracking-tight text-center md:text-left">
-              Start Your Study Abroad Journey, Call On...
-            </h3>
+            <div className="space-y-1 text-center md:text-left">
+              <span className="text-xs font-bold text-red-400 tracking-wider uppercase">Direct Counsellor Helpline</span>
+              <h3 className="text-white text-xl sm:text-2xl lg:text-[26px] font-bold tracking-tight">
+                Start Your Study Abroad Journey, Call Today
+              </h3>
+              <p className="text-slate-300 text-xs sm:text-sm">
+                Vadodara Office: First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP Road
+              </p>
+            </div>
 
-            <a
-              href="tel:+919173186109"
-              className="anim-phone-ring inline-flex items-center gap-3 bg-[#e52928] hover:bg-[#c92017] text-white px-8 py-3.5 rounded-full font-bold shadow-lg transition-transform hover:scale-105 active:scale-95 text-base sm:text-lg flex-shrink-0"
-            >
-              <PhoneIcon />
-              <span>+91 9173186109</span>
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="tel:+919173186109"
+                className="anim-phone-ring inline-flex items-center gap-2.5 bg-[#e52928] hover:bg-[#c92017] text-white px-6 py-3.5 rounded-full font-bold shadow-lg transition-transform hover:scale-105 active:scale-95 text-sm sm:text-base flex-shrink-0"
+              >
+                <PhoneIcon />
+                <span>+91 91731 86109</span>
+              </a>
+              <a
+                href="tel:+919712610086"
+                className="anim-phone-ring inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-6 py-3.5 rounded-full font-bold shadow-lg transition-transform hover:scale-105 active:scale-95 text-sm sm:text-base flex-shrink-0"
+              >
+                <PhoneIcon />
+                <span>+91 97126 10086</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -888,12 +1097,15 @@ export default function StudentVisaContent() {
                   <select
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#e52928] focus:ring-1 focus:ring-[#e52928] text-slate-800 text-sm bg-white transition-all"
                   >
-                    <option value="canada">Canada (Study Permit / SDS)</option>
-                    <option value="uk">United Kingdom (Student Visa / Tier 4)</option>
-                    <option value="usa">United States (F-1 Student Visa)</option>
                     <option value="australia">Australia (Subclass 500)</option>
-                    <option value="germany">Germany & Europe</option>
-                    <option value="other">Other Countries</option>
+                    <option value="uk">United Kingdom (Student Visa Route)</option>
+                    <option value="canada">Canada (Study Permit / Regular Stream)</option>
+                    <option value="usa">United States (F-1 Student Visa)</option>
+                    <option value="new zealand">New Zealand (Fee Paying Student Visa)</option>
+                    <option value="europe">Europe / Schengen Area</option>
+                    <option value="dubai">Dubai / UAE</option>
+                    <option value="singapore">Singapore (Student's Pass STP)</option>
+                    <option value="other">Other Global Destinations</option>
                   </select>
                 </div>
 
@@ -924,14 +1136,41 @@ export default function StudentVisaContent() {
                   Book Free Visa Consultation
                 </button>
 
-                <a
-                  href="https://wa.me/919173186109"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-sm transition-colors hover:scale-105 active:scale-95"
-                >
-                  <span>Chat on WhatsApp</span>
-                </a>
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <a
+                    href="https://wa.me/919173186109"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-sm transition-colors hover:scale-105 active:scale-95 text-sm"
+                  >
+                    <span>WhatsApp</span>
+                  </a>
+                  <a
+                    href="tel:+919712610086"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-[#0a1e38] hover:bg-[#112a4c] text-white font-semibold rounded-xl shadow-sm transition-colors hover:scale-105 active:scale-95 text-sm"
+                  >
+                    <span>Call Counsellor</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Direct Office & Contact Verification Strip */}
+              <div className="pt-6 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-500">
+                <div>
+                  <strong className="text-slate-700 font-semibold block mb-0.5">Visit Our Head Office:</strong>
+                  First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019
+                </div>
+                <div>
+                  <strong className="text-slate-700 font-semibold block mb-0.5">Direct Enquiries:</strong>
+                  <div className="flex flex-wrap gap-x-3 gap-y-1">
+                    <a href="tel:+919173186109" className="text-[#0a1e38] font-bold hover:underline">+91 9173186109</a>
+                    <span>•</span>
+                    <a href="tel:+919712610086" className="text-[#0a1e38] font-bold hover:underline">+91 9712610086</a>
+                  </div>
+                  <div className="text-[11px] text-slate-500 mt-1">
+                    <a href="mailto:umangcareer2022@gmail.com" className="hover:underline">umangcareer2022@gmail.com</a> | <a href="mailto:umangcareer2026@gmail.com" className="hover:underline">umangcareer2026@gmail.com</a>
+                  </div>
+                </div>
               </div>
             </form>
           </div>

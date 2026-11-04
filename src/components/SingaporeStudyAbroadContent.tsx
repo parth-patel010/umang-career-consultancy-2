@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import VibrantCountryFlag from "@/components/VibrantCountryFlag";
 
 /* -------------------------------------------------------------
    SVG ICONS
@@ -30,63 +31,51 @@ function ChevronDownIcon({ isOpen }: { isOpen: boolean }) {
   );
 }
 
-/* Course Icons */
-function BusinessIcon() {
+function CheckmarkIcon({ className = "w-5 h-5 text-[#22c55e]" }: { className?: string }) {
   return (
-    <svg className="w-10 h-10 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
+function AlertIcon({ className = "w-5 h-5 text-amber-500" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+  );
+}
+
+/* Course Icons */
+function HTMIcon() {
+  return (
+    <svg className="w-8 h-8 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+    </svg>
+  );
+}
+
+function CyberTechIcon() {
+  return (
+    <svg className="w-8 h-8 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+    </svg>
+  );
+}
+
+function LogisticsIcon() {
+  return (
+    <svg className="w-8 h-8 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
     </svg>
   );
 }
 
-function TechIcon() {
+function SCMIcon() {
   return (
-    <svg className="w-10 h-10 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-    </svg>
-  );
-}
-
-function EngineeringIcon() {
-  return (
-    <svg className="w-10 h-10 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-  );
-}
-
-function DesignIcon() {
-  return (
-    <svg className="w-10 h-10 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M7 21a4 4 0 01-4-4 4 4 0 014-4c.488 0 .95.093 1.378.261l9.143-9.143a2 2 0 112.828 2.828l-9.143 9.143A4 4 0 017 21z" />
-    </svg>
-  );
-}
-
-function LawIcon() {
-  return (
-    <svg className="w-10 h-10 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-    </svg>
-  );
-}
-
-/* Singapore Flag Badge */
-function SingaporeFlagBadge() {
-  return (
-    <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
-      <rect width="60" height="21" fill="#ed2939" />
-      <rect y="21" width="60" height="21" fill="#fff" />
-      {/* Crescent Moon */}
-      <circle cx="12" cy="10.5" r="6" fill="#fff" />
-      <circle cx="14" cy="10.5" r="5" fill="#ed2939" />
-      {/* Five Stars */}
-      <circle cx="17" cy="8" r="0.9" fill="#fff" />
-      <circle cx="19" cy="10" r="0.9" fill="#fff" />
-      <circle cx="18" cy="12" r="0.9" fill="#fff" />
-      <circle cx="15.5" cy="12.5" r="0.9" fill="#fff" />
-      <circle cx="15" cy="9.5" r="0.9" fill="#fff" />
+    <svg className="w-8 h-8 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
     </svg>
   );
 }
@@ -122,7 +111,7 @@ function SectionHeader({
 
         <h2
           className={`text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight ${
-            isDark ? "text-[#22c55e]" : "text-[#0a1e38]"
+            isDark ? "text-white" : "text-[#0a1e38]"
           }`}
         >
           {title}
@@ -139,7 +128,7 @@ function SectionHeader({
       </div>
       {subtitle && (
         <p
-          className={`mt-2.5 text-base sm:text-lg font-semibold max-w-3xl mx-auto ${
+          className={`mt-2.5 text-base sm:text-lg font-medium max-w-3xl mx-auto ${
             isDark ? "text-slate-200" : "text-slate-600"
           }`}
         >
@@ -153,193 +142,173 @@ function SectionHeader({
 /* -------------------------------------------------------------
    DATA STRUCTURES
 ------------------------------------------------------------- */
-const TOP_COURSES = [
+const POPULAR_PROGRAMS = [
   {
-    title: "Business & Management",
-    desc: "Premier MBA, global finance, supply chain management, and fintech leadership at Singapore Management University (SMU), NUS Business School, and NTU.",
-    icon: <BusinessIcon />,
-    tag: "APAC Financial Hub",
+    title: "Hospitality & Tourism Management (HTM)",
+    tag: "Paid Internships & Resort Ops",
+    desc: "Singapore is the undisputed hospitality capital of Asia. Study luxury hospitality, resort operations, and event management with guaranteed paid industry internships at Marina Bay Sands, Sentosa, and world-class 5-star hotel chains.",
+    icon: <HTMIcon />,
+    careers: "Hotel General Manager, Revenue Analyst, Event Director, Guest Experience Lead",
   },
   {
-    title: "Information Technology",
-    desc: "World-leading artificial intelligence, cyber security, cloud architecture, and data analytics programs aligned directly with Asia's Silicon Island tech corridor.",
-    icon: <TechIcon />,
-    tag: "Top Tech Careers",
+    title: "Information Technology (IT) & Cyber Security",
+    tag: "Asia Tech Capital",
+    desc: "Gain industry-aligned credentials in cloud architecture, cybersecurity defense, data analytics, and software engineering. Connect directly with regional tech hubs of Google, Meta, Microsoft, and GovTech Singapore.",
+    icon: <CyberTechIcon />,
+    careers: "Cyber Security Analyst, Cloud Engineer, Full-Stack Developer, AI Data Specialist",
   },
   {
-    title: "Engineering",
-    desc: "Globally celebrated engineering disciplines across robotics, biomedical engineering, clean energy, civil engineering, and aerospace technology at NTU and SUTD.",
-    icon: <EngineeringIcon />,
-    tag: "MIT-Partnered Pedagogy",
+    title: "Business Management (BM) & Global Logistics",
+    tag: "Fortune 500 APAC Epicenter",
+    desc: "Master international finance, strategic business leadership, fintech, and cross-border commercial trade. Singapore hosts over 4,000 regional multinational headquarters offering premier networking opportunities.",
+    icon: <LogisticsIcon />,
+    careers: "Management Consultant, Financial Analyst, Regional Business Development Lead",
   },
   {
-    title: "Design & Creative Arts",
-    desc: "Pioneering industrial product design, digital animation, interactive media, and game design at LASALLE College of the Arts, NAFA, and SUTD.",
-    icon: <DesignIcon />,
-    tag: "Creative Capital",
-  },
-  {
-    title: "Law & International Relations",
-    desc: "Renowned international commercial arbitration, maritime law, intellectual property, and Asian governance at Lee Kuan Yew School of Public Policy & NUS Law.",
-    icon: <LawIcon />,
-    tag: "Global Jurisprudence",
+    title: "Supply Chain Management (SCM)",
+    tag: "World's Busiest Transshipment Hub",
+    desc: "Specialized training in multimodal freight, container logistics, inventory optimization, and digital maritime supply systems anchored around PSA Singapore and the world's best air hub, Changi Airport.",
+    icon: <SCMIcon />,
+    careers: "Supply Chain Director, Global Procurement Manager, Freight Logistics Planner",
   },
 ];
 
-const WHY_SINGAPORE = [
+const SOLAR_STEPS = [
   {
-    title: "Globally Recognised Degrees",
-    desc: "NUS (#8 globally) and NTU (#15 globally) consistently rank among the top 15 universities in the world according to QS World University Rankings.",
+    num: "1",
+    title: "Offer & Student Contract",
+    desc: "We secure your official Letter of Acceptance (LOA) and execute the mandatory Standard PEI-Student Contract with your chosen institution, safeguarding your fees under Singapore's Fee Protection Scheme (FPS).",
   },
   {
-    title: "Wide Range of English-Taught Programs",
-    desc: "English is Singapore's official language of instruction and business, ensuring seamless academic integration for international students.",
+    num: "2",
+    title: "SOLAR System Registration",
+    desc: "The university registers your unique profile on the ICA Student's Pass On-Line Application & Registration (SOLAR) portal and generates your official SOLAR Application Number.",
   },
   {
-    title: "Quality Education & Strict Accreditation",
-    desc: "Rigorous standards maintained by the Committee for Private Education (CPE) and EduTrust certification guarantee high teaching quality.",
+    num: "3",
+    title: "In-Principle Approval (IPA)",
+    desc: "We accurately lodge your digital Form 16, V36, and financial briefs. Once evaluated, the ICA grants an In-Principle Approval (IPA) Letter. This letter serves as your single-entry visa to travel to Singapore.",
   },
   {
-    title: "Diverse Study Options",
-    desc: "Choose between prestigious autonomous public universities, polytechnics, and foreign branch campuses (e.g., James Cook University, Curtin, ESSEC, INSEAD).",
+    num: "4",
+    title: "Arrival & Biometrics",
+    desc: "Upon landing, we guide you through completing your local medical examination and your physical ICA biometric verification at the ICA Building to receive your official Student's Pass card.",
+  },
+];
+
+const ICA_FEES = [
+  {
+    label: "ICA Processing Fee",
+    amount: "SGD 45",
+    inr: "≈ ₹2,800",
+    timing: "Non-refundable, paid at the time of online application on SOLAR.",
+    badge: "Initial Filing",
   },
   {
-    title: "International Student Community",
-    desc: "Vibrant multicultural society hosting scholars and professionals from over 120+ nations in a truly global, cosmopolitan environment.",
+    label: "Student's Pass Issuance Fee",
+    amount: "SGD 60",
+    inr: "≈ ₹3,750",
+    timing: "Paid online once your application is formally approved by ICA.",
+    badge: "Upon Approval",
   },
   {
-    title: "Scholarship Opportunities (TGS)",
-    desc: "Generous tuition grants, MOE Tuition Grant Scheme (TGS) providing up to 50%+ fee subsidies, ASEAN scholarships, and university fellowships.",
+    label: "Multiple-Entry Visa Fee",
+    amount: "SGD 30",
+    inr: "≈ ₹1,875",
+    timing: "Applicable if your nationality requires a visa for entry into Singapore.",
+    badge: "If Applicable",
   },
   {
-    title: "Strong Industry Exposure",
-    desc: "Asia-Pacific headquarters for 4,000+ multinational corporations including Google, Meta, Microsoft, Dyson, Shopee, DBS, and Pfizer.",
-  },
-  {
-    title: "Excellent Asia-Pacific Connectivity",
-    desc: "Changi Airport connects directly to all major Indian cities with flight times of only 4.5 to 5 hours, making family visits convenient.",
+    label: "Standard Processing Timeline",
+    amount: "1 to 2 Weeks",
+    inr: "File 8-12 weeks early",
+    timing: "Usually takes 1 to 2 weeks for autonomous universities & EduTrust schools. We advise applying 8-12 weeks early.",
+    badge: "Fast Turnaround",
   },
 ];
 
 const UNIVERSITIES = [
   {
     name: "National University of Singapore (NUS)",
-    type: "Public Autonomous Flagship",
-    qsRank: "#8 Global (QS World 2025)",
-    tag: "Asia's Top University",
-    features: "Comprehensive research university excelling in computer science, business, engineering, law, medicine, and social sciences.",
+    type: "Autonomous Public University",
+    qsRank: "#8 Globally (QS World 2025)",
+    tag: "Asia's #1 Ranked University",
+    features: "Global academic powerhouse excelling in computer science, business, engineering, law, medicine, and social sciences.",
   },
   {
     name: "Nanyang Technological University (NTU)",
-    type: "Public Autonomous Flagship",
-    qsRank: "#15 Global (QS World 2025)",
-    tag: "Engineering & Tech Powerhouse",
-    features: "Smart Campus renowned globally for materials science, artificial intelligence, sustainability research, and business.",
+    type: "Autonomous Public University",
+    qsRank: "#15 Globally (QS World 2025)",
+    tag: "Engineering & Tech Leader",
+    features: "Renowned Smart Campus leading world benchmarks in AI, robotics, sustainability, clean energy, and materials science.",
   },
   {
     name: "Singapore Management University (SMU)",
     type: "Specialized Business & Social Sciences",
-    qsRank: "Top 50 Global in Business/Finance",
-    tag: "City Campus Leadership",
-    features: "Modeled after the Wharton School (UPenn), SMU delivers interactive seminar-style learning in the heart of Singapore's financial district.",
+    qsRank: "Top 50 Global Business",
+    tag: "Wharton-Modeled City Campus",
+    features: "Interactive seminar-style pedagogy in Singapore's financial core with strong corporate mentoring and fintech integration.",
   },
   {
-    name: "Singapore University of Technology and Design (SUTD)",
-    type: "Technology & Design Pioneer",
-    qsRank: "Established in collaboration with MIT",
-    tag: "Architectural & Product Innovation",
-    features: "Cutting-edge curriculum integrating design, engineering, and artificial intelligence with intensive hands-on incubator projects.",
+    name: "Singapore University of Technology & Design (SUTD)",
+    type: "Autonomous Public University",
+    qsRank: "Developed with MIT & Zhejiang Univ",
+    tag: "Design & Product Innovation",
+    features: "Cutting-edge curriculum fusing artificial intelligence, architectural innovation, design computation, and engineering.",
   },
   {
     name: "Singapore Institute of Technology (SIT)",
     type: "University of Applied Learning",
     qsRank: "Premier Applied Degrees",
-    tag: "Industry-Centric Education",
-    features: "Offers integrated work study programs with Singapore's economic agencies, ensuring 95%+ graduate employment rates.",
+    tag: "95%+ Employment Placement",
+    features: "Direct industrial partnership modules providing hands-on operational work-study degrees in aerospace, software, and logistics.",
   },
   {
     name: "James Cook University (JCU Singapore)",
-    type: "Australian Public University Branch Campus",
-    qsRank: "Top 2% Global / EduTrust Star",
-    tag: "Fast-Track Trimester System",
-    features: "Direct Australian degrees in Singapore with options for inter-campus transfers to Australia, offering IT, Psychology, and Business.",
+    type: "Australian Public University Campus",
+    qsRank: "Top 2% Globally / EduTrust Star",
+    tag: "Direct Australian Degree",
+    features: "Direct Australian degrees with trimester-based accelerated study and seamless campus transfer options between Singapore and Australia.",
   },
 ];
 
 const LIVING_COSTS = [
   { item: "Accommodation (Student Hostel / Shared HDB / Condo)", range: "SGD 600 – SGD 1,200", inr: "₹37,500 – ₹75,000" },
-  { item: "Food & Groceries (Hawker Centers & Markets)", range: "SGD 300 – SGD 500", inr: "₹18,700 – ₹31,200" },
-  { item: "Transportation (EZ-Link MRT & Bus Network)", range: "SGD 100 – SGD 150", inr: "₹6,200 – ₹9,300" },
-  { item: "Internet & Mobile Data Plans", range: "SGD 50 – SGD 80", inr: "₹3,100 – ₹5,000" },
-  { item: "Utilities (Air-Conditioning, Water, Power)", range: "SGD 100 – SGD 180", inr: "₹6,200 – ₹11,200" },
-  { item: "Personal, Leisure & Social Activities", range: "SGD 150 – SGD 300", inr: "₹9,300 – ₹18,700" },
-];
-
-const ACADEMIC_SYSTEM = [
-  {
-    step: "01",
-    title: "SOLAR Student's Pass System",
-    desc: "Student visas are officially known as Student's Pass, issued electronically through the Singapore Immigration & Checkpoints Authority (ICA) Student's Pass Online Application & Registration (SOLAR) system.",
-  },
-  {
-    step: "02",
-    title: "Tuition Grant Scheme (TGS)",
-    desc: "Substantial tuition fee reduction offered by the Singapore Ministry of Education (MOE) for eligible university students in return for a 3-year commitment to work in Singapore-registered firms.",
-  },
-  {
-    step: "03",
-    title: "Work While Studying Rules",
-    desc: "Full-time international students at approved public institutions (NUS, NTU, SMU, SIT, SUTD) can work part-time up to 16 hours/week during term time and unlimited hours during official vacations without a separate work pass.",
-  },
-  {
-    step: "04",
-    title: "Long Term Visit Pass (LTVP)",
-    desc: "Graduates from recognized Institutes of Higher Learning can apply for a one-year non-renewable Long-Term Visit Pass to seek full-time employment in Singapore.",
-  },
-  {
-    step: "05",
-    title: "Employment Pass (EP) & S-Pass",
-    desc: "Smooth pathway to Employment Pass (EP) or S-Pass upon securing a full-time job offer, evaluated under Singapore's transparent COMPASS points-based immigration framework.",
-  },
-  {
-    step: "06",
-    title: "World's Safest & Cleanest Nation",
-    desc: "Strict laws, zero-tolerance policy for crime, world-renowned public healthcare, and flawless MRT public transit infrastructure make Singapore ideal for international students.",
-  },
+  { item: "Food & Meals (Hawker Centers & Campus Pantries)", range: "SGD 300 – SGD 500", inr: "₹18,750 – ₹31,250" },
+  { item: "Transportation (EZ-Link MRT & Public Buses)", range: "SGD 100 – SGD 150", inr: "₹6,250 – ₹9,375" },
+  { item: "Mobile Internet & Connectivity Plans", range: "SGD 40 – SGD 75", inr: "₹2,500 – ₹4,680" },
+  { item: "Utilities (Power, Water, Air-Conditioning)", range: "SGD 100 – SGD 180", inr: "₹6,250 – ₹11,250" },
+  { item: "Personal & Social Incidentals", range: "SGD 150 – SGD 300", inr: "₹9,375 – ₹18,750" },
 ];
 
 const FAQS = [
   {
-    q: "Can I work while studying in Singapore?",
-    a: "International students may be allowed to work during their studies if they meet the applicable requirements and their institution and course are eligible. Full-time students enrolled at designated public institutions (such as NUS, NTU, SMU, SUTD, and SIT) are permitted to work up to 16 hours per week during term time and full-time during official vacation periods without applying for a work pass. Students at private education institutions should consult their institution's specific EduTrust regulations.",
+    q: "Is a Singapore Student Visa actually a visa sticker?",
+    a: "No! This is the most common misconception. In Singapore, international students are granted a Student's Pass (STP) issued digitally by the Immigration & Checkpoints Authority (ICA). The In-Principle Approval (IPA) letter serves as your entry authorization to travel to Singapore, and your physical Student's Pass card is collected after completing biometric verification and a local medical checkup in Singapore.",
   },
   {
-    q: "Can international students stay in Singapore after graduation?",
-    a: "Yes! Post-study options depend on your employment, immigration status, and the rules applicable at the time of application. International graduates from government-funded autonomous universities and select polytechnics can apply for a 1-Year Long-Term Visit Pass (LTVP) to seek employment. Once you secure a qualifying job offer, your employer can sponsor an Employment Pass (EP) or S-Pass.",
+    q: "Can I study part-time or attend evening classes on a Student's Pass?",
+    a: "No. Under strict Singapore ICA immigration law, a Student's Pass is only issued for approved, full-time daytime courses. Part-time, weekend, or evening courses are completely ineligible for international student sponsorship.",
   },
   {
-    q: "How long does it take to process a student visa for Singapore?",
-    a: "Processing times can vary depending on the institution, application, and immigration requirements. On average, the Singapore Immigration & Checkpoints Authority (ICA) processes Student's Pass applications via SOLAR in approximately 2 to 4 weeks. Once approved, you receive an In-Principle Approval (IPA) letter which serves as a single-entry visa to travel to Singapore.",
+    q: "Can international students work part-time while studying in Singapore?",
+    a: "Work rights in Singapore are strictly regulated: Full-time international students enrolled in government-recognized autonomous universities (NUS, NTU, SMU, SUTD, SIT) or polytechnics are permitted to work part-time up to 16 hours per week during term time and unlimited hours during scheduled vacations. Students enrolled at private education institutions (PEIs) generally do not have default work rights unless they are on an official On-the-Job Training (OJT) or paid internship module approved by the Ministry of Manpower (MOM).",
+  },
+  {
+    q: "What is the post-study work visa pathway in Singapore?",
+    a: "Unlike countries with automatic open graduate work permits, graduates from recognized Institutes of Higher Learning (IHLs) can apply for a 1-year non-renewable Long-Term Visit Pass (LTVP) to reside in Singapore while interviewing for full-time corporate jobs. Once you secure an employment offer meeting prevailing Ministry of Manpower salary criteria, your sponsoring employer applies for your S Pass or Employment Pass (EP).",
+  },
+  {
+    q: "What are the exact fees charged by the Singapore ICA?",
+    a: "The official ICA fee structure is 100% transparent: SGD 45 for initial SOLAR application processing (non-refundable), SGD 60 for Student's Pass issuance once approved, and SGD 30 for multiple-entry visa fees if applicable to your passport.",
   },
   {
     q: "What is the Tuition Grant Scheme (TGS)?",
-    a: "The Tuition Grant Scheme provides eligible students with a subsidy toward tuition fees at participating public institutions (such as NUS, NTU, SMU, and polytechnics), subject to applicable conditions. In exchange for receiving the grant, non-Singaporean students sign an agreement obligating them to work for a Singapore-registered entity for 3 years upon graduation.",
+    a: "The Tuition Grant Scheme is a Singapore Ministry of Education (MOE) initiative that subsidizes up to 50%+ of undergraduate tuition fees for eligible students at autonomous public universities. In return, international recipients sign a formal bond committing to work for a Singapore-registered company for 3 years upon graduation.",
   },
   {
-    q: "Can I bring my dependents (spouse/children) on a student visa?",
-    a: "Dependent eligibility depends on your type of course, institution, immigration status, and applicable Singapore regulations. Generally, international students pursuing postgraduate research degrees (Ph.D. or Master's by Research) at autonomous universities can apply for a Dependant's Pass or Long-Term Visit Pass for their legally married spouse and children, subject to ICA approval and minimum financial thresholds.",
-  },
-  {
-    q: "What are the primary intakes for Singapore universities?",
-    a: "The major intake for autonomous universities (NUS, NTU, SMU) is August (Fall Semester), with select master's and postgraduate programs offering a January intake. Private universities and foreign branch campuses (like JCU Singapore and Curtin) offer flexible trimester intakes in March/April, July/August, and October/November.",
-  },
-  {
-    q: "What is the climate like in Singapore throughout the year?",
-    a: "Singapore has a hot, humid, and tropical climate throughout the year, with temperatures consistently averaging between 24°C and 32°C. There are no distinct seasonal changes, though sudden tropical rain showers occur frequently. All academic buildings, libraries, public transport (MRT & buses), and shopping malls are fully air-conditioned.",
-  },
-  {
-    q: "How can Indian students keep living costs affordable in Singapore?",
-    a: "Students can comfortably manage expenses by dining at UNESCO-recognized local hawker centers where nutritious meals cost just SGD 4 to SGD 7, utilizing subsidized student MRT/bus concession cards, and sharing HDB flats or university residences. Many students also offset costs through university teaching or research assistantships.",
+    q: "How does Umang Career Consultancy assist with Singapore applications?",
+    a: "We provide honest, direct evaluations. We analyze your academic transcripts, explain proof-of-fund rules truthfully, map your backlog status honestly, draft your SOPs and student contracts, register your profile on the SOLAR portal, and prepare you for flawless ICA compliance.",
   },
 ];
 
@@ -349,17 +318,17 @@ const FAQS = [
 export default function SingaporeStudyAbroadContent() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    degree: "Master's / PG",
+    program: "Hospitality & Tourism Management (HTM)",
     intake: "August 2026",
     notes: "",
   });
 
-  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -371,7 +340,7 @@ export default function SingaporeStudyAbroadContent() {
 
   return (
     <main className="w-full bg-white overflow-hidden">
-      {/* Global Embedded Animations matching Services Theme */}
+      {/* Embedded Animations */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -397,9 +366,9 @@ export default function SingaporeStudyAbroadContent() {
       />
 
       {/* =========================================================
-          HERO SECTION
+          1. HERO SECTION
          ========================================================= */}
-      <section className="relative w-full pt-28 pb-16 sm:pt-36 sm:pb-24 bg-gradient-to-b from-slate-50 via-white to-slate-50/50 border-b border-slate-100">
+      <section className="relative w-full pt-28 pb-16 sm:pt-36 sm:pb-24 bg-gradient-to-b from-[#f8fafc] via-white to-slate-50 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
           <nav className="mb-6 flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-medium">
@@ -411,7 +380,7 @@ export default function SingaporeStudyAbroadContent() {
               Study Abroad
             </Link>
             <span>/</span>
-            <span className="text-[#0a1e38] font-bold">Singapore</span>
+            <span className="text-[#0a1e38] font-bold">Singapore Student Visa</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -423,58 +392,61 @@ export default function SingaporeStudyAbroadContent() {
             >
               {/* Badge */}
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-200 shadow-sm mb-6">
-                <SingaporeFlagBadge />
+                <VibrantCountryFlag country="singapore" size="sm" variant="badge" />
                 <span className="text-xs sm:text-sm font-bold text-[#e52928] tracking-wide uppercase">
-                  Asia&apos;s Leading Education & Global Finance Hub
+                  Website Content • Study in Singapore (Umang Career Consultancy)
                 </span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0a1e38] tracking-tight leading-[1.15]">
-                Study in <span className="text-[#e52928]">Singapore</span>
-                <br />
-                <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-800">
-                  Build Your Global Career at World-Class Institutions
-                </span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black text-[#0a1e38] tracking-tight leading-[1.15]">
+                Study in Singapore:{" "}
+                <span className="text-[#e52928]">Your Gateway</span> to World-Class Asian Education
               </h1>
 
-              {/* Sub-tagline */}
-              <p className="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Singapore combines Ivy-League caliber autonomous universities (NUS & NTU), English-medium education, exceptional safety, cutting-edge innovation, and direct access to Fortune 500 headquarters in the heart of Southeast Asia.
+              {/* Tagline Paragraph from OM Bhai */}
+              <p className="mt-5 text-base sm:text-lg text-slate-700 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                Are you dreaming of studying in the world’s safest, cleanest, and most forward-thinking global business hub? Singapore offers a perfect mix of elite global education, vibrant multicultural student life, and unmatched proximity to international career opportunities.
               </p>
 
-              {/* Bullet Highlights */}
-              <div className="mt-6 grid grid-cols-2 gap-3 text-left max-w-md mx-auto lg:mx-0 text-xs sm:text-sm font-medium text-slate-700">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>NUS (#8) & NTU (#15) QS Global</span>
+              <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                At <strong className="text-[#0a1e38] font-bold">Umang Career Consultancy</strong>, we believe in keeping our advice transparent and direct. Here is the actual, crystal-clear breakdown of how a Singapore Student Visa works and what you truly need to prepare.
+              </p>
+
+              {/* Key Bullet Highlights */}
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-lg mx-auto lg:mx-0 text-xs sm:text-sm font-medium text-slate-700">
+                <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                  <CheckmarkIcon className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Official Student&apos;s Pass (ICA SOLAR)</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>Tuition Grant Scheme (TGS) Subsidies</span>
+                <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                  <CheckmarkIcon className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Fast 1 to 2 Week ICA Processing</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>1-Year LTVP Post-Study Work Pathway</span>
+                <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                  <CheckmarkIcon className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>1-Year LTVP Job Seeker Pathway</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>Only 4.5 Hours Direct Flight from India</span>
+                <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-slate-200/80 shadow-sm">
+                  <CheckmarkIcon className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>100% Transparent ICA Official Fees</span>
                 </div>
               </div>
 
-              {/* CTAs */}
+              {/* CTAs with Real Phone Lines */}
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
                   href="#counselling-form"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-bold text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-red-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <span>Free Singapore Counselling</span>
+                  <span>Book Free Evaluation</span>
                 </a>
-                <a href="tel:+919173186109" className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#0a1e38] hover:bg-slate-800 text-white font-bold text-base px-7 py-3.5 rounded-xl shadow-md transition-all duration-300"
+                <a
+                  href="tel:+919173186109"
+                  className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#0a1e38] hover:bg-slate-800 text-white font-bold text-base px-7 py-3.5 rounded-xl shadow-md transition-all duration-300"
                 >
                   <PhoneIcon />
-                  <span>+91 91731 86109</span>
+                  <span>+91 9173186109</span>
                 </a>
               </div>
             </div>
@@ -488,13 +460,13 @@ export default function SingaporeStudyAbroadContent() {
               <div className="relative w-[320px] sm:w-[420px] md:w-[460px] aspect-square flex items-center justify-center anim-gentle-float">
                 {/* Glowing Outer Rings */}
                 <div className="absolute inset-0 rounded-full border border-red-200/60 animate-ping [animation-duration:4s] pointer-events-none" />
-                <div className="absolute inset-4 rounded-full border-2 border-dashed border-sky-300/80 animate-spin [animation-duration:60s] pointer-events-none" />
+                <div className="absolute inset-4 rounded-full border-2 border-dashed border-red-300/80 animate-spin [animation-duration:60s] pointer-events-none" />
 
-                {/* Central High Quality Graphic */}
+                {/* Central Image Card */}
                 <div className="relative w-full h-full p-4 flex items-center justify-center transition-transform duration-700 hover:scale-105">
                   <Image
                     src="/singapore-hero.png"
-                    alt="Study in Singapore Student - Umang Career Consultancy"
+                    alt="Study in Singapore - Umang Career Consultancy"
                     width={480}
                     height={480}
                     className="w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white"
@@ -503,22 +475,24 @@ export default function SingaporeStudyAbroadContent() {
                 </div>
 
                 {/* Floating Metric Pill 1 */}
-                <div className="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-0 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce [animation-duration:3.5s]">
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-black text-lg">
-                    #8
+                <div className="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-0 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#e52928] font-black text-sm">
+                    ICA
                   </div>
                   <div>
-                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">QS World Ranking</div>
-                    <div className="text-base font-extrabold text-[#0a1e38]">NUS Top in Asia</div>
+                    <div className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Pass Type</div>
+                    <div className="text-sm font-extrabold text-[#0a1e38]">Student&apos;s Pass (STP)</div>
                   </div>
                 </div>
 
                 {/* Floating Metric Pill 2 */}
-                <div className="absolute -top-2 -right-2 sm:top-4 sm:right-0 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce [animation-duration:4.2s]">
-                  <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#e52928] font-black text-xs tracking-wider">SG</div>
+                <div className="absolute -top-2 -right-2 sm:top-4 sm:right-0 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-black text-sm">
+                    SGD
+                  </div>
                   <div>
-                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Global Business</div>
-                    <div className="text-base font-extrabold text-[#0a1e38]">4,000+ MNC HQs</div>
+                    <div className="text-[11px] text-slate-500 font-semibold uppercase tracking-wider">Official Fee</div>
+                    <div className="text-sm font-extrabold text-[#0a1e38]">SGD 45 + 60</div>
                   </div>
                 </div>
               </div>
@@ -528,80 +502,51 @@ export default function SingaporeStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          ABOUT SINGAPORE (Matching User Reference)
+          2. THE FIRST TRUTH: IT IS NOT A "VISA," IT IS A STUDENT’S PASS
          ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full py-16 sm:py-20 bg-white relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="About Singapore"
-            subtitle="A global powerhouse of technological innovation, economic dynamism, and pristine urban architecture."
+            title="The First Truth: It is Not a &quot;Visa,&quot; It is a Student’s Pass"
+            subtitle="Transparent legal clarity from Founder Sudip Parikh & Umang Career Consultancy"
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Landmark Image */}
-            <div className="lg:col-span-5 relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl border border-slate-100 group">
-              <Image
-                src="/destinations/singapore.jpg"
-                alt="Marina Bay Sands Skyline Singapore"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#e52928] text-white">
-                  Marina Bay Sands & Gardens by the Bay
+          <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-sm space-y-6">
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed font-normal">
+              A common misconception is that you apply for a standard visa sticker in your passport. In Singapore, international students are granted a <strong className="text-[#0a1e38] font-bold">Student&apos;s Pass (STP)</strong> issued directly by the <strong className="text-[#0a1e38] font-bold">Immigration & Checkpoints Authority (ICA)</strong>.
+            </p>
+
+            {/* Critical Rule Callout Box */}
+            <div className="p-6 rounded-2xl bg-amber-50 border-2 border-amber-300 text-amber-950 flex flex-col sm:flex-row items-start gap-4 shadow-sm">
+              <div className="p-2.5 rounded-xl bg-amber-100 text-amber-800 shrink-0">
+                <AlertIcon className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <span className="text-xs font-black uppercase tracking-wider text-amber-900 block">
+                  Critical Rule Mandated by Singapore ICA
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold mt-2">The Lion City</h3>
+                <p className="text-sm sm:text-base font-bold leading-relaxed">
+                  A Student’s Pass is strictly issued for approved, full-time daytime courses. Part-time, weekend, or evening courses are completely ineligible for a Student&apos;s Pass.
+                </p>
               </div>
             </div>
 
-            {/* Key Fact Badges */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-8 h-8 rounded-full bg-emerald-100 text-[#22c55e] flex items-center justify-center font-bold text-sm mb-3"><svg className="w-3.5 h-3.5 inline mr-1 text-[#e52928] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg></div>
-                <h4 className="text-base font-extrabold text-[#0a1e38]">Located in Southeast Asia</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Strategic maritime crossroads at the southern tip of the Malay Peninsula connecting East and West.
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80">
+                <div className="font-bold text-[#0a1e38] text-base mb-1">
+                  Autonomous Universities & Polytechnics
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Government-funded premier institutions like NUS, NTU, SMU, SUTD, and SIT offer autonomous degree programs, Tuition Grant Schemes (TGS), and full legal campus privileges.
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm mb-3"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-                <h4 className="text-base font-extrabold text-[#0a1e38]">Small Island City-State</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Highly efficient, compact metropolis where university campuses, business centers, and transit are minutes apart.
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-8 h-8 rounded-full bg-emerald-100 text-[#22c55e] flex items-center justify-center font-bold text-sm mb-3"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div>
-                <h4 className="text-base font-extrabold text-[#0a1e38]">Innovation-Driven Economy</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Asia&apos;s leading R&D, biomedical, fintech, and semiconductor ecosystem backed by substantial government investment.
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm mb-3"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
-                <h4 className="text-base font-extrabold text-[#0a1e38]">Excellent Infrastructure</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Changi Airport voted world&apos;s best, complemented by automated driverless MRT subway networks and 5G nationwide coverage.
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-sm mb-3"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg></div>
-                <h4 className="text-base font-extrabold text-[#0a1e38]">Strong Economy & High GDP</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  AAA sovereign credit rated economy offering currency stability, flourishing capital markets, and high student earning potential.
-                </p>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-8 h-8 rounded-full bg-red-100 text-[#e52928] flex items-center justify-center font-bold text-sm mb-3"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div>
-                <h4 className="text-base font-extrabold text-[#0a1e38]">Safe, Clean & Law-Abiding</h4>
-                <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Consistently ranked among the safest cities in the world with strict civic regulations and zero-tolerance crime policies.
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80">
+                <div className="font-bold text-[#0a1e38] text-base mb-1">
+                  EduTrust-Accredited Private Institutes (PEIs)
+                </div>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Must hold valid certification under the Committee for Private Education (CPE) and EduTrust quality frameworks to ensure student tuition fees are protected under the Fee Protection Scheme (FPS).
                 </p>
               </div>
             </div>
@@ -610,120 +555,204 @@ export default function SingaporeStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          TOP COURSES IN SINGAPORE
+          3. POPULAR PROGRAMS WE HELP YOU APPLY FOR
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Top Courses in Singapore"
-            subtitle="High-demand academic disciplines connected directly to Asia's premier multinational employers."
+            title="Popular Programs We Help You Apply For"
+            subtitle="Admissions are open for multiple intakes throughout the year, spanning top local universities, polytechnics, and well-known private institutions offering internationally recognized programs:"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TOP_COURSES.map((course, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {POPULAR_PROGRAMS.map((prog, idx) => (
               <div
                 key={idx}
-                className="bg-white p-7 rounded-3xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <div className="p-3 rounded-2xl bg-emerald-50 group-hover:scale-110 transition-transform duration-300">
-                      {course.icon}
+                  <div className="flex items-center justify-between gap-3 mb-5">
+                    <div className="p-3 rounded-2xl bg-red-50 group-hover:bg-[#e52928] group-hover:text-white transition-colors duration-300">
+                      {prog.icon}
                     </div>
-                    <span className="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-[#0a1e38] border border-slate-200">
-                      {course.tag}
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-slate-100 text-[#0a1e38] border border-slate-200 uppercase tracking-wider">
+                      {prog.tag}
                     </span>
                   </div>
-                  <h3 className="text-xl font-extrabold text-[#0a1e38] group-hover:text-[#e52928] transition-colors">
-                    {course.title}
+
+                  <h3 className="text-xl sm:text-2xl font-black text-[#0a1e38] group-hover:text-[#e52928] transition-colors">
+                    {prog.title}
                   </h3>
-                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">{course.desc}</p>
+
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                    {prog.desc}
+                  </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#e52928]">
-                  <span>Explore Course Syllabi</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+
+                <div className="mt-6 pt-4 border-t border-slate-100">
+                  <div className="text-xs font-semibold text-slate-500 mb-1">Target Career Horizons:</div>
+                  <div className="text-xs font-bold text-[#0a1e38]">{prog.careers}</div>
                 </div>
               </div>
             ))}
+          </div>
 
-            {/* Consultation CTA Card */}
-            <div className="bg-gradient-to-br from-[#0a1e38] to-[#122e54] p-7 rounded-3xl shadow-lg text-white flex flex-col justify-between">
-              <div>
-                <span className="px-3 py-1 rounded-full bg-red-500/20 text-[#e52928] text-xs font-bold border border-red-500/30">
-                  Profile Assessment
-                </span>
-                <h3 className="text-xl font-black mt-4">Want to Apply to NUS, NTU or SMU?</h3>
-                <p className="mt-3 text-sm text-slate-300 leading-relaxed">
-                  Admission to Singapore autonomous universities is highly competitive. Let our senior consultants evaluate your GPA and profile for scholarships.
-                </p>
-              </div>
-              <div className="mt-6">
-                <a
-                  href="#counselling-form"
-                  className="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-[#e52928] hover:bg-red-700 text-white font-bold text-sm shadow-md transition-colors"
-                >
-                  Request University Shortlist
-                </a>
-              </div>
-            </div>
+          {/* Quick Notice Pill */}
+          <div className="mt-8 text-center">
+            <span className="inline-block px-4 py-2 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-600 shadow-sm">
+              <strong className="text-[#0a1e38]">Multiple Intakes:</strong> January, March/April, July/August, and October/November. Fast admissions available!
+            </span>
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          WHY SINGAPORE AS AN IDEAL DESTINATION? (8 Pillars)
+          4. OFFICIAL ICA FEES AND PROCESSING TIMES
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Why Singapore as an Ideal Study Abroad Destination?"
-            subtitle="Unmatched advantages of pursuing higher education in Asia's most progressive city-state."
+            title="What are the Official ICA Fees and Processing Times?"
+            subtitle="We don't hide costs behind generic package fees. Here is the exact fee structure mandated by the Singapore ICA:"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {WHY_SINGAPORE.map((pillar, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {ICA_FEES.map((fee, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
+                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#e52928] font-black text-sm flex items-center justify-center mb-4">
-                    0{idx + 1}
+                  <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-red-50 text-[#e52928] border border-red-100 inline-block mb-3">
+                    {fee.badge}
+                  </span>
+                  <h3 className="text-base font-extrabold text-[#0a1e38]">{fee.label}</h3>
+                  <div className="mt-3 flex items-baseline gap-2">
+                    <span className="text-2xl sm:text-3xl font-black text-[#e52928]">{fee.amount}</span>
+                    <span className="text-xs font-semibold text-slate-500">({fee.inr})</span>
                   </div>
-                  <h3 className="text-lg font-extrabold text-[#0a1e38] mb-2">{pillar.title}</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{pillar.desc}</p>
+                  <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">{fee.timing}</p>
                 </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-[#0a1e38] to-[#122e54] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+            <div className="space-y-1 text-center md:text-left">
+              <span className="text-xs font-bold uppercase tracking-wider text-red-400">Umang Advisory Tip</span>
+              <h4 className="text-lg font-bold">Standard Processing Timeline: 1 to 2 Weeks</h4>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                Usually takes 1 to 2 weeks for autonomous universities and EduTrust-accredited private schools. However, we strongly advise filing your paperwork at least 8 to 12 weeks before your course intake begins.
+              </p>
+            </div>
+            <a
+              href="#counselling-form"
+              className="px-6 py-3 rounded-xl bg-[#e52928] hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider shrink-0 transition-transform hover:scale-105"
+            >
+              Check Your Intake Timeline
+            </a>
+          </div>
         </div>
       </section>
 
       {/* =========================================================
-          TUITION GRANT SCHEME (TGS) SPOTLIGHT
+          5. OUR STEP-BY-STEP SOLAR VISA PROCESS
          ========================================================= */}
-      <section className="w-full py-12 sm:py-16 bg-[#0a1e38] text-white relative overflow-hidden">
+      <section className="w-full py-16 sm:py-24 bg-[#0a1e38] text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8">
-              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-500/20 text-[#22c55e] border border-emerald-500/30">
-                Singapore Ministry of Education (MOE) Initiative
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mt-3 text-white">
-                The Tuition Grant Scheme (TGS) & 3-Year Career Guarantee
-              </h2>
-              <p className="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-                International students admitted to full-time undergraduate courses at Singapore autonomous universities (NUS, NTU, SMU, SUTD, SIT) can apply for the MOE Tuition Grant. This covers a substantial portion of your tuition costs in return for a 3-year service bond working in Singapore upon graduation.
-              </p>
-            </div>
-            <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
-              <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-center">
-                <div className="text-2xl font-black text-[#22c55e]">Up to 50%+</div>
-                <div className="text-xs text-slate-300 font-semibold mt-1">Tuition Subsidies Under TGS</div>
+          <SectionHeader
+            title="Our Step-by-Step SOLAR Visa Process"
+            subtitle="Founder Sudip Parikh’s extensive global visa training ensures your application moves flawlessly through Singapore’s digital-first architecture:"
+            variant="dark"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {SOLAR_STEPS.map((step, idx) => (
+              <div
+                key={idx}
+                className="p-7 rounded-3xl bg-white/5 border border-white/10 hover:border-[#22c55e]/50 hover:bg-white/10 transition-all duration-300 flex flex-col justify-between backdrop-blur-sm group"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#e52928] text-white font-black text-lg flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform">
+                    {step.num}
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-[#22c55e] transition-colors leading-snug">
+                    {step.title}
+                  </h3>
+                  <p className="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                    {step.desc}
+                  </p>
+                </div>
               </div>
-              <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-center">
-                <div className="text-2xl font-black text-[#e52928]">3 Years</div>
-                <div className="text-xs text-slate-300 font-semibold mt-1">Guaranteed Work in Singapore</div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto">
+              From your initial LOA submission to your official ICA biometrics at Kallang Road, Umang Career Consultancy manages every Form 16, e-Form V36, and document upload with zero margin for error.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          6. THE REALITY OF WORK RIGHTS IN SINGAPORE
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-24 bg-white relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="The Reality of Work Rights in Singapore"
+            subtitle="In alignment with our absolute commitment to honest consultation, we want you to know the realistic boundaries of working while studying:"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Panel 1: Part-Time Work */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-md flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
+                    16h
+                  </div>
+                  <h3 className="text-xl font-black text-[#0a1e38]">Part-Time Work During Term</h3>
+                </div>
+
+                <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
+                  <p>
+                    <strong className="text-[#0a1e38]">Autonomous Universities & Polytechnics:</strong> Only students enrolled in specific, government-recognized autonomous universities (NUS, NTU, SMU, SUTD, SIT) or polytechnics are permitted to work <strong className="text-[#0a1e38]">up to 16 hours per week</strong> during term time.
+                  </p>
+                  <p>
+                    <strong className="text-[#0a1e38]">Private School Students:</strong> Private education institution (PEI) students generally <strong className="text-red-700">do not hold default work rights</strong> unless they are on an official On-the-Job Training (OJT) or internship module integrated directly into their diploma.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-slate-200 text-xs font-semibold text-slate-500">
+                Strict MOM Regulations Apply • Zero Illegal Employment Tolerated
+              </div>
+            </div>
+
+            {/* Panel 2: Post-Study Stay */}
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-md flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg">
+                    LTVP
+                  </div>
+                  <h3 className="text-xl font-black text-[#0a1e38]">Post-Study Stay & Employment</h3>
+                </div>
+
+                <div className="space-y-4 text-sm text-slate-600 leading-relaxed">
+                  <p>
+                    <strong className="text-[#0a1e38]">1-Year LTVP Job Seeker Pass:</strong> Unlike countries with automatic graduate route visas, Singapore allows you to apply for a <strong className="text-[#0a1e38]">1-year non-renewable Long-Term Visit Pass (LTVP)</strong> to look for a job after graduating from recognized Institutes of Higher Learning.
+                  </p>
+                  <p>
+                    <strong className="text-[#0a1e38]">Corporate S Pass / Employment Pass (EP):</strong> Once you secure a job offer meeting the required salary thresholds and COMPASS points criteria, your employer will sponsor your official S Pass or Employment Pass (EP).
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-4 border-t border-slate-200 text-xs font-semibold text-slate-500">
+                Evaluated under Singapore Ministry of Manpower COMPASS Framework
               </div>
             </div>
           </div>
@@ -731,20 +760,20 @@ export default function SingaporeStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          UNIVERSITIES IN SINGAPORE
+          7. PROMINENT UNIVERSITIES & INSTITUTIONS
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Prominent Universities in Singapore"
-            subtitle="Ivy-League tier autonomous institutions and prestigious international branch campuses."
+            title="Prominent Universities & Institutions in Singapore"
+            subtitle="Explore world-leading autonomous universities and prestigious foreign branch campuses."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {UNIVERSITIES.map((uni, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
+                className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#e52928] transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -755,13 +784,9 @@ export default function SingaporeStudyAbroadContent() {
                   </div>
                   <h3 className="text-lg font-black text-[#0a1e38]">{uni.name}</h3>
                   <div className="text-xs font-bold text-[#e52928] mt-1 flex items-center gap-1.5">
-                    <svg className="w-3.5 h-3.5 inline mr-1 text-[#e52928] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-                    <span>Singapore</span>
+                    <span>{uni.tag}</span>
                   </div>
                   <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">{uni.features}</p>
-                </div>
-                <div className="mt-5 pt-3 border-t border-slate-100 text-xs font-bold text-slate-700 flex items-center justify-between">
-                  <span>Specialty: {uni.tag}</span>
                 </div>
               </div>
             ))}
@@ -770,25 +795,20 @@ export default function SingaporeStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          TUITION FEES & LIVING COSTS TABLES
+          8. TUITION FEES & LIVING COSTS
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Singapore Tuition Fees & Living Costs"
-            subtitle="Transparent financial overview in Singapore Dollars (SGD) and Indian Rupees (INR)."
+            title="Indicative Tuition Fees & Living Costs in Singapore"
+            subtitle="Transparent financial estimates in Singapore Dollars (SGD) and Indian Rupees (INR)."
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Tuition Fees Table */}
-            <div className="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200">
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-xl font-black text-[#0a1e38]">Singapore Tuition Fees</h3>
-                  <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                    Annual indicative tuition rates for international students
-                  </p>
-                </div>
+            <div className="lg:col-span-7 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+              <div className="flex items-center justify-between mb-5">
+                <h3 className="text-xl font-black text-[#0a1e38]">Annual Indicative Tuition Fees</h3>
                 <span className="text-xs font-bold px-3 py-1 rounded-full bg-red-50 text-[#e52928] border border-red-200">
                   Multiple Intakes
                 </span>
@@ -798,80 +818,73 @@ export default function SingaporeStudyAbroadContent() {
                 <table className="w-full text-left border-collapse text-xs sm:text-sm">
                   <thead>
                     <tr className="border-b-2 border-slate-200 text-[#0a1e38]">
-                      <th className="py-3 px-3 font-extrabold">Courses</th>
-                      <th className="py-3 px-3 font-extrabold">Minimum Annual</th>
-                      <th className="py-3 px-3 font-extrabold">Maximum Annual</th>
+                      <th className="py-3 px-3 font-extrabold">Course Level</th>
+                      <th className="py-3 px-3 font-extrabold">Min. (SGD)</th>
+                      <th className="py-3 px-3 font-extrabold">Max. (SGD)</th>
                       <th className="py-3 px-3 font-extrabold text-[#22c55e]">Approx. INR</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 text-slate-700">
                     <tr className="hover:bg-white">
+                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Diploma Programs</td>
+                      <td className="py-3.5 px-3 font-semibold">S$4,400</td>
+                      <td className="py-3.5 px-3 font-semibold">S$25,000</td>
+                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹2.7L – ₹15.6L</td>
+                    </tr>
+                    <tr className="hover:bg-white">
                       <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Bachelor Degree</td>
-                      <td className="py-3.5 px-3 font-semibold">S$11,990</td>
-                      <td className="py-3.5 px-3 font-semibold">S$60,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹7.5L – ₹37.5L</td>
+                      <td className="py-3.5 px-3 font-semibold">S$12,000</td>
+                      <td className="py-3.5 px-3 font-semibold">S$55,000</td>
+                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹7.5L – ₹34.5L</td>
                     </tr>
                     <tr className="hover:bg-white">
                       <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Master Degree</td>
-                      <td className="py-3.5 px-3 font-semibold">S$11,605</td>
-                      <td className="py-3.5 px-3 font-semibold">S$75,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹7.2L – ₹46.8L</td>
+                      <td className="py-3.5 px-3 font-semibold">S$14,000</td>
+                      <td className="py-3.5 px-3 font-semibold">S$65,000</td>
+                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹8.8L – ₹40.5L</td>
                     </tr>
                     <tr className="hover:bg-white">
-                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Diploma Programs</td>
-                      <td className="py-3.5 px-3 font-semibold">S$4,400</td>
-                      <td className="py-3.5 px-3 font-semibold">S$35,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹2.7L – ₹21.8L</td>
-                    </tr>
-                    <tr className="hover:bg-white">
-                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Ph.D. Programs</td>
-                      <td className="py-3.5 px-3 font-semibold">S$25,000</td>
-                      <td className="py-3.5 px-3 font-semibold">S$60,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">Often Fully Funded*</td>
+                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Ph.D. / Research</td>
+                      <td className="py-3.5 px-3 font-semibold">S$20,000</td>
+                      <td className="py-3.5 px-3 font-semibold">S$50,000</td>
+                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">Often 100% Funded*</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               <div className="mt-4 p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-600">
-                <span className="font-bold text-[#0a1e38]">Key Intakes:</span> August, January, March/April, October.
-                <br />
-                <span className="italic text-slate-500">
-                  *Note: Fees and intakes vary depending on the institution, program, and whether a student receives the MOE Tuition Grant. Ph.D. scholars at NUS and NTU frequently receive full tuition waivers plus S$2,000–S$3,500 monthly research stipends.
-                </span>
+                <span className="font-bold text-[#0a1e38]">Tuition Grant Scheme (TGS):</span> Eligible autonomous university students receive up to 50%+ government subsidies in exchange for a 3-year service bond working in Singapore.
               </div>
             </div>
 
-            {/* Monthly Cost of Living Table */}
-            <div className="lg:col-span-5 bg-slate-50 p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between">
+            {/* Cost of Living */}
+            <div className="lg:col-span-5 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-black text-[#0a1e38]">Monthly Cost of Living</h3>
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="text-xl font-black text-[#0a1e38]">Monthly Living Costs</h3>
                   <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">
-                    Est. Breakdown
+                    Realistic Est.
                   </span>
                 </div>
-                <p className="text-xs text-slate-500 mb-4">
-                  Estimated monthly living expenditure in Singapore
-                </p>
 
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {LIVING_COSTS.map((c, i) => (
                     <div key={i} className="flex items-center justify-between text-xs sm:text-sm py-1.5 border-b border-slate-200">
                       <span className="text-slate-600 font-medium">{c.item}</span>
                       <div className="text-right">
                         <span className="font-bold text-[#0a1e38]">{c.range}</span>
-                        <span className="text-xs text-slate-400 block">({c.inr})</span>
+                        <span className="text-[11px] text-slate-400 block">({c.inr})</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-5 p-4 rounded-2xl bg-white border border-slate-200">
+              <div className="mt-4 p-3.5 rounded-2xl bg-white border border-slate-200">
                 <div className="flex items-center justify-between text-sm font-extrabold text-[#0a1e38]">
-                  <span>Total Estimated Monthly:</span>
-                  <span className="text-[#22c55e] text-base font-black">SGD 1,300 – 2,410</span>
+                  <span>Total Est. Monthly:</span>
+                  <span className="text-[#22c55e] text-base font-black">SGD 1,300 – 2,400</span>
                 </div>
                 <div className="text-xs text-slate-500 text-right mt-0.5">Approx. ₹80,000 – ₹1,50,000 / month</div>
               </div>
@@ -881,150 +894,63 @@ export default function SingaporeStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          WEATHER THROUGHOUT THE YEAR
+          9. WHY FILE YOUR SINGAPORE APPLICATION WITH UMANG?
          ========================================================= */}
-      <section className="w-full py-14 sm:py-20 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-4 text-center lg:text-left">
-                <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-amber-100 text-amber-800 border border-amber-200">
-                  Climate Profile
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-black text-[#0a1e38] mt-3">
-                  Weather Throughout the Year
-                </h3>
-                <div className="mt-4 text-4xl sm:text-5xl font-black text-[#e52928]">
-                  24℃ – 32℃
-                </div>
-                <div className="text-xs font-bold text-slate-500 mt-1">Consistent Annual Temperatures</div>
-              </div>
+      <section className="w-full py-16 sm:py-24 bg-gradient-to-b from-[#0a1e38] via-[#112a4c] to-[#0a1e38] text-white relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30">
+            Honest • Professional • Transparent
+          </span>
 
-              <div className="lg:col-span-8 space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
-                <p>
-                  Singapore has a <strong className="text-[#0a1e38]">hot, humid and tropical climate throughout the year</strong>, with relatively consistent temperatures and rainfall. There are no cold winters or extreme seasonal temperature fluctuations.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                    <div className="font-bold text-[#0a1e38] text-sm flex items-center gap-2">
-                      <span className="inline-flex items-center gap-1.5"><svg className="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" strokeWidth={2} /><path strokeWidth={2} strokeLinecap="round" d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>Tropical Sunshine</span>
-                    </div>
-                    <p className="text-xs text-slate-500 mt-1">
-                      Warm sunny days year-round. Light cotton clothing, sunglasses, and comfortable footwear are everyday student staples.
-                    </p>
-                  </div>
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                    <div className="font-bold text-[#0a1e38] text-sm flex items-center gap-2">
-                      <span className="inline-flex items-center gap-1.5"><svg className="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>Monsoon Showers & Air-Conditioning</span>
-                    </div>
-                    <p className="text-xs text-slate-500 mt-1">
-                      Frequent refreshing afternoon showers. All lecture theaters, libraries, malls, and MRT trains are fully climate-controlled.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mt-4">
+            Why File Your Singapore Application with Umang?
+          </h2>
+
+          <p className="mt-6 text-base sm:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed">
+            &ldquo;We don&apos;t build empty expectations. We analyze your academic transcripts, explain proof-of-fund rules truthfully, map your backlog status honestly, and construct a practical roadmap to maximize your ICA approval chances.&rdquo;
+          </p>
+
+          <div className="mt-8 text-2xl sm:text-3xl font-black text-[#e52928] tracking-tight">
+            Umang career mein possible hai!
+          </div>
+
+          <p className="mt-2 text-sm sm:text-base text-slate-300 font-medium">
+            Ready for an honest, crystal-clear evaluation of your Singapore study options?
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="tel:+919173186109"
+              className="anim-phone-ring inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#e52928] hover:bg-red-700 text-white font-bold text-base shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              <PhoneIcon />
+              <span>Call +91 9173186109</span>
+            </a>
+            <a
+              href="tel:+919712610086"
+              className="anim-phone-ring inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-base shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              <PhoneIcon />
+              <span>Call +91 9712610086</span>
+            </a>
+            <a
+              href="#counselling-form"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-[#0a1e38] font-bold text-base shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+            >
+              <span>Visit Vadodara Office</span>
+            </a>
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          SINGAPORE ACADEMIC SYSTEM & IMMIGRATION (6 Cards)
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="The Singapore Academic & Student Pass System"
-            subtitle="Essential regulations, immigration pathways, and student employment frameworks."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ACADEMIC_SYSTEM.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-red-50 text-[#e52928] font-black text-sm flex items-center justify-center mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-lg font-black text-[#0a1e38]">{item.title}</h3>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          STEP-BY-STEP ADMISSION & STUDENT PASS ROADMAP
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Step-by-Step Singapore Admission & SOLAR Visa Process"
-            subtitle="From choosing your institution to ICA biometric verification — Umang Career Consultancy guides you at every stage."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                step: "01",
-                title: "Profile Assessment & Program Selection",
-                desc: "Evaluating transcripts, standardized tests (IELTS/PTE, GRE/GMAT if applicable), and identifying autonomous universities or private pathway colleges.",
-              },
-              {
-                step: "02",
-                title: "Dossier Formulation & SOP Drafting",
-                desc: "Crafting customized Statements of Purpose, resumes, academic references, and assembling certified academic portfolios.",
-              },
-              {
-                step: "03",
-                title: "University Acceptance & Student Contract",
-                desc: "Securing your Letter of Acceptance (LOA) and signing the mandatory Standard PEI-Student Contract or university registration agreement.",
-              },
-              {
-                step: "04",
-                title: "SOLAR Registration & IPA Letter Issuance",
-                desc: "The institution submits your details on the ICA SOLAR portal; we lodge your Form 16/V36 to receive your In-Principle Approval (IPA) visa letter.",
-              },
-              {
-                step: "05",
-                title: "Travel to Singapore & ICA Biometrics",
-                desc: "Entering Singapore with your IPA letter and completing biometric registration, medical checkup, and collecting your physical Student's Pass card.",
-              },
-              {
-                step: "06",
-                title: "Pre-Departure Briefing & Housing Setup",
-                desc: "Assistance with student hostel bookings, EZ-Link public transit cards, bank account opening, and SIM card activation upon arrival.",
-              },
-            ].map((step, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:border-[#22c55e] transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#0a1e38] text-white font-black text-sm flex items-center justify-center mb-4">
-                    {step.step}
-                  </div>
-                  <h3 className="text-lg font-black text-[#0a1e38]">{step.title}</h3>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          FAQS SECTION (Matching User Reference + Practical Advice)
+          10. FREQUENTLY ASKED QUESTIONS
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-white relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Frequently Asked Questions"
-            subtitle="Authoritative answers to vital queries regarding education and student visas in Singapore."
+            title="Frequently Asked Questions: Singapore Student's Pass"
+            subtitle="Straightforward answers regarding SOLAR approvals, part-time work legality, and post-study LTVP stay."
           />
 
           <div className="space-y-4">
@@ -1053,148 +979,167 @@ export default function SingaporeStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          FREE COUNSELLING FORM & HASSLE-FREE CTA
+          11. FREE COUNSELLING FORM & OFFICIAL OFFICE DETAILS
          ========================================================= */}
-      <section id="counselling-form" className="w-full py-16 sm:py-24 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-[#0a1e38] to-[#142d4f] rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 text-white border border-slate-800">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              {/* Left Column Text */}
-              <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
-                <span className="text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-red-500/20 text-[#e52928] border border-red-500/30">
-                  Plan Your Singapore Study Journey
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-                  To Make Your Study in Singapore <span className="text-[#e52928]">Hassle-Free</span>
-                </h2>
-                <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                  Plan your Singapore study journey with Umang Career Consultancy. From navigating competitive admissions at NUS, NTU, and SMU to securing Tuition Grants and Student&apos;s Pass via SOLAR, our certified Asia-Pacific counselors ensure an impeccable experience.
-                </p>
+      <section id="counselling-form" className="w-full py-16 sm:py-24 bg-slate-50 relative border-t border-slate-200/60">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-8 sm:p-12">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-xs sm:text-sm font-bold text-[#e52928] tracking-widest uppercase">
+                Take The Next Step
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a1e38] mt-1.5">
+                Book Free Singapore Study Evaluation
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base mt-2">
+                Receive end-to-end guidance from Founder Sudip Parikh and senior Asia-Pacific visa counselors at Umang Career Consultancy.
+              </p>
+            </div>
 
-                <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <a href="tel:+919173186109" className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg transition-colors"
-                  >
-                    <PhoneIcon />
-                    <span>Call +91 91731 86109</span>
-                  </a>
-                  <div className="text-xs text-slate-400 font-medium">
-                    Office Hours: Mon–Sat, 9:30 AM – 7:00 PM IST
+            {formSubmitted ? (
+              <div className="text-center py-10">
+                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+                  <CheckmarkIcon className="w-8 h-8 text-emerald-600" />
+                </div>
+                <h3 className="text-2xl font-black text-[#0a1e38]">Inquiry Submitted!</h3>
+                <p className="text-sm text-slate-600 mt-2">
+                  Thank you! Our Singapore education advisor will contact you within 24 hours.
+                </p>
+                <button
+                  onClick={() => setFormSubmitted(false)}
+                  className="mt-6 inline-flex text-xs font-bold text-[#e52928] hover:underline"
+                >
+                  Submit another evaluation
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">Your Full Name *</label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+                      placeholder="Enter your name"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#e52928] focus:ring-1 focus:ring-[#e52928] text-slate-800 text-sm transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
+                    <input
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
+                      placeholder="+91 98765 43210"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#e52928] focus:ring-1 focus:ring-[#e52928] text-slate-800 text-sm transition-all"
+                    />
                   </div>
                 </div>
-              </div>
 
-              {/* Right Column Form */}
-              <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 text-slate-800 shadow-xl border border-slate-100">
-                {formSubmitted ? (
-                  <div className="text-center py-8">
-                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4"><svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></div>
-                    <h3 className="text-2xl font-black text-[#0a1e38]">Thank You!</h3>
-                    <p className="text-sm text-slate-600 mt-2">
-                      Your inquiry for studying in Singapore has been received. Our senior Asia-Pacific education specialist will contact you within 24 hours.
-                    </p>
-                    <button
-                      onClick={() => setFormSubmitted(false)}
-                      className="mt-6 inline-flex text-xs font-bold text-[#e52928] hover:underline"
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">Target Program *</label>
+                    <select
+                      value={formData.program}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, program: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#e52928] focus:ring-1 focus:ring-[#e52928] text-slate-800 text-sm bg-white transition-all"
                     >
-                      Submit another inquiry
-                    </button>
+                      <option value="Hospitality & Tourism Management (HTM)">Hospitality & Tourism Management (HTM)</option>
+                      <option value="Information Technology (IT) & Cyber Security">Information Technology (IT) & Cyber Security</option>
+                      <option value="Business Management (BM) & Global Logistics">Business Management (BM) & Global Logistics</option>
+                      <option value="Supply Chain Management (SCM)">Supply Chain Management (SCM)</option>
+                      <option value="Autonomous University UG/PG (NUS/NTU/SMU)">Autonomous University UG/PG (NUS/NTU/SMU)</option>
+                      <option value="Other Course">Other Course / Private Diploma</option>
+                    </select>
                   </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <h3 className="text-xl font-black text-[#0a1e38] text-center lg:text-left">
-                      Book Free Singapore Counselling
-                    </h3>
 
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-                        placeholder="e.g. Ananya Desai"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
-                        <input
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
-                          placeholder="+91 98765 43210"
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
-                        <input
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                          placeholder="ananya@example.com"
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Intended Degree</label>
-                        <select
-                          value={formData.degree}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, degree: e.target.value }))}
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        >
-                          <option value="Master's / PG">Master&apos;s Degree / PG</option>
-                          <option value="Bachelor's / UG">Bachelor&apos;s Degree / UG</option>
-                          <option value="Diploma">Diploma Program</option>
-                          <option value="Ph.D.">Ph.D. / Research</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Target Intake</label>
-                        <select
-                          value={formData.intake}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, intake: e.target.value }))}
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        >
-                          <option value="August 2026">August 2026 Intake</option>
-                          <option value="January 2027">January 2027 Intake</option>
-                          <option value="March/April 2027">March / April 2027 Intake</option>
-                          <option value="October 2027">October 2027 Intake</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">Preferred University or Course?</label>
-                      <textarea
-                        rows={2}
-                        value={formData.notes}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, notes: e.target.value }))}
-                        placeholder="e.g. Interested in Computer Science or MBA at NUS / NTU / SMU"
-                        className="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full py-3.5 px-4 rounded-xl bg-[#e52928] hover:bg-red-700 text-white font-extrabold text-sm sm:text-base shadow-md hover:shadow-red-500/25 transition-all duration-300"
+                  <div>
+                    <label className="block text-sm font-semibold text-slate-700 mb-2">Target Intake</label>
+                    <select
+                      value={formData.intake}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, intake: e.target.value }))}
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#e52928] focus:ring-1 focus:ring-[#e52928] text-slate-800 text-sm bg-white transition-all"
                     >
-                      Book Free Profile Evaluation
-                    </button>
-                    <p className="text-center text-[11px] text-slate-400">
-                      <svg className="w-3.5 h-3.5 inline mr-1 text-slate-400 fill-current" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>100% Confidential. Official partner university counseling.
-                    </p>
-                  </form>
-                )}
-              </div>
-            </div>
+                      <option value="August 2026">August 2026</option>
+                      <option value="October/November 2026">October / November 2026</option>
+                      <option value="January 2027">January 2027</option>
+                      <option value="March/April 2027">March / April 2027</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address (Optional)</label>
+                  <input
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                    placeholder="you@example.com"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#e52928] focus:ring-1 focus:ring-[#e52928] text-slate-800 text-sm transition-all"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-2">Academic Background or Questions</label>
+                  <textarea
+                    rows={3}
+                    value={formData.notes}
+                    onChange={(e) => setFormData((prev) => ({ ...prev, notes: e.target.value }))}
+                    placeholder="Tell us about your highest qualification, percentage, backlogs (if any), or preferred Singapore institute."
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-[#e52928] focus:ring-1 focus:ring-[#e52928] text-slate-800 text-sm transition-all"
+                  />
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-slate-100">
+                  <button
+                    type="submit"
+                    className="w-full sm:w-auto px-8 py-3.5 bg-[#e52928] hover:bg-[#c92017] text-white font-bold rounded-xl shadow-lg shadow-red-500/20 transition-all hover:scale-105 active:scale-95"
+                  >
+                    Book Free Singapore Consultation
+                  </button>
+
+                  <div className="flex items-center gap-3 w-full sm:w-auto">
+                    <a
+                      href="https://wa.me/919173186109"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl shadow-sm transition-colors hover:scale-105 active:scale-95 text-sm"
+                    >
+                      <span>WhatsApp</span>
+                    </a>
+                    <a
+                      href="tel:+919173186109"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-[#0a1e38] hover:bg-[#112a4c] text-white font-semibold rounded-xl shadow-sm transition-colors hover:scale-105 active:scale-95 text-sm"
+                    >
+                      <span>Call Counsellor</span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Direct Office & Contact Verification Strip */}
+                <div className="pt-6 border-t border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-500">
+                  <div>
+                    <strong className="text-slate-700 font-semibold block mb-0.5">Visit Our Head Office:</strong>
+                    First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019
+                  </div>
+                  <div>
+                    <strong className="text-slate-700 font-semibold block mb-0.5">Direct Enquiries:</strong>
+                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                      <a href="tel:+919173186109" className="text-[#0a1e38] font-bold hover:underline">+91 9173186109</a>
+                      <span>•</span>
+                      <a href="tel:+919712610086" className="text-[#0a1e38] font-bold hover:underline">+91 9712610086</a>
+                    </div>
+                    <div className="text-[11px] text-slate-500 mt-1">
+                      <a href="mailto:umangcareer2022@gmail.com" className="hover:underline">umangcareer2022@gmail.com</a> | <a href="mailto:umangcareer2026@gmail.com" className="hover:underline">umangcareer2026@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </section>

@@ -1,0 +1,19 @@
+# Robots.txt for Umang Career Consultancy (umangcareer.in)
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Sitemaps
+Sitemap: https://umangcareer.in/sitemap.xml
+Host: https://umangcareer.in

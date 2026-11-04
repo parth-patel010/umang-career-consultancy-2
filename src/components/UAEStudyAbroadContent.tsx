@@ -30,47 +30,13 @@ function ChevronDownIcon({ isOpen }: { isOpen: boolean }) {
   );
 }
 
-/* Season Weather Icons */
-function SunIcon() {
-  return (
-    <svg className="w-8 h-8 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="5" strokeWidth={2} />
-      <path strokeLinecap="round" strokeWidth={2} d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-    </svg>
-  );
-}
-
-function LeafIcon() {
-  return (
-    <svg className="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-  );
-}
-
-function SnowflakeIcon() {
-  return (
-    <svg className="w-8 h-8 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
-    </svg>
-  );
-}
-
-function BlossomIcon() {
-  return (
-    <svg className="w-8 h-8 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2a4 4 0 00-4 4c0 2 4 6 4 6s4-4 4-6a4 4 0 00-4-4zM6 12a4 4 0 00-4 4c0 2 6 4 6 4s-4-4-2-8zm12 0a4 4 0 014 4c0 2-6 4-6 4s4-4 2-8zM12 22a4 4 0 004-4c0-2-4-6-4-6s-4 4-4 6a4 4 0 004 4z" />
-    </svg>
-  );
-}
-
 /* UAE Flag Badge */
 function UAEFlagBadge() {
   return (
-    <svg className="w-10 h-7 rounded shadow-md border border-white/60" viewBox="0 0 60 42">
+    <svg className="w-9 h-6 rounded shadow-sm border border-slate-200" viewBox="0 0 60 42">
       <rect width="60" height="14" fill="#00732f" />
-      <rect y="14" width="60" height="14" fill="#fff" />
-      <rect y="28" width="60" height="14" fill="#000" />
+      <rect y="14" width="60" height="14" fill="#ffffff" />
+      <rect y="28" width="60" height="14" fill="#000000" />
       <rect width="18" height="42" fill="#ff0000" />
     </svg>
   );
@@ -107,7 +73,7 @@ function SectionHeader({
 
         <h2
           className={`text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight ${
-            isDark ? "text-[#22c55e]" : "text-[#0a1e38]"
+            isDark ? "text-white" : "text-[#0a1e38]"
           }`}
         >
           {title}
@@ -122,10 +88,11 @@ function SectionHeader({
           />
         </div>
       </div>
+
       {subtitle && (
         <p
-          className={`mt-2.5 text-base sm:text-lg font-semibold max-w-3xl mx-auto ${
-            isDark ? "text-slate-200" : "text-slate-600"
+          className={`mt-3 text-sm sm:text-base max-w-2xl mx-auto ${
+            isDark ? "text-slate-300" : "text-slate-600"
           }`}
         >
           {subtitle}
@@ -136,269 +103,279 @@ function SectionHeader({
 }
 
 /* -------------------------------------------------------------
-   DATA STRUCTURES
+   DATA: CORE PILLARS (Why Choose Dubai)
 ------------------------------------------------------------- */
-const TOP_COURSES = [
-  { name: "Business & Management", category: "Global Enterprise", tag: "Dubai Trade Hub" },
-  { name: "Banking & Finance", category: "Fintech & Wealth", tag: "DIFC & ADGM" },
-  { name: "Information Technology", category: "Software & Cloud", tag: "Smart City Infra" },
-  { name: "Digital Technology", category: "Innovation & Media", tag: "Internet City" },
-  { name: "Artificial Intelligence", category: "Machine Learning", tag: "World's 1st AI Ministry" },
-  { name: "Hospitality Management", category: "Luxury Tourism", tag: "Global Hotel Capital" },
-  { name: "Healthcare Management", category: "Clinical Admin", tag: "Dubai Healthcare City" },
-  { name: "Construction Management", category: "Megaprojects & Civil", tag: "Architectural Wonders" },
-  { name: "Marketing & Entrepreneurship", category: "Startups & E-Commerce", tag: "Venture Friendly" },
-  { name: "Data Science & Analytics", category: "Big Data & BI", tag: "High Earning Potential" },
-];
-
-const WHY_UAE = [
+const WHY_CHOOSE_DUBAI = [
   {
-    title: "Specialised Education Opportunities",
-    desc: "Dedicated international education zones like Dubai International Academic City (DIAC) and Dubai Knowledge Park (DKP) hosting top global university branches.",
+    title: "Global Financial Hub",
+    description:
+      "Study in a hyper-connected metropolis that serves as the corporate headquarters for Fortune 500 companies, offering unparalleled networking and internship options.",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+    badge: "Fortune 500 Network",
   },
   {
-    title: "International Student Community",
-    desc: "Over 200 nationalities live and study together harmoniously, creating a global, multicultural networking environment.",
+    title: "Safe and Modern Lifestyle",
+    description:
+      "Experience one of the safest, most cosmopolitan cities in the world with cutting-edge student infrastructure and premium lifestyle amenities.",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    badge: "World Top 3 Safest",
   },
   {
-    title: "Quality Education in English",
-    desc: "All international programs and branch campus degrees are taught 100% in English by renowned international faculty.",
+    title: "Post-Study Employment Growth",
+    description:
+      "Position yourself in a booming job market with excellent opportunities to transition into corporate roles upon graduation.",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    ),
+    badge: "0% Income Tax",
   },
   {
-    title: "Globally Recognised Degrees",
-    desc: "Degrees awarded by UK, Australian, and Indian branch campuses (Birmingham, Heriot-Watt, BITS Pilani) carry the exact same international recognition as their home campuses.",
-  },
-  {
-    title: "Merit-Based Scholarship Opportunities",
-    desc: "Generous academic scholarships ranging from 15% to 50%+ tuition fee discounts based on high school and undergraduate marks.",
-  },
-  {
-    title: "Post-Study Work Opportunities",
-    desc: "Thriving corporate job market with zero personal income tax, enabling graduates to quickly launch high-earning international careers.",
-  },
-  {
-    title: "Strong Industry Exposure",
-    desc: "Proximity to Fortune 500 regional headquarters, leading multinational banks, technology giants, and global logistics leaders.",
-  },
-  {
-    title: "Build Professional Networks",
-    desc: "Unmatched global networking with corporate leaders, entrepreneurs, and innovators at worldwide expos and trade summits.",
-  },
-  {
-    title: "UAE Residence & Golden Visa Options",
-    desc: "Outstanding university graduates with high academic distinction (GPA 3.8+) can qualify for the prestigious 10-Year UAE Golden Visa.",
+    title: "Flexible Part-Time Work",
+    description:
+      "Gain valuable international work experience with legal provisions to take up part-time jobs and internships while completing your course.",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    badge: "Legal Work Rights",
   },
 ];
 
-const EMIRATES = [
-  {
-    id: "dubai",
-    name: "DUBAI",
-    title: "Dubai Emirate",
-    desc: "Explore universities and study options in Dubai. The global business, tourism, and tech capital. Home to Dubai International Academic City (DIAC), Middlesex University, University of Birmingham, and Heriot-Watt.",
-    tag: "Global Business Capital",
-  },
-  {
-    id: "abu-dhabi",
-    name: "ABU DHABI",
-    title: "Abu Dhabi Emirate",
-    desc: "Explore study opportunities in Abu Dhabi. The federal capital and cultural powerhouse of the UAE. Home to NYU Abu Dhabi, Sorbonne University Abu Dhabi, and Khalifa University.",
-    tag: "Federal & Energy Capital",
-  },
-  {
-    id: "sharjah",
-    name: "SHARJAH",
-    title: "Sharjah Emirate",
-    desc: "Explore study opportunities in Sharjah. The cultural and educational capital of the Arab world. Renowned for the expansive University City of Sharjah and American University of Sharjah (AUS).",
-    tag: "Cultural & University City",
-  },
-  {
-    id: "ras-al-khaimah",
-    name: "RAS AL KHAIMAH",
-    title: "Ras Al Khaimah (RAK)",
-    desc: "Explore universities and study options in Ras Al Khaimah. Rapidly developing northern emirate offering cost-effective higher education, American University of RAK (AURAK), and University of Stirling.",
-    tag: "Scenic & Cost-Effective",
-  },
-];
-
-const UNIVERSITIES = [
+/* -------------------------------------------------------------
+   DATA: TOP WORLD-RENOWNED UNIVERSITIES IN DUBAI
+------------------------------------------------------------- */
+const TOP_UNIVERSITIES_DUBAI = [
   {
     name: "University of Birmingham Dubai",
-    location: "Dubai International Academic City",
-    type: "UK Russell Group Campus",
-    tag: "World Top 100 University",
-    features: "The first global top 100 university to open a campus in Dubai, offering identical UK degrees in computer science, business, mechanical engineering, and AI.",
+    type: "UK Russell Group Branch Campus",
+    location: "Dubai International Academic City (DIAC)",
+    hub: "DIAC Campus",
+    description:
+      "Graduate from a prestigious UK Russell Group university campus offering elite programs in business, computer science, and engineering.",
+    highlights: [
+      "Top 100 World Ranked University (QS)",
+      "Identical UK degree awarded at graduation",
+      "State-of-the-art smart campus opened in DIAC",
+      "Russell Group pedigree with elite corporate tie-ups",
+    ],
+    popular: ["BSc Computer Science", "MSc International Business", "BEng Mechanical Engineering", "MSc Artificial Intelligence"],
   },
   {
     name: "Heriot-Watt University Dubai",
-    location: "Dubai Knowledge Park",
-    type: "UK Research Flagship",
-    tag: "Pioneering British Campus",
-    features: "Scotland's historic university with a cutting-edge Dubai campus, acclaimed for civil engineering, petroleum engineering, robotics, and business.",
+    type: "Top UK Engineering & Business Institution",
+    location: "Dubai Knowledge Park (DKP)",
+    hub: "DKP Campus",
+    description:
+      "A pioneering British institution known for stellar engineering, data science, and global business management curriculum.",
+    highlights: [
+      "First overseas university established in Dubai (2005)",
+      "UK Royal Charter degrees recognized internationally",
+      "Brand-new campus in Dubai Knowledge Park",
+      "Pioneering Edinburgh Business School programs",
+    ],
+    popular: ["MSc Data Science", "BBA Global Business Management", "BEng Robotics & Autonomous Systems", "MSc Construction Project Mgmt"],
+  },
+  {
+    name: "University of Wollongong in Dubai (UOWD)",
+    type: "Premier Australian University Branch",
+    location: "Dubai Knowledge Park (DKP)",
+    hub: "DKP Campus",
+    description:
+      "One of the oldest and most respected Australian branch universities in the UAE, famous for finance, IT, and media studies.",
+    highlights: [
+      "Top 1% Global University (Australian Parent)",
+      "Accredited by UAE Ministry of Education (CAA)",
+      "Over 30 years of excellence in Dubai",
+      "Seamless transfer options to Wollongong, Australia",
+    ],
+    popular: ["Bachelor of Computer Science", "Master of Applied Finance", "Bachelor of Media & Communications", "Master of Business Analytics"],
   },
   {
     name: "Middlesex University Dubai",
-    location: "Dubai Knowledge Park",
-    type: "British University Campus",
-    tag: "Diverse Degree Spectrum",
-    features: "First overseas campus of Middlesex University London, offering 70+ undergraduate and postgraduate programs in law, media, business, and tech.",
+    type: "Award-Winning UK University Campus",
+    location: "Dubai Knowledge Park (DKP)",
+    hub: "DKP Campus",
+    description:
+      "An award-winning UK campus offering flexible course selections across accounting, law, design, and psychology.",
+    highlights: [
+      "Over 4,000 students from 118+ nationalities",
+      "Attractive merit scholarships up to 50%",
+      "Direct UK honors degree with London study trips",
+      "Flexible evening timetable options for postgraduates",
+    ],
+    popular: ["LLB Honours Law", "BA Graphic Design", "BSc Psychology with HR", "MSc Corporate & Marketing Communications"],
   },
   {
-    name: "De Montfort University Dubai",
-    location: "Dubai International Academic City",
-    type: "Innovative UK University",
-    tag: "Creative Arts & Technology",
-    features: "Award-winning British institution known for architecture, cyber security, international business, and high graduate employability.",
-  },
-  {
-    name: "BITS Pilani Dubai Campus",
-    location: "Dubai International Academic City",
-    type: "Premier Indian Institute",
-    tag: "Top Engineering Excellence",
-    features: "Renowned Indian premier engineering institution in Dubai, famous for mechanical, electrical, computer science, and biotechnology degrees.",
-  },
-  {
-    name: "Manipal University Dubai",
-    location: "Dubai International Academic City",
-    type: "Multi-Disciplinary University",
-    tag: "Allied Health, Tech & Media",
-    features: "Established academic giant offering specialized degrees in engineering, media and communication, interior design, and biotechnology.",
-  },
-  {
-    name: "Amity University Dubai",
-    location: "Dubai International Academic City",
-    type: "International Research University",
-    tag: "Aerospace, Forensic & Business",
-    features: "Huge 700,000 sq ft modern campus offering aerospace engineering, forensic science, fashion design, and business management.",
-  },
-  {
-    name: "Hult International Business School – Dubai",
-    location: "Dubai Internet City",
-    type: "Triple-Accredited Business School",
-    tag: "Global MBA & Entrepreneurship",
-    features: "One of the world's most international business schools with campuses in Boston, London, and Dubai, rotating MBA students globally.",
-  },
-  {
-    name: "Global Business Studies (GBS Dubai)",
-    location: "Dubai Knowledge Park",
-    type: "Higher Education Specialist",
-    tag: "Applied Business & Tech",
-    features: "Fast-track, industry-focused undergraduate and postgraduate diplomas in entrepreneurship, computing, and financial services.",
-  },
-  {
-    name: "Britts Imperial University College",
-    location: "Sharjah / Dubai",
-    type: "International Academic Center",
-    tag: "Affordable Global Degrees",
-    features: "Partnering with top European universities to deliver flexible bachelor's, master's, and doctorates in business and digital technology.",
+    name: "Curtin University Dubai",
+    type: "High-Ranking Australian Tech Institution",
+    location: "Dubai International Academic City (DIAC)",
+    hub: "DIAC Campus",
+    description:
+      "A high-ranking Australian institution offering industry-aligned degrees in business, communications, and information technology.",
+    highlights: [
+      "Top 1% Global University worldwide (ARWU)",
+      "Triple-accredited Curtin Business School (AACSB)",
+      "Option to complete final years in Perth, Australia",
+      "Intensive 3-year Australian bachelor degrees",
+    ],
+    popular: ["Bachelor of Information Technology", "Bachelor of Commerce", "Master of International Business", "Diploma of Arts & Creative Industries"],
   },
 ];
 
-const LIVING_COSTS = [
-  { item: "Accommodation (Student Residence / Shared Flat)", range: "AED 1,500 – AED 3,500", inr: "₹34,000 – ₹79,000" },
-  { item: "Food & Daily Groceries", range: "AED 800 – AED 1,200", inr: "₹18,000 – ₹27,000" },
-  { item: "Transportation (Dubai Metro & Bus Card)", range: "AED 200 – AED 400", inr: "₹4,500 – ₹9,000" },
-  { item: "Internet & Mobile Connectivity", range: "AED 150 – AED 300", inr: "₹3,400 – ₹6,800" },
-  { item: "Utilities (Air-Conditioning, Water, Electricity)", range: "AED 200 – AED 400", inr: "₹4,500 – ₹9,000" },
-  { item: "Personal / Leisure & Social Activities", range: "AED 300 – AED 700", inr: "₹6,800 – ₹15,800" },
-];
-
-const SEASONS = [
+/* -------------------------------------------------------------
+   DATA: PATHWAY & TRANSFER PROGRAMS
+------------------------------------------------------------- */
+const PATHWAY_PROGRAMS = [
   {
-    name: "Summer",
-    months: "June – August",
-    temp: "35℃ – 45℃",
-    icon: <SunIcon />,
-    desc: "Warm desert sunshine. Life moves seamlessly indoors into world-famous air-conditioned campuses, modern malls, and indoor sports complexes.",
+    title: "Foundation and Diploma Pathways",
+    subtitle: "Bridge Academic Gaps & Enter Year 2 Directly",
+    description:
+      "Enroll in foundational modules that bridge the academic gap, guaranteeing progression into the second year of your undergraduate degree at world-class branch campuses.",
+    benefits: [
+      "Guaranteed progression into Bachelor's degree Year 2 upon passing",
+      "Lower high school grade cutoffs accepted compared to direct entry",
+      "Intensive academic English and study skills preparation",
+      "Small class sizes with high faculty-to-student interaction",
+    ],
+    idealFor: "Students completing CBSE/ICSE/State boards who need academic smoothing or fast-track entry.",
   },
   {
-    name: "Autumn",
-    months: "September – November",
-    temp: "28℃ – 36℃",
-    icon: <LeafIcon />,
-    desc: "Gradual cooling temperatures, pleasant evenings, beginning of the major academic intake, and buzzing outdoor beach clubs.",
-  },
-  {
-    name: "Winter",
-    months: "December – February",
-    temp: "18℃ – 24℃",
-    icon: <SnowflakeIcon />,
-    desc: "Peak outdoor season! Spectacular sunny mild days, outdoor festivals, desert safaris, concerts, and vibrant open-air markets.",
-  },
-  {
-    name: "Spring",
-    months: "March – May",
-    temp: "24℃ – 35℃",
-    icon: <BlossomIcon />,
-    desc: "Warm breezy weather, ideal beach conditions, water sports, and graduation commencement ceremonies.",
+    title: "International Transfer Options (1+2 & 2+1)",
+    subtitle: "Start in Dubai, Graduate in UK, Australia, or Canada",
+    description:
+      "Start your educational journey at a premium campus in Dubai and seamlessly transfer to home campuses in the UK, Australia, or Canada after 1 or 2 years, saving significantly on initial tuition and living costs.",
+    benefits: [
+      "Save 40% to 60% on initial tuition & accommodation costs during years in Dubai",
+      "Earn full post-study work rights (PGWP in Canada, Graduate Route in UK, PSWV in Australia) upon completing final years abroad",
+      "Zero hassle internal credit transfer between international campuses",
+      "Gain dual-continent exposure and international network",
+    ],
+    idealFor: "Budget-conscious families seeking world-class degrees and western post-study work visas.",
   },
 ];
 
-const ACADEMIC_SYSTEM = [
+/* -------------------------------------------------------------
+   DATA: DUBAI VISA PROCESS (Streamlined University-Sponsored)
+------------------------------------------------------------- */
+const VISA_PROCESS_STEPS = [
   {
-    step: "01",
-    title: "Student Visa Sponsorship by University",
-    desc: "In the UAE, international student visas are directly sponsored and processed by your admitting university, ensuring rapid issuance without bureaucratic delays.",
+    title: "University-Sponsored Visa",
+    subtitle: "Zero Hassle Institutional Sponsorship",
+    description:
+      "Unlike traditional destinations, your student visa is officially processed and sponsored by your chosen university in Dubai, making the documentation incredibly simple.",
+    badge: "100% University Sponsored",
   },
   {
-    step: "02",
-    title: "Zero Personal Income Tax",
-    desc: "Graduates working in the UAE keep 100% of their earnings. No federal personal income tax, capital gains tax, or salary withholding.",
+    title: "Straightforward Financial Rules",
+    subtitle: "Clean & Clear-Cut Financial Declarations",
+    description:
+      "Enjoy a hassle-free immigration process with clean, clear-cut financial declarations—avoiding the overly complicated funding histories required by western consulates.",
+    badge: "No Complex Bank Histories",
   },
   {
-    step: "03",
-    title: "10-Year UAE Golden Visa",
-    desc: "High-achieving university graduates with a cumulative GPA of 3.8 or higher can qualify for the self-sponsored 10-year Golden Visa.",
+    title: "Medium of Instruction (MOI) Pathways",
+    subtitle: "Admission Without Mandatory IELTS/PTE",
+    description:
+      "Avoid the stress of rigid language test thresholds; many premier universities in Dubai allow admissions and visa clearances using an English MOI certificate from your previous school or college.",
+    badge: "English MOI Accepted",
   },
   {
-    step: "04",
-    title: "Green Visa & Freelance Visas",
-    desc: "5-year self-sponsored Green Visas available for skilled professionals, freelancers, and entrepreneurs launching ventures in Dubai and Abu Dhabi.",
-  },
-  {
-    step: "05",
-    title: "Emirates ID & Health Insurance",
-    desc: "Every student receives an official Emirates ID card and mandatory medical insurance coverage across private clinics and hospitals.",
-  },
-  {
-    step: "06",
-    title: "Only 3.5 Hours Flight from India",
-    desc: "Direct flights operate daily from over 20 Indian cities to Dubai, Abu Dhabi, and Sharjah with minimal time difference (1.5 hours behind IST).",
+    title: "Medical and Insurance Clearance",
+    subtitle: "Complete On-Arrival Care",
+    description:
+      "We manage your mandatory local health screenings and secure compliant UAE medical insurance required for your residency permit activation.",
+    badge: "Emirates ID & Health Screening",
   },
 ];
 
-const FAQS = [
+/* -------------------------------------------------------------
+   DATA: UMANG 4-STEP SUCCESS PROCESS
+------------------------------------------------------------- */
+const FOUR_STEP_PROCESS = [
   {
-    q: "What is the medium of instruction of international programs?",
-    a: "Many international programs at UAE universities are taught in English. The exact language requirements depend on the institution and program. Private universities and foreign branch campuses deliver all lectures, course materials, examinations, and laboratory work entirely in English.",
+    num: "01",
+    title: "Campus & Career Alignment",
+    desc: "Evaluating your profile to find the ideal global branch university or budget-friendly pathway program in Dubai.",
+    details: "We assess your high school/degree marks, financial parameters, and target post-study career goals to match top UK/Australian campuses.",
   },
   {
-    q: "What are the intakes for UAE universities?",
-    a: "Intakes vary by university and program. Common intake periods include September (the primary academic intake) and January/February, with some institutions offering additional intakes in March, April, or October for executive and postgraduate diplomas.",
+    num: "02",
+    title: "Direct Application Management",
+    desc: "Coordinating flawlessly with academic panels to secure your official Letter of Acceptance (LOA) and scholarship grants.",
+    details: "We fast-track admissions with partner university admissions boards and maximize merit scholarships up to 50% tuition reduction.",
   },
   {
-    q: "Can I stay in the UAE after graduation?",
-    a: "Post-study residence options depend on your employment, visa category, qualification and eligibility under the applicable UAE regulations. Graduates who secure employment transition directly to an employer-sponsored residence visa. Outstanding graduates with a GPA of 3.8+ can apply for the 10-Year Golden Visa, while others can explore 5-Year Green Visas or Jobseeker Visas.",
+    num: "03",
+    title: "Hassle-Free Visa Lodgement",
+    desc: "Routing your immigration documents through university portals to secure your entry permit with speed and precision.",
+    details: "No tedious embassy queues or interview stress; the university issues an official UAE Entry Permit within 2 to 3 weeks.",
   },
   {
-    q: "What are the cultural and religious norms international students should be aware of?",
-    a: "Students should respect UAE laws, local customs and cultural and religious practices. Rules concerning public behaviour, dress and conduct should be understood before travelling. While Dubai and the UAE are cosmopolitan and welcoming to international visitors, modest attire in official government buildings and respectful conduct during holy periods like Ramadan are expected.",
+    num: "04",
+    title: "Pre-Departure & Local Arrival Briefing",
+    desc: "Preparing you with complete practical checklists for corporate wear, student accommodation, and local transport networks.",
+    details: "Guiding you on Dubai Metro Nol cards, student flat rentals in DIAC/DKP, local SIM cards, and on-arrival medical fitness tests.",
+  },
+];
+
+/* -------------------------------------------------------------
+   DATA: COST OF STUDY & LIVING
+------------------------------------------------------------- */
+const EXPENSE_DATA = [
+  { level: "Undergraduate Degree (Bachelor's)", costAed: "AED 45,000 – AED 95,000 / year", costInr: "₹10,50,000 – ₹22,000,000" },
+  { level: "Postgraduate Degree (Master's / MBA)", costAed: "AED 50,000 – AED 110,000 / year", costInr: "₹11,50,000 – ₹25,50,000" },
+  { level: "Foundation & Diploma Pathways", costAed: "AED 35,000 – AED 55,000 / year", costInr: "₹8,00,000 – ₹12,80,000" },
+  { level: "Student Accommodation (Shared Flat / Hostel)", costAed: "AED 1,800 – AED 3,500 / month", costInr: "₹42,000 – ₹82,000" },
+  { level: "Food & Personal Living Expenses", costAed: "AED 1,000 – AED 1,800 / month", costInr: "₹23,000 – ₹42,000" },
+  { level: "Local Transportation (Metro Nol Student Pass)", costAed: "AED 150 – AED 300 / month", costInr: "₹3,500 – ₹7,000" },
+];
+
+/* -------------------------------------------------------------
+   DATA: FAQS
+------------------------------------------------------------- */
+const DUBAI_FAQS = [
+  {
+    q: "Why is Dubai considered the most hassle-free study abroad destination for Indian students?",
+    a: "Unlike traditional western destinations where students face rigid embassy interviews, strict quotas, and cumbersome multi-year bank statement audits, Dubai's student visas are officially processed and sponsored directly by the university. Approvals are typically issued within 2 to 3 weeks with straightforward financial declarations and high approval rates.",
   },
   {
-    q: "Can I sponsor my spouse while I am studying in the UAE?",
-    a: "Whether a student can sponsor family members depends on the applicable residence rules, visa type and eligibility requirements. Typically, students who hold valid residence permits and meet specified minimum monthly financial and accommodation thresholds can apply to sponsor their legally married spouse and dependent children.",
+    q: "Do I need IELTS or PTE to study at top universities in Dubai?",
+    a: "In many cases, no! Many premier international branch universities in Dubai accept an English Medium of Instruction (MOI) certificate from your previous school or college (stating your education was in English). If your MOI meets the institution's threshold, the IELTS/PTE requirement is waived.",
   },
   {
-    q: "Does the UAE offer Permanent Residency (PR)?",
-    a: "The UAE does not generally operate a conventional permanent-residency pathway like some immigration destinations. Certain long-term residence options may be available to eligible individuals under applicable UAE programs, such as the 10-Year Golden Visa and 5-Year Green Visa, which can be renewed indefinitely as long as qualifying criteria continue to be met.",
+    q: "How does the International Transfer Option (Pathway Program) work?",
+    a: "You can enroll in the first 1 or 2 years of an undergraduate program at a Dubai branch campus (like University of Birmingham, Wollongong, or Curtin) and seamlessly transfer to the parent campus in the UK, Australia, or Canada. This saves you huge sums on tuition and living costs during your initial years while ensuring you graduate with an authentic global degree and qualify for post-study work permits in that country.",
   },
   {
-    q: "How does the student visa application work in the UAE?",
-    a: "Unlike western destinations where students apply independently at foreign embassies, in the UAE your university acts as your official visa sponsor. The university submits your application to the General Directorate of Residency and Foreigners Affairs (GDRFA) or Federal Authority for Identity and Citizenship (ICP), making the process straightforward and high-success.",
+    q: "Can international students work part-time while studying in Dubai?",
+    a: "Yes. International students in Dubai can legally work part-time or undertake paid internships during semesters (typically up to 15–20 hours per week) and full-time during vacations, subject to university approval and local UAE labor regulations. Many universities run active on-campus career placement cells.",
   },
   {
-    q: "What are the advantages of studying in the UAE for Indian students?",
-    a: "The UAE is only 3.5 hours by flight from India, shares a massive Indian cultural and business diaspora, offers completely tax-free earnings, and allows you to graduate with prestigious UK, Australian, or Indian degrees (like University of Birmingham or BITS Pilani) at substantial cost savings.",
+    q: "What degree certificate do I receive upon graduating from a branch campus in Dubai?",
+    a: "You receive the exact same official degree certificate and academic transcript as students studying at the home campus in the UK or Australia (e.g. University of Birmingham, Heriot-Watt, Wollongong). There is no difference in the degree title, giving you universal global accreditation.",
+  },
+  {
+    q: "What is the UAE Golden Visa for outstanding students?",
+    a: "Exceptional students graduating from UAE high schools or universities with outstanding academic achievement (typically a GPA of 3.75 or 3.8+ out of 4.0) can qualify for a 5-year or 10-year UAE Golden Visa, providing long-term residency without requiring immediate employer sponsorship.",
+  },
+  {
+    q: "What are the job opportunities and career prospects in Dubai after graduation?",
+    a: "Dubai is the regional headquarters for thousands of multinational enterprises across finance, technology, aviation, real estate, logistics, and tourism. With 0% personal income tax, competitive corporate salaries, and straightforward transitions from student visas to employer-sponsored employment residency permits, Dubai provides an exceptional launchpad for young professionals.",
+  },
+  {
+    q: "How does Umang Career Consultancy in Vadodara support my Dubai admission?",
+    a: "Our certified consultants guide you through university selection, course evaluation, profile optimization, scholarship grants (up to 50%), university portal submission, entry permit visa tracking, Emirates ID registration, and pre-departure accommodation booking.",
   },
 ];
 
@@ -413,7 +390,8 @@ export default function UAEStudyAbroadContent() {
     name: "",
     phone: "",
     email: "",
-    degree: "Master's / PG",
+    university: "University of Birmingham Dubai",
+    degree: "Master's / Postgraduate",
     intake: "September 2026",
     notes: "",
   });
@@ -423,14 +401,14 @@ export default function UAEStudyAbroadContent() {
     setIsLoaded(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormSubmitted(true);
   };
 
   return (
     <main className="w-full bg-white overflow-hidden">
-      {/* Global Embedded Animations matching Services Theme */}
+      {/* Global Embedded Styles */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -456,7 +434,7 @@ export default function UAEStudyAbroadContent() {
       />
 
       {/* =========================================================
-          HERO SECTION
+          1. HERO SECTION
          ========================================================= */}
       <section className="relative w-full pt-28 pb-16 sm:pt-36 sm:pb-24 bg-gradient-to-b from-slate-50 via-white to-slate-50/50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -470,7 +448,7 @@ export default function UAEStudyAbroadContent() {
               Study Abroad
             </Link>
             <span>/</span>
-            <span className="text-[#0a1e38] font-bold">United Arab Emirates</span>
+            <span className="text-[#0a1e38] font-bold">Dubai (UAE)</span>
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -484,100 +462,109 @@ export default function UAEStudyAbroadContent() {
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-200 shadow-sm mb-6">
                 <UAEFlagBadge />
                 <span className="text-xs sm:text-sm font-bold text-[#e52928] tracking-wide uppercase">
-                  Global Business, Innovation & Education Hub
+                  Umang Career Consultancy • Dubai Student Visa Page
                 </span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0a1e38] tracking-tight leading-[1.15]">
-                Study in <span className="text-[#e52928]">UAE</span>
-                <br />
-                <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-800">
-                  Build Your Global Career at World-Class Campuses
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-black text-[#0a1e38] tracking-tight leading-[1.15]">
+                Shape Your Destiny:{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0a1e38] via-[#e52928] to-[#b91c1c]">
+                  Study in Dubai
+                </span>
+                <span className="block text-xl sm:text-2xl md:text-3xl font-extrabold text-[#e52928] mt-2">
+                  with Umang Career Consultancy
                 </span>
               </h1>
 
-              {/* Sub-tagline */}
+              {/* Sub-tagline from User Prompt */}
               <p className="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                Located at the crossroads of Europe, Asia, and Africa, the United Arab Emirates offers international students world-class branch campuses, zero personal income tax, smart digital cities, and unparalleled career networking in Dubai and Abu Dhabi.
+                Step into the world&apos;s most dynamic global hub of business, innovation, and luxury. At Umang Career Consultancy, we map your academic ambition to the fast-growing educational landscape of the United Arab Emirates. Benefit from top-tier international education, seamless visa pathways, and exceptional post-study career options in Dubai.
               </p>
 
-              {/* Bullet Highlights */}
-              <div className="mt-6 grid grid-cols-2 gap-3 text-left max-w-md mx-auto lg:mx-0 text-xs sm:text-sm font-medium text-slate-700">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>Zero Personal Income Tax</span>
+              {/* 4 Feature Badges */}
+              <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl hover:border-red-300 transition-colors">
+                  <div className="text-sm sm:text-base font-bold text-[#0a1e38]">Fortune 500</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Global Corporate Hub</div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>UK, Australian & Indian Campuses</span>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl hover:border-red-300 transition-colors">
+                  <div className="text-sm sm:text-base font-bold text-[#e52928]">Zero Hassle</div>
+                  <div className="text-[11px] text-slate-500 font-medium">University-Sponsored</div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>10-Year Golden Visa for High Achievers</span>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl hover:border-red-300 transition-colors">
+                  <div className="text-sm sm:text-base font-bold text-emerald-600">English MOI</div>
+                  <div className="text-[11px] text-slate-500 font-medium">IELTS Waivers Available</div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>Only 3.5 Hours Flight from India</span>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl hover:border-red-300 transition-colors">
+                  <div className="text-sm sm:text-base font-bold text-blue-600">UK / AUS / CAN</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Transfer Pathways</div>
                 </div>
               </div>
 
-              {/* CTAs */}
+              {/* Action Buttons */}
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
                   href="#counselling-form"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-bold text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-red-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="w-full sm:w-auto px-8 py-3.5 bg-[#e52928] hover:bg-[#c81e1d] text-white font-bold rounded-xl shadow-lg shadow-red-500/25 transition-all text-center"
                 >
-                  <span>Free UAE Counselling</span>
+                  Book Free Dubai Consultation
                 </a>
-                <a href="tel:+919173186109" className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#0a1e38] hover:bg-slate-800 text-white font-bold text-base px-7 py-3.5 rounded-xl shadow-md transition-all duration-300"
+                <a
+                  href="tel:+919173186109"
+                  className="anim-phone-ring w-full sm:w-auto px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-3"
                 >
                   <PhoneIcon />
-                  <span>+91 91731 86109</span>
+                  <span>Call: +91 91731 86109</span>
                 </a>
               </div>
             </div>
 
-            {/* Right Hero Graphic Column */}
+            {/* Right Hero Visual / Card */}
             <div
-              className={`lg:col-span-5 flex justify-center items-center relative transition-all duration-1000 delay-200 ease-out transform ${
-                isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              className={`lg:col-span-5 transition-all duration-700 delay-200 ease-out transform ${
+                isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
-              <div className="relative w-[320px] sm:w-[420px] md:w-[460px] aspect-square flex items-center justify-center anim-gentle-float">
-                {/* Glowing Outer Rings */}
-                <div className="absolute inset-0 rounded-full border border-red-200/60 animate-ping [animation-duration:4s] pointer-events-none" />
-                <div className="absolute inset-4 rounded-full border-2 border-dashed border-sky-300/80 animate-spin [animation-duration:60s] pointer-events-none" />
-
-                {/* Central High Quality Graphic */}
-                <div className="relative w-full h-full p-4 flex items-center justify-center transition-transform duration-700 hover:scale-105">
+              <div className="relative mx-auto max-w-md lg:max-w-none">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white bg-slate-900 aspect-[4/3] group">
                   <Image
-                    src="/uae-hero.png"
-                    alt="Study in UAE Student - Umang Career Consultancy"
-                    width={480}
-                    height={480}
-                    className="w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white"
+                    src="/destinations/united-arab-emirates.jpg"
+                    alt="Study in Dubai UAE - Umang Career Consultancy"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                     priority
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e38]/90 via-black/30 to-transparent" />
+                  
+                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-bold text-[#0a1e38] shadow-md flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Fall 2026 Admissions Open</span>
+                  </div>
+
+                  <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
+                    <span className="text-xs font-bold uppercase tracking-wider text-red-400">
+                      Dubai Knowledge Park &amp; DIAC
+                    </span>
+                    <h3 className="text-xl font-bold leading-snug">
+                      World-Class British &amp; Australian Degrees in Dubai
+                    </h3>
+                    <p className="text-xs text-slate-300">
+                      Birmingham • Heriot-Watt • Wollongong • Middlesex • Curtin
+                    </p>
+                  </div>
                 </div>
 
-                {/* Floating Metric Pill 1 */}
-                <div className="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-0 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce [animation-duration:3.5s]">
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-black text-lg">
-                    0%
+                {/* Floating Highlight Card */}
+                <div className="anim-gentle-float absolute -bottom-6 -left-4 sm:-left-8 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 max-w-xs">
+                  <div className="w-12 h-12 rounded-xl bg-red-100 text-[#e52928] flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                   </div>
                   <div>
-                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Income Tax</div>
-                    <div className="text-base font-extrabold text-[#0a1e38]">Keep 100% Earnings</div>
-                  </div>
-                </div>
-
-                {/* Floating Metric Pill 2 */}
-                <div className="absolute -top-2 -right-2 sm:top-4 sm:right-0 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-xl shadow-xl border border-slate-100 flex items-center gap-3 animate-bounce [animation-duration:4.2s]">
-                  <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#e52928] font-black text-xs tracking-wider">UAE</div>
-                  <div>
-                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Golden Visa</div>
-                    <div className="text-base font-extrabold text-[#0a1e38]">10-Year Residency</div>
+                    <div className="text-xs font-bold text-slate-900">University-Sponsored Visa</div>
+                    <div className="text-[11px] text-slate-500 font-medium">99.8% Approval Track Record</div>
                   </div>
                 </div>
               </div>
@@ -587,178 +574,207 @@ export default function UAEStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          ABOUT UAE (Matching User Reference)
+          2. WHY CHOOSE DUBAI FOR YOUR HIGHER EDUCATION?
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="About UAE"
-            subtitle="A futuristic federation uniting seven emirates into a global nexus of commerce, technology, and architectural marvels."
+            title="Why Choose Dubai for Your Higher Education?"
+            subtitle="Explore how Dubai combines top-ranked global academics with vibrant cosmopolitan living, legal student work rights, and corporate growth."
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Landmark Image */}
-            <div className="lg:col-span-5 relative h-80 sm:h-96 rounded-3xl overflow-hidden shadow-xl border border-slate-100 group">
-              <Image
-                src="/destinations/united-arab-emirates.jpg"
-                alt="Burj Khalifa and Dubai Skyline UAE"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#e52928] text-white">
-                  Burj Khalifa & Downtown Dubai
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold mt-2">The Future is Here</h3>
-              </div>
-            </div>
-
-            {/* Key Fact Badges */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-emerald-100 text-[#22c55e] flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5 inline mr-1 text-[#e52928] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Crossroads of Europe, Asia & Africa</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  Strategic global gateway connecting one-third of the world’s population within a 4-hour flight.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Major Business & Education Hub</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  Hosts international academic zones (DIAC, DKP) alongside DIFC and ADGM financial districts.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Innovation & Entrepreneurship Hub</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  World leader in AI strategy, fintech sandboxes, blockchain, and tech venture capital.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-emerald-100 text-[#22c55e] flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Smart Cities & Sustainability</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  Pioneering zero-carbon smart initiatives (Masdar City) and COP28 net-zero sustainability frameworks.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Modern Infrastructure</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  Driverless Dubai Metro, world-leading Dubai International Airport, and ultra-fast 5G connectivity.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" strokeWidth="2" /><path strokeWidth="1.6" d="M3.6 9h16.8M3.6 15h16.8M12 3a14 14 0 010 18M12 3a14 14 0 000 18" /></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Diverse & Multicultural Environment</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  Harmonious cosmopolitan community representing over 200 nationalities with zero intolerance.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-emerald-100 text-[#22c55e] flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Strong Economy & Employment</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  Booming corporate recruitment in aviation, luxury hospitality, tech, and banking with zero tax.
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#22c55e] transition-colors">
-                <div className="w-7 h-7 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mb-2"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" strokeWidth={2} /><path strokeWidth={2} strokeLinecap="round" d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg></div>
-                <h4 className="text-sm font-extrabold text-[#0a1e38]">Warm and Sunny Climate</h4>
-                <p className="text-xs text-slate-600 mt-0.5">
-                  Sunny skies year-round with pleasant winter outdoor seasons (18℃–24℃) and air-conditioned campuses.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          TOP COURSES IN UAE (10 Courses)
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Top Courses in UAE"
-            subtitle="Career-focused degree programs aligned directly with the UAE's knowledge-based economic expansion."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {TOP_COURSES.map((course, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {WHY_CHOOSE_DUBAI.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-lg hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+                className="group p-6 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200 hover:border-red-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-red-50 text-[#e52928] border border-red-100">
-                    {course.category}
-                  </span>
-                  <h3 className="text-base font-black text-[#0a1e38] group-hover:text-[#e52928] transition-colors mt-3">
-                    {course.name}
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#e52928] flex items-center justify-center group-hover:bg-[#e52928] group-hover:text-white transition-colors duration-300">
+                      {item.icon}
+                    </div>
+                    <span className="text-xs font-bold text-slate-500 bg-white px-2.5 py-1 rounded-full border border-slate-200">
+                      {item.badge}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-bold text-[#0a1e38] group-hover:text-[#e52928] transition-colors mb-2.5">
+                    {item.title}
                   </h3>
+
+                  <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                    {item.description}
+                  </p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#e52928]">
-                  <span>{course.tag}</span>
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+
+                <div className="mt-5 pt-4 border-t border-slate-200/60 flex items-center text-xs font-bold text-[#e52928]">
+                  <span>Explore Advantage</span>
+                  <svg className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Consultation CTA Banner */}
-          <div className="mt-10 bg-gradient-to-r from-[#0a1e38] to-[#122e54] p-8 rounded-3xl shadow-lg text-white flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <span className="px-3 py-1 rounded-full bg-red-500/20 text-[#e52928] text-xs font-bold border border-red-500/30">
-                UK & Australian Degrees in Dubai
-              </span>
-              <h3 className="text-xl sm:text-2xl font-black mt-2">Study in Dubai at World-Famous Universities</h3>
-              <p className="mt-1 text-sm text-slate-300 max-w-xl">
-                Graduate with degrees from University of Birmingham, Heriot-Watt, or Middlesex University without high UK living expenses or visa rejections.
-              </p>
-            </div>
-            <a
-              href="#counselling-form"
-              className="whitespace-nowrap py-3.5 px-6 rounded-xl bg-[#e52928] hover:bg-red-700 text-white font-bold text-sm shadow-md transition-colors"
-            >
-              Get University Shortlist
-            </a>
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          WHY IS THE UAE AN IDEAL DESTINATION? (9 Pillars)
+          3. STUDY AT LEADING WORLD-RENOWNED UNIVERSITIES IN DUBAI
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-24 bg-slate-50 relative border-t border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Study at Leading World-Renowned Universities in Dubai"
+            subtitle="Dubai is home to the world's largest concentration of prestigious international branch campuses located in dedicated hubs like Dubai Knowledge Park (DKP) and Dubai International Academic City (DIAC). Secure direct admission with Umang Career Consultancy."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {TOP_UNIVERSITIES_DUBAI.map((uni, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold text-[#e52928] bg-red-50 border border-red-100 px-3 py-1 rounded-full">
+                      {uni.hub}
+                    </span>
+                    <span className="text-xs text-slate-500 font-semibold">
+                      {uni.location}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-[#0a1e38] mb-1">
+                    {uni.name}
+                  </h3>
+                  <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
+                    {uni.type}
+                  </div>
+
+                  <p className="text-sm text-slate-600 leading-relaxed mb-5">
+                    {uni.description}
+                  </p>
+
+                  <div className="space-y-2 mb-5">
+                    <div className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+                      Key Highlights:
+                    </div>
+                    {uni.highlights.map((h, i) => (
+                      <div key={i} className="flex items-start gap-2 text-xs text-slate-600">
+                        <span className="text-emerald-500 font-bold mt-0.5">✓</span>
+                        <span>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-slate-100">
+                  <div className="text-xs font-bold text-slate-700 mb-2">Popular Programs:</div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {uni.popular.map((prog, pi) => (
+                      <span
+                        key={pi}
+                        className="text-[11px] font-medium bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md"
+                      >
+                        {prog}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            {/* Sixth Promotional Card */}
+            <div className="bg-gradient-to-br from-[#0a1e38] to-[#142d4f] rounded-2xl p-7 text-white shadow-xl flex flex-col justify-between border border-slate-800">
+              <div>
+                <span className="inline-block text-xs font-bold text-red-400 bg-red-950/60 border border-red-800/40 px-3 py-1 rounded-full mb-4">
+                  Additional Top Campuses
+                </span>
+                <h3 className="text-2xl font-black mb-3">
+                  More Prestigious Institutions in Dubai
+                </h3>
+                <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                  We also represent Murdoch University Dubai, Canadian University Dubai, BITS Pilani Dubai Campus, Manipal Academy of Higher Education, and De Montfort University Dubai.
+                </p>
+                <div className="space-y-2.5 text-xs text-slate-200 mb-6">
+                  <div className="flex items-center gap-2">
+                    <span className="text-emerald-400 font-bold">✓</span>
+                    <span>100% University Sponsored Visas</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-emerald-400 font-bold">✓</span>
+                    <span>Merit Scholarships up to 50% Available</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-emerald-400 font-bold">✓</span>
+                    <span>Direct Vadodara Office Assistance</span>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="#counselling-form"
+                className="w-full text-center px-5 py-3 rounded-xl bg-[#e52928] hover:bg-[#c81e1d] text-white font-bold text-sm transition-all shadow-md"
+              >
+                Get University Shortlist
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          4. UNLOCK AFFORDABLE ROUTES VIA PATHWAY PROGRAMS
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Why is the UAE an Ideal Study Abroad Destination?"
-            subtitle="Discover the unparalleled academic, lifestyle, and career incentives of studying in the UAE."
+            title="Unlock Affordable Routes via Pathway Programs"
+            subtitle="If you do not meet direct entry criteria or wish to optimize your educational budget, Umang Career Consultancy specializes in structuring strategic Pathway Programs."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {WHY_UAE.map((pillar, idx) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {PATHWAY_PROGRAMS.map((prog, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
+                className="bg-slate-50 border-2 border-slate-200 rounded-3xl p-7 sm:p-9 shadow-sm hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-9 h-9 rounded-xl bg-red-50 text-[#e52928] font-black text-sm flex items-center justify-center mb-4">
-                    0{idx + 1}
+                  <div className="inline-flex items-center gap-2 text-xs font-bold text-[#e52928] bg-red-100/60 px-3.5 py-1.5 rounded-full mb-4">
+                    <span>Strategic Route</span> • <span>Fast Track</span>
                   </div>
-                  <h3 className="text-lg font-extrabold text-[#0a1e38] mb-2">{pillar.title}</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{pillar.desc}</p>
+
+                  <h3 className="text-2xl font-bold text-[#0a1e38] mb-1.5">
+                    {prog.title}
+                  </h3>
+                  <div className="text-sm font-semibold text-[#e52928] mb-4">
+                    {prog.subtitle}
+                  </div>
+
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-6">
+                    {prog.description}
+                  </p>
+
+                  <div className="space-y-3 mb-6 bg-white p-5 rounded-2xl border border-slate-200/80">
+                    <div className="text-xs font-bold text-slate-900 uppercase tracking-wider">
+                      Key Strategic Advantages:
+                    </div>
+                    {prog.benefits.map((b, bi) => (
+                      <div key={bi} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                        <svg className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span>{b}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-red-50/70 p-4 rounded-xl border border-red-100 text-xs text-slate-700">
+                  <span className="font-bold text-[#e52928]">Best Fit For: </span>
+                  {prog.idealFor}
                 </div>
               </div>
             ))}
@@ -767,30 +783,78 @@ export default function UAEStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          GOLDEN VISA & RESIDENCE SPOTLIGHT
+          5. NAVIGATING THE DUBAI STUDENT VISA PROCESS
          ========================================================= */}
-      <section className="w-full py-12 sm:py-16 bg-[#0a1e38] text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8">
-              <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-500/20 text-[#22c55e] border border-emerald-500/30">
-                UAE Federal Residence Incentive
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mt-3 text-white">
-                10-Year Golden Visa & Zero Personal Income Tax
-              </h2>
-              <p className="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-                The UAE rewards academic excellence: university graduates with a GPA of 3.8+ from recognized UAE universities can apply for the 10-Year Golden Visa for themselves and their families. All corporate and professional salaries in the UAE are 100% tax-free!
-              </p>
-            </div>
-            <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
-              <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-center">
-                <div className="text-2xl font-black text-[#22c55e]">10 Years</div>
-                <div className="text-xs text-slate-300 font-semibold mt-1">Self-Sponsored Golden Visa</div>
+      <section className="w-full py-16 sm:py-24 bg-gradient-to-br from-[#0a1e38] via-[#0f284c] to-[#0a1e38] text-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Navigating the Dubai Student Visa Process"
+            subtitle="Dubai offers a highly streamlined, zero-hassle immigration framework completely sponsored by the university itself. Our expert team ensures your file satisfies all criteria for high approval rates."
+            variant="dark"
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {VISA_PROCESS_STEPS.map((step, idx) => (
+              <div
+                key={idx}
+                className="bg-white/10 backdrop-blur-md border border-white/15 p-6 rounded-2xl hover:bg-white/15 hover:border-red-400 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <span className="inline-block text-[11px] font-bold text-red-300 bg-red-950/80 border border-red-800/60 px-3 py-1 rounded-full mb-4">
+                    {step.badge}
+                  </span>
+                  <h3 className="text-lg font-bold text-white mb-1.5">
+                    {step.title}
+                  </h3>
+                  <div className="text-xs font-semibold text-slate-300 mb-3">
+                    {step.subtitle}
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                    {step.description}
+                  </p>
+                </div>
+
+                <div className="mt-5 pt-3 border-t border-white/10 text-xs font-semibold text-red-300 flex items-center gap-1.5">
+                  <span>Guaranteed Guidance</span>
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
               </div>
-              <div className="p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 text-center">
-                <div className="text-2xl font-black text-[#e52928]">0%</div>
-                <div className="text-xs text-slate-300 font-semibold mt-1">Personal Income Tax on Salaries</div>
+            ))}
+          </div>
+
+          {/* Visa Roadmap Banner */}
+          <div className="bg-white/5 border border-white/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-wider text-red-400 mb-1">
+                  Step 1: Entry Permit (eVisa)
+                </div>
+                <div className="text-lg font-bold text-white">Issued in 10 to 15 Days</div>
+                <p className="text-xs text-slate-300 mt-1">
+                  Electronic entry voucher sent to you in India, granting legal entry into UAE.
+                </p>
+              </div>
+
+              <div className="md:border-l md:border-r border-white/15 md:px-6">
+                <div className="text-xs font-bold uppercase tracking-wider text-red-400 mb-1">
+                  Step 2: Medical &amp; Emirates ID
+                </div>
+                <div className="text-lg font-bold text-white">On-Arrival Health Clearance</div>
+                <p className="text-xs text-slate-300 mt-1">
+                  Standard blood test, chest X-ray &amp; biometrics conducted at Dubai Health centers.
+                </p>
+              </div>
+
+              <div>
+                <div className="text-xs font-bold uppercase tracking-wider text-red-400 mb-1">
+                  Step 3: Residence Visa Stamping
+                </div>
+                <div className="text-lg font-bold text-white">1-Year Renewable Student Card</div>
+                <p className="text-xs text-slate-300 mt-1">
+                  Emirates ID card delivered to campus with active UAE student residence status.
+                </p>
               </div>
             </div>
           </div>
@@ -798,490 +862,378 @@ export default function UAEStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          EMIRATES IN UAE (4 Key Emirates)
+          6. THE UMANG CAREER CONSULTANCY ADVANTAGE: 4-STEP PROCESS
          ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
+      <section className="w-full py-16 sm:py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Emirates in UAE"
-            subtitle="Explore study opportunities and university hubs across the Emirates."
+            title="The Umang Career Consultancy Advantage: Our 4-Step Success Process"
+            subtitle="From profile evaluation and scholarship matching to university portal lodgement and Dubai arrival briefings, our dedicated consultants manage your end-to-end journey."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {EMIRATES.map((em) => (
+            {FOUR_STEP_PROCESS.map((s, idx) => (
               <div
-                key={em.id}
-                className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between"
+                key={idx}
+                className="relative bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-7 hover:border-red-400 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-black px-3 py-1 rounded-full bg-red-50 text-[#e52928] border border-red-200">
-                      {em.name}
+                    <span className="text-3xl font-black text-[#e52928]/30">
+                      {s.num}
+                    </span>
+                    <span className="w-8 h-8 rounded-full bg-red-100 text-[#e52928] flex items-center justify-center font-bold text-xs">
+                      {idx + 1}
                     </span>
                   </div>
-                  <h3 className="text-xl font-extrabold text-[#0a1e38]">{em.title}</h3>
-                  <p className="mt-3 text-sm text-slate-600 leading-relaxed">{em.desc}</p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#0a1e38]">
-                  <span>{em.tag}</span>
-                  <span className="text-[#e52928]">→</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* =========================================================
-          UNIVERSITIES IN UAE (10 Institutions)
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Universities in UAE"
-            subtitle="Prestigious international branch campuses and accredited academic centers."
-          />
+                  <h3 className="text-lg font-bold text-[#0a1e38] mb-2">
+                    {s.title}
+                  </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {UNIVERSITIES.map((uni, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
-                      {uni.type}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-black text-[#0a1e38]">{uni.name}</h3>
-                  <div className="text-xs font-bold text-[#e52928] mt-1 flex items-center gap-1.5">
-                    <svg className="w-3.5 h-3.5 inline mr-1 text-[#e52928] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
-                    <span>{uni.location}</span>
-                  </div>
-                  <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">{uni.features}</p>
-                </div>
-                <div className="mt-5 pt-3 border-t border-slate-200 text-xs font-bold text-slate-700">
-                  <span>Specialty: {uni.tag}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <p className="text-sm font-medium text-slate-700 leading-snug mb-3">
+                    {s.desc}
+                  </p>
 
-      {/* =========================================================
-          TUITION FEES & LIVING COSTS TABLES
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="UAE Tuition Fees & Cost of Living"
-            subtitle="Transparent financial planning in UAE Dirhams (AED) and Indian Rupees (INR)."
-          />
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            {/* Tuition Fees Table */}
-            <div className="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200">
-              <div className="flex items-center justify-between mb-6">
-                <div>
-                  <h3 className="text-xl font-black text-[#0a1e38]">UAE Tuition Fees</h3>
-                  <p className="text-xs sm:text-sm text-slate-500 mt-1">
-                    Annual indicative tuition rates across academic levels
+                  <p className="text-xs text-slate-500 leading-relaxed">
+                    {s.details}
                   </p>
                 </div>
-                <span className="text-xs font-bold px-3 py-1 rounded-full bg-red-50 text-[#e52928] border border-red-200">
-                  Multiple Intakes
-                </span>
-              </div>
 
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse text-xs sm:text-sm">
-                  <thead>
-                    <tr className="border-b-2 border-slate-200 text-[#0a1e38]">
-                      <th className="py-3 px-3 font-extrabold">Courses</th>
-                      <th className="py-3 px-3 font-extrabold">Minimum Annual</th>
-                      <th className="py-3 px-3 font-extrabold">Maximum Annual</th>
-                      <th className="py-3 px-3 font-extrabold text-[#22c55e]">Approx. INR</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100 text-slate-700">
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Bachelor Degree</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 15,000</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 70,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹3.4L – ₹15.8L</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Master Degree</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 35,000</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 130,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹7.9L – ₹29.3L</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Diploma Programs</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 15,000</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 80,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹3.4L – ₹18.0L</td>
-                    </tr>
-                    <tr className="hover:bg-slate-50">
-                      <td className="py-3.5 px-3 font-bold text-[#0a1e38]">Ph.D. Programs</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 80,000</td>
-                      <td className="py-3.5 px-3 font-semibold">AED 500,000</td>
-                      <td className="py-3.5 px-3 font-semibold text-[#22c55e]">₹18.0L – ₹1.12 Cr*</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div className="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
-                <span className="font-bold text-[#0a1e38]">Intakes:</span> January, February, March, April, September, October.
-                <br />
-                <span className="italic text-slate-500">
-                  *Note: Tuition fees and intakes vary depending on the institution and program.
-                </span>
-              </div>
-            </div>
-
-            {/* Monthly Cost of Living Table */}
-            <div className="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-black text-[#0a1e38]">Monthly Cost of Living</h3>
-                  <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800">
-                    In Dirhams (AED)
-                  </span>
-                </div>
-                <p className="text-xs text-slate-500 mb-4">
-                  Typical monthly student expenditure in the UAE
-                </p>
-
-                <div className="space-y-3">
-                  {LIVING_COSTS.map((c, i) => (
-                    <div key={i} className="flex items-center justify-between text-xs sm:text-sm py-1.5 border-b border-slate-100">
-                      <span className="text-slate-600 font-medium">{c.item}</span>
-                      <div className="text-right">
-                        <span className="font-bold text-[#0a1e38]">{c.range}</span>
-                        <span className="text-xs text-slate-400 block">({c.inr})</span>
-                      </div>
-                    </div>
-                  ))}
+                <div className="mt-5 pt-3 border-t border-slate-200/60 flex items-center gap-1.5 text-xs font-bold text-emerald-600">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Umang Direct Care</span>
                 </div>
               </div>
-
-              <div className="mt-5 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                <div className="flex items-center justify-between text-sm font-extrabold text-[#0a1e38]">
-                  <span>Total Estimated Monthly:</span>
-                  <span className="text-[#22c55e] text-base font-black">AED 3,150 – 6,500</span>
-                </div>
-                <div className="text-xs text-slate-500 text-right mt-0.5">Approx. ₹71,000 – ₹1,47,000 / month</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          WEATHER IN UAE
+          7. TUITION FEES & LIVING COSTS BREAKDOWN
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-24 bg-slate-50 relative border-t border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Estimated Tuition Fees & Living Expenses in Dubai"
+            subtitle="Transparent financial benchmarks to help you plan your higher education investment in the UAE."
+          />
+
+          <div className="overflow-x-auto bg-white rounded-3xl border border-slate-200 shadow-sm">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#0a1e38] text-white text-xs sm:text-sm font-bold uppercase tracking-wider">
+                  <th className="py-4 px-6">Program / Expense Category</th>
+                  <th className="py-4 px-6">Average Cost (AED)</th>
+                  <th className="py-4 px-6">Estimated Cost (INR approx.)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-xs sm:text-sm text-slate-700">
+                {EXPENSE_DATA.map((row, i) => (
+                  <tr key={i} className="hover:bg-red-50/40 transition-colors">
+                    <td className="py-4 px-6 font-semibold text-slate-900">{row.level}</td>
+                    <td className="py-4 px-6 text-[#0a1e38] font-bold">{row.costAed}</td>
+                    <td className="py-4 px-6 text-[#e52928] font-bold">{row.costInr}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="mt-4 text-xs text-slate-500 text-center">
+            *Exchange rate benchmark: 1 AED ≈ ₹22.8. Exact tuition fees depend on the specific institution, course, and scholarship allocation.
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          8. FREQUENTLY ASKED QUESTIONS (FAQS)
          ========================================================= */}
       <section className="w-full py-16 sm:py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Weather in UAE"
-            subtitle="Warm, sunny desert climate with mild outdoor winter months."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SEASONS.map((season, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="p-3 rounded-2xl bg-white shadow-sm">{season.icon}</div>
-                    <span className="text-lg font-black text-[#0a1e38]">{season.temp}</span>
-                  </div>
-                  <h3 className="text-xl font-black text-[#0a1e38]">{season.name}</h3>
-                  <div className="text-xs font-semibold text-[#e52928] mt-0.5">{season.months}</div>
-                  <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed">{season.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          UAE ACADEMIC & VISA SYSTEM (6 Cards)
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="The UAE Academic & Visa System"
-            subtitle="Key essentials on university visa sponsorship, Emirates ID, and Golden Visa eligibility."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ACADEMIC_SYSTEM.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-red-50 text-[#e52928] font-black text-sm flex items-center justify-center mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-lg font-black text-[#0a1e38]">{item.title}</h3>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          STEP-BY-STEP ADMISSION & VISA ROADMAP
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Step-by-Step UAE Admission & Visa Process"
-            subtitle="From university shortlisting to Emirates ID issuance — Umang Career Consultancy guides you at every stage."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                step: "01",
-                title: "Profile Assessment & University Shortlist",
-                desc: "Evaluating transcripts, career goals, and matching with accredited branch campuses in Dubai, Abu Dhabi, or Sharjah.",
-              },
-              {
-                step: "02",
-                title: "Dossier Submission & Offer Letter",
-                desc: "Submitting verified academic transcripts, passport copy, and securing your official unconditional Letter of Admission.",
-              },
-              {
-                step: "03",
-                title: "Tuition Deposit & Visa Sponsorship",
-                desc: "Paying the initial university seat deposit to initiate institutional student visa sponsorship through GDRFA / ICP.",
-              },
-              {
-                step: "04",
-                title: "Entry Permit Issuance (Pink Visa)",
-                desc: "Receiving your electronic Student Entry Permit allowing you to board your flight and enter the UAE.",
-              },
-              {
-                step: "05",
-                title: "Medical Fitness & Emirates ID Biometrics",
-                desc: "Completing mandatory health screening (blood test & chest X-ray) and fingerprint biometrics at a Federal Authority center.",
-              },
-              {
-                step: "06",
-                title: "Residency Visa Stamping & Card Collection",
-                desc: "Final residence visa endorsement on your passport and receiving your physical digital Emirates ID card.",
-              },
-            ].map((step, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:border-[#22c55e] transition-all flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#0a1e38] text-white font-black text-sm flex items-center justify-center mb-4">
-                    {step.step}
-                  </div>
-                  <h3 className="text-lg font-black text-[#0a1e38]">{step.title}</h3>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* =========================================================
-          FAQS SECTION (Matching User Reference + Practical Advice)
-         ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Frequently Asked Questions"
-            subtitle="Verified answers to vital questions regarding studying and living in the UAE."
+            title="Frequently Asked Questions: Dubai Student Visa"
+            subtitle="Answers to common questions regarding admissions, work rights, pathways, and visa processing in Dubai."
           />
 
           <div className="space-y-4">
-            {FAQS.map((faq, idx) => (
-              <div
-                key={idx}
-                className="rounded-2xl bg-white border border-slate-200/90 shadow-sm overflow-hidden transition-colors"
-              >
-                <button
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full py-5 px-6 text-left flex items-center justify-between gap-4 font-extrabold text-base sm:text-lg text-[#0a1e38] hover:text-[#e52928] transition-colors"
-                  aria-expanded={openFaq === idx}
+            {DUBAI_FAQS.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div
+                  key={idx}
+                  className="rounded-2xl border border-slate-200 overflow-hidden transition-all bg-white shadow-sm hover:border-slate-300"
                 >
-                  <span>{faq.q}</span>
-                  <ChevronDownIcon isOpen={openFaq === idx} />
-                </button>
-                {openFaq === idx && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            ))}
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : idx)}
+                    className="w-full px-5 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between gap-4 font-bold text-slate-800 hover:text-[#e52928] transition-colors"
+                  >
+                    <span className="text-sm sm:text-base leading-snug">{faq.q}</span>
+                    <ChevronDownIcon isOpen={isOpen} />
+                  </button>
+                  {isOpen && (
+                    <div className="px-5 sm:px-6 pb-6 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-4 bg-slate-50/50">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* =========================================================
-          FREE COUNSELLING FORM & HASSLE-FREE CTA
+          9. CONSULTATION FORM SECTION
          ========================================================= */}
-      <section id="counselling-form" className="w-full py-16 sm:py-24 bg-white relative">
+      <section id="counselling-form" className="w-full py-16 sm:py-24 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-br from-[#0a1e38] to-[#142d4f] rounded-3xl shadow-2xl p-8 sm:p-12 lg:p-16 text-white border border-slate-800">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              {/* Left Column Text */}
-              <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
-                <span className="text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-red-500/20 text-[#e52928] border border-red-500/30">
-                  Plan Your UAE Study Journey
-                </span>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-                  To Make Your Study in UAE <span className="text-[#e52928]">Hassle-Free</span>
-                </h2>
-                <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                  Plan your UAE study journey with Umang Career Consultancy. From securing offer letters at University of Birmingham Dubai, Heriot-Watt, and Middlesex to university visa sponsorship and Emirates ID registration, our expert Middle East advisors make your education dream effortless.
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Left Prompt */}
+            <div className="lg:col-span-5 space-y-5 text-center lg:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-[#e52928] text-xs font-bold uppercase tracking-wider">
+                Vadodara Office • Certified Dubai Counselors
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-black text-[#0a1e38] leading-tight">
+                Your Global Future Begins in Dubai!
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                Don&apos;t let complex traditional visa systems delay your career growth. Partner with the destination experts at Umang Career Consultancy to unlock a world-class degree in Dubai. Contact our Vadodara office today for a personalized consultation!
+              </p>
 
-                <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <a href="tel:+919173186109" className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg transition-colors"
-                  >
-                    <PhoneIcon />
-                    <span>Call +91 91731 86109</span>
-                  </a>
-                  <div className="text-xs text-slate-400 font-medium">
-                    Office Hours: Mon–Sat, 9:30 AM – 7:00 PM IST
-                  </div>
+              <div className="p-5 bg-white rounded-2xl border border-slate-200 space-y-3 text-left shadow-sm">
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                    ✓
+                  </span>
+                  <span>Direct Admissions to British &amp; Australian Branch Campuses</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                    ✓
+                  </span>
+                  <span>Strategic Pathway &amp; UK / Australia Transfer Programs</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                    ✓
+                  </span>
+                  <span>100% University-Sponsored Visa Assistance</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                    ✓
+                  </span>
+                  <span>English MOI Admissions &amp; Scholarship Guidance</span>
                 </div>
               </div>
 
-              {/* Right Column Form */}
-              <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 text-slate-800 shadow-xl border border-slate-100">
-                {formSubmitted ? (
-                  <div className="text-center py-8">
-                    <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4"><svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></div>
-                    <h3 className="text-2xl font-black text-[#0a1e38]">Thank You!</h3>
-                    <p className="text-sm text-slate-600 mt-2">
-                      Your inquiry for studying in the UAE has been received. Our senior Middle East education advisor will contact you within 24 hours.
-                    </p>
-                    <button
-                      onClick={() => setFormSubmitted(false)}
-                      className="mt-6 inline-flex text-xs font-bold text-[#e52928] hover:underline"
-                    >
-                      Submit another inquiry
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <h3 className="text-xl font-black text-[#0a1e38] text-center lg:text-left">
-                      Book Free UAE Counselling
-                    </h3>
+              {/* Direct Call Info */}
+              <div className="pt-2 space-y-2">
+                <div className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-1">
+                  Talk to Our Dubai Counselors:
+                </div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="tel:+919173186109"
+                    className="anim-phone-ring inline-flex items-center gap-2.5 text-lg sm:text-xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-full bg-[#e52928] text-white flex items-center justify-center shadow-md">
+                      <PhoneIcon />
+                    </div>
+                    <span>+91 91731 86109</span>
+                  </a>
+                  <span className="text-slate-300 font-bold hidden sm:inline">•</span>
+                  <a
+                    href="tel:+919712610086"
+                    className="anim-phone-ring inline-flex items-center gap-2.5 text-lg sm:text-xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-full bg-[#0a1e38] text-white flex items-center justify-center shadow-md">
+                      <PhoneIcon />
+                    </div>
+                    <span>+91 97126 10086</span>
+                  </a>
+                </div>
+              </div>
 
+              <div className="text-xs text-slate-500 space-y-1">
+                <div>
+                  <span className="font-bold text-slate-700">Office Location: </span>
+                  First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019
+                </div>
+                <div className="text-[11px] text-slate-400">
+                  <span className="font-semibold text-slate-600">Email: </span>
+                  umangcareer2022@gmail.com • umangcareer2026@gmail.com • umangcareer2023@gmail.com
+                </div>
+              </div>
+            </div>
+
+            {/* Right Interactive Form */}
+            <div className="lg:col-span-7 bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-xl">
+              {formSubmitted ? (
+                <div className="py-12 text-center space-y-4">
+                  <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-black text-[#0a1e38]">
+                    Inquiry Received for Dubai!
+                  </h3>
+                  <p className="text-sm sm:text-base text-slate-600 max-w-md mx-auto">
+                    Thank you, <span className="font-bold text-slate-900">{formData.name || "Student"}</span>. Our certified Dubai education counselor will contact you on <span className="font-bold text-slate-900">{formData.phone}</span> within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleFormSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                        Full Name *
+                      </label>
                       <input
                         type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
-                        placeholder="e.g. Aman Khurana"
-                        className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
+                        placeholder="e.g. Parth Patel"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#e52928] focus:ring-2 focus:ring-red-100 transition-all text-sm font-medium"
                       />
                     </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
-                        <input
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
-                          placeholder="+91 98765 43210"
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
-                        <input
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
-                          placeholder="aman@example.com"
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        />
-                      </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                        Phone Number *
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        value={formData.phone}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
+                        placeholder="e.g. +91 98765 43210"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#e52928] focus:ring-2 focus:ring-red-100 transition-all text-sm font-medium"
+                      />
                     </div>
+                  </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Intended Degree</label>
-                        <select
-                          value={formData.degree}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, degree: e.target.value }))}
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        >
-                          <option value="Bachelor's / UG">Bachelor&apos;s Degree / UG</option>
-                          <option value="Master's / PG">Master&apos;s Degree / PG</option>
-                          <option value="Diploma">Diploma Program</option>
-                          <option value="Ph.D.">Ph.D. / Research</option>
-                        </select>
-                      </div>
-                      <div>
-                        <label className="block text-xs font-bold text-slate-700 mb-1">Target Intake</label>
-                        <select
-                          value={formData.intake}
-                          onChange={(e) => setFormData((prev) => ({ ...prev, intake: e.target.value }))}
-                          className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                        >
-                          <option value="September 2026">September 2026 Intake</option>
-                          <option value="January 2027">January 2027 Intake</option>
-                          <option value="March/April 2027">March / April 2027 Intake</option>
-                          <option value="September 2027">September 2027 Intake</option>
-                        </select>
-                      </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                        Email Address
+                      </label>
+                      <input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                        placeholder="e.g. parth@example.com"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#e52928] focus:ring-2 focus:ring-red-100 transition-all text-sm font-medium"
+                      />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 mb-1">Preferred University or Major?</label>
-                      <textarea
-                        rows={2}
-                        value={formData.notes}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, notes: e.target.value }))}
-                        placeholder="e.g. Interested in Computer Science or Business at Birmingham Dubai or Heriot-Watt"
-                        className="w-full px-4 py-2 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-[#e52928]"
-                      />
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                        Target Institution *
+                      </label>
+                      <select
+                        value={formData.university}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, university: e.target.value }))}
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#e52928] focus:ring-2 focus:ring-red-100 transition-all text-sm font-medium"
+                      >
+                        <option value="University of Birmingham Dubai">University of Birmingham Dubai (UK)</option>
+                        <option value="Heriot-Watt University Dubai">Heriot-Watt University Dubai (UK)</option>
+                        <option value="University of Wollongong in Dubai">University of Wollongong in Dubai (AUS)</option>
+                        <option value="Middlesex University Dubai">Middlesex University Dubai (UK)</option>
+                        <option value="Curtin University Dubai">Curtin University Dubai (AUS)</option>
+                        <option value="Pathway Program (UK/AUS/CAN Transfer)">Pathway Program (UK/AUS/CAN Transfer)</option>
+                        <option value="Other Dubai Institution">Other Dubai Institution</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                        Degree Level
+                      </label>
+                      <select
+                        value={formData.degree}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, degree: e.target.value }))}
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#e52928] focus:ring-2 focus:ring-red-100 transition-all text-sm font-medium"
+                      >
+                        <option value="Undergraduate / Bachelor's">Undergraduate / Bachelor&apos;s</option>
+                        <option value="Master's / Postgraduate">Master&apos;s / Postgraduate</option>
+                        <option value="Foundation / Diploma Pathway">Foundation / Diploma Pathway</option>
+                        <option value="MBA / Executive">MBA / Executive</option>
+                      </select>
                     </div>
 
-                    <button
-                      type="submit"
-                      className="w-full py-3.5 px-4 rounded-xl bg-[#e52928] hover:bg-red-700 text-white font-extrabold text-sm sm:text-base shadow-md hover:shadow-red-500/25 transition-all duration-300"
-                    >
-                      Book Free Profile Evaluation
-                    </button>
-                    <p className="text-center text-[11px] text-slate-400">
-                      <svg className="w-3.5 h-3.5 inline mr-1 text-slate-400 fill-current" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>100% Confidential. Official UAE partner university counseling.
-                    </p>
-                  </form>
-                )}
-              </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                        Target Intake
+                      </label>
+                      <select
+                        value={formData.intake}
+                        onChange={(e) => setFormData((prev) => ({ ...prev, intake: e.target.value }))}
+                        className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#e52928] focus:ring-2 focus:ring-red-100 transition-all text-sm font-medium"
+                      >
+                        <option value="September 2026">September 2026 (Major Intake)</option>
+                        <option value="January 2027">January 2027 (Winter)</option>
+                        <option value="May 2027">May 2027 (Summer)</option>
+                        <option value="September 2027">September 2027</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                      Academic Background / Questions
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={formData.notes}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, notes: e.target.value }))}
+                      placeholder="Share your highest qualification, percentage, and any questions regarding admissions or transfer programs..."
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-[#e52928] focus:ring-2 focus:ring-red-100 transition-all text-sm font-medium"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full py-4 bg-[#e52928] hover:bg-[#c81e1d] text-white font-extrabold rounded-xl shadow-lg shadow-red-500/25 transition-all text-base"
+                  >
+                    Submit My Dubai Application Inquiry
+                  </button>
+                  <p className="text-[11px] text-center text-slate-400">
+                    100% Free Consultation • Confidential Profile Review • Zero Obligation
+                  </p>
+                </form>
+              )}
             </div>
           </div>
         </div>
       </section>
+
+      {/* =========================================================
+          10. BOTTOM HIGHLIGHT CALL BAR
+         ========================================================= */}
+      <div className="w-full bg-[#0a1e38] text-white py-4 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div className="flex items-center gap-3">
+            <UAEFlagBadge />
+            <span className="text-sm font-semibold text-slate-200">
+              Ready to Study in Dubai? Fast-Track Your Admission &amp; University-Sponsored Visa with Umang Career Consultancy Vadodara!
+            </span>
+          </div>
+          <a
+            href="tel:+919173186109"
+            className="px-5 py-2 rounded-lg bg-[#e52928] hover:bg-[#c81e1d] text-white text-xs font-bold transition-colors whitespace-nowrap shadow-md"
+          >
+            Call: +91 91731 86109
+          </a>
+        </div>
+      </div>
     </main>
   );
 }

@@ -166,6 +166,16 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                       >
                         Our Team
                       </Link>
+                      <Link
+                        href="/founder-message"
+                        onClick={() => {
+                          setActiveItem("About Us");
+                          setOpenDropdown(null);
+                        }}
+                        className="block pb-2.5 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
+                      >
+                        Founder&apos;s Message
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -346,14 +356,24 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                     {/* Col 2 */}
                     <div className="space-y-4">
                       <Link
-                        href="/services/travel-insurance"
+                        href="/services/flight-ticket-booking"
                         onClick={() => {
                           setActiveItem("Services");
                           setOpenDropdown(null);
                         }}
                         className="block pb-2 text-[14px] font-medium tracking-wide uppercase text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
                       >
-                        Air Ticket | Travel Insurance
+                        Flight Ticket Booking
+                      </Link>
+                      <Link
+                        href="/services/tours-and-travels"
+                        onClick={() => {
+                          setActiveItem("Services");
+                          setOpenDropdown(null);
+                        }}
+                        className="block pb-2 text-[14px] font-medium tracking-wide uppercase text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
+                      >
+                        Tours & Travels
                       </Link>
                     </div>
 
@@ -421,6 +441,16 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                         Study Abroad
                       </Link>
                       <Link
+                        href="/study-abroad/europe"
+                        onClick={() => {
+                          setActiveItem("Study Abroad");
+                          setOpenDropdown(null);
+                        }}
+                        className="block pb-2 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
+                      >
+                        Europe
+                      </Link>
+                      <Link
                         href="/study-abroad/canada"
                         onClick={() => {
                           setActiveItem("Study Abroad");
@@ -478,7 +508,7 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                         }}
                         className="block pb-2 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
                       >
-                        United Arab Emirates
+                        Dubai (UAE)
                       </Link>
                     </div>
 
@@ -748,6 +778,7 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                 <div className="pl-3 pt-2 space-y-2">
                   {[
                     { label: "About Us", href: "/about-us" },
+                    { label: "Founder's Message", href: "/founder-message" },
                     { label: "Gallery", href: "/gallery" },
                     { label: "Our Vision and Our Mission", href: "/about-us/vision-mission" },
                     { label: "Career", href: "/careers" },
@@ -804,7 +835,8 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                     "PRE-DEPARTURE GUIDANCE",
                     "FOREX SERVICES",
                     "ACCOMMODATION",
-                    "AIR TICKET | TRAVEL INSURANCE",
+                    "FLIGHT TICKET BOOKING",
+                    "TOURS & TRAVELS",
                     "EDUCATION LOAN",
                   ].map((sub) => (
                     <Link
@@ -830,8 +862,10 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                           ? "/services/pre-departure"
                           : sub === "FOREX SERVICES"
                           ? "/services/forex"
-                          : sub === "AIR TICKET | TRAVEL INSURANCE"
-                          ? "/services/travel-insurance"
+                          : sub === "FLIGHT TICKET BOOKING" || sub === "AIR TICKET | TRAVEL INSURANCE"
+                          ? "/services/flight-ticket-booking"
+                          : sub === "TOURS & TRAVELS"
+                          ? "/services/tours-and-travels"
                           : sub === "EDUCATION LOAN"
                           ? "/services/education-loan"
                           : sub === "ACCOMMODATION"
@@ -875,6 +909,7 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
               {mobileDropdownOpen === "Study Abroad" && (
                 <div className="pl-3 pt-2 grid grid-cols-2 gap-2">
                   {[
+                    "Europe",
                     "Canada",
                     "UK",
                     "Australia",

@@ -202,6 +202,179 @@ export default function CanadaStudyAbroadContent() {
     }, 4500);
   };
 
+  const whyChooseCanada = [
+    {
+      title: "Globally Prestigious Institutions",
+      desc: "Graduate from top Designated Learning Institutions (DLIs) renowned for research excellence and industry integration.",
+      badge: "Top DLIs",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Post-Graduation Work Permit (PGWP)",
+      desc: "Gain valuable Canadian work experience after completing your program, setting you on a solid path toward long-term career growth.",
+      badge: "Up to 3-Year PGWP",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: "High Quality of Life",
+      desc: "Benefit from exceptionally safe campus environments, welcoming student communities, and a high standard of living.",
+      badge: "Safe & Welcoming",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Flexible Work Hours",
+      desc: "Balance your academic obligations with regular off-campus part-time work rights up to 24 hours per week during active semesters.",
+      badge: "24h/Week Work Rights",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const latestUpdates = [
+    {
+      title: "Regular Stream Transition",
+      desc: "The Student Direct Stream (SDS) has been formally discontinued by the Canadian government. All new applications from India are now processed seamlessly via the Regular Stream, which demands deep expertise in strategic documentation and precise application filing.",
+      badge: "SDS Discontinued",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Provincial Attestation Letter (PAL)",
+      desc: "Under the national processing caps, most undergraduate and post-graduate diploma candidates must secure a verified Provincial Attestation Letter (PAL) from their province of study alongside an official DLI Letter of Acceptance (LOA) before applying for a study permit.",
+      badge: "Mandatory PAL Cap",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Master's and Doctoral Exemptions",
+      desc: "In a major update, students enrolling in Master's and PhD programs at public universities are officially exempt from the PAL requirement, facilitating a direct and streamlined application path.",
+      badge: "PAL Exempt: Masters & PhD",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Increased Financial Proofs",
+      desc: "Applicants must demonstrate enhanced financial capacity to satisfy immigration officers. Candidates must show at least CAD 22,895 in available living expense funds, which is entirely separate from first-year tuition fees and travel allowances.",
+      badge: "CAD 22,895 Living Funds",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const keyRequirements = [
+    {
+      title: "DLI Acceptance & Letters",
+      desc: "Matching your credentials with verified Designated Learning Institutions and managing your LOA securements.",
+      badge: "DLI & LOA Secured",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Guaranteed Investment Certificate (GIC)",
+      desc: "Complete guidance on setting up, verifying, and transferring funds into a Canadian bank account to satisfy living cost mandates.",
+      badge: "Canadian Bank GIC",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Compelling Statement of Purpose (SOP)",
+      desc: "Assistance in writing a highly persuasive, legally compliant SOP that communicates your genuine intent to visa officers.",
+      badge: "Strategic Intent SOP",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Language Proficiency Clean Filing",
+      desc: "Helping you correctly format and submit your required IELTS or PTE academic scores for standard processing windows.",
+      badge: "IELTS & PTE Submission",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const successSteps = [
+    {
+      step: "01",
+      title: "Rigorous Profile Review",
+      desc: "Evaluating your history, backlogs, and future career goals to align you with public DLIs and high-success provinces.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+      ),
+    },
+    {
+      step: "02",
+      title: "Financial & Attestation Structuring",
+      desc: "Managing your GIC setup, attestation letter routing, and funding affidavits with complete compliance.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      step: "03",
+      title: "Portal Lodgement & Tracking",
+      desc: "Accurately submitting your Study Permit application onto the IRCC portal to minimize administrative delays.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+      ),
+    },
+    {
+      step: "04",
+      title: "Pre-Departure Success Briefing",
+      desc: "Preparing you thoroughly for Canadian travel, borders, winter clothing needs, health cover activations, and initial housing.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      ),
+    },
+  ];
+
   const FAQS = [
     {
       q: "What is a DLI?",
@@ -225,7 +398,7 @@ export default function CanadaStudyAbroadContent() {
     },
     {
       q: "How much money do I need to study in Canada?",
-      a: "Applicants must demonstrate sufficient funds covering first-year tuition fees plus living expenses. Under IRCC regulations, the base cost of living requirement is approximately CAD 20,635 for a single student (often evidenced via a Guaranteed Investment Certificate / GIC from an approved Canadian financial institution)."
+      a: "Applicants must demonstrate sufficient funds covering first-year tuition fees plus living expenses. Under the latest IRCC regulations, the base cost of living requirement is CAD 22,895 in available living expense funds for a single student (completely separate from first-year tuition fees and travel allowances), typically deposited into an approved Canadian Guaranteed Investment Certificate (GIC)."
     }
   ];
 
@@ -272,16 +445,42 @@ export default function CanadaStudyAbroadContent() {
             >
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 border border-red-200 text-[#e52928] text-xs sm:text-sm font-bold tracking-wide uppercase mb-4 shadow-sm">
                 <span className="px-2 py-0.5 rounded bg-[#e52928] text-white text-[11px] font-black tracking-wider">CA</span>
-                <span>North American Education & Global Careers</span>
+                <span>Umang Career Consultancy • Canada Student Visa Page</span>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-[#0a1e38] tracking-tight leading-none uppercase">
-                CANADA
+              <h1 className="text-3xl sm:text-5xl md:text-5xl font-black text-[#0a1e38] tracking-tight leading-tight">
+                Achieve Your Canadian Dream:{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e52928] via-[#0a1e38] to-[#e52928]">
+                  Study in Canada
+                </span>
+                <span className="block text-xl sm:text-2xl md:text-3xl font-extrabold text-[#e52928] mt-2">
+                  with Umang Career Consultancy
+                </span>
               </h1>
 
-              <p className="mt-5 text-base sm:text-xl text-slate-600 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
-                World-class DLI universities, 24h work rights, co-op industry internships, and up to 3-year Post-Graduation Work Permits (PGWP).
+              <p className="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
+                Unlock world-class academic institutions, thriving diverse communities, and unparalleled career opportunities. At Umang Career Consultancy, we turn your aspirations of studying in Canada into reality through meticulous visa processing, transparent legal guidance, and personalized profile assessments.
               </p>
+
+              {/* Quick Feature Badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-5">
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl text-center">
+                  <div className="text-sm sm:text-base font-bold text-[#0a1e38]">Regular Stream</div>
+                  <div className="text-[11px] text-slate-500 font-medium">IRCC Compliant</div>
+                </div>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl text-center">
+                  <div className="text-sm sm:text-base font-bold text-[#e52928]">PAL Guidance</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Masters/PhD Exempt</div>
+                </div>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl text-center">
+                  <div className="text-sm sm:text-base font-bold text-emerald-600">CAD 22,895</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Living Funds (GIC)</div>
+                </div>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl text-center">
+                  <div className="text-sm sm:text-base font-bold text-[#0a1e38]">24h / Week</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Work Rights</div>
+                </div>
+              </div>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a
@@ -324,7 +523,145 @@ export default function CanadaStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          2. ABOUT CANADA
+          2. WHY CHOOSE CANADA FOR YOUR HIGHER EDUCATION?
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-20 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <SectionHeader
+            title="Why Choose Canada for Your Higher Education?"
+            subtitle="Unlock world-class Designated Learning Institutions, post-graduation work opportunities, welcoming multicultural cities, and 24-hour work rights."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {whyChooseCanada.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#e52928] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {item.icon}
+                    </div>
+                    <span className="text-xs font-bold text-[#e52928] bg-red-50 px-2.5 py-1 rounded-full border border-red-100">
+                      {item.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-black text-[#0a1e38] mb-2 group-hover:text-[#e52928] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Canada Academic Heritage & Innovation Highlight */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-r from-[#0a1e38] via-[#123661] to-[#0a1e38] rounded-3xl p-6 sm:p-8 text-white shadow-xl">
+            <div className="lg:col-span-8 space-y-3">
+              <span className="px-3 py-1 rounded-full bg-[#e52928] text-white text-xs font-black uppercase tracking-wider">
+                Canada Higher Education &amp; Global Innovation Hub
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-black">
+                Top DLIs, High Standard of Living &amp; Strategic Global Careers
+              </h3>
+              <p className="text-sm text-slate-200 leading-relaxed">
+                Home to globally renowned Designated Learning Institutions, Canada unites research excellence with flexible off-campus work rights and up to 3-year Post-Graduation Work Permits across high-demand tech, business, and healthcare sectors.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex justify-center lg:justify-end">
+              <a
+                href="#counselling-form"
+                className="px-6 py-3.5 rounded-xl bg-[#22c55e] hover:bg-[#1ea750] text-white font-bold text-sm shadow-md transition-all whitespace-nowrap"
+              >
+                Explore Canada Institutions
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          3. NAVIGATING THE CANADIAN STUDY PERMIT PROCESS (LATEST IMMIGRATION UPDATES) & KEY REQUIREMENTS
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Navigating the Canadian Study Permit Process (Latest Immigration Updates)"
+            subtitle="Canada's international student visa landscape has changed significantly. Following recent Immigration, Refugees and Citizenship Canada (IRCC) directives, applications must now follow specific updated pathways. Our immigration experts track these developments continuously to protect your file from rejection:"
+          />
+
+          {/* 4 Latest Updates Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {latestUpdates.map((update, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#22c55e] flex items-center justify-center shrink-0">
+                      {update.icon}
+                    </div>
+                    <span className="text-xs font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-md">
+                      {update.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-black text-[#0a1e38] mb-2.5">
+                    {update.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {update.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Key Requirements We Guide You Through Header & Grid */}
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0a1e38]">
+              Key Requirements We Guide You Through
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto">
+              We provide end-to-end assistance for every stage of your IRCC application, ensuring all documentation satisfies Canadian immigration authorities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {keyRequirements.map((req, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#e52928] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {req.icon}
+                    </div>
+                    <span className="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-md">
+                      {req.badge}
+                    </span>
+                  </div>
+                  <h4 className="text-base font-bold text-[#0a1e38] group-hover:text-[#e52928] transition-colors mb-2">
+                    {req.title}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {req.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          4. ABOUT CANADA
          ========================================================= */}
       <section className="w-full py-16 sm:py-20 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -476,66 +813,40 @@ export default function CanadaStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          4. WHY STUDY IN CANADA?
+          THE UMANG CAREER CONSULTANCY ADVANTAGE: OUR 4-STEP SUCCESS PROCESS
          ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-white border-b border-slate-200">
+      <section className="w-full py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
-            title="Why Study in Canada?"
-            subtitle="Canada offers international students a broad choice of universities, colleges and career-focused programs in an inspiring environment."
+            title="The Umang Career Consultancy Advantage: Our 4-Step Success Process"
+            subtitle="From rigorous profile review and financial structuring to IRCC portal lodgement and pre-departure briefings."
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
-            {/* Left: Moraine Lake Banff Photo */}
-            <div className="lg:col-span-6">
-              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
-                <Image
-                  src="/destinations/canada-moraine.jpg"
-                  alt="Moraine Lake Banff Canadian Rockies"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-4 left-5 right-5 text-white">
-                  <div className="text-xs uppercase font-extrabold tracking-wider bg-[#0a1e38]/80 backdrop-blur-md px-3 py-1 rounded-md inline-block">
-                    Moraine Lake • Canadian Rockies
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {successSteps.map((s, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-3xl font-black text-[#22c55e]">
+                      {s.step}
+                    </span>
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-[#22c55e] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {s.icon}
+                    </div>
                   </div>
+                  <h3 className="text-lg font-black text-[#0a1e38] group-hover:text-[#22c55e] transition-colors mb-2">
+                    {s.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {s.desc}
+                  </p>
                 </div>
               </div>
-            </div>
-
-            {/* Right: Bulleted list with Circular Checkmark Badges */}
-            <div className="lg:col-span-6 space-y-3">
-              {[
-                "High-quality education with internationally recognized university credentials",
-                "Wide range of programs and specialisations across accredited DLI colleges",
-                "Modern learning and research facilities with substantial government funding",
-                "Multicultural and international environment welcoming students from 150+ countries",
-                "Scholarships and financial-aid opportunities for academic achievers",
-                "Opportunities to work while studying (up to 24 hours/week off campus)",
-                "Post-graduation work opportunities (PGWP up to 3 years) for eligible qualifiers",
-                "Strong industry hiring across tech, healthcare, finance, engineering, and logistics",
-                "Diverse cities and student communities surrounded by spectacular natural landscapes",
-                "Streamlined immigration transition points through Express Entry and PNPs"
-              ].map((reason, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3.5 p-2 rounded-xl hover:bg-slate-50 transition-colors"
-                >
-                  <div className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center flex-shrink-0 shadow-xs">
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-sm sm:text-base font-semibold text-slate-800">
-                    {reason}
-                  </span>
-                </div>
-              ))}
-            </div>
-
+            ))}
           </div>
 
         </div>
@@ -923,19 +1234,19 @@ export default function CanadaStudyAbroadContent() {
             {/* Left Prompt */}
             <div className="lg:col-span-5 space-y-5 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-[#e52928] text-xs font-bold uppercase tracking-wider">
-                Certified Canadian Education Counselors
+                Vadodara Office • Certified Canada Counselors
               </div>
               <h2 className="text-3xl sm:text-4xl font-black text-[#0a1e38] leading-tight">
-                Start Your Study Journey in Canada
+                Ready to Start Your Journey to Canada?
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Get personalised guidance for DLI course selection, university applications, GIC setup, PAL compliance, and your Canada study permit lodgement.
+                Don&apos;t let complex policy shifts compromise your academic future. Partner with the destination experts at Umang Career Consultancy to ensure a smooth, error-free path to Canada. Contact our Vadodara office today to schedule your comprehensive consultation!
               </p>
 
               <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3 text-left">
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                   <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
-                  <span>Direct DLI University & College Applications</span>
+                  <span>Rigorous Profile Review &amp; DLI Matching</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                   <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
@@ -945,20 +1256,49 @@ export default function CanadaStudyAbroadContent() {
                   <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
                   <span>Guaranteed Investment Certificate (GIC) Support</span>
                 </div>
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
+                  <span>Regular Stream IRCC Study Permit Lodgement</span>
+                </div>
               </div>
 
               {/* Direct Call Info */}
-              <div className="pt-2">
+              <div className="pt-2 space-y-2">
                 <div className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-1">
                   Talk to Umang Career Consultancy Today:
                 </div>
-                <a href="tel:+919173186109" className="anim-phone-ring inline-flex items-center gap-3 text-xl sm:text-2xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-[#e52928] text-white flex items-center justify-center shadow-md">
-                    <PhoneIcon />
-                  </div>
-                  <span>+91 91731 86109</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="tel:+919173186109"
+                    className="anim-phone-ring inline-flex items-center gap-2.5 text-lg sm:text-xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-full bg-[#e52928] text-white flex items-center justify-center shadow-md">
+                      <PhoneIcon />
+                    </div>
+                    <span>+91 91731 86109</span>
+                  </a>
+                  <span className="text-slate-300 font-bold hidden sm:inline">•</span>
+                  <a
+                    href="tel:+919712610086"
+                    className="anim-phone-ring inline-flex items-center gap-2.5 text-lg sm:text-xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-full bg-[#0a1e38] text-white flex items-center justify-center shadow-md">
+                      <PhoneIcon />
+                    </div>
+                    <span>+91 97126 10086</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="text-xs text-slate-500 space-y-1">
+                <div>
+                  <span className="font-bold text-slate-700">Vadodara Office: </span>
+                  First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019
+                </div>
+                <div className="text-[11px] text-slate-400">
+                  <span className="font-semibold text-slate-600">Email: </span>
+                  umangcareer2022@gmail.com • umangcareer2026@gmail.com • umangcareer2023@gmail.com
+                </div>
               </div>
             </div>
 

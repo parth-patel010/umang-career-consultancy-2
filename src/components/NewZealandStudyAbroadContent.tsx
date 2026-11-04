@@ -144,6 +144,199 @@ function SectionHeader({
 /* -------------------------------------------------------------
    DATA STRUCTURES
 ------------------------------------------------------------- */
+const WHY_CHOOSE_NZ = [
+  {
+    title: "Universally Ranked Universities",
+    desc: "Graduate from world-class institutions where every single university ranks highly in global academic listings.",
+    badge: "Top 2% Worldwide",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+      </svg>
+    ),
+  },
+  {
+    title: "High Employability & In-Demand Skills",
+    desc: "Align your education with New Zealand’s 'Green List' to target high-priority career roles in sectors like technology, engineering, and healthcare.",
+    badge: "Green List Careers",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: "India-NZ Free Trade Agreement Perks",
+    desc: "Benefit from exclusive new immigration pathways, extended visa validity, and guaranteed long-term work rights designed specifically for Indian graduates.",
+    badge: "India-NZ FTA Perks",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Outstanding Safety and Lifestyle",
+    desc: "Experience the unparalleled peace, safety, and vibrant student-friendly culture of dynamic metropolitan hubs like Auckland, Wellington, and Christchurch.",
+    badge: "#4 Global Peace Index",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+];
+
+const LATEST_INZ_UPDATES = [
+  {
+    title: "Unified Master’s Work Hours",
+    desc: "All new Master's students, including those in Master's-by-Research programs, are subject to a standard part-time cap of up to 25 hours per week during active semesters and unlimited full-time hours during scheduled academic holidays.",
+    badge: "25h / Week Cap",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Stringent English Language Checks",
+    desc: "INZ visa officers have drastically strengthened their instructions regarding language skills. English proficiency is now a major deciding factor for visa validation; our experts ensure your IELTS or PTE scores are bulletproof.",
+    badge: "IELTS & PTE Scrutiny",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Extended Grace Period",
+    desc: "Eligible students now receive a comfortable 2-month grace visa extension after their official course completion date—up from just 1 month—giving you ample time to transition or lodge your post-study paperwork.",
+    badge: "2-Month Transition Grace",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Enhanced Post-Study & Short-Term Visas",
+    desc: "Under the latest rules: Master's Graduates receive an automatic 3-year Post-Study Work Visa; Indian PhD Graduates are now eligible for an extended 4-year post-study work visa under the FTA; Graduate Diploma (Level 7) holders now qualify for a 1-year open work visa if they hold a prior Bachelor's degree; other Level 5 to 7 graduates can take advantage of the brand-new 6-month Short-Term Graduate Work Visa to launch their local job search.",
+    badge: "3–4 Yrs PSWV & FTA",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    ),
+  },
+];
+
+const KEY_REQUIREMENTS = [
+  {
+    title: "Verified Offer of Place",
+    desc: "Securing your official confirmation from an approved, compliant Kiwi university or polytechnic.",
+    badge: "Official Kiwi Offer",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Airtight Financial Proofs & FTS",
+    desc: "Guiding you flawlessly through required living expense thresholds (at least NZ$ 20,000 per year) and structuring secure Funds Transfer Scheme (FTS) accounts.",
+    badge: "NZ$ 20,000 / Yr & FTS",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Genuine Student (GS) Intent Statements",
+    desc: "Assisting you in drafting a powerful, fact-based Statement of Purpose (SOP) that highlights your career objectives and commitment to compliance.",
+    badge: "Fact-Based GS SOP",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    ),
+  },
+  {
+    title: "E-Medical and Police Verification",
+    desc: "Seamlessly scheduling your digital health exams and obtaining your required Police Clearance Certificates (PCC).",
+    badge: "e-Medical & PCC",
+    icon: (
+      <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+];
+
+const SUCCESS_PATHWAY = [
+  {
+    step: "01",
+    title: "Career Profiling & Green List Mapping",
+    desc: "Pairing your profile with specific courses that naturally unlock New Zealand's best post-study career options.",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+      </svg>
+    ),
+  },
+  {
+    step: "02",
+    title: "Academic Dossier Composition",
+    desc: "Formatting highly persuasive CVs, recommendation letters, and SOPs that attract academic panels.",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    ),
+  },
+  {
+    step: "03",
+    title: "Fee & FTS Management",
+    desc: "Safely routing your tuition payments and setting up authorized banking channels for living costs.",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    step: "04",
+    title: "Portal Application Lodgement",
+    desc: "Submitting your Fee-Paying Student Visa onto the Immigration Online portal with zero processing flaws.",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+      </svg>
+    ),
+  },
+  {
+    step: "05",
+    title: "Mock Embassy Interview Prep",
+    desc: "Conducting intense, one-on-one mock interview drills so you can speak to visa officers with absolute conviction.",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+      </svg>
+    ),
+  },
+  {
+    step: "06",
+    title: "Pre-Departure Orientation",
+    desc: "Empowering you with practical checklists for your flight, initial student housing, currency exchange, and cultural adjustment.",
+    icon: (
+      <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+  },
+];
+
 const TOP_COURSES = [
   { name: "MBA", category: "Business & Leadership", tag: "Triple-Accredited" },
   { name: "Accounting & Finance", category: "Commerce & Banking", tag: "CPA / CAANZ" },
@@ -377,28 +570,32 @@ const FAQS = [
     a: "Yes! Depending on your visa type and circumstances, eligible partners or dependent children may be able to accompany you under applicable New Zealand immigration rules. If you are enrolled in a Level 9 Master's degree or Level 10 Ph.D. (or a Bachelor's leading to an occupation on the Green List), your spouse is typically eligible for a Partner of a Student Work Visa with full open work rights, and your school-age dependent children can attend New Zealand state schools as domestic fee-free students.",
   },
   {
-    q: "Is IELTS mandatory to study in New Zealand?",
-    a: "English-language requirements depend on the institution and program. While IELTS (typically 6.0 for UG and 6.5 for PG) is widely accepted, many New Zealand universities and institutes also accept PTE Academic, TOEFL iBT, or verified Medium of Instruction (MOI) certificates from recognized English-medium colleges for eligible applicants.",
+    q: "Is English language proficiency mandatory under the latest INZ rules?",
+    a: "Yes. INZ visa officers have drastically strengthened their instructions regarding language skills. English proficiency is now a major deciding factor for visa validation. Our counselors assist you in preparing and achieving bulletproof IELTS or PTE Academic test scores to ensure complete compliance with the latest criteria.",
   },
   {
-    q: "Do I get a work visa in New Zealand after graduation?",
-    a: "Yes! Eligible graduates may be able to apply for a Post-Study Work Visa (PSWV), depending on their qualification, study duration, and the rules applicable at the time of application. Students completing Bachelor's, Master's, or Ph.D. programs in New Zealand generally qualify for up to a 3-year open post-study work visa allowing them to work for any employer across any industry.",
+    q: "What post-study work visa rights do I get under the latest updates and India-NZ FTA?",
+    a: "Under current INZ regulations and the India-NZ Free Trade Agreement: Master's Graduates receive an automatic 3-year Post-Study Work Visa; Indian PhD Graduates are now eligible for an extended 4-year post-study work visa; Graduate Diploma (Level 7) holders qualify for a 1-year open work visa if they hold a prior Bachelor's degree; and other Level 5 to 7 graduates can leverage the brand-new 6-month Short-Term Graduate Work Visa to launch their local job search.",
   },
   {
     q: "Can I stay in New Zealand permanently after studying?",
-    a: "Permanent residence is not automatic after graduation. Your options depend on your qualifications, employment, immigration pathway, and eligibility under the rules in place at the time. However, graduates who work in occupations on New Zealand's 'Green List' (such as civil engineering, software engineering, nursing, ICT, and teaching) can access fast-track Straight to Residence or Work to Residence pathways under the Skilled Migrant Category.",
+    a: "Permanent residence is not automatic after graduation, but graduates who work in occupations on New Zealand's 'Green List' (such as civil engineering, software engineering, nursing, ICT, and healthcare) can access fast-track Straight to Residence or Work to Residence pathways under the Skilled Migrant Category.",
   },
   {
-    q: "What is the Funds Transfer Scheme (FTS) for Indian students?",
-    a: "The Funds Transfer Scheme (FTS) is an arrangement between Immigration New Zealand (INZ) and the ANZ Bank New Zealand. It allows Indian students to transfer their living funds into a dedicated ANZ New Zealand bank account. A set allowance is paid out monthly to the student after arrival, providing transparent proof of genuine financial capability to visa officers.",
+    q: "What is the Funds Transfer Scheme (FTS) and required living expense threshold?",
+    a: "The Funds Transfer Scheme (FTS) is an arrangement between Immigration New Zealand (INZ) and ANZ Bank New Zealand. It allows international students from India to transfer their living funds (at least NZ$ 20,000 per year) into a dedicated, secure Kiwi bank account. A set allowance is paid out monthly after arrival, demonstrating airtight financial capability to visa officers.",
   },
   {
     q: "What are the primary university intakes in New Zealand?",
-    a: "The two major intakes are February/March (Semester 1 - the primary intake with the widest program choice) and July (Semester 2). Select institutes of technology and pathway colleges also offer rolling intakes in September, October, and November.",
+    a: "The two major intakes are February/March (Semester 1 - primary intake with widest course options) and July (Semester 2). Select institutes of technology and pathway colleges also offer rolling intakes in September, October, and November.",
   },
   {
     q: "How many hours can international students work in New Zealand?",
-    a: "International students holding a valid New Zealand student visa are entitled to work up to 20 hours per week during academic semesters, and full-time (up to 40 hours per week) during official summer vacations and semester breaks. The current minimum wage in New Zealand is approximately NZD 23.15 per hour.",
+    a: "Under the latest INZ rules, all new Master's students (including Master's-by-Research) are subject to a unified standard cap of up to 25 hours per week during active semesters and unlimited full-time hours during scheduled academic holidays. Other eligible students can work up to 20 hours per week during semesters.",
+  },
+  {
+    q: "What is the new 2-month grace visa extension?",
+    a: "Eligible international students now receive a comfortable 2-month grace visa extension after their official course completion date—up from just 1 month previously—giving you ample time to transition, attend graduation, or lodge your post-study work paperwork without stress.",
   },
   {
     q: "Why is New Zealand's Ph.D. policy so popular among international researchers?",
@@ -488,41 +685,43 @@ export default function NewZealandStudyAbroadContent() {
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-200 shadow-sm mb-6">
                 <NZFlagBadge />
                 <span className="text-xs sm:text-sm font-bold text-[#e52928] tracking-wide uppercase">
-                  World-Leading Education & Green List Pathways
+                  Umang Career Consultancy • New Zealand Student Visa Page
                 </span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#0a1e38] tracking-tight leading-[1.15]">
-                Study in <span className="text-[#e52928]">New Zealand</span>
-                <br />
-                <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-800">
-                  Build Your Global Future in Aotearoa
+              <h1 className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl font-black text-[#0a1e38] tracking-tight leading-[1.15]">
+                Build Your Global Future:{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-[#0a1e38] to-[#e52928]">
+                  Study in New Zealand
+                </span>
+                <span className="block text-xl sm:text-2xl md:text-3xl font-extrabold text-[#e52928] mt-2">
+                  with Umang Career Consultancy
                 </span>
               </h1>
 
               {/* Sub-tagline */}
               <p className="mt-5 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
-                New Zealand combines globally recognized qualifications (all 8 universities ranked in the global top 2%), hands-on research, safe and welcoming student cities, up to 3 years Post-Study Work Visas, and fast-track Green List residence opportunities.
+                Step into a country renowned for its pristine natural beauty, universally respected educational infrastructure, and excellent career pathways. At Umang Career Consultancy, we convert your dreams of studying in New Zealand into a reality through rigorous document drafting, verified financial formatting, and up-to-date immigration expertise.
               </p>
 
-              {/* Bullet Highlights */}
-              <div className="mt-6 grid grid-cols-2 gap-3 text-left max-w-md mx-auto lg:mx-0 text-xs sm:text-sm font-medium text-slate-700">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>All 8 Universities in Global Top 2%</span>
+              {/* Feature Badges */}
+              <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                  <div className="text-sm sm:text-base font-bold text-[#0a1e38]">Top 2% Globally</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Universally Ranked</div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>Up to 3-Year Post-Study Work Visa</span>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                  <div className="text-sm sm:text-base font-bold text-[#e52928]">Green List</div>
+                  <div className="text-[11px] text-slate-500 font-medium">High Employability</div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>Spouse Open Work Visa Privileges</span>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                  <div className="text-sm sm:text-base font-bold text-emerald-600">25h / Week</div>
+                  <div className="text-[11px] text-slate-500 font-medium">Master&apos;s Work Hours</div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#22c55e]" />
-                  <span>Ph.D. at Domestic Tuition Rates</span>
+                <div className="bg-slate-50 border border-slate-200 p-3 rounded-xl">
+                  <div className="text-sm sm:text-base font-bold text-[#0a1e38]">3–4 Yrs PSWV</div>
+                  <div className="text-[11px] text-slate-500 font-medium">India-NZ FTA Perks</div>
                 </div>
               </div>
 
@@ -532,7 +731,8 @@ export default function NewZealandStudyAbroadContent() {
                   href="#counselling-form"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-bold text-base px-8 py-3.5 rounded-xl shadow-lg hover:shadow-red-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <span>Free New Zealand Counselling</span>
+                  <span>Apply for New Zealand</span>
+                  <span>→</span>
                 </a>
                 <a href="tel:+919173186109" className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#0a1e38] hover:bg-slate-800 text-white font-bold text-base px-7 py-3.5 rounded-xl shadow-md transition-all duration-300"
                 >
@@ -581,11 +781,149 @@ export default function NewZealandStudyAbroadContent() {
                   <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-[#e52928] font-black text-xs tracking-wider">NZ</div>
                   <div>
                     <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Post-Study Visa</div>
-                    <div className="text-base font-extrabold text-[#0a1e38]">Up to 3 Years PSWV</div>
+                    <div className="text-base font-extrabold text-[#0a1e38]">Up to 3-4 Yrs PSWV</div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          2. WHY CHOOSE NEW ZEALAND (AOTEAROA) FOR YOUR HIGHER EDUCATION?
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-20 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <SectionHeader
+            title="Why Choose New Zealand (Aotearoa) for Your Higher Education?"
+            subtitle="Universally ranked institutions, high-priority Green List career mapping, exclusive India-NZ FTA benefits, and an unmatched quality of life."
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {WHY_CHOOSE_NZ.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#e52928] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {item.icon}
+                    </div>
+                    <span className="text-xs font-bold text-[#e52928] bg-red-50 px-2.5 py-1 rounded-full border border-red-100">
+                      {item.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-black text-[#0a1e38] mb-2 group-hover:text-[#e52928] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* New Zealand Academic Excellence & Innovation Highlight */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-r from-[#012169] via-[#0a1e38] to-[#123661] rounded-3xl p-6 sm:p-8 text-white shadow-xl">
+            <div className="lg:col-span-8 space-y-3">
+              <span className="px-3 py-1 rounded-full bg-[#e52928] text-white text-xs font-black uppercase tracking-wider">
+                New Zealand Higher Education Hub
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-black">
+                100% Universally Ranked State Universities &amp; Green List Career Pathways
+              </h3>
+              <p className="text-sm text-slate-200 leading-relaxed">
+                All 8 New Zealand state universities rank in the global top 2%, offering hands-on research facilities, unified 25h/week work rights, up to 3 to 4 years Post-Study Work Visas under the India-NZ FTA, and subsidized PhD tuition.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex justify-center lg:justify-end">
+              <a
+                href="#counselling-form"
+                className="px-6 py-3.5 rounded-xl bg-[#22c55e] hover:bg-[#1ea750] text-white font-bold text-sm shadow-md transition-all whitespace-nowrap"
+              >
+                Explore Kiwi Universities
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          3. NAVIGATING THE NEW ZEALAND STUDENT VISA (LATEST INZ RULES & REGULATIONS) & KEY REQUIREMENTS
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Navigating the New Zealand Student Visa (Latest INZ Rules & Regulations)"
+            subtitle="Immigration New Zealand (INZ) has updated its student framework to protect international students and streamline visa pathways. At Umang Career Consultancy, our counseling team ensures your file fully satisfies these strict new criteria to safeguard your application from rejection:"
+          />
+
+          {/* 4 Latest INZ Rules Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {LATEST_INZ_UPDATES.map((update, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#22c55e] flex items-center justify-center shrink-0">
+                      {update.icon}
+                    </div>
+                    <span className="text-xs font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-md">
+                      {update.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-black text-[#0a1e38] mb-2.5">
+                    {update.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {update.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Key Requirements We Help You Perfect Header & Grid */}
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0a1e38]">
+              Key Requirements We Help You Perfect
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto">
+              We guide you through every essential requirement from securing compliant Kiwi offers to structuring FTS accounts, fact-based SOPs, and medical clearance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {KEY_REQUIREMENTS.map((req, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#e52928] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {req.icon}
+                    </div>
+                    <span className="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-md">
+                      {req.badge}
+                    </span>
+                  </div>
+                  <h4 className="text-base font-bold text-[#0a1e38] group-hover:text-[#e52928] transition-colors mb-2">
+                    {req.title}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {req.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1004,85 +1342,37 @@ export default function NewZealandStudyAbroadContent() {
       {/* =========================================================
           NZ ACADEMIC SYSTEM & IMMIGRATION (6 Cards)
          ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-slate-50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="The New Zealand Academic & Student Life System"
-            subtitle="Essential facts on immigration, student pastoral care, and work privileges."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ACADEMIC_SYSTEM.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-              >
-                <div>
-                  <div className="w-10 h-10 rounded-xl bg-red-50 text-[#e52928] font-black text-sm flex items-center justify-center mb-4">
-                    {item.step}
-                  </div>
-                  <h3 className="text-lg font-black text-[#0a1e38]">{item.title}</h3>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* =========================================================
-          STEP-BY-STEP ADMISSION & STUDENT VISA ROADMAP
+          THE UMANG CAREER CONSULTANCY ADVANTAGE: OUR 6-STEP PATHWAY
          ========================================================= */}
-      <section className="w-full py-16 sm:py-24 bg-white relative">
+      <section className="w-full py-16 sm:py-24 bg-white relative border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            title="Step-by-Step New Zealand Admission & Visa Process"
-            subtitle="From university selection to visa lodgement — Umang Career Consultancy guides you at every milestone."
+            title="The Umang Career Consultancy Advantage: Our 6-Step Pathway"
+            subtitle="From career profiling and Green List mapping to FTS setup, portal lodgement, mock interview drills, and pre-departure orientation."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                step: "01",
-                title: "Profile Assessment & University Shortlist",
-                desc: "Evaluating academic background, English proficiency, and career goals to shortlist top NZ universities and Green List courses.",
-              },
-              {
-                step: "02",
-                title: "Dossier Formulation & SOP Drafting",
-                desc: "Assisting with Statement of Purpose (SOP), letters of recommendation, CVs, and verified academic transcripts.",
-              },
-              {
-                step: "03",
-                title: "Offer of Place & Fee Payment",
-                desc: "Securing your official Offer of Place and coordinating tuition fee transfer or Funds Transfer Scheme (FTS) setup.",
-              },
-              {
-                step: "04",
-                title: "Medical & Police Clearance (PCC)",
-                desc: "Guiding you through e-Medical health examinations and obtaining your Police Clearance Certificate for Immigration New Zealand.",
-              },
-              {
-                step: "05",
-                title: "Online Student Visa Lodgement (INZ)",
-                desc: "Lodge your fee-payer student visa application on the INZ portal with flawless financial proof and genuine intent documentation.",
-              },
-              {
-                step: "06",
-                title: "Pre-Departure Briefing & Housing",
-                desc: "Assisting with student flat/hostel booking, flight ticketing, health insurance, and banking setup in New Zealand.",
-              },
-            ].map((step, idx) => (
+            {SUCCESS_PATHWAY.map((s, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:border-[#22c55e] transition-all flex flex-col justify-between"
+                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-[#0a1e38] text-white font-black text-sm flex items-center justify-center mb-4">
-                    {step.step}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-3xl font-black text-[#22c55e]">
+                      {s.step}
+                    </span>
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-[#22c55e] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {s.icon}
+                    </div>
                   </div>
-                  <h3 className="text-lg font-black text-[#0a1e38]">{step.title}</h3>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">{step.desc}</p>
+                  <h3 className="text-lg font-black text-[#0a1e38] group-hover:text-[#22c55e] transition-colors mb-2">
+                    {s.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {s.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -1135,23 +1425,61 @@ export default function NewZealandStudyAbroadContent() {
               {/* Left Column Text */}
               <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
                 <span className="text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-red-500/20 text-[#e52928] border border-red-500/30">
-                  Plan Your New Zealand Study Journey
+                  Vadodara Office • Certified New Zealand Counselors
                 </span>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
-                  To Make Your Study in New Zealand <span className="text-[#e52928]">Hassle-Free</span>
+                  Begin Your Journey to <span className="text-[#e52928]">New Zealand</span> Today!
                 </h2>
                 <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                  Plan your New Zealand study journey with Umang Career Consultancy. From university selection across Auckland, Otago, and Canterbury to securing your fee-payer visa and FTS account, our certified counselors make your transition effortless.
+                  Don&apos;t let complex policy updates slow down your career ambitions. Put your profile in the hands of the destination experts at Umang Career Consultancy. Contact our Vadodara office today to secure your personalized visa roadmap!
                 </p>
 
-                <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                  <a href="tel:+919173186109" className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-bold text-base px-6 py-3.5 rounded-xl shadow-lg transition-colors"
-                  >
-                    <PhoneIcon />
-                    <span>Call +91 91731 86109</span>
-                  </a>
-                  <div className="text-xs text-slate-400 font-medium">
-                    Office Hours: Mon–Sat, 9:30 AM – 7:00 PM IST
+                <div className="space-y-3 pt-2 text-left">
+                  <div className="flex items-center gap-3 text-sm text-slate-200">
+                    <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-[#22c55e] flex items-center justify-center shrink-0"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
+                    <span>Career Profiling &amp; Green List Mapping</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-slate-200">
+                    <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-[#22c55e] flex items-center justify-center shrink-0"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
+                    <span>Airtight Financial Proofs &amp; FTS Structuring</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-slate-200">
+                    <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-[#22c55e] flex items-center justify-center shrink-0"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
+                    <span>Fact-Based Genuine Student (GS) Intent Statements</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-slate-200">
+                    <span className="w-6 h-6 rounded-full bg-emerald-500/20 text-[#22c55e] flex items-center justify-center shrink-0"><svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
+                    <span>Mock Embassy Interview Prep &amp; Pre-Departure Guidance</span>
+                  </div>
+                </div>
+
+                <div className="pt-4 space-y-3">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href="tel:+919173186109"
+                      className="anim-phone-ring inline-flex items-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-bold text-sm sm:text-base px-5 py-3 rounded-xl shadow-lg transition-colors"
+                    >
+                      <PhoneIcon />
+                      <span>+91 91731 86109</span>
+                    </a>
+                    <a
+                      href="tel:+919712610086"
+                      className="anim-phone-ring inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-bold text-sm sm:text-base px-5 py-3 rounded-xl border border-white/20 transition-colors"
+                    >
+                      <PhoneIcon />
+                      <span>+91 97126 10086</span>
+                    </a>
+                  </div>
+
+                  <div className="text-xs text-slate-300 space-y-1">
+                    <div>
+                      <strong className="text-white">Vadodara Office: </strong>
+                      First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019
+                    </div>
+                    <div className="text-[11px] text-slate-400">
+                      <span className="font-semibold text-slate-300">Email: </span>
+                      umangcareer2022@gmail.com • umangcareer2026@gmail.com • umangcareer2023@gmail.com
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1268,6 +1596,31 @@ export default function NewZealandStudyAbroadContent() {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================
+          BOTTOM RED CALL BAR
+         ========================================================= */}
+      <section className="w-full bg-[#e52928] py-8 text-white relative shadow-inner">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <div className="text-xs uppercase tracking-widest font-black text-red-200">
+              Personalized New Zealand Admission Guidance
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black mt-1">
+              Talk to Umang Career Consultancy Today
+            </h2>
+          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <a href="tel:+919173186109" className="anim-phone-ring inline-flex items-center gap-3 bg-white text-[#0a1e38] hover:text-[#e52928] font-black text-lg sm:text-xl px-7 py-3.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <div className="w-7 h-7 rounded-full bg-[#0a1e38] text-white flex items-center justify-center">
+                <PhoneIcon />
+              </div>
+              <span>+91 91731 86109</span>
+            </a>
           </div>
         </div>
       </section>

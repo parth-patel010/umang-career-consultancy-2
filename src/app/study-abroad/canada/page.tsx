@@ -2,18 +2,21 @@ import type { Metadata } from "next";
 import CanadaStudyAbroadContent from "@/components/CanadaStudyAbroadContent";
 
 export const metadata: Metadata = {
-  title: "Study in Canada | Top Universities, PGWP & Visas | Umang Career Consultancy",
+  title: "Canada Student Visa & Study in Canada | Umang Career Consultancy",
   description:
-    "Study in Canada with Umang Career Consultancy. Expert guidance on top DLI universities, 24-hour work rights, post-graduation work permits (PGWP up to 3 years), tuition fees, cost of living, scholarships & Canada study permit processing.",
+    "Achieve Your Canadian Dream: Study in Canada with Umang Career Consultancy. Expert guidance on Regular Stream filing, PAL & Master's/Doctoral exemptions, CAD 22,895 living funds (GIC), top DLI universities, 24-hr work rights & PGWP.",
   keywords: [
-    "Study in Canada",
-    "Study in Canada DLI",
     "Canada Student Visa",
-    "Canada Study Permit",
+    "Study in Canada",
+    "Canadian Study Permit",
+    "Canada Regular Stream Visa",
+    "Provincial Attestation Letter PAL",
+    "CAD 22895 Living Funds",
+    "Canada GIC Account",
     "PGWP Canada",
-    "Canada Tuition Fees",
-    "University of Toronto admissions",
+    "Designated Learning Institutions DLI",
     "Umang Career Consultancy Canada",
+    "Vadodara Canada Student Visa Consultant",
     "Study Abroad Canada",
   ],
 };

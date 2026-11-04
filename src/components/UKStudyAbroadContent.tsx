@@ -201,6 +201,168 @@ export default function UKStudyAbroadContent() {
     }, 4500);
   };
 
+  const whyChooseLondon = [
+    {
+      title: "Global Financial & Cultural Hub",
+      desc: "Study in the world's top-ranked student city with unparalleled networking opportunities.",
+      badge: "Top Student City",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Career-Focused Degrees",
+      desc: "Access top institutions like the University of Greenwich and Queen Mary University of London, known for industry connections and robust internship programs.",
+      badge: "Industry Connections",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Post-Study Work Visa",
+      desc: "Benefit from the Graduate Route, allowing you to live and work in the UK for 2 to 3 years after finishing your studies.",
+      badge: "2–3 Yrs Graduate Route",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      ),
+    },
+    {
+      title: "Vibrant Student Life",
+      desc: "Experience a rich, multicultural environment with access to modern campus facilities, dynamic student communities, and historic landmark attractions.",
+      badge: "Vibrant Community",
+      icon: (
+        <svg className="w-6 h-6 text-[#e52928]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const latestUpdates = [
+    {
+      title: "Official CAS Verification",
+      desc: "Every student requires a Confirmation of Acceptance for Studies (CAS) from their university. Following the latest UKVI rules, we ensure mandatory, secure verification of registered agent details within your CAS for official processing compliance.",
+      badge: "Mandatory Agent ID Check",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Updated Maintenance Requirements",
+      desc: "You must demonstrate sufficient funds to cover your tuition fees and London living expenses. We guide you through the latest, updated financial maintenance thresholds required to satisfy immigration authorities.",
+      badge: "London Living Funds",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Revised Visa Fees",
+      desc: "The standard UK Student Visa application fee is now set at £558. We provide a clear breakdown of all up-to-date fees, including the Immigration Health Surcharge (IHS), so there are no surprises.",
+      badge: "Standard Fee: £558 + IHS",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const keyRequirements = [
+    {
+      title: "University Admission & CAS",
+      desc: "Securing your official offer letter and tracking your CAS generation.",
+      badge: "Offer & CAS",
+      icon: (
+        <svg className="w-6 h-6 text-[#012169]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Clear Financial Proofs",
+      desc: "Organizing your bank statements, fixed deposits, or education loans according to the latest UKVI timeline rules.",
+      badge: "28-Day Bank Rule",
+      icon: (
+        <svg className="w-6 h-6 text-[#012169]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      title: "English Language Proficiency",
+      desc: "Assisting you with university specific requirements, including IELTS, PTE, or Medium of Instruction (MOI) waivers.",
+      badge: "IELTS / MOI Waiver",
+      icon: (
+        <svg className="w-6 h-6 text-[#012169]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Immigration Health Surcharge (IHS)",
+      desc: "Processing your mandatory health coverage to access the UK's National Health Service (NHS).",
+      badge: "NHS Health Access",
+      icon: (
+        <svg className="w-6 h-6 text-[#012169]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const successSteps = [
+    {
+      step: "01",
+      title: "Profile Assessment & University Matching",
+      desc: "Finding the right course and scholarship options across prestigious institutions in London.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+      ),
+    },
+    {
+      step: "02",
+      title: "Direct Application & CAS Shield Support",
+      desc: "Managing your university applications and navigating modern compliance systems effortlessly.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      step: "03",
+      title: "Meticulous Visa Filing",
+      desc: "Reviewing your documents against the newest UKVI rules to ensure a high success rate and fast turnaround.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+      ),
+    },
+    {
+      step: "04",
+      title: "London Pre-Departure Briefing",
+      desc: "Helping you settle in with practical advice on student accommodation, local transport, banking, and part-time jobs.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+  ];
+
   const FAQS = [
     {
       q: "Can IELTS be waived for admission to a UK university?",
@@ -291,19 +453,21 @@ export default function UKStudyAbroadContent() {
             >
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#012169] text-xs sm:text-sm font-bold tracking-wide uppercase mb-4 shadow-sm">
                 <span className="px-2 py-0.5 rounded bg-[#e52928] text-white text-[11px] font-black tracking-wider">UK</span>
-                <span>The Place of Discoveries, Innovation & Opportunity</span>
+                <span>Umang Career Consultancy • UK London Student Visa Page</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-[#0a1e38] tracking-tight leading-tight uppercase">
-                UNITED KINGDOM
+              <h1 className="text-3xl sm:text-5xl md:text-5xl font-black text-[#0a1e38] tracking-tight leading-tight">
+                Shape Your Future:{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#012169] via-[#0a1e38] to-[#e52928]">
+                  Study in London
+                </span>
+                <span className="block text-xl sm:text-2xl md:text-3xl font-extrabold text-[#e52928] mt-2">
+                  with Umang Career Consultancy
+                </span>
               </h1>
 
-              <div className="mt-3 text-lg sm:text-2xl font-extrabold text-[#e52928]">
-                Build Skills. Build Your Future. More Than Just a Degree.
-              </div>
-
               <p className="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl mx-auto lg:mx-0">
-                The UK is a premier destination for international students, offering centuries of academic heritage, fast-track 1-year Master&apos;s degrees, and the 2-Year Graduate Route post-study work visa.
+                Your journey to a world-class education in the heart of the UK begins here. At Umang Career Consultancy, we turn your dreams of studying in London into a reality through expert visa processing, transparent guidance, and trusted institutional partnerships.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -311,7 +475,7 @@ export default function UKStudyAbroadContent() {
                   href="#counselling-form"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#e52928] hover:bg-red-700 text-white font-extrabold text-base px-8 py-3.5 rounded-xl shadow-lg shadow-red-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
                 >
-                  <span>Apply for UK</span>
+                  <span>Apply for London</span>
                   <span>→</span>
                 </a>
                 <a href="tel:+919173186109" className="anim-phone-ring w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#0a1e38] hover:bg-slate-800 text-white font-bold text-base px-7 py-3.5 rounded-xl shadow-sm transition-all duration-300"
@@ -347,91 +511,140 @@ export default function UKStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          2. WHY STUDY IN THE UK? (AFFORDABLE, EMPLOYABLE, VALUABLE)
+          2. WHY CHOOSE LONDON FOR YOUR HIGHER EDUCATION?
          ========================================================= */}
       <section className="w-full py-16 sm:py-20 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
-            title="Why Study in the UK?"
-            subtitle="The UK combines established universities, diverse academic choices and a multicultural environment for international students."
+            title="Why Choose London for Your Higher Education?"
+            subtitle="Study in the world's top-ranked student city with industry-connected degrees, post-study work rights, and vibrant multicultural communities."
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
-            {/* Left: 3 Pillars */}
-            <div className="lg:col-span-7 space-y-6">
-              {[
-                {
-                  title: "AFFORDABLE",
-                  tag: "1-Year Master's Advantage",
-                  iconSvg: "cost",
-                  desc: "Many UK master's programs can be completed in just one year, potentially saving substantial tuition fees and full living costs compared with traditional two-year programs. Universities also offer an extensive range of merit scholarships and early-bird fee reductions."
-                },
-                {
-                  title: "EMPLOYABLE",
-                  tag: "Practical Industry Skills",
-                  iconSvg: "growth",
-                  desc: "UK universities provide direct opportunities to develop academic knowledge, practical skills and industry-focused experience through structured courses, real-world case studies, and state-of-the-art laboratory research facilities."
-                },
-                {
-                  title: "VALUABLE",
-                  tag: "Global Degree Prestige",
-                  iconSvg: "degree",
-                  desc: "Students can choose from a wide range of disciplines and specialised programs, allowing them to align their education with their academic interests and career goals. Qualifications from UK institutions are held in highest esteem by employers worldwide."
-                }
-              ].map((pillar, idx) => (
-                <div
-                  key={idx}
-                  className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="w-8 h-8 rounded-lg bg-red-50 text-[#e52928] flex items-center justify-center shrink-0">
-                      {pillar.iconSvg === "cost" ? (
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                      ) : pillar.iconSvg === "growth" ? (
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                      ) : (
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
-                      )}
-                    </span>
-                    <h3 className="text-xl font-black text-[#0a1e38] tracking-tight">
-                      {pillar.title}
-                    </h3>
-                    <span className="text-xs font-bold text-[#e52928] bg-red-50 px-2.5 py-0.5 rounded-full border border-red-100">
-                      {pillar.tag}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {whyChooseLondon.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#e52928] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {item.icon}
+                    </div>
+                    <span className="text-xs font-bold text-[#e52928] bg-red-50 px-2.5 py-1 rounded-full border border-red-100">
+                      {item.badge}
                     </span>
                   </div>
-                  <p className="text-sm text-slate-600 leading-relaxed pl-9">
-                    {pillar.desc}
+                  <h3 className="text-lg font-black text-[#0a1e38] mb-2 group-hover:text-[#e52928] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {item.desc}
                   </p>
                 </div>
-              ))}
-            </div>
-
-            {/* Right: Westminster / Big Ben Landmark Photo */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
-                <Image
-                  src="/destinations/uk.jpg"
-                  alt="Westminster Abbey and London Red Bus UK"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <span className="text-xs uppercase tracking-widest font-black bg-white/20 backdrop-blur-md px-3 py-1 rounded-full border border-white/30">
-                    London • United Kingdom
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-black mt-2">
-                    Centuries of Global Academic & Cultural Heritage
-                  </h3>
-                </div>
               </div>
-            </div>
-
+            ))}
           </div>
 
+          {/* London Academic Heritage Highlight */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-gradient-to-r from-[#012169] via-[#0a1e38] to-[#123661] rounded-3xl p-6 sm:p-8 text-white shadow-xl">
+            <div className="lg:col-span-8 space-y-3">
+              <span className="px-3 py-1 rounded-full bg-[#e52928] text-white text-xs font-black uppercase tracking-wider">
+                London Higher Education Hub
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-black">
+                Centuries of Global Academic Excellence &amp; Unrivaled Networking
+              </h3>
+              <p className="text-sm text-slate-200 leading-relaxed">
+                Home to over 40 higher education institutions, London unites world-renowned academic heritage with direct access to multinational corporate headquarters, international law firms, FinTech giants, and NHS teaching hospitals.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex justify-center lg:justify-end">
+              <a
+                href="#counselling-form"
+                className="px-6 py-3.5 rounded-xl bg-[#22c55e] hover:bg-[#1ea750] text-white font-bold text-sm shadow-md transition-all whitespace-nowrap"
+              >
+                Explore London Universities
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================
+          NAVIGATING THE UK STUDENT VISA ROUTE (LATEST UPDATES) & KEY REQUIREMENTS
+         ========================================================= */}
+      <section className="w-full py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Navigating the UK Student Visa Route (Latest Updates)"
+            subtitle="Securing a UK Student Visa requires careful alignment with the latest UK Visas and Immigration (UKVI) guidelines. Our team stays ahead of regulatory updates to ensure your application remains error-free:"
+          />
+
+          {/* 3 Latest Updates Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {latestUpdates.map((update, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#22c55e] flex items-center justify-center shrink-0">
+                      {update.icon}
+                    </div>
+                    <span className="text-xs font-bold text-slate-700 bg-slate-100 px-3 py-1 rounded-md">
+                      {update.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-black text-[#0a1e38] mb-2.5">
+                    {update.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {update.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Key Requirements We Help You Prepare Header & Grid */}
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0a1e38]">
+              Key Requirements We Help You Prepare
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto">
+              We guide you through every critical UKVI requirement from CAS tracking to financial proofs, IELTS/MOI waivers, and IHS processing.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {keyRequirements.map((req, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#012169] transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#012169] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {req.icon}
+                    </div>
+                    <span className="text-xs font-bold text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-md">
+                      {req.badge}
+                    </span>
+                  </div>
+                  <h4 className="text-base font-bold text-[#0a1e38] group-hover:text-[#e52928] transition-colors mb-2">
+                    {req.title}
+                  </h4>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {req.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -609,11 +822,11 @@ export default function UKStudyAbroadContent() {
               { name: "University of Cambridge", acronym: "CAMBRIDGE" },
               { name: "Imperial College London", acronym: "IMPERIAL" },
               { name: "University College London", acronym: "UCL" },
+              { name: "Queen Mary University of London", acronym: "QMUL" },
+              { name: "University of Greenwich", acronym: "GREENWICH" },
+              { name: "King's College London", acronym: "KCL" },
               { name: "University of Edinburgh", acronym: "EDINBURGH" },
               { name: "University of Manchester", acronym: "MANCHESTER" },
-              { name: "King's College London", acronym: "KCL" },
-              { name: "University of Leeds", acronym: "LEEDS" },
-              { name: "University of Birmingham", acronym: "BIRMINGHAM" },
               { name: "Middlesex University London", acronym: "MIDDLESEX" }
             ].map((uni, idx) => (
               <div
@@ -644,63 +857,36 @@ export default function UKStudyAbroadContent() {
       </section>
 
       {/* =========================================================
-          6. UK STUDENT VISA PROCESS (6 Steps)
+          6. THE UMANG CAREER CONSULTANCY ADVANTAGE: OUR 4-STEP SUCCESS PROCESS
          ========================================================= */}
       <section className="w-full py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <SectionHeader
-            title="UK Student Visa Process"
-            subtitle="A structured 6-step roadmap from initial shortlisting to securing your UK Student visa and boarding your flight."
+            title="The Umang Career Consultancy Advantage: Our 4-Step Success Process"
+            subtitle="From initial profile assessment to university matching, CAS shield support, visa filing, and London pre-departure briefings."
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                step: "01",
-                title: "Choose Your Course & University",
-                desc: "Shortlist programs based on your academic profile, English test scores (or waivers), budget, and long-term career plans."
-              },
-              {
-                step: "02",
-                title: "Apply to the University",
-                desc: "Prepare original academic transcripts, SOP, reference letters (LOR), and submit applications directly or via UCAS."
-              },
-              {
-                step: "03",
-                title: "Receive Your Offer & CAS",
-                desc: "Accept your offer, pay initial tuition deposit, and receive your official Confirmation of Acceptance for Studies (CAS)."
-              },
-              {
-                step: "04",
-                title: "Prepare Your Financial Dossier",
-                desc: "Ensure tuition balance plus UKVI maintenance funds (28-day bank balance rule) are strictly verified."
-              },
-              {
-                step: "05",
-                title: "Submit Visa Application & Biometrics",
-                desc: "Complete the online UK Student visa form, pay Immigration Health Surcharge (IHS), and attend VFS biometrics."
-              },
-              {
-                step: "06",
-                title: "Visa Decision & Pre-Departure",
-                desc: "Receive your passport sticker / digital vignette, book flights, arrange student housing, and attend our pre-departure briefing."
-              }
-            ].map((s, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {successSteps.map((s, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-black px-2.5 py-1 rounded bg-[#e52928] text-white">
-                    STEP {s.step}
-                  </span>
-                  <span className="text-xs text-slate-400 font-mono">UKVI Process</span>
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-3xl font-black text-[#22c55e]">
+                      {s.step}
+                    </span>
+                    <div className="w-10 h-10 rounded-xl bg-emerald-50 text-[#22c55e] flex items-center justify-center">
+                      {s.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#0a1e38] group-hover:text-[#e52928] transition-colors mb-2">{s.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    {s.desc}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#0a1e38] mb-2">{s.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  {s.desc}
-                </p>
               </div>
             ))}
           </div>
@@ -872,42 +1058,71 @@ export default function UKStudyAbroadContent() {
             {/* Left Prompt */}
             <div className="lg:col-span-5 space-y-5 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-[#e52928] text-xs font-bold uppercase tracking-wider">
-                Official UK University Representatives
+                Certified London Education Experts
               </div>
               <h2 className="text-3xl sm:text-4xl font-black text-[#0a1e38] leading-tight">
-                Start Your UK Study Journey
+                Ready to Start Your London Journey?
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                Get personalised guidance for course selection, IELTS waivers, fast-track offer letters, CAS issuance, and your UK Student visa filing.
+                Don&apos;t let changing regulations complicate your dreams. Trust the destination experts at Umang Career Consultancy to guide your path to London. Contact our Vadodara office today for a personalized consultation!
               </p>
 
               <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3 text-left">
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                   <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
-                  <span>Direct Applications to 130+ Recognized UK Universities</span>
+                  <span>Official CAS Generation &amp; Registered Agent Verification</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                   <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
-                  <span>IELTS Waiver Assessment (70%+ in Class 12 English)</span>
+                  <span>Updated London Maintenance &amp; 28-Day Financial Audit</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
                   <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
-                  <span>End-to-End CAS & UKVI Credibility Interview Coaching</span>
+                  <span>Standard £558 Visa Fee Guidance &amp; IHS Health Surcharge Filing</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></span>
+                  <span>London Pre-Departure Briefing: Housing, Transport &amp; Jobs</span>
                 </div>
               </div>
 
               {/* Direct Call Info */}
-              <div className="pt-2">
+              <div className="pt-2 space-y-2">
                 <div className="text-xs uppercase tracking-wider font-bold text-slate-500 mb-1">
-                  Book Your Free Counselling with Umang Career Consultancy:
+                  Contact Our Vadodara Office Today:
                 </div>
-                <a href="tel:+919173186109" className="anim-phone-ring inline-flex items-center gap-3 text-xl sm:text-2xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-[#e52928] text-white flex items-center justify-center shadow-md">
-                    <PhoneIcon />
-                  </div>
-                  <span>+91 91731 86109</span>
-                </a>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="tel:+919173186109"
+                    className="anim-phone-ring inline-flex items-center gap-2.5 text-lg sm:text-xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-full bg-[#e52928] text-white flex items-center justify-center shadow-md">
+                      <PhoneIcon />
+                    </div>
+                    <span>+91 91731 86109</span>
+                  </a>
+                  <span className="text-slate-300 font-bold hidden sm:inline">•</span>
+                  <a
+                    href="tel:+919712610086"
+                    className="anim-phone-ring inline-flex items-center gap-2.5 text-lg sm:text-xl font-black text-[#0a1e38] hover:text-[#e52928] transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-full bg-[#0a1e38] text-white flex items-center justify-center shadow-md">
+                      <PhoneIcon />
+                    </div>
+                    <span>+91 97126 10086</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="text-xs text-slate-500 space-y-1">
+                <div>
+                  <span className="font-bold text-slate-700">Vadodara Office: </span>
+                  First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019
+                </div>
+                <div className="text-[11px] text-slate-400">
+                  <span className="font-semibold text-slate-600">Email: </span>
+                  umangcareer2022@gmail.com • umangcareer2026@gmail.com • umangcareer2023@gmail.com
+                </div>
               </div>
             </div>
 
@@ -917,7 +1132,7 @@ export default function UKStudyAbroadContent() {
                 <div className="py-12 text-center space-y-4">
                   <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto shadow-md"><svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg></div>
                   <h3 className="text-2xl font-black text-[#0a1e38]">
-                    Inquiry Received for United Kingdom!
+                    Inquiry Received for London, UK!
                   </h3>
                   <p className="text-sm sm:text-base text-slate-600 max-w-md mx-auto">
                     Thank you, <span className="font-bold text-slate-900">{formData.name || "Student"}</span>. Our UK certified education counselor will contact you on <span className="font-bold text-slate-900">{formData.phone}</span> within 24 hours.
@@ -925,6 +1140,12 @@ export default function UKStudyAbroadContent() {
                 </div>
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-4">
+                  <h3 className="text-xl font-bold text-[#0a1e38]">
+                    Ready to Start Your London Journey?
+                  </h3>
+                  <p className="text-xs text-slate-500 mb-2">
+                    Fill out your details below and our London education specialists will contact you within 24 hours.
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">

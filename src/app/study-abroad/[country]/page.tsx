@@ -320,12 +320,35 @@ export async function generateMetadata({
   const slug = resolved.country.toLowerCase();
   const c = COUNTRIES_DATA[slug] || {
     name: resolved.country.toUpperCase(),
-    tagline: "Study Abroad Opportunities & Visa Guidance"
+    tagline: "Study Abroad Opportunities & Visa Guidance",
+    image: `/destinations/${slug}.jpg`
   };
 
+  const title = `Study in ${c.name} | Admissions, Visas & Scholarships | Umang Career`;
+  const description = `Complete guide to study in ${c.name}. Explore top universities, admission eligibility, tuition fees, post-study work permits, and student visa processing with Umang Career Consultancy in Vadodara.`;
+
   return {
-    title: `Study in ${c.name} | Admissions, Visas & Scholarships | Umang Career Consultancy`,
-    description: `Complete guide to study in ${c.name}. Explore top universities, admission eligibility, tuition fees, post-study work permits, and student visa processing with Umang Career Consultancy.`,
+    title,
+    description,
+    alternates: {
+      canonical: `https://umangcareer.in/study-abroad/${slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://umangcareer.in/study-abroad/${slug}`,
+      siteName: "Umang Career Consultancy",
+      images: [
+        {
+          url: c.image || `/destinations/${slug}.jpg`,
+          width: 1200,
+          height: 630,
+          alt: `Study in ${c.name} - Umang Career Consultancy`,
+        },
+      ],
+      locale: "en_IN",
+      type: "article",
+    },
   };
 }
 

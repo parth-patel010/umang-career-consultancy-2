@@ -301,44 +301,120 @@ export default function AustraliaStudyAbroadContent() {
 
   const whyStudyAustralia = [
     {
-      title: "Globally Recognised Universities",
-      desc: "Home to the world-famous Group of Eight (Go8). 7 Australian universities rank among the global top 100 in QS and THE rankings.",
-      badge: "World Top 100",
+      title: "Globally Ranked Universities",
+      desc: "Earn a degree that commands respect worldwide.",
+      badge: "World-Class Education",
     },
     {
-      title: "Subclass 485 Graduate Work Visa",
-      desc: "Eligible graduates gain 2 to 3 years of post-study work rights. Indian graduates under the Australia–India ECTA receive up to 3 to 4 years.",
-      badge: "2 – 4 Years PSW",
+      title: "Work While You Study",
+      desc: "Gain valuable international work experience with flexible part-time work rights.",
+      badge: "Flexible Work Rights",
     },
     {
-      title: "Work 48 Hours Per Fortnight",
-      desc: "Work up to 48 hours per fortnight during term time and unrestricted full-time hours during university breaks, earning top minimum wages.",
-      badge: "48 Hrs / Fortnight",
+      title: "Post-Study Work Opportunities",
+      desc: "Build a global career with excellent post-study pathways.",
+      badge: "Career Pathways",
     },
     {
-      title: "Australia–India ECTA Benefits",
-      desc: "Special bilateral arrangements providing extended post-study work rights and priority mobility for Indian graduates in STEM & ICT.",
-      badge: "ECTA Advantage",
+      title: "Unmatched Quality of Life",
+      desc: "Live and learn in safe, multicultural, and student-friendly cities.",
+      badge: "Multicultural & Safe",
+    },
+  ];
+
+  const keyRequirements = [
+    {
+      title: "Confirmation of Enrollment (CoE)",
+      desc: "Securing your official admission from a registered Australian institution.",
+      badge: "Official Admission",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
     },
     {
-      title: "High Standard of Living & Safety",
-      desc: "Melbourne, Sydney, Brisbane, and Adelaide consistently rank among the world's most liveable, safe, and multicultural cities.",
-      badge: "World's Most Liveable",
+      title: "Genuine Student (GS) Requirement",
+      desc: "Crafting a compelling submission that proves your primary focus is quality education.",
+      badge: "Visa Assessment",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
     },
     {
-      title: "Generous Scholarships",
-      desc: "Billions in funding including Australia Awards, Destination Australia, and university-specific merit discounts of 20% to 50% tuition.",
-      badge: "Merit Grants",
+      title: "Financial Capability",
+      desc: "Organizing clear evidence of funds to cover your tuition, travel, and living expenses.",
+      badge: "Fund Proofs",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
     },
     {
-      title: "Regional Study Migration Boost",
-      desc: "Studying in designated regional cities (Perth, Adelaide, Gold Coast, Wollongong, Hobart) unlocks extra 1-2 years of post-study work visas.",
-      badge: "+1-2 Yrs Regional",
+      title: "Language Proficiency",
+      desc: "Guiding you to achieve the required scores in IELTS, PTE, or TOEFL.",
+      badge: "IELTS / PTE / TOEFL",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+      ),
     },
     {
-      title: "Unrivaled Outdoor & Coastal Lifestyle",
-      desc: "World-class public infrastructure, clean pristine beaches, vibrant arts festivals, and year-round outdoor sports and sunshine.",
-      badge: "Coastal Lifestyle",
+      title: "Health & Character",
+      desc: "Arranging your Overseas Student Health Cover (OSHC) and medical checks.",
+      badge: "OSHC & Medicals",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+    },
+  ];
+
+  const successSteps = [
+    {
+      step: "01",
+      title: "Profile Evaluation & Course Matching",
+      desc: "We match your academic background and career goals with the finest Australian universities.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+      ),
+    },
+    {
+      step: "02",
+      title: "Meticulous Documentation",
+      desc: "Our experts ensure your financial proofs, academic transcripts, and GS statements are flawlessly prepared.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
+    },
+    {
+      step: "03",
+      title: "Visa Lodgement & Tracking",
+      desc: "We handle the entire Subclass 500 application process, maximizing your chances of approval.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+      ),
+    },
+    {
+      step: "04",
+      title: "Pre-Departure & Beyond",
+      desc: "From accommodation advice to cultural orientation, we ensure you land in Australia with absolute confidence.",
+      icon: (
+        <svg className="w-6 h-6 text-[#22c55e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
     },
   ];
 
@@ -627,38 +703,41 @@ export default function AustraliaStudyAbroadContent() {
               <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-white text-xs sm:text-sm font-medium">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#22c55e] animate-ping" />
                 <span className="text-slate-100 font-semibold tracking-wide">
-                  Top Global Destination • Group of Eight (Go8) & CRICOS
+                  Umang Career Consultancy • Australian Student Visa Page
                 </span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
-                Study in <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-[#22c55e]">Australia</span>
-                <span className="block text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#22c55e] mt-2">
-                  World-Class Degrees & 2 to 4-Year Graduate Visas
+                Empower Your Future:{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-[#22c55e]">
+                  Study in Australia
+                </span>
+                <span className="block text-xl sm:text-2xl lg:text-3xl font-semibold text-[#22c55e] mt-2">
+                  with Umang Career Consultancy
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl font-light">
-                Australia is a premier global destination for international students, offering internationally recognised qualifications, seven of the world&apos;s top 100 universities, generous post-study work rights under the Australia–India ECTA, and an enviable outdoor lifestyle.
+              <p className="text-base sm:text-lg text-slate-200 leading-relaxed max-w-2xl font-normal">
+                Your dream of achieving a world-class education in Australia is closer than you think. At Umang Career Consultancy, we turn your global academic aspirations into reality with expert guidance, transparent processing, and dedicated student visa support.
               </p>
 
               {/* Quick Feature Badges */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-3 rounded-xl text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-white">Top 100</div>
-                  <div className="text-xs text-slate-300 font-medium">7 Go8 Universities</div>
+                  <div className="text-xl sm:text-2xl font-bold text-white">Subclass 500</div>
+                  <div className="text-xs text-slate-300 font-medium">Student Visa Support</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-3 rounded-xl text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-[#22c55e]">48 Hrs</div>
-                  <div className="text-xs text-slate-300 font-medium">Fortnight Work</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#22c55e]">Up to 5 Yrs</div>
+                  <div className="text-xs text-slate-300 font-medium">Course Duration Visa</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-3 rounded-xl text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-[#e52928]">2–4 Years</div>
-                  <div className="text-xs text-slate-300 font-medium">Graduate Visa (PSW)</div>
+                  <div className="text-xl sm:text-2xl font-bold text-[#e52928]">4-Step</div>
+                  <div className="text-xs text-slate-300 font-medium">Success Process</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-3 rounded-xl text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-amber-400">ECTA</div>
-                  <div className="text-xs text-slate-300 font-medium">India Benefits</div>
+                  <div className="text-xl sm:text-2xl font-bold text-amber-400">CoE &amp; GS</div>
+                  <div className="text-xs text-slate-300 font-medium">Expert Preparation</div>
                 </div>
               </div>
 
@@ -668,7 +747,7 @@ export default function AustraliaStudyAbroadContent() {
                   href="#consultation"
                   className="px-7 py-3.5 rounded-xl font-bold bg-[#e52928] hover:bg-[#c9201f] text-white shadow-lg shadow-red-900/30 transition-all transform hover:-translate-y-0.5 text-center"
                 >
-                  Apply for Australia 2026/27
+                  Book Free Consultation
                 </a>
                 <a href="tel:+919173186109" className="anim-phone-ring inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md transition-all text-center"
                 >
@@ -827,11 +906,14 @@ export default function AustraliaStudyAbroadContent() {
       </section>
 
       {/* -------------------------------------------------------------
-          4. WHY STUDY IN AUSTRALIA?
+          4. WHY CHOOSE AUSTRALIA FOR YOUR HIGHER EDUCATION?
       ------------------------------------------------------------- */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader title="Why Study in Australia?" subtitle="Australia offers international students a broad selection of courses, internationally recognised qualifications, and unmatched opportunities to gain academic and practical experience." />
+          <SectionHeader
+            title="Why Choose Australia for Your Higher Education?"
+            subtitle="Australia offers international students world-class education, global career pathways, and an unmatched quality of life."
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyStudyAustralia.map((item, idx) => (
@@ -873,6 +955,82 @@ export default function AustraliaStudyAbroadContent() {
                 Check ECTA Eligibility
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* -------------------------------------------------------------
+          5. NAVIGATING THE AUSTRALIAN STUDENT VISA (SUBCLASS 500) & KEY REQUIREMENTS
+      ------------------------------------------------------------- */}
+      <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            title="Navigating the Australian Student Visa (Subclass 500)"
+            subtitle="To study in Australia, you must secure the Student Visa (Subclass 500). This visa permits you to live and study in the country for up to 5 years, depending on your course duration."
+          />
+
+          {/* Visa Overview Callout Banner */}
+          <div className="mb-12 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-start gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00843D] to-[#0a1e38] text-white flex items-center justify-center shrink-0 shadow-md">
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div className="space-y-1.5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-[#00843D] text-xs font-bold uppercase tracking-wider">
+                  Official Visa Category: Subclass 500
+                </div>
+                <h3 className="text-xl font-bold text-[#0a1e38]">
+                  Live &amp; Study in Australia for Up to 5 Years
+                </h3>
+                <p className="text-sm text-slate-600 leading-relaxed max-w-3xl">
+                  To study in Australia, you must secure the Student Visa (Subclass 500). This visa permits you to live and study in the country for up to 5 years, depending on your course duration. Umang Career Consultancy ensures your visa filing meets all Department of Home Affairs benchmarks.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#consultation"
+              className="px-6 py-3.5 rounded-xl bg-[#e52928] hover:bg-[#c9201f] text-white text-sm font-bold shadow-md transition-all shrink-0 whitespace-nowrap"
+            >
+              Get Visa Support
+            </a>
+          </div>
+
+          {/* Key Requirements We Help You Prepare Header */}
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0a1e38]">
+              Key Requirements We Help You Prepare
+            </h3>
+            <p className="text-sm sm:text-base text-slate-600 mt-2 max-w-2xl mx-auto">
+              Our experienced education and visa counselors guide you step-by-step through every mandatory compliance checkpoint.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {keyRequirements.map((req, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 hover:border-[#22c55e]/40 group flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#22c55e] flex items-center justify-center group-hover:scale-110 transition-transform">
+                      {req.icon}
+                    </div>
+                    <span className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold">
+                      {req.badge}
+                    </span>
+                  </div>
+                  <h4 className="text-lg font-bold text-[#0a1e38] group-hover:text-[#e52928] transition-colors mb-2">
+                    {req.title}
+                  </h4>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    {req.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1105,52 +1263,36 @@ export default function AustraliaStudyAbroadContent() {
       </section>
 
       {/* -------------------------------------------------------------
-          9. 6-STEP ADMISSION & AUSTRALIA STUDENT VISA (SUBCLASS 500)
+          THE UMANG CAREER CONSULTANCY ADVANTAGE: OUR 4-STEP SUCCESS PROCESS
       ------------------------------------------------------------- */}
       <section className="py-16 md:py-24 bg-slate-900 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <SectionHeader title="Your 6-Step Admission & Subclass 500 Visa Roadmap" subtitle="Umang Career Consultancy guides you from university selection to electronic Confirmation of Enrolment (CoE) and Department of Home Affairs visa grant." variant="dark" />
+          <SectionHeader
+            title="The Umang Career Consultancy Advantage: Our 4-Step Success Process"
+            subtitle="From initial profile evaluation to university matching, documentation, visa lodgement, and arrival support."
+            variant="dark"
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                step: "01",
-                title: "Course Discovery & Eligibility Assessment",
-                desc: "We analyze your academic marks, English test score (IELTS/PTE), budget, and career goals across CRICOS accredited Australian universities.",
-              },
-              {
-                step: "02",
-                title: "University Application & Genuine Student (GS)",
-                desc: "Submitting your application dossier along with a compelling Genuine Student (GS) statement outlining your academic intent and economic ties.",
-              },
-              {
-                step: "03",
-                title: "Letter of Offer & Initial Tuition Deposit",
-                desc: "Receiving your conditional or unconditional Letter of Offer from the university and transferring the initial semester tuition deposit.",
-              },
-              {
-                step: "04",
-                title: "Electronic Confirmation of Enrolment (eCoE) & OSHC",
-                desc: "Securing your official eCoE and activating mandatory Overseas Student Health Cover (OSHC) for the complete duration of your studies.",
-              },
-              {
-                step: "05",
-                title: "Student Visa (Subclass 500) Online Filing",
-                desc: "Lodging your visa file via ImmiAccount with verified financial evidence (AUD $29,710), medical health examination, and biometrics appointment.",
-              },
-              {
-                step: "06",
-                title: "Pre-Departure & Australian Airport Arrival",
-                desc: "Forex currency card setup, booking student accommodation, packing guidance, and flight ticketing with Sydney, Melbourne or Brisbane airport pick-up.",
-              },
-            ].map((stepItem, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {successSteps.map((stepItem, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#22c55e]/50 backdrop-blur-sm transition-all duration-300"
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#22c55e]/50 backdrop-blur-sm transition-all duration-300 relative group flex flex-col justify-between"
               >
-                <div className="text-3xl font-black text-[#22c55e] mb-2">{stepItem.step}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{stepItem.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{stepItem.desc}</p>
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-3xl font-black text-[#22c55e]">{stepItem.step}</div>
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-[#22c55e]">
+                      {stepItem.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#22c55e] transition-colors">
+                    {stepItem.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {stepItem.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -1205,39 +1347,61 @@ export default function AustraliaStudyAbroadContent() {
                   Start Your Journey
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                  Start Your Study Journey in Australia
+                  Take the First Step Toward Your Global Career
                 </h3>
                 <p className="text-sm text-slate-200 leading-relaxed">
-                  Get personalized guidance for course selection, university applications, Genuine Student (GS) statements, financial capacity audits, and your Australia Student visa.
+                  Let the experts at Umang Career Consultancy guide your path to Australia. Contact our certified counselors today for a personalized consultation.
                 </p>
 
                 <div className="space-y-3 pt-2 text-xs sm:text-sm text-slate-200">
                   <div className="flex items-center gap-3">
                     <svg className="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                    <span>Group of Eight (Go8) & ATN University Matching</span>
+                    <span>Confirmation of Enrollment (CoE) Guidance</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                    <span>Genuine Student (GS) Statement Assessment</span>
+                    <span>Genuine Student (GS) Statement Preparation</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                    <span>Financial Evidence & Education Loan Guidance</span>
+                    <span>Financial Evidence &amp; Funds Verification</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <svg className="w-4 h-4 text-[#22c55e] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
-                    <span>Post-Study Work (Subclass 485) Strategy</span>
+                    <span>Subclass 500 Visa Lodgement &amp; Tracking</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-white/10 space-y-2">
-                <div className="text-xs text-slate-300">Talk to Umang Career Consultancy Today</div>
-                <a href="tel:+919173186109" className="anim-phone-ring text-lg font-bold text-[#22c55e] hover:underline flex items-center gap-2"
-                >
-                  <PhoneIcon />
-                  <span>+91 91731 86109</span>
-                </a>
+              <div className="pt-4 border-t border-white/10 space-y-3">
+                <div className="text-xs text-slate-300">Talk to Umang Career Consultancy Today:</div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <a
+                    href="tel:+919173186109"
+                    className="anim-phone-ring text-base sm:text-lg font-bold text-white hover:text-[#22c55e] flex items-center gap-2"
+                  >
+                    <PhoneIcon />
+                    <span>+91 91731 86109</span>
+                  </a>
+                  <span className="text-slate-400 font-bold">•</span>
+                  <a
+                    href="tel:+919712610086"
+                    className="anim-phone-ring text-base sm:text-lg font-bold text-white hover:text-[#22c55e] flex items-center gap-2"
+                  >
+                    <PhoneIcon />
+                    <span>+91 97126 10086</span>
+                  </a>
+                </div>
+                <div className="text-xs text-slate-300 space-y-1">
+                  <div>
+                    <strong className="text-white">Vadodara Office: </strong>
+                    First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019
+                  </div>
+                  <div className="text-[11px] text-slate-400">
+                    <span className="font-semibold text-slate-300">Email: </span>
+                    umangcareer2022@gmail.com • umangcareer2026@gmail.com • umangcareer2023@gmail.com
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1260,10 +1424,10 @@ export default function AustraliaStudyAbroadContent() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <h4 className="text-xl font-bold text-[#0a1e38] mb-1">
-                    Book Free Australia Consultation
+                    Book Free Australia Student Visa Consultation
                   </h4>
                   <p className="text-xs text-slate-500 mb-4">
-                    Fill in your details below and our Australian admissions specialist will contact you within 24 hours.
+                    Fill in your details below and our certified Australian education counselors will contact you within 24 hours.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">

@@ -236,10 +236,16 @@ export default function ContactUsContent({
                       {site.email}
                     </a>
                     <a
-                      href={`mailto:${site.secondaryEmail}`}
+                      href="mailto:umangcareer2026@gmail.com"
                       className="text-slate-300 hover:text-white block transition-colors"
                     >
-                      {site.secondaryEmail}
+                      umangcareer2026@gmail.com
+                    </a>
+                    <a
+                      href="mailto:umangcareer2023@gmail.com"
+                      className="text-slate-300 hover:text-white block transition-colors"
+                    >
+                      umangcareer2023@gmail.com
                     </a>
                   </div>
                 </div>
@@ -424,7 +430,7 @@ export default function ContactUsContent({
                 Find Us on Google Maps
               </h2>
               <p className="text-xs sm:text-sm text-slate-300 mt-1">
-                Located at 301-305, Pinnacle Business Park, Above RBL Bank, Near Tulsidham Char Rasta, Manjalpur, Vadodara – 390011.
+                First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara, Gujarat 390019.
               </p>
             </div>
 
