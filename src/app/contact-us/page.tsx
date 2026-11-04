@@ -6,19 +6,24 @@ import { getMergedPageData } from "@/lib/cms/content";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Meet Career Advisors & Head Office Vadodara | Umang Career Consultancy",
+  title: "Contact Us | Head Office Vadodara | Umang Career Consultancy",
   description:
-    "Get in touch with Umang Career Consultancy (DEC Abroad). Visit our Head Office at 301-305 Pinnacle Business Park, Manjalpur, Vadodara or speak directly with our certified career advisors for Canada, UK, Europe, MBBS Abroad, and Test Coaching.",
+    "Get in touch with Umang Career Consultancy. Visit our Head Office at First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP Road, Vadodara, Gujarat 390019, or speak directly with our certified career advisors for Student Visas, Visitor Visas, and Travel Logistics.",
   keywords: [
     "Contact Umang Career Consultancy",
-    "DEC Abroad Vadodara",
+    "Umang Career Vadodara",
     "Overseas Education Consultant Vadodara",
-    "Pinnacle Business Park Manjalpur",
+    "Shree Siddeshwar Plaza New VIP Road",
     "Study Abroad Advisors Gujarat",
+    "Student Visa Consultant Vadodara",
+    "Visitor Visa Vadodara",
     "Canada Visa Consultant Vadodara",
-    "UK Visa Consultant Vadodara",
-    "Europe Education Consultants",
+    "Australia Visa Consultant Vadodara",
+    "USA Student Visa Vadodara",
   ],
+  alternates: {
+    canonical: "https://umangcareer.in/contact-us",
+  },
 };
 
 export default async function ContactUsPage() {

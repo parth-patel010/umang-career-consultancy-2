@@ -284,7 +284,7 @@ export default function ContactUsContent({
                       Message Sent Successfully!
                     </h4>
                     <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                      Thank you for contacting Umang Career Consultancy (DEC Abroad). Our senior advisor for <span className="text-amber-300 font-bold">{formData.service || "Study Abroad"}</span> will connect with you at <span className="text-white font-bold">{formData.phone}</span> shortly.
+                      Thank you for contacting Umang Career Consultancy. Our senior advisor for <span className="text-amber-300 font-bold">{formData.service || "Study Abroad"}</span> will connect with you at <span className="text-white font-bold">{formData.phone}</span> shortly.
                     </p>
                     <button
                       onClick={() => {
@@ -391,7 +391,7 @@ export default function ContactUsContent({
                         className="mt-1 h-4 w-4 rounded border-slate-300 text-[#e52928] focus:ring-[#e52928] cursor-pointer"
                       />
                       <label htmlFor="agreeToTerms" className="text-xs text-slate-300 leading-relaxed cursor-pointer select-none">
-                        I agree to receive messages from DEC Abroad Private Limited and its representatives through WhatsApp, RCS, Email, and other communication channels.
+                        I agree to receive messages from Umang Career Consultancy and its representatives through WhatsApp, RCS, Email, and other communication channels.
                       </label>
                     </div>
 
