@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -333,8 +335,9 @@ export default function SingaporeStudyAbroadContent() {
     setIsLoaded(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Singapore Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -568,7 +571,7 @@ export default function SingaporeStudyAbroadContent() {
             {POPULAR_PROGRAMS.map((prog, idx) => (
               <div
                 key={idx}
-                className="bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-7 sm:p-8 rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-5">
@@ -852,6 +855,7 @@ export default function SingaporeStudyAbroadContent() {
                   </tbody>
                 </table>
               </div>
+              <FeeNote />
 
               <div className="mt-4 p-3 rounded-xl bg-white border border-slate-200 text-xs text-slate-600">
                 <span className="font-bold text-[#0a1e38]">Tuition Grant Scheme (TGS):</span> Eligible autonomous university students receive up to 50%+ government subsidies in exchange for a 3-year service bond working in Singapore.

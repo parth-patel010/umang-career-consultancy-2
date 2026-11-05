@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -172,8 +173,9 @@ export default function EuropeStudyAbroadContent() {
     setHeroLoaded(true);
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Europe Study Abroad page"))) return;
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -534,7 +536,7 @@ export default function EuropeStudyAbroadContent() {
             {whyChooseEurope.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="h-full p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -596,7 +598,7 @@ export default function EuropeStudyAbroadContent() {
             {topDestinations.map((dest, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#003399] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+                className="h-full bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#003399] transition-all duration-300 overflow-hidden flex flex-col justify-between group"
               >
                 <div className="p-6 sm:p-7">
                   <div className="flex items-center justify-between mb-3">
@@ -647,7 +649,7 @@ export default function EuropeStudyAbroadContent() {
             {schengenVisaProcess.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-slate-50 p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#003399] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-slate-50 p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#003399] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -748,7 +750,7 @@ export default function EuropeStudyAbroadContent() {
             {successSteps.map((s, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

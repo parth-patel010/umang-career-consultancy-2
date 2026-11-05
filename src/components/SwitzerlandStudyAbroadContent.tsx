@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -581,8 +583,9 @@ export default function SwitzerlandStudyAbroadContent() {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Switzerland Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -785,7 +788,7 @@ export default function SwitzerlandStudyAbroadContent() {
             {ABOUT_CARDS.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-2xl border border-slate-200/80 hover:border-[#da291c]/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-6 rounded-2xl border border-slate-200/80 hover:border-[#da291c]/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -817,7 +820,7 @@ export default function SwitzerlandStudyAbroadContent() {
             {TOP_COURSES.map((course, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/50 p-6 sm:p-7 hover:border-[#da291c] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="h-full rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/50 p-6 sm:p-7 hover:border-[#da291c] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -950,7 +953,7 @@ export default function SwitzerlandStudyAbroadContent() {
             {STUDY_DESTINATIONS.map((dest, idx) => (
               <div
                 key={idx}
-                className="bg-slate-50 rounded-2xl border border-slate-200/90 p-6 hover:bg-white hover:border-[#da291c] hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-slate-50 rounded-2xl border border-slate-200/90 p-6 hover:bg-white hover:border-[#da291c] hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -1043,6 +1046,7 @@ export default function SwitzerlandStudyAbroadContent() {
               </tbody>
             </table>
           </div>
+          <FeeNote />
         </div>
       </section>
 

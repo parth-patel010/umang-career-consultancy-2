@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -400,8 +402,9 @@ export default function USAStudyAbroadContent() {
     setIsLoaded(true);
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "U S A Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -870,6 +873,7 @@ export default function USAStudyAbroadContent() {
               </tbody>
             </table>
           </div>
+          <FeeNote />
           <div className="mt-4 text-xs text-slate-500 text-center">
             *Exchange rate benchmark: 1 USD ≈ ₹84.5. Exact tuition fees depend on the specific institution, department, credit hours, and scholarship awards.
           </div>

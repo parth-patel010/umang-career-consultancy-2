@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -182,8 +183,9 @@ export default function EducationLoanContent() {
     return () => observer.disconnect();
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Education Loan page"))) return;
     setFormSubmitted(true);
   };
 
@@ -586,7 +588,7 @@ export default function EducationLoanContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
             {/* Non-Collateral (Unsecured) */}
-            <div className="bg-white rounded-3xl p-8 border-2 border-slate-200 shadow-md hover:shadow-xl hover:border-[#e52928] transition-all flex flex-col justify-between group">
+            <div className="h-full bg-white rounded-3xl p-8 border-2 border-slate-200 shadow-md hover:shadow-xl hover:border-[#e52928] transition-all flex flex-col justify-between group">
               <div>
                 <div className="inline-block px-3.5 py-1 rounded-full bg-red-100 text-[#e52928] text-xs font-bold uppercase tracking-wider mb-4">
                   No Property Required
@@ -629,7 +631,7 @@ export default function EducationLoanContent() {
             </div>
 
             {/* Collateral (Secured) */}
-            <div className="bg-white rounded-3xl p-8 border-2 border-slate-200 shadow-md hover:shadow-xl hover:border-[#0a1e38] transition-all flex flex-col justify-between group">
+            <div className="h-full bg-white rounded-3xl p-8 border-2 border-slate-200 shadow-md hover:shadow-xl hover:border-[#0a1e38] transition-all flex flex-col justify-between group">
               <div>
                 <div className="inline-block px-3.5 py-1 rounded-full bg-blue-100 text-[#0a1e38] text-xs font-bold uppercase tracking-wider mb-4">
                   Lowest Interest Rates
@@ -758,7 +760,7 @@ export default function EducationLoanContent() {
             {bankingPartners.map((b, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200/80 shadow-xs hover:shadow-lg hover:border-[#e52928]/40 transition-all flex flex-col justify-between group transform hover:-translate-y-1"
+                className="h-full p-6 rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200/80 shadow-xs hover:shadow-lg hover:border-[#e52928]/40 transition-all flex flex-col justify-between group transform hover:-translate-y-1"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">

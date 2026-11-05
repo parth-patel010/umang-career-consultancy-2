@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -464,8 +466,9 @@ export default function DenmarkStudyAbroadContent() {
     setIsLoaded(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Denmark Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -723,7 +726,7 @@ export default function DenmarkStudyAbroadContent() {
             {TOP_COURSES.map((course, idx) => (
               <div
                 key={idx}
-                className="bg-white p-7 rounded-3xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-7 rounded-3xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
@@ -989,6 +992,7 @@ export default function DenmarkStudyAbroadContent() {
                   </tbody>
                 </table>
               </div>
+              <FeeNote />
 
               <p className="mt-4 text-xs text-slate-500 italic">
                 *Note: Tuition fees vary by university, program, and student eligibility. In Denmark, many Ph.D. positions are considered salaried research employment with zero tuition and competitive monthly stipends.

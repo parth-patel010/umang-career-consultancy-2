@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -340,8 +341,9 @@ export default function ToursAndTravelsContent() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Tours And Travels page"))) return;
     setFormSubmitted(true);
   };
 
@@ -524,7 +526,7 @@ export default function ToursAndTravelsContent() {
             {DOMESTIC_PACKAGES.map((pkg, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5"
+                className="h-full bg-white rounded-3xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-4">
@@ -616,7 +618,7 @@ export default function ToursAndTravelsContent() {
             {INTERNATIONAL_PACKAGES.map((pkg, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5"
+                className="h-full bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5"
               >
                 <div>
                   <div className="flex items-center justify-between gap-3 mb-4">
@@ -682,14 +684,14 @@ export default function ToursAndTravelsContent() {
             inView={advantageInView}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 items-stretch">
             {UMANG_ADVANTAGES.map((adv, idx) => (
               <div
                 key={idx}
-                className="bg-slate-50 rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5"
+                className="h-full bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#0a1e38] transition-all duration-300 flex flex-col group transform hover:-translate-y-1.5"
               >
-                <div>
-                  <div className="p-3.5 rounded-2xl bg-white border border-slate-100 inline-block mb-6 shadow-xs group-hover:scale-110 transition-transform">
+                <div className="flex-1 flex flex-col">
+                  <div className="self-start p-3.5 rounded-2xl bg-white border border-slate-100 inline-block mb-6 shadow-xs group-hover:scale-110 transition-transform">
                     {adv.icon}
                   </div>
 
@@ -697,7 +699,7 @@ export default function ToursAndTravelsContent() {
                     {adv.title}
                   </h3>
 
-                  <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                  <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal text-left break-words [text-wrap:pretty]">
                     {adv.desc}
                   </p>
                 </div>

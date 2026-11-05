@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -222,8 +223,9 @@ export default function AboutUsContent() {
     };
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "About Us page"))) return;
     setFormSubmitted(true);
   };
 

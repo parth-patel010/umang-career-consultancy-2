@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -445,8 +447,9 @@ export default function MalaysiaStudyAbroadContent() {
     setIsLoaded(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Malaysia Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -722,7 +725,7 @@ export default function MalaysiaStudyAbroadContent() {
             {TOP_COURSES.map((course, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-6 rounded-3xl shadow-sm border border-slate-200/80 hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-red-50 text-[#e52928] border border-red-100">
@@ -959,6 +962,7 @@ export default function MalaysiaStudyAbroadContent() {
                   </tbody>
                 </table>
               </div>
+              <FeeNote />
 
               <div className="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
                 <span className="font-bold text-[#0a1e38]">Primary Intakes:</span> January, July, September.
