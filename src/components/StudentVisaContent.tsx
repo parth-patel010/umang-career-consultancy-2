@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -1063,8 +1064,9 @@ export default function StudentVisaContent() {
             }`}
           >
             <form
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
+                if (!(await sendFormInquiry(e.currentTarget, "Student Visa page"))) return;
                 alert("Thank you for reaching out! Our student visa specialists at Umang Career Consultancy will contact you shortly.");
               }}
               className="space-y-6"

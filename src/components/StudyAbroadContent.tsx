@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -229,7 +230,7 @@ const DESTINATIONS: Destination[] = [
     badgeText: "Up to 3-Year PGWP & PR Pathways",
     topIntakes: "September, January & May",
     postStudyWork: "Up to 3 Years PGWP",
-    avgTuition: "CAD $16,000 - $32,000 / year",
+    avgTuition: "CAD $14,500 - $29,000 / year",
     highlights: [
       "Transparent post-graduation work permit (PGWP) up to 3 years",
       "Safe, multicultural environment ranked among top global living standards",
@@ -647,8 +648,9 @@ export default function StudyAbroadContent() {
     return d.region === selectedRegion;
   });
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Study Abroad page"))) return;
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -904,6 +906,7 @@ export default function StudyAbroadContent() {
                     <span className="font-semibold text-slate-500">Avg Tuition:</span>
                     <span className="font-bold text-emerald-600">{dest.avgTuition}</span>
                   </div>
+                  <p className="text-[11px] italic text-slate-400 text-right">*Fees may vary depending on university, course and intake.</p>
                 </div>
 
                 {/* 4. Dark Navy Button "Read More" (Exact Reference Match) */}
@@ -986,6 +989,7 @@ export default function StudyAbroadContent() {
                 <div>
                   <div className="text-slate-500 font-semibold">Est. Tuition Fee</div>
                   <div className="text-emerald-700 font-bold mt-0.5">{activeModalCountry.avgTuition}</div>
+                  <div className="text-[11px] italic text-slate-500 mt-0.5">*Fees may vary depending on university, course and intake.</div>
                 </div>
               </div>
 

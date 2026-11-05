@@ -30,7 +30,7 @@ const COUNTRIES_DATA: Record<string, CountryInfo> = {
       "Canada stands as one of the world's most sought-after higher education destinations. With globally acclaimed universities, affordable tuition structures, safe multicultural communities, and post-graduation work permits (PGWP) lasting up to 3 years, Canada is the gateway to long-term career success and permanent residency.",
     topIntakes: "Fall (September), Winter (January), Summer (May)",
     workPermit: "Up to 3 Years Post-Graduation Work Permit (PGWP)",
-    avgTuition: "CAD $16,000 - $32,000 / year",
+    avgTuition: "CAD $14,500 - $29,000 / year",
     costOfLiving: "CAD $12,000 - $18,000 / year",
     languageReq: "IELTS 6.5+ / PTE 60+ (Duolingo accepted by select colleges)",
     topUniversities: [
@@ -461,6 +461,7 @@ export default async function CountryDetailPage({
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Average Tuition</div>
               <div className="text-sm sm:text-base font-extrabold text-emerald-600 mt-1">{country.avgTuition}</div>
+              <div className="text-[11px] italic text-slate-500 mt-1">*Fees may vary depending on university, course and intake.</div>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80">
               <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Cost of Living</div>

@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -194,8 +196,9 @@ export default function MaltaStudyAbroadContent() {
     setHeroLoaded(true);
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Malta Study Abroad page"))) return;
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -656,6 +659,7 @@ export default function MaltaStudyAbroadContent() {
                 </tbody>
               </table>
             </div>
+            <FeeNote />
           </div>
 
           <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-600 text-center">

@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -624,8 +626,9 @@ export default function NewZealandStudyAbroadContent() {
     setIsLoaded(true);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "New Zealand Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -805,7 +808,7 @@ export default function NewZealandStudyAbroadContent() {
             {WHY_CHOOSE_NZ.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="h-full p-6 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#e52928] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -904,7 +907,7 @@ export default function NewZealandStudyAbroadContent() {
             {KEY_REQUIREMENTS.map((req, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -1024,7 +1027,7 @@ export default function NewZealandStudyAbroadContent() {
             {TOP_COURSES.map((course, idx) => (
               <div
                 key={idx}
-                className="bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-lg hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-5 rounded-2xl shadow-sm border border-slate-200/80 hover:shadow-lg hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700">
@@ -1260,6 +1263,7 @@ export default function NewZealandStudyAbroadContent() {
                   </tbody>
                 </table>
               </div>
+              <FeeNote />
 
               <div className="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
                 <span className="font-bold text-[#0a1e38]">Key Intakes:</span> February, September, March, July.
@@ -1356,7 +1360,7 @@ export default function NewZealandStudyAbroadContent() {
             {SUCCESS_PATHWAY.map((s, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
+                className="h-full p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#22c55e] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">

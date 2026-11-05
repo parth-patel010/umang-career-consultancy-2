@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -184,8 +185,9 @@ export default function AccommodationContent() {
     return () => observer.disconnect();
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Accommodation page"))) return;
     setFormSubmitted(true);
   };
 
@@ -624,7 +626,7 @@ export default function AccommodationContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {/* Type 1: On-Campus Halls */}
-            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-[#e52928] transition-all flex flex-col justify-between group transform hover:-translate-y-1.5">
+            <div className="h-full bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-[#e52928] transition-all flex flex-col justify-between group transform hover:-translate-y-1.5">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-blue-100 text-[#0a1e38] flex items-center justify-center font-bold text-lg mb-4"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
                 <h3 className="text-xl font-bold text-[#0a1e38] mb-2 group-hover:text-[#e52928] transition-colors">
@@ -645,7 +647,7 @@ export default function AccommodationContent() {
             </div>
 
             {/* Type 2: Private PBSA (Ensuites & Studios) */}
-            <div className="bg-slate-50 rounded-3xl p-8 border-2 border-red-200 shadow-md hover:shadow-xl hover:border-[#e52928] transition-all flex flex-col justify-between group transform hover:-translate-y-1.5 relative">
+            <div className="h-full bg-slate-50 rounded-3xl p-8 border-2 border-red-200 shadow-md hover:shadow-xl hover:border-[#e52928] transition-all flex flex-col justify-between group transform hover:-translate-y-1.5 relative">
               <div className="absolute top-4 right-4 bg-[#e52928] text-white text-[10px] font-extrabold uppercase px-2.5 py-1 rounded-full">
                 Most Popular
               </div>
@@ -669,7 +671,7 @@ export default function AccommodationContent() {
             </div>
 
             {/* Type 3: Homestays & Shared Flats */}
-            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-[#0a1e38] transition-all flex flex-col justify-between group transform hover:-translate-y-1.5">
+            <div className="h-full bg-slate-50 rounded-3xl p-8 border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-[#0a1e38] transition-all flex flex-col justify-between group transform hover:-translate-y-1.5">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg></div>
                 <h3 className="text-xl font-bold text-[#0a1e38] mb-2 group-hover:text-[#0a1e38] transition-colors">

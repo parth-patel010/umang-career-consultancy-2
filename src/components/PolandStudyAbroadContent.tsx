@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -204,8 +206,9 @@ export default function PolandStudyAbroadContent() {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Poland Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -970,6 +973,7 @@ export default function PolandStudyAbroadContent() {
                     </tbody>
                   </table>
                 </div>
+                <FeeNote />
               </div>
 
               <p className="text-xs text-slate-500 italic">

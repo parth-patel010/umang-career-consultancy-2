@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -522,8 +524,9 @@ export default function LithuaniaStudyAbroadContent() {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Lithuania Study Abroad page"))) return;
     setFormSubmitted(true);
   };
 
@@ -728,7 +731,7 @@ export default function LithuaniaStudyAbroadContent() {
             {ABOUT_CARDS.map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white p-6 rounded-2xl border border-slate-200/80 hover:border-[#006a44]/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                className="h-full bg-white p-6 rounded-2xl border border-slate-200/80 hover:border-[#006a44]/50 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -762,7 +765,7 @@ export default function LithuaniaStudyAbroadContent() {
             {TOP_COURSES.map((course, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/50 p-6 sm:p-7 hover:border-[#006a44] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="h-full rounded-2xl border border-slate-200 bg-gradient-to-b from-white to-slate-50/50 p-6 sm:p-7 hover:border-[#006a44] hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -944,6 +947,7 @@ export default function LithuaniaStudyAbroadContent() {
               </tbody>
             </table>
           </div>
+          <FeeNote />
         </div>
       </section>
 

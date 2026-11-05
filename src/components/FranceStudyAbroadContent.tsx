@@ -1,5 +1,7 @@
 "use client";
 
+import FeeNote from "@/components/FeeNote";
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -186,8 +188,9 @@ export default function FranceStudyAbroadContent() {
     setHeroLoaded(true);
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "France Study Abroad page"))) return;
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -644,6 +647,7 @@ export default function FranceStudyAbroadContent() {
                 </tbody>
               </table>
             </div>
+            <FeeNote />
           </div>
 
           {/* Differentiated Registration Fees Box from Campus France */}

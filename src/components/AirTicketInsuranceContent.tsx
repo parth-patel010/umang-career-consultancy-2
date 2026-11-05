@@ -1,5 +1,6 @@
 "use client";
 
+import { sendFormInquiry } from "@/lib/inquiries/web3forms";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -196,8 +197,9 @@ export default function AirTicketInsuranceContent() {
     return () => observer.disconnect();
   }, []);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!(await sendFormInquiry(e.currentTarget as HTMLFormElement, "Air Ticket Insurance page"))) return;
     setFormSubmitted(true);
   };
 
@@ -632,7 +634,7 @@ export default function AirTicketInsuranceContent() {
             {fullServicePillars.map((pillar, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-2 relative overflow-hidden"
+                className="h-full bg-white rounded-3xl p-8 border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-[#e52928] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-2 relative overflow-hidden"
               >
                 {/* Top decorative gradient bar */}
                 <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#e52928] via-[#0a1e38] to-[#e52928] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
@@ -788,7 +790,7 @@ export default function AirTicketInsuranceContent() {
             {processSteps.map((stepItem, idx) => (
               <div
                 key={idx}
-                className="bg-[#0e274a]/90 backdrop-blur-sm rounded-2xl p-6 sm:p-7 border border-white/10 hover:border-[#22c55e]/50 hover:bg-[#13325c] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5 shadow-lg"
+                className="h-full bg-[#0e274a]/90 backdrop-blur-sm rounded-2xl p-6 sm:p-7 border border-white/10 hover:border-[#22c55e]/50 hover:bg-[#13325c] transition-all duration-300 flex flex-col justify-between group transform hover:-translate-y-1.5 shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
