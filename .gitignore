@@ -47,3 +47,4 @@ next-env.d.ts
 
 # Local admin secrets (never commit)
 ADMIN_CREDENTIALS.txt
+__pycache__/
