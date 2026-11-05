@@ -174,6 +174,8 @@ export default function StudentSupportSection({
               <div
                 ref={dropdownRef}
                 className={`relative w-full transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1) ${
+                  isDropdownOpen ? "z-30" : "z-10"
+                } ${
                   isVisible
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-14"
@@ -248,7 +250,7 @@ export default function StudentSupportSection({
 
               {/* Row 3: Message Textarea - Smooth slide in from Left */}
               <div
-                className={`transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1) ${
+                className={`relative z-0 transition-all duration-700 cubic-bezier(0.16, 1, 0.3, 1) ${
                   isVisible
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-14"
@@ -266,7 +268,7 @@ export default function StudentSupportSection({
 
               {/* Submit Button - Smooth slide up */}
               <div
-                className={`pt-2 transition-all duration-800 cubic-bezier(0.16, 1, 0.3, 1) ${
+                className={`relative z-0 pt-2 transition-all duration-800 cubic-bezier(0.16, 1, 0.3, 1) ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
