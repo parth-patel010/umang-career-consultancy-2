@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingWidgets from "@/components/FloatingWidgets";
 import { siteContent, type SiteContent } from "@/content/cmsDefaults";
 import { getMergedPageData } from "@/lib/cms/content";
 
@@ -259,6 +260,7 @@ export default async function RootLayout({
             <Navbar site={site} />
             <div className="flex-1 flex flex-col overflow-x-hidden">{children}</div>
             <Footer site={site} />
+            <FloatingWidgets site={site} />
           </>
         )}
       </body>
