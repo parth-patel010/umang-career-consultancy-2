@@ -54,15 +54,6 @@ export const homepageContent = {
           "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
         imageAlt: "Study in Australia & Europe",
       },
-      {
-        id: "india",
-        title: "Direct Admission in India",
-        subtitle: "B.Tech, MBA & Medical",
-        miniTitle: "Top NAAC 'A++' & NIRF Ranked Colleges",
-        imageSrc:
-          "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80",
-        imageAlt: "Direct Admission in India",
-      },
     ],
   },
   destinations: [
