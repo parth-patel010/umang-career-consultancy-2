@@ -1,10 +1,19 @@
 import fs from "fs";
+import os from "os";
 import path from "path";
 import { CmsData } from "./types";
 
-const DATA_DIR = path.join(process.cwd(), "data");
+const isVercel = Boolean(process.env.VERCEL);
+
+// On Vercel the deploy filesystem is read-only except /tmp, and /tmp is not
+// persistent across invocations — CMS writes and uploads only last for that instance.
+const DATA_DIR = isVercel
+  ? path.join(os.tmpdir(), "umang-cms-data")
+  : path.join(process.cwd(), "data");
 const CMS_FILE = path.join(DATA_DIR, "cms.json");
-const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
+const UPLOADS_DIR = isVercel
+  ? path.join(os.tmpdir(), "umang-cms-uploads")
+  : path.join(process.cwd(), "public", "uploads");
 
 export function defaultCmsData(): CmsData {
   return {
@@ -16,11 +25,15 @@ export function defaultCmsData(): CmsData {
 }
 
 function ensureDirs() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-  if (!fs.existsSync(UPLOADS_DIR)) {
-    fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    if (!fs.existsSync(UPLOADS_DIR)) {
+      fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+    }
+  } catch (error) {
+    console.error("Failed to ensure CMS directories:", error);
   }
 }
 
@@ -30,30 +43,29 @@ export function getUploadsDir() {
 }
 
 function readCmsDataLocal(): CmsData {
-  ensureDirs();
-  if (!fs.existsSync(CMS_FILE)) {
-    const data = defaultCmsData();
-    writeCmsDataLocal(data);
-    return data;
-  }
-
+  // Reads must never write. Missing or unreadable cms.json → defaults.
   try {
+    if (!fs.existsSync(CMS_FILE)) {
+      return defaultCmsData();
+    }
     const raw = fs.readFileSync(CMS_FILE, "utf-8");
     return { ...defaultCmsData(), ...JSON.parse(raw) } as CmsData;
   } catch {
-    const data = defaultCmsData();
-    writeCmsDataLocal(data);
-    return data;
+    return defaultCmsData();
   }
 }
 
 function writeCmsDataLocal(data: CmsData) {
-  ensureDirs();
-  const payload: CmsData = {
-    ...data,
-    updatedAt: new Date().toISOString(),
-  };
-  fs.writeFileSync(CMS_FILE, JSON.stringify(payload, null, 2), "utf-8");
+  try {
+    ensureDirs();
+    const payload: CmsData = {
+      ...data,
+      updatedAt: new Date().toISOString(),
+    };
+    fs.writeFileSync(CMS_FILE, JSON.stringify(payload, null, 2), "utf-8");
+  } catch (error) {
+    console.error("Failed to write CMS data:", error);
+  }
 }
 
 export async function readCmsDataAsync(): Promise<CmsData> {
