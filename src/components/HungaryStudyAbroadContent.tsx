@@ -520,27 +520,31 @@ export default function HungaryStudyAbroadContent() {
           {/* 10 Circular Institution Badges */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
             {[
-              { name: "Corvinus University", acronym: "CORVINUS" },
-              { name: "Semmelweis University", acronym: "SEMMELWEIS" },
-              { name: "University of Pécs", acronym: "PÉCS" },
-              { name: "University of Debrecen", acronym: "DEBRECEN" },
-              { name: "University of Szeged", acronym: "SZEGED" },
-              { name: "Budapest Univ. of Tech (BME)", acronym: "BME" },
-              { name: "Eötvös Loránd University", acronym: "ELTE" },
-              { name: "University of Miskolc", acronym: "MISKOLC" },
-              { name: "Széchenyi István Univ.", acronym: "SZE" },
-              { name: "IBS Business School", acronym: "IBS" }
+              { name: "Corvinus University", logo: "/universities/hungary/corvinus.avif", acronym: "CORVINUS" },
+              { name: "Semmelweis University", logo: "/universities/hungary/semmelweis.avif", acronym: "SEMMELWEIS" },
+              { name: "University of Pécs", logo: "/universities/hungary/pecs.avif", acronym: "PÉCS" },
+              { name: "University of Debrecen", logo: "/universities/hungary/debrecen.avif", acronym: "DEBRECEN" },
+              { name: "University of Szeged", logo: "/universities/hungary/szeged.avif", acronym: "SZEGED" },
+              { name: "Budapest Univ. of Tech (BME)", logo: "/universities/hungary/bme.avif", acronym: "BME" },
+              { name: "Eötvös Loránd University", logo: "/universities/hungary/elte.avif", acronym: "ELTE" },
+              { name: "University of Miskolc", logo: "/universities/hungary/miskolc.avif", acronym: "MISKOLC" },
+              { name: "Széchenyi István Univ.", logo: "/universities/hungary/sze.avif", acronym: "SZE" },
+              { name: "IBS Business School", logo: "/universities/hungary/ibs.avif", acronym: "IBS" }
             ].map((uni, idx) => (
               <div
                 key={idx}
                 className="flex flex-col items-center text-center group cursor-pointer"
               >
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-3 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80">
-                  <div className="font-black text-xs sm:text-sm tracking-wider uppercase text-[#0a1e38] group-hover:text-[#e52928] transition-colors">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-2.5 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80 overflow-hidden">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={72}
+                    height={72}
+                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                  />
+                  <div className="text-[10px] font-bold text-slate-500 uppercase mt-0.5 tracking-wider truncate max-w-[85px]">
                     {uni.acronym}
-                  </div>
-                  <div className="text-[10px] text-slate-400 font-semibold uppercase mt-0.5">
-                    Hungary
                   </div>
                 </div>
 

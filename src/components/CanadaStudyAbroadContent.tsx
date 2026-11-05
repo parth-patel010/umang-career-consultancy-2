@@ -870,27 +870,31 @@ export default function CanadaStudyAbroadContent() {
           {/* 10 Circular Institution Badges */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
             {[
-              { name: "University of Toronto", acronym: "U of T" },
-              { name: "McGill University", acronym: "McGill" },
-              { name: "Univ. of British Columbia", acronym: "UBC" },
-              { name: "University of Alberta", acronym: "U of A" },
-              { name: "University of Waterloo", acronym: "Waterloo" },
-              { name: "York University", acronym: "York" },
-              { name: "University of Ottawa", acronym: "uOttawa" },
-              { name: "Western University", acronym: "Western" },
-              { name: "University of Calgary", acronym: "UCalgary" },
-              { name: "Simon Fraser University", acronym: "SFU" }
+              { name: "University of Toronto", logo: "/universities/canada/toronto.avif", acronym: "U of T" },
+              { name: "McGill University", logo: "/universities/canada/mcgill.avif", acronym: "McGill" },
+              { name: "Univ. of British Columbia", logo: "/universities/canada/ubc.avif", acronym: "UBC" },
+              { name: "University of Alberta", logo: "/universities/canada/alberta.avif", acronym: "U of A" },
+              { name: "University of Waterloo", logo: "/universities/canada/waterloo.avif", acronym: "Waterloo" },
+              { name: "York University", logo: "/universities/canada/york.avif", acronym: "York" },
+              { name: "University of Ottawa", logo: "/universities/canada/ottawa.avif", acronym: "uOttawa" },
+              { name: "Western University", logo: "/universities/canada/western.avif", acronym: "Western" },
+              { name: "University of Calgary", logo: "/universities/canada/calgary.avif", acronym: "UCalgary" },
+              { name: "Simon Fraser University", logo: "/universities/canada/sfu.avif", acronym: "SFU" }
             ].map((uni, idx) => (
               <div
                 key={idx}
                 className="flex flex-col items-center text-center group cursor-pointer"
               >
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-3 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80">
-                  <div className="font-black text-sm sm:text-base tracking-wider uppercase text-[#0a1e38] group-hover:text-[#e52928] transition-colors">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-2.5 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80 overflow-hidden">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={72}
+                    height={72}
+                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                  />
+                  <div className="text-[10px] font-bold text-slate-500 uppercase mt-0.5 tracking-wider truncate max-w-[85px]">
                     {uni.acronym}
-                  </div>
-                  <div className="text-[10px] text-slate-400 font-semibold uppercase mt-0.5">
-                    Canada
                   </div>
                 </div>
 

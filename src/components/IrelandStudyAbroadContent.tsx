@@ -340,6 +340,7 @@ export default function IrelandStudyAbroadContent() {
   const universities = [
     {
       name: "Trinity College Dublin (TCD)",
+      logo: "/universities/ireland/tcd.avif",
       city: "Dublin",
       tag: "Founded 1592 • Ranked #1 in Ireland",
       specialty: "Computer Science, Literature, Law, Medicine, Business",
@@ -347,6 +348,7 @@ export default function IrelandStudyAbroadContent() {
     },
     {
       name: "University College Dublin (UCD)",
+      logo: "/universities/ireland/ucd.avif",
       city: "Dublin",
       tag: "Triple-Accredited Business (Smurfit)",
       specialty: "Data Analytics, Biotechnology, Business, Engineering, Agriculture",
@@ -354,6 +356,7 @@ export default function IrelandStudyAbroadContent() {
     },
     {
       name: "University of Galway",
+      logo: "/universities/ireland/galway.avif",
       city: "Galway",
       tag: "Global MedTech Capital Hub",
       specialty: "Biomedical Engineering, Marine Science, Software, Human Rights",
@@ -361,6 +364,7 @@ export default function IrelandStudyAbroadContent() {
     },
     {
       name: "University College Cork (UCC)",
+      logo: "/universities/ireland/ucc.avif",
       city: "Cork",
       tag: "World's First Green Flag Campus",
       specialty: "Pharmaceutical Chemistry, Food Science, Microelectronics, Law",
@@ -368,6 +372,7 @@ export default function IrelandStudyAbroadContent() {
     },
     {
       name: "University of Limerick (UL)",
+      logo: "/universities/ireland/ul.avif",
       city: "Limerick",
       tag: "Pioneer in Paid Co-Op Work Placements",
       specialty: "Aeronautical Engineering, Software, Supply Chain, Sports Science",
@@ -375,6 +380,7 @@ export default function IrelandStudyAbroadContent() {
     },
     {
       name: "Dublin City University (DCU)",
+      logo: "/universities/ireland/dcu.avif",
       city: "Dublin",
       tag: "Ireland's University of Enterprise",
       specialty: "Artificial Intelligence, Communications, Finance, Education",
@@ -382,6 +388,7 @@ export default function IrelandStudyAbroadContent() {
     },
     {
       name: "Maynooth University",
+      logo: "/universities/ireland/maynooth.avif",
       city: "Maynooth (Co. Kildare)",
       tag: "Rapidly Growing Research Institution",
       specialty: "Computer Science, Immunology, Humanities, International Finance",
@@ -389,6 +396,7 @@ export default function IrelandStudyAbroadContent() {
     },
     {
       name: "Technological University Dublin (TU Dublin)",
+      logo: "/universities/ireland/tu-dublin.avif",
       city: "Dublin (Grangegorman)",
       tag: "Ireland's First Technological University",
       specialty: "Architecture, Cybersecurity, Hospitality, Applied Sciences",
@@ -872,8 +880,14 @@ export default function IrelandStudyAbroadContent() {
                 key={idx}
                 className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#22c55e] hover:bg-white hover:shadow-md transition-all duration-300 flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0a1e38] text-white flex items-center justify-center font-bold text-base shrink-0 shadow-sm">
-                  {idx + 1}
+                <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-1">

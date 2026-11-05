@@ -306,6 +306,7 @@ export default function PolandStudyAbroadContent() {
   const universities = [
     {
       name: "University of Warsaw (UW)",
+      logo: "/universities/poland/uw.avif",
       city: "Warsaw",
       tag: "Ranked #1 University in Poland",
       specialty: "Humanities, Social Sciences, Computer Science, Economics",
@@ -313,6 +314,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "Warsaw University of Technology (WUT)",
+      logo: "/universities/poland/wut.avif",
       city: "Warsaw",
       tag: "Top Technical University",
       specialty: "Civil, Mechanical, Computer Science, Aerospace Engineering",
@@ -320,6 +322,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "Jagiellonian University",
+      logo: "/universities/poland/uj.avif",
       city: "Krakow",
       tag: "Founded 1364 (Historic Prestige)",
       specialty: "Medicine, Law, International Relations, Sciences",
@@ -327,6 +330,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "AGH University of Science & Technology",
+      logo: "/universities/poland/agh.avif",
       city: "Krakow",
       tag: "Renowned Technical Institute",
       specialty: "Mining, Metallurgy, AI, Data Science, Telecommunications",
@@ -334,6 +338,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "Adam Mickiewicz University",
+      logo: "/universities/poland/uam.avif",
       city: "Poznań",
       tag: "Major Research University",
       specialty: "Languages, Law, Natural Sciences, Environmental Science",
@@ -341,6 +346,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "Wrocław University of Science & Technology",
+      logo: "/universities/poland/pwr.avif",
       city: "Wrocław",
       tag: "Innovation & Polytech Leader",
       specialty: "Information Systems, Electronics, Nanotechnology",
@@ -348,6 +354,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "Gdańsk University of Technology",
+      logo: "/universities/poland/pg.avif",
       city: "Gdańsk",
       tag: "Baltic Coastal Excellence",
       specialty: "Naval Architecture, Ocean Engineering, Green Chemistry",
@@ -355,6 +362,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "Poznań University of Technology",
+      logo: "/universities/poland/put.avif",
       city: "Poznań",
       tag: "European Universities Alliance (EUNICE)",
       specialty: "Logistics, Mechanical Systems, Software Engineering",
@@ -362,6 +370,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "University of Wrocław",
+      logo: "/universities/poland/uwr.avif",
       city: "Wrocław",
       tag: "9 Nobel Laureates Heritage",
       specialty: "Physics, Mathematics, Biotechnology, Global Law",
@@ -369,6 +378,7 @@ export default function PolandStudyAbroadContent() {
     },
     {
       name: "Lodz University of Technology",
+      logo: "/universities/poland/tul.avif",
       city: "Łódź",
       tag: "Industrial & Creative Heart",
       specialty: "Textile Engineering, Biomedical Engineering, Mechatronics",
@@ -893,8 +903,14 @@ export default function PolandStudyAbroadContent() {
                 key={idx}
                 className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#22c55e] hover:bg-white hover:shadow-md transition-all duration-300 flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0a1e38] text-white flex items-center justify-center font-bold text-base shrink-0 shadow-sm">
-                  {idx + 1}
+                <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-1">

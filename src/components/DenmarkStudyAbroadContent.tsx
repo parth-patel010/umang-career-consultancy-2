@@ -289,6 +289,7 @@ const REGIONS = [
 const UNIVERSITIES = [
   {
     name: "University of Copenhagen (UCPH)",
+    logo: "/universities/denmark/copenhagen.avif",
     location: "Copenhagen",
     founded: "1479",
     qsRank: "#107 Global (QS)",
@@ -297,6 +298,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Technical University of Denmark (DTU)",
+    logo: "/universities/denmark/dtu.avif",
     location: "Kongens Lyngby, Greater Copenhagen",
     founded: "1829",
     qsRank: "#109 Global (QS)",
@@ -305,6 +307,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Aarhus University (AU)",
+    logo: "/universities/denmark/aarhus.avif",
     location: "Aarhus",
     founded: "1928",
     qsRank: "#143 Global (QS)",
@@ -313,6 +316,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Aalborg University (AAU)",
+    logo: "/universities/denmark/aalborg.avif",
     location: "Aalborg & Copenhagen",
     founded: "1974",
     qsRank: "Top 350 Global / Top 50 Engineering",
@@ -321,6 +325,7 @@ const UNIVERSITIES = [
   },
   {
     name: "University of Southern Denmark (SDU)",
+    logo: "/universities/denmark/sdu.avif",
     location: "Odense, Esbjerg, Kolding, Sønderborg",
     founded: "1966",
     qsRank: "Top 350 Global",
@@ -329,6 +334,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Roskilde University (RUC)",
+    logo: "/universities/denmark/roskilde.avif",
     location: "Roskilde (Greater Copenhagen)",
     founded: "1972",
     qsRank: "Renowned Research Hub",
@@ -907,11 +913,22 @@ export default function DenmarkStudyAbroadContent() {
                 className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
-                      {uni.qsRank}
-                    </span>
-                    <span className="text-xs text-slate-500 font-semibold">Est. {uni.founded}</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
+                        {uni.qsRank}
+                      </span>
+                      <span className="text-xs text-slate-500 font-semibold">Est. {uni.founded}</span>
+                    </div>
                   </div>
                   <h3 className="text-lg font-black text-[#0a1e38]">{uni.name}</h3>
                   <div className="text-xs font-bold text-[#e52928] mt-1 flex items-center gap-1.5">

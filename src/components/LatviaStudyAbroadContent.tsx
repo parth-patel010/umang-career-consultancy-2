@@ -539,27 +539,31 @@ export default function LatviaStudyAbroadContent() {
           {/* 10 Circular Institution Badges */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
             {[
-              { name: "Riga Technical University", acronym: "RTU" },
-              { name: "University of Latvia", acronym: "LU" },
-              { name: "Rīga Stradiņš University", acronym: "RSU" },
-              { name: "Daugavpils University", acronym: "DU" },
-              { name: "University of Liepāja", acronym: "LiepU" },
-              { name: "Vidzeme Univ. of Applied Sciences", acronym: "ViA" },
-              { name: "Ventspils Univ. of Applied Sciences", acronym: "VeA" },
-              { name: "Rēzekne Academy of Technologies", acronym: "RTA" },
-              { name: "Latvian Academy of Art", acronym: "LMA" },
-              { name: "Transport & Telecomm. Institute", acronym: "TSI" }
+              { name: "Riga Technical University", logo: "/universities/latvia/rtu.avif", acronym: "RTU" },
+              { name: "University of Latvia", logo: "/universities/latvia/lu.avif", acronym: "LU" },
+              { name: "Rīga Stradiņš University", logo: "/universities/latvia/rsu.avif", acronym: "RSU" },
+              { name: "Daugavpils University", logo: "/universities/latvia/du.avif", acronym: "DU" },
+              { name: "University of Liepāja", logo: "/universities/latvia/liepaja.avif", acronym: "LiepU" },
+              { name: "Vidzeme Univ. of Applied Sciences", logo: "/universities/latvia/va.avif", acronym: "ViA" },
+              { name: "Ventspils Univ. of Applied Sciences", logo: "/universities/latvia/venta.avif", acronym: "VeA" },
+              { name: "Rēzekne Academy of Technologies", logo: "/universities/latvia/rta.avif", acronym: "RTA" },
+              { name: "Latvian Academy of Art", logo: "/universities/latvia/lma.avif", acronym: "LMA" },
+              { name: "Transport & Telecomm. Institute", logo: "/universities/latvia/tsi.avif", acronym: "TSI" }
             ].map((uni, idx) => (
               <div
                 key={idx}
                 className="flex flex-col items-center text-center group cursor-pointer"
               >
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-3 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80">
-                  <div className="font-black text-sm sm:text-base tracking-wider uppercase text-[#0a1e38] group-hover:text-[#e52928] transition-colors">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-2.5 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80 overflow-hidden">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={72}
+                    height={72}
+                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                  />
+                  <div className="text-[10px] font-bold text-slate-500 uppercase mt-0.5 tracking-wider truncate max-w-[85px]">
                     {uni.acronym}
-                  </div>
-                  <div className="text-[10px] text-slate-400 font-semibold uppercase mt-0.5">
-                    Latvia
                   </div>
                 </div>
 

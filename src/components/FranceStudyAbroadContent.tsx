@@ -556,28 +556,32 @@ export default function FranceStudyAbroadContent() {
           {/* 10 Circular Institution Badges Grid (Exact match to Screenshot 4) */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
             {[
-              { name: "SKEMA Business School", acronym: "skema", color: "from-red-600 to-red-800" },
-              { name: "Rennes School Of Business", acronym: "RENNES", color: "from-blue-600 to-indigo-800" },
-              { name: "NEOMA Business School", acronym: "NEOMA", color: "from-sky-700 to-blue-900" },
-              { name: "EM Normandie", acronym: "EM", color: "from-rose-600 to-red-900" },
-              { name: "Collège de Paris", acronym: "CDP", color: "from-amber-700 to-yellow-900" },
-              { name: "De Vinci Higher Education", acronym: "DEVINCI", color: "from-slate-700 to-slate-900" },
-              { name: "KEDGE Business School", acronym: "KEDGE", color: "from-blue-800 to-slate-900" },
-              { name: "Burgundy School Of Business", acronym: "BSB", color: "from-purple-800 to-pink-900" },
-              { name: "Montpellier Business School", acronym: "MBS", color: "from-blue-900 to-cyan-900" },
-              { name: "Sorbonne & Paris-Saclay", acronym: "PARIS", color: "from-emerald-800 to-teal-950" }
+              { name: "SKEMA Business School", logo: "/universities/france/skema.avif", acronym: "skema", color: "from-red-600 to-red-800" },
+              { name: "Rennes School Of Business", logo: "/universities/france/rennes.avif", acronym: "RENNES", color: "from-blue-600 to-indigo-800" },
+              { name: "NEOMA Business School", logo: "/universities/france/neoma.avif", acronym: "NEOMA", color: "from-sky-700 to-blue-900" },
+              { name: "EM Normandie", logo: "/universities/france/em-normandie.avif", acronym: "EM", color: "from-rose-600 to-red-900" },
+              { name: "Collège de Paris", logo: "/universities/france/college-de-paris.avif", acronym: "CDP", color: "from-amber-700 to-yellow-900" },
+              { name: "De Vinci Higher Education", logo: "/universities/france/devinci.avif", acronym: "DEVINCI", color: "from-slate-700 to-slate-900" },
+              { name: "KEDGE Business School", logo: "/universities/france/kedge.avif", acronym: "KEDGE", color: "from-blue-800 to-slate-900" },
+              { name: "Burgundy School Of Business", logo: "/universities/france/bsb.avif", acronym: "BSB", color: "from-purple-800 to-pink-900" },
+              { name: "Montpellier Business School", logo: "/universities/france/mbs.avif", acronym: "MBS", color: "from-blue-900 to-cyan-900" },
+              { name: "Sorbonne & Paris-Saclay", logo: "/universities/france/sorbonne.avif", acronym: "PARIS", color: "from-emerald-800 to-teal-950" }
             ].map((uni, idx) => (
               <div
                 key={idx}
                 className="flex flex-col items-center text-center group cursor-pointer"
               >
                 {/* Circular White Badge with University Crest / Name */}
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-3 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80">
-                  <div className="font-black text-sm sm:text-base tracking-wider uppercase text-[#0a1e38] group-hover:text-[#e52928] transition-colors">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-2.5 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80 overflow-hidden">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={72}
+                    height={72}
+                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                  />
+                  <div className="text-[10px] font-bold text-slate-500 uppercase mt-0.5 tracking-wider truncate max-w-[85px]">
                     {uni.acronym}
-                  </div>
-                  <div className="text-[10px] text-slate-400 font-semibold uppercase mt-0.5">
-                    France
                   </div>
                 </div>
 

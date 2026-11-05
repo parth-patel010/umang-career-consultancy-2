@@ -293,6 +293,7 @@ const UMANG_SUCCESS_PATHWAY = [
 const TOP_US_UNIVERSITIES = [
   {
     name: "Stanford University",
+    logo: "/universities/usa/stanford.avif",
     location: "Stanford, California (Silicon Valley)",
     ranking: "#2 QS World Rankings",
     programs: "Computer Science, AI, Business, Bioengineering",
@@ -300,6 +301,7 @@ const TOP_US_UNIVERSITIES = [
   },
   {
     name: "Purdue University",
+    logo: "/universities/usa/purdue.avif",
     location: "West Lafayette, Indiana",
     ranking: "Top 10 US Public Engineering",
     programs: "Mechanical, Aerospace, Data Analytics, Cybersecurity",
@@ -307,6 +309,7 @@ const TOP_US_UNIVERSITIES = [
   },
   {
     name: "University of Southern California (USC)",
+    logo: "/universities/usa/usc.avif",
     location: "Los Angeles, California",
     ranking: "Top 25 US National University",
     programs: "Viterbi Computer Science, Marshall MBA, Cinematic Arts",
@@ -314,6 +317,7 @@ const TOP_US_UNIVERSITIES = [
   },
   {
     name: "Boston University",
+    logo: "/universities/usa/bu.avif",
     location: "Boston, Massachusetts",
     ranking: "Top 40 US National University",
     programs: "Data Science, Biomedical Engineering, Finance",
@@ -321,6 +325,7 @@ const TOP_US_UNIVERSITIES = [
   },
   {
     name: "University of Texas at Austin",
+    logo: "/universities/usa/ut-austin.avif",
     location: "Austin, Texas",
     ranking: "Top 10 US Engineering & Tech Hub",
     programs: "Cockrell Engineering, McCombs Business, Computer Science",
@@ -328,6 +333,7 @@ const TOP_US_UNIVERSITIES = [
   },
   {
     name: "New York University (NYU)",
+    logo: "/universities/usa/nyu.avif",
     location: "New York City, New York",
     ranking: "Top 35 Global Ranking",
     programs: "Stern Business & Finance, Tandon School of Engineering",
@@ -806,7 +812,16 @@ export default function USAStudyAbroadContent() {
                 className="bg-slate-50 border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-red-300 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                     <span className="text-xs font-bold text-[#e52928] bg-red-50 border border-red-100 px-3 py-1 rounded-full">
                       {uni.ranking}
                     </span>

@@ -334,6 +334,7 @@ export default function GermanyStudyAbroadContent() {
   const universities = [
     {
       name: "Technical University of Munich (TUM)",
+      logo: "/universities/germany/tum.avif",
       city: "Munich, Bavaria",
       tag: "Excellence University • Ranked #1 in Germany",
       specialty: "Computer Science, Mechanical Engineering, AI, Electrical Systems",
@@ -341,6 +342,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "LMU Munich (Ludwig Maximilian University)",
+      logo: "/universities/germany/lmu.avif",
       city: "Munich, Bavaria",
       tag: "Historic Excellence • Founded 1472",
       specialty: "Medicine, Natural Sciences, Business Administration, Humanities",
@@ -348,6 +350,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "Heidelberg University (Ruprecht Karls)",
+      logo: "/universities/germany/heidelberg.avif",
       city: "Heidelberg, Baden-Württemberg",
       tag: "Oldest University in Germany (Founded 1386)",
       specialty: "Medicine (MD), Physics, Molecular Biology, Law, Humanities",
@@ -355,6 +358,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "RWTH Aachen University",
+      logo: "/universities/germany/rwth.avif",
       city: "Aachen, North Rhine-Westphalia",
       tag: "Premier Mechanical & Tech Polytechnic",
       specialty: "Mechanical & Automotive Engineering, Metallurgy, Electrical Eng",
@@ -362,6 +366,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "Humboldt University of Berlin (HU Berlin)",
+      logo: "/universities/germany/hu-berlin.avif",
       city: "Berlin (Capital)",
       tag: "Alma Mater of Einstein, Planck & Marx",
       specialty: "Computer Science, Philosophy, Economics, Environmental Sciences",
@@ -369,6 +374,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "Free University of Berlin (FU Berlin)",
+      logo: "/universities/germany/fu-berlin.avif",
       city: "Berlin (Capital)",
       tag: "International Research University",
       specialty: "Social Sciences, Political Science, Global Economics, Life Sciences",
@@ -376,6 +382,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "Karlsruhe Institute of Technology (KIT)",
+      logo: "/universities/germany/kit.avif",
       city: "Karlsruhe, Baden-Württemberg",
       tag: "The Research University in the Helmholtz Association",
       specialty: "Computer Science, Energy Systems, Nanotechnology, Mechanical Eng",
@@ -383,6 +390,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "Technical University of Berlin (TU Berlin)",
+      logo: "/universities/germany/tu-berlin.avif",
       city: "Berlin (Capital)",
       tag: "TU9 Innovation & Entrepreneurship",
       specialty: "Civil & Environmental Engineering, Architecture, Data Analytics",
@@ -390,6 +398,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "University of Freiburg",
+      logo: "/universities/germany/freiburg.avif",
       city: "Freiburg, Baden-Württemberg",
       tag: "Black Forest Green Campus (Founded 1457)",
       specialty: "Renewable Energy, Biotechnology, Forestry, Medicine",
@@ -397,6 +406,7 @@ export default function GermanyStudyAbroadContent() {
     },
     {
       name: "University of Bonn",
+      logo: "/universities/germany/bonn.avif",
       city: "Bonn, North Rhine-Westphalia",
       tag: "Most Nobel & Fields Medals in Germany",
       specialty: "Mathematics, Quantitative Economics, Agricultural Sciences, Physics",
@@ -1003,8 +1013,14 @@ export default function GermanyStudyAbroadContent() {
                 key={idx}
                 className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#22c55e] hover:bg-white hover:shadow-md transition-all duration-300 flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0a1e38] text-white flex items-center justify-center font-bold text-base shrink-0 shadow-sm">
-                  {idx + 1}
+                <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-1">

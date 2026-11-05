@@ -352,6 +352,73 @@ export async function generateMetadata({
   };
 }
 
+const UNIVERSITY_LOGOS: Record<string, string> = {
+  "University of Toronto": "/universities/canada/toronto.avif",
+  "McGill University": "/universities/canada/mcgill.avif",
+  "University of British Columbia": "/universities/canada/ubc.avif",
+  "University of Waterloo": "/universities/canada/waterloo.avif",
+  "Centennial College": "/universities/canada/centennial.avif",
+  "Seneca Polytechnic": "/universities/canada/seneca.avif",
+  "University of Windsor": "/universities/canada/windsor.avif",
+  "Conestoga College": "/universities/canada/conestoga.avif",
+  "Johns Hopkins University": "/universities/usa/jhu.avif",
+  "Massachusetts Institute of Technology (MIT)": "/universities/usa/mit.avif",
+  "Stanford University": "/universities/usa/stanford.avif",
+  "Northeastern University": "/universities/usa/northeastern.avif",
+  "Arizona State University": "/universities/usa/asu.avif",
+  "University of South Florida": "/universities/usa/usf.avif",
+  "Purdue University": "/universities/usa/purdue.avif",
+  "University of North Texas": "/universities/usa/unt.avif",
+  "Middlesex University London": "/universities/uk/middlesex.avif",
+  "University of Leeds": "/universities/uk/leeds.avif",
+  "University of Manchester": "/universities/uk/manchester.avif",
+  "Coventry University": "/universities/uk/coventry.avif",
+  "University of Birmingham": "/universities/uk/birmingham.avif",
+  "University of Hertfordshire": "/universities/uk/hertfordshire.avif",
+  "Cardiff University": "/universities/uk/cardiff.avif",
+  "Queen Mary University of London": "/universities/uk/qmul.avif",
+  "University of Melbourne": "/universities/australia/melbourne.avif",
+  "University of Sydney": "/universities/australia/sydney.avif",
+  "University of New South Wales (UNSW)": "/universities/australia/unsw.avif",
+  "Monash University": "/universities/australia/monash.avif",
+  "University of Queensland": "/universities/australia/uq.avif",
+  "Deakin University": "/universities/australia/deakin.avif",
+  "RMIT University": "/universities/australia/rmit.avif",
+  "Macquarie University": "/universities/australia/macquarie.avif",
+  "Technical University of Munich (TUM)": "/universities/germany/tum.avif",
+  "RWTH Aachen University": "/universities/germany/rwth.avif",
+  "Karlsruhe Institute of Technology (KIT)": "/universities/germany/kit.avif",
+  "TU Berlin": "/universities/germany/tu-berlin.avif",
+  "Constructor University Bremen": "/universities/germany/constructor.avif",
+  "University of Stuttgart": "/universities/germany/stuttgart.avif",
+  "Heidelberg University": "/universities/germany/heidelberg.avif",
+  "Frankfurt School of Finance & Management": "/universities/germany/frankfurt-school.avif",
+  "HEC Paris": "/universities/france/hec.avif",
+  "Sorbonne University": "/universities/france/sorbonne.avif",
+  "INSEAD": "/universities/france/insead.avif",
+  "ESSEC Business School": "/universities/france/essec.avif",
+  "EPITA School of Engineering": "/universities/france/epita.avif",
+  "Skema Business School": "/universities/france/skema.avif",
+  "CentraleSupélec": "/universities/france/centralesupelec.avif",
+  "KEDGE Business School": "/universities/france/kedge.avif",
+  "Trinity College Dublin (TCD)": "/universities/ireland/tcd.avif",
+  "University College Dublin (UCD)": "/universities/ireland/ucd.avif",
+  "National University of Ireland Galway": "/universities/ireland/galway.avif",
+  "University College Cork (UCC)": "/universities/ireland/ucc.avif",
+  "Dublin City University (DCU)": "/universities/ireland/dcu.avif",
+  "University of Limerick": "/universities/ireland/ul.avif",
+  "Technological University Dublin": "/universities/ireland/tu-dublin.avif",
+  "National College of Ireland (NCI)": "/universities/ireland/nci.avif",
+  "University of Auckland": "/universities/nz/auckland.avif",
+  "University of Otago": "/universities/nz/otago.avif",
+  "Victoria University of Wellington": "/universities/nz/victoria.avif",
+  "University of Canterbury": "/universities/nz/canterbury.avif",
+  "Massey University": "/universities/nz/massey.avif",
+  "University of Waikato": "/universities/nz/waikato.avif",
+  "Lincoln University": "/universities/nz/lincoln.avif",
+  "Auckland University of Technology (AUT)": "/universities/nz/aut.avif"
+};
+
 export default async function CountryDetailPage({
   params,
 }: {
@@ -509,17 +576,30 @@ export default async function CountryDetailPage({
                   Top Universities & Colleges in {country.name}
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {country.topUniversities.map((uni, idx) => (
-                    <div
-                      key={idx}
-                      className="p-4 bg-white rounded-xl border border-slate-200 flex items-center gap-3 shadow-xs hover:border-[#e52928] transition-colors"
-                    >
-                      <span className="w-8 h-8 rounded-lg bg-red-50 text-[#e52928] flex items-center justify-center font-bold text-xs">
-                        {idx + 1}
-                      </span>
-                      <span className="text-sm font-bold text-slate-800">{uni}</span>
-                    </div>
-                  ))}
+                  {country.topUniversities.map((uni, idx) => {
+                    const logoUrl = UNIVERSITY_LOGOS[uni];
+                    return (
+                      <div
+                        key={idx}
+                        className="p-3.5 bg-white rounded-xl border border-slate-200 flex items-center gap-3 shadow-xs hover:border-[#e52928] transition-colors"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-slate-50 border border-slate-200/90 p-0.5 flex items-center justify-center shrink-0">
+                          {logoUrl ? (
+                            <Image
+                              src={logoUrl}
+                              alt={uni}
+                              width={36}
+                              height={36}
+                              className="w-full h-full object-contain"
+                            />
+                          ) : (
+                            <span className="font-bold text-xs text-[#e52928]">{idx + 1}</span>
+                          )}
+                        </div>
+                        <span className="text-sm font-bold text-slate-800">{uni}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 

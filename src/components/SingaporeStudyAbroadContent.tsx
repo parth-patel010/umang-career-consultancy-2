@@ -232,6 +232,7 @@ const ICA_FEES = [
 const UNIVERSITIES = [
   {
     name: "National University of Singapore (NUS)",
+    logo: "/universities/singapore/nus.avif",
     type: "Autonomous Public University",
     qsRank: "#8 Globally (QS World 2025)",
     tag: "Asia's #1 Ranked University",
@@ -239,6 +240,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Nanyang Technological University (NTU)",
+    logo: "/universities/singapore/ntu.avif",
     type: "Autonomous Public University",
     qsRank: "#15 Globally (QS World 2025)",
     tag: "Engineering & Tech Leader",
@@ -246,6 +248,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Singapore Management University (SMU)",
+    logo: "/universities/singapore/smu.avif",
     type: "Specialized Business & Social Sciences",
     qsRank: "Top 50 Global Business",
     tag: "Wharton-Modeled City Campus",
@@ -253,6 +256,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Singapore University of Technology & Design (SUTD)",
+    logo: "/universities/singapore/sutd.avif",
     type: "Autonomous Public University",
     qsRank: "Developed with MIT & Zhejiang Univ",
     tag: "Design & Product Innovation",
@@ -260,6 +264,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Singapore Institute of Technology (SIT)",
+    logo: "/universities/singapore/sit.avif",
     type: "University of Applied Learning",
     qsRank: "Premier Applied Degrees",
     tag: "95%+ Employment Placement",
@@ -267,6 +272,7 @@ const UNIVERSITIES = [
   },
   {
     name: "James Cook University (JCU Singapore)",
+    logo: "/universities/singapore/jcu.avif",
     type: "Australian Public University Campus",
     qsRank: "Top 2% Globally / EduTrust Star",
     tag: "Direct Australian Degree",
@@ -779,11 +785,22 @@ export default function SingaporeStudyAbroadContent() {
                 className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#e52928] transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
-                      {uni.qsRank}
-                    </span>
-                    <span className="text-xs text-slate-500 font-semibold">{uni.type}</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
+                        {uni.qsRank}
+                      </span>
+                      <span className="text-xs text-slate-500 font-semibold">{uni.type}</span>
+                    </div>
                   </div>
                   <h3 className="text-lg font-black text-[#0a1e38]">{uni.name}</h3>
                   <div className="text-xs font-bold text-[#e52928] mt-1 flex items-center gap-1.5">

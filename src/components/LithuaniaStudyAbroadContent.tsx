@@ -341,6 +341,7 @@ const ABOUT_CARDS = [
 const UNIVERSITIES = [
   {
     name: "Vilnius University (VU)",
+    logo: "/universities/lithuania/vu.avif",
     location: "Vilnius (Old Town)",
     est: "Est. 1579 (One of Europe's Oldest)",
     speciality: "Medicine, International Business, Physics, AI, Law & Social Sciences",
@@ -348,6 +349,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Vilnius Gediminas Technical University (VILNIUS TECH)",
+    logo: "/universities/lithuania/vilnius-tech.avif",
     location: "Vilnius (Saulėtekis Tech Valley)",
     est: "Premier Engineering & Technology Leader",
     speciality: "Laser Tech, Civil Engineering, Computer Science, Architecture & Robotics",
@@ -355,6 +357,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Kaunas University of Technology (KTU)",
+    logo: "/universities/lithuania/ktu.avif",
     location: "Kaunas (Santaka Valley)",
     est: "Innovation & Technology Powerhouse",
     speciality: "Informatics, Biomedical Engineering, Materials Science & Industrial Tech",
@@ -362,6 +365,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Lithuanian University of Health Sciences (LSMU)",
+    logo: "/universities/lithuania/lsmu.avif",
     location: "Kaunas",
     est: "Largest Medical University in the Baltics",
     speciality: "6-Year General Medicine (MD), 5-Year Dentistry (DMD), Pharmacy & Veterinary",
@@ -369,6 +373,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Vytautas Magnus University (VMU)",
+    logo: "/universities/lithuania/vmu.avif",
     location: "Kaunas & Vilnius",
     est: "Comprehensive Liberal Arts Institution",
     speciality: "International Politics, Economics, Computer Informatics & Media Arts",
@@ -376,6 +381,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Mykolas Romeris University (MRU)",
+    logo: "/universities/lithuania/mru.avif",
     location: "Vilnius",
     est: "Social Sciences & Cybersecurity Leader",
     speciality: "Cybersecurity Management, European Law, Psychology & Public Governance",
@@ -383,6 +389,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Klaipėda University (KU)",
+    logo: "/universities/lithuania/ku.avif",
     location: "Klaipėda (Baltic Coast)",
     est: "Maritime & Coastal Research Hub",
     speciality: "Marine Engineering, Port Logistics, Marine Biotechnology & Nursing",
@@ -390,6 +397,7 @@ const UNIVERSITIES = [
   },
   {
     name: "LCC International University",
+    logo: "/universities/lithuania/lcc.avif",
     location: "Klaipėda",
     est: "North American Liberal Arts Style",
     speciality: "International Business, Communication, Psychology & English Studies",
@@ -850,13 +858,24 @@ export default function LithuaniaStudyAbroadContent() {
                 className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#006a44] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                      <svg className="w-3.5 h-3.5 inline mr-1 text-[#006a44] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>{uni.location}
-                    </span>
-                    <span className="text-[11px] font-bold text-[#006a44] bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full">
-                      {uni.tag}
-                    </span>
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-[11px] font-bold text-[#006a44] bg-emerald-50 border border-emerald-100 px-3 py-1 rounded-full text-right">
+                        {uni.tag}
+                      </span>
+                      <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        {uni.location}
+                      </span>
+                    </div>
                   </div>
 
                   <h3 className="text-xl font-extrabold text-[#0a1e38] mb-1">{uni.name}</h3>

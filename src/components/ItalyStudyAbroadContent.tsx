@@ -248,6 +248,7 @@ const REGIONS = [
 const UNIVERSITIES = [
   {
     name: "University of Bologna",
+    logo: "/universities/italy/bologna.avif",
     location: "Bologna, Emilia-Romagna",
     founded: "1088 AD",
     qsRank: "#133 Global (QS World 2025)",
@@ -256,6 +257,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Sapienza University of Rome",
+    logo: "/universities/italy/sapienza.avif",
     location: "Rome, Lazio",
     founded: "1303 AD",
     qsRank: "#132 Global (QS World 2025)",
@@ -264,6 +266,7 @@ const UNIVERSITIES = [
   },
   {
     name: "University of Padua",
+    logo: "/universities/italy/padua.avif",
     location: "Padua, Veneto",
     founded: "1222 AD",
     qsRank: "#236 Global (QS World 2025)",
@@ -272,6 +275,7 @@ const UNIVERSITIES = [
   },
   {
     name: "University of Milan (UniMi)",
+    logo: "/universities/italy/unimi.avif",
     location: "Milan, Lombardy",
     founded: "1924 AD",
     qsRank: "#285 Global (QS World 2025)",
@@ -280,6 +284,7 @@ const UNIVERSITIES = [
   },
   {
     name: "University of Pisa",
+    logo: "/universities/italy/pisa.avif",
     location: "Pisa, Tuscany",
     founded: "1343 AD",
     qsRank: "#357 Global (QS World 2025)",
@@ -288,6 +293,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Politecnico di Milano (PoliMi)",
+    logo: "/universities/italy/polimi.avif",
     location: "Milan, Lombardy",
     founded: "1863 AD",
     qsRank: "#111 Global (QS World 2025)",
@@ -848,11 +854,22 @@ export default function ItalyStudyAbroadContent() {
                 className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
-                      {uni.qsRank}
-                    </span>
-                    <span className="text-xs text-slate-500 font-semibold">Est. {uni.founded}</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
+                        {uni.qsRank}
+                      </span>
+                      <span className="text-xs text-slate-500 font-semibold">Est. {uni.founded}</span>
+                    </div>
                   </div>
                   <h3 className="text-lg font-black text-[#0a1e38]">{uni.name}</h3>
                   <div className="text-xs font-bold text-[#e52928] mt-1 flex items-center gap-1.5">

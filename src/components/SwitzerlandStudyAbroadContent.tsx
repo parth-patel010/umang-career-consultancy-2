@@ -325,6 +325,7 @@ const ABOUT_CARDS = [
 const UNIVERSITIES = [
   {
     name: "EU Business School",
+    logo: "/universities/switzerland/eu-business.avif",
     campuses: "Geneva & Montreux",
     speciality: "International Business, Entrepreneurship & Digital Media",
     type: "Top Ranked European Business School",
@@ -332,6 +333,7 @@ const UNIVERSITIES = [
   },
   {
     name: "GLION Institute of Higher Education",
+    logo: "/universities/switzerland/glion.avif",
     campuses: "Glion-sur-Montreux & Bulle",
     speciality: "Luxury Hospitality Management & Finance",
     type: "QS World Top 5 Hospitality Institution",
@@ -339,6 +341,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Geneva Business School",
+    logo: "/universities/switzerland/gbs.avif",
     campuses: "Geneva (Palais des Nations District)",
     speciality: "International Finance, Geopolitics & DBA",
     type: "Accredited Swiss Business School",
@@ -346,6 +349,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Swiss Hotel Management School (SHMS)",
+    logo: "/universities/switzerland/shms.avif",
     campuses: "Caux & Leysin",
     speciality: "Hospitality Management, Event Design & Luxury Services",
     type: "Historic Swiss Palace Campuses",
@@ -353,6 +357,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Business & Hotel Management School (BHMS)",
+    logo: "/universities/switzerland/bhms.avif",
     campuses: "Lucerne",
     speciality: "Culinary Arts, Hospitality & Global Business",
     type: "Downtown City-Center Campus",
@@ -360,6 +365,7 @@ const UNIVERSITIES = [
   },
   {
     name: "César Ritz Colleges Switzerland",
+    logo: "/universities/switzerland/cesar-ritz.avif",
     campuses: "Le Bouveret & Brig",
     speciality: "Hospitality, Tourism & Entrepreneurship",
     type: "Legacy of King of Hoteliers",
@@ -367,6 +373,7 @@ const UNIVERSITIES = [
   },
   {
     name: "American Institute of Applied Sciences in Switzerland",
+    logo: "/universities/switzerland/aus.avif",
     campuses: "La Tour-de-Peilz (Lake Geneva)",
     speciality: "Applied Business Administration & IT Management",
     type: "US-Accredited Curriculum in Switzerland",
@@ -374,6 +381,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Swiss School of Business and Management (SSBM)",
+    logo: "/universities/switzerland/ssbm.avif",
     campuses: "Geneva",
     speciality: "Global MBA, Executive DBA & Data Management",
     type: "Premier Research & Business Institute",
@@ -381,6 +389,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Hotel & Tourism Management Institute Switzerland (HTMi)",
+    logo: "/universities/switzerland/htmi.avif",
     campuses: "Sörenberg (Canton of Lucerne)",
     speciality: "Hotel Operations, Event Planning & Culinary Arts",
     type: "Traditional Swiss Alpine Campus",
@@ -388,6 +397,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Culinary Arts Academy Switzerland",
+    logo: "/universities/switzerland/caa.avif",
     campuses: "Le Bouveret & Lucerne",
     speciality: "Fine Dining, Pastry & Chocolate Arts, Kitchen Management",
     type: "World's Foremost Culinary Institute",
@@ -905,13 +915,24 @@ export default function SwitzerlandStudyAbroadContent() {
                 className="bg-white rounded-2xl border border-slate-200/90 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#da291c] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                      <svg className="w-3.5 h-3.5 inline mr-1 text-[#da291c] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>{uni.campuses}
-                    </span>
-                    <span className="text-[11px] font-bold text-[#da291c] bg-red-50 border border-red-100 px-3 py-1 rounded-full">
-                      {uni.tag}
-                    </span>
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-[11px] font-bold text-[#da291c] bg-red-50 border border-red-100 px-3 py-1 rounded-full text-right">
+                        {uni.tag}
+                      </span>
+                      <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                        {uni.campuses}
+                      </span>
+                    </div>
                   </div>
 
                   <h3 className="text-xl font-extrabold text-[#0a1e38] mb-2">{uni.name}</h3>

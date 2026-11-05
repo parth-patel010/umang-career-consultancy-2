@@ -276,6 +276,7 @@ const PROVINCES = [
 const UNIVERSITIES = [
   {
     name: "University of Malaya (UM)",
+    logo: "/universities/malaysia/um.avif",
     location: "Kuala Lumpur",
     qsRank: "#60 Global (QS World 2025)",
     tag: "Malaysia's #1 Premier University",
@@ -283,6 +284,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Monash University Malaysia",
+    logo: "/universities/malaysia/monash-my.avif",
     location: "Bandar Sunway, Selangor",
     qsRank: "Top 40 Global (Monash Australia)",
     tag: "Australian Group of Eight Campus",
@@ -290,6 +292,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Universiti Kebangsaan Malaysia (UKM)",
+    logo: "/universities/malaysia/ukm.avif",
     location: "Bangi, Selangor",
     qsRank: "#138 Global (QS World 2025)",
     tag: "National Research Powerhouse",
@@ -297,6 +300,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Universiti Putra Malaysia (UPM)",
+    logo: "/universities/malaysia/upm.avif",
     location: "Serdang, Selangor",
     qsRank: "#148 Global (QS World 2025)",
     tag: "Agriculture & Engineering Leader",
@@ -304,6 +308,7 @@ const UNIVERSITIES = [
   },
   {
     name: "UCSI University",
+    logo: "/universities/malaysia/ucsi.avif",
     location: "Kuala Lumpur",
     qsRank: "#265 Global (QS World 2025)",
     tag: "Top Private Research University",
@@ -311,6 +316,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Sunway University",
+    logo: "/universities/malaysia/sunway.avif",
     location: "Subang Jaya, Selangor",
     qsRank: "Top 2% Global / 5-Star QS",
     tag: "Affiliated with Lancaster & Harvard",
@@ -878,7 +884,16 @@ export default function MalaysiaStudyAbroadContent() {
                 className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                     <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
                       {uni.qsRank}
                     </span>

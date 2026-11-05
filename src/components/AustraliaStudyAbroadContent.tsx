@@ -424,6 +424,7 @@ export default function AustraliaStudyAbroadContent() {
   const universities = [
     {
       name: "University of Melbourne",
+      logo: "/universities/australia/melbourne.avif",
       state: "Victoria (Melbourne)",
       tag: "Group of Eight (Go8) • Ranked #1 in Australia",
       specialty: "Medicine, Business, Law, Computer Science, Engineering",
@@ -431,6 +432,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "University of Sydney",
+      logo: "/universities/australia/sydney.avif",
       state: "New South Wales (Sydney)",
       tag: "Group of Eight (Go8) • Founded 1850",
       specialty: "Nursing, Architecture, Engineering, Finance, Arts",
@@ -438,6 +440,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "University of New South Wales (UNSW Sydney)",
+      logo: "/universities/australia/unsw.avif",
       state: "New South Wales (Sydney)",
       tag: "Group of Eight (Go8) • Engineering Powerhouse",
       specialty: "Civil Engineering, AI, Solar Tech, Accounting, Law",
@@ -445,6 +448,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "Australian National University (ANU)",
+      logo: "/universities/australia/anu.avif",
       state: "ACT (Canberra)",
       tag: "Group of Eight (Go8) • National Research Leader",
       specialty: "Politics & Public Policy, Philosophy, Physics, International Relations",
@@ -452,6 +456,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "Monash University",
+      logo: "/universities/australia/monash.avif",
       state: "Victoria (Melbourne)",
       tag: "Group of Eight (Go8) • Global Campus Network",
       specialty: "Pharmacy & Pharmacology (World #2), IT, Business, Education",
@@ -459,6 +464,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "University of Queensland (UQ)",
+      logo: "/universities/australia/uq.avif",
       state: "Queensland (Brisbane)",
       tag: "Group of Eight (Go8) • Research Pioneer",
       specialty: "Biotechnology, Environmental Science, Mining, Sports Science",
@@ -466,6 +472,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "University of Western Australia (UWA)",
+      logo: "/universities/australia/uwa.avif",
       state: "Western Australia (Perth)",
       tag: "Group of Eight (Go8) • Mining & Energy Hub",
       specialty: "Petroleum & Mining Eng, Agriculture, Oceanography, Data Science",
@@ -473,6 +480,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "University of Adelaide",
+      logo: "/universities/australia/adelaide.avif",
       state: "South Australia (Adelaide)",
       tag: "Group of Eight (Go8) • 5 Nobel Laureates",
       specialty: "Wine Science, Dentistry, Computer Science, Aerospace",
@@ -480,6 +488,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "Deakin University",
+      logo: "/universities/australia/deakin.avif",
       state: "Victoria (Melbourne & Geelong)",
       tag: "Top Rated for Student Satisfaction",
       specialty: "Sports Management, Nursing, Cybersecurity, Business Analytics",
@@ -487,6 +496,7 @@ export default function AustraliaStudyAbroadContent() {
     },
     {
       name: "University of Wollongong (UOW)",
+      logo: "/universities/australia/uow.avif",
       state: "New South Wales (Wollongong & Sydney)",
       tag: "Regional Study & Tech Innovation Leader",
       specialty: "Materials Engineering, Information Technology, Social Work",
@@ -1092,8 +1102,14 @@ export default function AustraliaStudyAbroadContent() {
                 key={idx}
                 className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#22c55e] hover:bg-white hover:shadow-md transition-all duration-300 flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0a1e38] text-white flex items-center justify-center font-bold text-base shrink-0 shadow-sm">
-                  {idx + 1}
+                <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-1">

@@ -437,6 +437,7 @@ const REGIONS = [
 const UNIVERSITIES = [
   {
     name: "The University of Auckland",
+    logo: "/universities/nz/auckland.avif",
     location: "Auckland",
     qsRank: "#65 Global (QS World 2025)",
     tag: "New Zealand's #1 Ranked University",
@@ -444,6 +445,7 @@ const UNIVERSITIES = [
   },
   {
     name: "University of Otago",
+    logo: "/universities/nz/otago.avif",
     location: "Dunedin",
     qsRank: "#214 Global (QS)",
     tag: "Oldest University & Medical Flagship",
@@ -451,6 +453,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Auckland University of Technology (AUT)",
+    logo: "/universities/nz/aut.avif",
     location: "Auckland",
     qsRank: "Top 1% Global Universities",
     tag: "Contemporary Tech & Industry Connect",
@@ -458,6 +461,7 @@ const UNIVERSITIES = [
   },
   {
     name: "University of Canterbury",
+    logo: "/universities/nz/canterbury.avif",
     location: "Christchurch",
     qsRank: "#256 Global (QS)",
     tag: "World-Class Civil & Tech Engineering",
@@ -465,6 +469,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Victoria University of Wellington",
+    logo: "/universities/nz/victoria.avif",
     location: "Wellington",
     qsRank: "#244 Global (QS)",
     tag: "Capital City Law & Public Policy",
@@ -472,6 +477,7 @@ const UNIVERSITIES = [
   },
   {
     name: "University of Waikato",
+    logo: "/universities/nz/waikato.avif",
     location: "Hamilton & Tauranga",
     qsRank: "#235 Global (QS)",
     tag: "Triple Crown Waikato Management School",
@@ -479,6 +485,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Massey University",
+    logo: "/universities/nz/massey.avif",
     location: "Palmerston North, Auckland, Wellington",
     qsRank: "#239 Global (QS)",
     tag: "Aviation & Veterinary Science",
@@ -486,6 +493,7 @@ const UNIVERSITIES = [
   },
   {
     name: "Lincoln University",
+    logo: "/universities/nz/lincoln.avif",
     location: "Canterbury",
     qsRank: "Specialist Land-Based University",
     tag: "Agriculture, Viticulture & Environment",
@@ -1179,7 +1187,16 @@ export default function NewZealandStudyAbroadContent() {
                 className="p-6 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-sm hover:shadow-lg hover:border-[#0a1e38] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                     <span className="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-100 text-emerald-800">
                       {uni.qsRank}
                     </span>

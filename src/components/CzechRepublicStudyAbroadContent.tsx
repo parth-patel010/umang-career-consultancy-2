@@ -292,6 +292,7 @@ export default function CzechRepublicStudyAbroadContent() {
   const universities = [
     {
       name: "Charles University (Univerzita Karlova)",
+      logo: "/universities/czech/charles.avif",
       city: "Prague",
       tag: "Founded 1348 • Top #1 in Czechia",
       specialty: "Medicine (MD), Law, Social Sciences, Natural Sciences, Humanities",
@@ -299,6 +300,7 @@ export default function CzechRepublicStudyAbroadContent() {
     },
     {
       name: "Masaryk University (MUNI)",
+      logo: "/universities/czech/muni.avif",
       city: "Brno",
       tag: "Second Largest • High Research Output",
       specialty: "Medicine, Informatics, Economics, Law, Science",
@@ -306,6 +308,7 @@ export default function CzechRepublicStudyAbroadContent() {
     },
     {
       name: "Czech Technical University in Prague (CTU / ČVUT)",
+      logo: "/universities/czech/ctu.avif",
       city: "Prague",
       tag: "Oldest Non-Military Tech University",
       specialty: "Computer Science, Civil & Mechanical Engineering, Architecture, AI",
@@ -313,6 +316,7 @@ export default function CzechRepublicStudyAbroadContent() {
     },
     {
       name: "Prague University of Economics and Business (VŠE)",
+      logo: "/universities/czech/vse.avif",
       city: "Prague",
       tag: "Leading Business School in Central Europe",
       specialty: "International Business, Finance, Management, Economics, CEMS MIM",
@@ -320,6 +324,7 @@ export default function CzechRepublicStudyAbroadContent() {
     },
     {
       name: "Brno University of Technology (BUT / VUT)",
+      logo: "/universities/czech/vut.avif",
       city: "Brno",
       tag: "Major Polytechnic Center",
       specialty: "Electrical Engineering, IT, Mechanical Engineering, Chemistry",
@@ -327,6 +332,7 @@ export default function CzechRepublicStudyAbroadContent() {
     },
     {
       name: "University of Chemistry and Technology, Prague (UCT)",
+      logo: "/universities/czech/uct.avif",
       city: "Prague",
       tag: "Largest Chemical Science Hub in Central Europe",
       specialty: "Chemical Engineering, Biochemistry, Food Technology, Nanomaterials",
@@ -334,6 +340,7 @@ export default function CzechRepublicStudyAbroadContent() {
     },
     {
       name: "Palacký University Olomouc",
+      logo: "/universities/czech/palacky.avif",
       city: "Olomouc",
       tag: "Historic 1573 Foundation",
       specialty: "Medicine, Science, Education, Philosophy, Physical Culture",
@@ -341,6 +348,7 @@ export default function CzechRepublicStudyAbroadContent() {
     },
     {
       name: "Czech University of Life Sciences Prague (CZU)",
+      logo: "/universities/czech/czu.avif",
       city: "Prague",
       tag: "Green Campus Excellence",
       specialty: "Environmental Sciences, Agrobiology, Forestry, Economics & Mgt",
@@ -865,8 +873,14 @@ export default function CzechRepublicStudyAbroadContent() {
                 key={idx}
                 className="p-5 rounded-2xl bg-slate-50 border border-slate-200/90 hover:border-[#22c55e] hover:bg-white hover:shadow-md transition-all duration-300 flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#0a1e38] text-white flex items-center justify-center font-bold text-base shrink-0 shadow-sm">
-                  {idx + 1}
+                <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={48}
+                    height={48}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-1">

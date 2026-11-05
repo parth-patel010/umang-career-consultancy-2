@@ -821,27 +821,31 @@ export default function UKStudyAbroadContent() {
           {/* 10 Circular Institution Badges */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
             {[
-              { name: "University of Oxford", acronym: "OXFORD" },
-              { name: "University of Cambridge", acronym: "CAMBRIDGE" },
-              { name: "Imperial College London", acronym: "IMPERIAL" },
-              { name: "University College London", acronym: "UCL" },
-              { name: "Queen Mary University of London", acronym: "QMUL" },
-              { name: "University of Greenwich", acronym: "GREENWICH" },
-              { name: "King's College London", acronym: "KCL" },
-              { name: "University of Edinburgh", acronym: "EDINBURGH" },
-              { name: "University of Manchester", acronym: "MANCHESTER" },
-              { name: "Middlesex University London", acronym: "MIDDLESEX" }
+              { name: "University of Oxford", logo: "/universities/uk/oxford.avif", acronym: "OXFORD" },
+              { name: "University of Cambridge", logo: "/universities/uk/cambridge.avif", acronym: "CAMBRIDGE" },
+              { name: "Imperial College London", logo: "/universities/uk/imperial.avif", acronym: "IMPERIAL" },
+              { name: "University College London", logo: "/universities/uk/ucl.avif", acronym: "UCL" },
+              { name: "Queen Mary University of London", logo: "/universities/uk/qmul.avif", acronym: "QMUL" },
+              { name: "University of Greenwich", logo: "/universities/uk/greenwich.avif", acronym: "GREENWICH" },
+              { name: "King's College London", logo: "/universities/uk/kcl.avif", acronym: "KCL" },
+              { name: "University of Edinburgh", logo: "/universities/uk/edinburgh.avif", acronym: "EDINBURGH" },
+              { name: "University of Manchester", logo: "/universities/uk/manchester.avif", acronym: "MANCHESTER" },
+              { name: "Middlesex University London", logo: "/universities/uk/middlesex.avif", acronym: "MIDDLESEX" }
             ].map((uni, idx) => (
               <div
                 key={idx}
                 className="flex flex-col items-center text-center group cursor-pointer"
               >
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-3 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80">
-                  <div className="font-black text-xs sm:text-sm tracking-wider uppercase text-[#0a1e38] group-hover:text-[#e52928] transition-colors">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-white text-[#0a1e38] flex flex-col items-center justify-center p-2.5 shadow-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-red-500/20 border-2 border-white/80 overflow-hidden">
+                  <Image
+                    src={uni.logo}
+                    alt={uni.name}
+                    width={72}
+                    height={72}
+                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                  />
+                  <div className="text-[10px] font-bold text-slate-500 uppercase mt-0.5 tracking-wider truncate max-w-[85px]">
                     {uni.acronym}
-                  </div>
-                  <div className="text-[10px] text-slate-400 font-semibold uppercase mt-0.5">
-                    United Kingdom
                   </div>
                 </div>
 

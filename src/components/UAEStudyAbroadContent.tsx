@@ -160,6 +160,7 @@ const WHY_CHOOSE_DUBAI = [
 const TOP_UNIVERSITIES_DUBAI = [
   {
     name: "University of Birmingham Dubai",
+    logo: "/universities/uae/birmingham-dubai.avif",
     type: "UK Russell Group Branch Campus",
     location: "Dubai International Academic City (DIAC)",
     hub: "DIAC Campus",
@@ -175,6 +176,7 @@ const TOP_UNIVERSITIES_DUBAI = [
   },
   {
     name: "Heriot-Watt University Dubai",
+    logo: "/universities/uae/heriot-watt-dubai.avif",
     type: "Top UK Engineering & Business Institution",
     location: "Dubai Knowledge Park (DKP)",
     hub: "DKP Campus",
@@ -190,6 +192,7 @@ const TOP_UNIVERSITIES_DUBAI = [
   },
   {
     name: "University of Wollongong in Dubai (UOWD)",
+    logo: "/universities/uae/uowd.avif",
     type: "Premier Australian University Branch",
     location: "Dubai Knowledge Park (DKP)",
     hub: "DKP Campus",
@@ -205,6 +208,7 @@ const TOP_UNIVERSITIES_DUBAI = [
   },
   {
     name: "Middlesex University Dubai",
+    logo: "/universities/uae/mdx-dubai.avif",
     type: "Award-Winning UK University Campus",
     location: "Dubai Knowledge Park (DKP)",
     hub: "DKP Campus",
@@ -220,6 +224,7 @@ const TOP_UNIVERSITIES_DUBAI = [
   },
   {
     name: "Curtin University Dubai",
+    logo: "/universities/uae/curtin-dubai.avif",
     type: "High-Ranking Australian Tech Institution",
     location: "Dubai International Academic City (DIAC)",
     hub: "DIAC Campus",
@@ -641,12 +646,23 @@ export default function UAEStudyAbroadContent() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold text-[#e52928] bg-red-50 border border-red-100 px-3 py-1 rounded-full">
-                      {uni.hub}
-                    </span>
-                    <span className="text-xs text-slate-500 font-semibold">
-                      {uni.location}
-                    </span>
+                    <div className="w-14 h-14 rounded-2xl bg-white border border-slate-200/90 p-1 flex items-center justify-center shrink-0 shadow-xs">
+                      <Image
+                        src={uni.logo}
+                        alt={uni.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      <span className="text-xs font-bold text-[#e52928] bg-red-50 border border-red-100 px-3 py-1 rounded-full">
+                        {uni.hub}
+                      </span>
+                      <span className="text-xs text-slate-500 font-semibold">
+                        {uni.location}
+                      </span>
+                    </div>
                   </div>
 
                   <h3 className="text-xl font-bold text-[#0a1e38] mb-1">
