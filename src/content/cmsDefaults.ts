@@ -46,15 +46,6 @@ export const homepageContent = {
         imageAlt: "Study in USA & Canada",
       },
       {
-        id: "mbbs",
-        title: "MBBS in Georgia & Russia",
-        subtitle: "₹ 15 Lakhs* Complete Package",
-        miniTitle: "NMC & WHO Recognized Medical Universities",
-        imageSrc:
-          "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80",
-        imageAlt: "MBBS in Georgia and Russia",
-      },
-      {
         id: "australia-europe",
         title: "Study in Australia & Europe",
         subtitle: "High PR Prospects",
