@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import founderPhoto from "../../public/founder-photo-v5.jpg";
+import founderPhoto from "../../public/founder-photo-v6.jpg";
 
 function PhoneIcon() {
   return (

@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import officeBanner from "../../public/umang-office-banner-v3.jpg";
-import founderPhoto from "../../public/founder-photo-v5.jpg";
+import founderPhoto from "../../public/founder-photo-v6.jpg";
 
 /* -------------------------------------------------------------
    SVG ICONS

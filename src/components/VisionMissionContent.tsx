@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import founderPhoto from "../../public/founder-photo-v5.jpg";
+import founderPhoto from "../../public/founder-photo-v6.jpg";
 
 export default function VisionMissionContent() {
   const [bannerLoaded, setBannerLoaded] = useState(false);
