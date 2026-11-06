@@ -220,9 +220,9 @@ export default function Footer({ site = siteContent }: { site?: SiteContent }) {
               <li><Link href="/services/student-visa" className="hover:text-white transition-colors">Student Visa</Link></li>
               <li><Link href="/services/spouse-visa" className="hover:text-white transition-colors">Spouse Visa</Link></li>
               <li><Link href="/services/visitor-visa" className="hover:text-white transition-colors">Visitor Visa</Link></li>
-              <li><Link href="/services/visa-documentation" className="hover:text-white transition-colors">Visa Documentation</Link></li>
               <li><Link href="/services/pr-immigration" className="hover:text-white transition-colors">PR & Immigration</Link></li>
-              <li><Link href="/services/pre-departure-guidance" className="hover:text-white transition-colors">Pre-Departure Guidance</Link></li>
+              <li><Link href="/services/visa-documentation" className="hover:text-white transition-colors">Visa Documentation</Link></li>
+              <li><Link href="/services/pre-departure-guidance" className="hover:text-white transition-colors">Pre-Post Departure</Link></li>
             </ul>
           </div>
 
