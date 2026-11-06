@@ -236,10 +236,10 @@ export default function ContactUsContent({
                       {site.email}
                     </a>
                     <a
-                      href="mailto:umangcareer2026@gmail.com"
+                      href="mailto:umangcareer2025@gmail.com"
                       className="text-slate-300 hover:text-white block transition-colors"
                     >
-                      umangcareer2026@gmail.com
+                      umangcareer2025@gmail.com
                     </a>
                     <a
                       href="mailto:umangcareer2023@gmail.com"

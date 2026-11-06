@@ -178,7 +178,7 @@ const jsonLdSchema = {
       telephone: ["+919173186109", "+919712610086"],
       email: [
         "umangcareer2022@gmail.com",
-        "umangcareer2026@gmail.com",
+        "umangcareer2025@gmail.com",
         "umangcareer2023@gmail.com",
       ],
       openingHoursSpecification: [

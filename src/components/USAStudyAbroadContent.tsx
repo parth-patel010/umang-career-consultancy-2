@@ -1026,7 +1026,7 @@ export default function USAStudyAbroadContent() {
                 </div>
                 <div className="text-[11px] text-slate-400">
                   <span className="font-semibold text-slate-600">Email: </span>
-                  umangcareer2022@gmail.com • umangcareer2026@gmail.com • umangcareer2023@gmail.com
+                  umangcareer2022@gmail.com • umangcareer2025@gmail.com • umangcareer2023@gmail.com
                 </div>
               </div>
             </div>

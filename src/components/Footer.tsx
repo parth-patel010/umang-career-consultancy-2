@@ -173,6 +173,11 @@ export default function Footer({ site = siteContent }: { site?: SiteContent }) {
                         {site.secondaryEmail}
                       </a>
                     )}
+                    {site.tertiaryEmail && (
+                      <a href={`mailto:${site.tertiaryEmail}`} className="hover:text-white transition-colors block text-[11px] text-slate-400">
+                        {site.tertiaryEmail}
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

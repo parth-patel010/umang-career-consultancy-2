@@ -9,7 +9,7 @@ export const siteContent = {
   whatsappDisplay: "+91 91731 86109",
   whatsappRaw: "919173186109",
   email: "umangcareer2022@gmail.com",
-  secondaryEmail: "umangcareer2026@gmail.com",
+  secondaryEmail: "umangcareer2025@gmail.com",
   tertiaryEmail: "umangcareer2023@gmail.com",
   address:
     "First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019",

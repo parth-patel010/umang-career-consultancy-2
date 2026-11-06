@@ -1170,7 +1170,7 @@ export default function StudentVisaContent() {
                     <a href="tel:+919712610086" className="text-[#0a1e38] font-bold hover:underline">+91 9712610086</a>
                   </div>
                   <div className="text-[11px] text-slate-500 mt-1">
-                    <a href="mailto:umangcareer2022@gmail.com" className="hover:underline">umangcareer2022@gmail.com</a> | <a href="mailto:umangcareer2026@gmail.com" className="hover:underline">umangcareer2026@gmail.com</a>
+                    <a href="mailto:umangcareer2022@gmail.com" className="hover:underline">umangcareer2022@gmail.com</a> | <a href="mailto:umangcareer2025@gmail.com" className="hover:underline">umangcareer2025@gmail.com</a> | <a href="mailto:umangcareer2023@gmail.com" className="hover:underline">umangcareer2023@gmail.com</a>
                   </div>
                 </div>
               </div>
