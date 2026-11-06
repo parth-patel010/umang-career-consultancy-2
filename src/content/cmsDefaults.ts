@@ -13,8 +13,8 @@ export const siteContent = {
   tertiaryEmail: "umangcareer2023@gmail.com",
   address:
     "First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019",
-  rating: "4.9/5",
-  reviewCount: "(1500+ Reviews)",
+  rating: "5/5",
+  reviewCount: "(2 Reviews)",
   facebook: "https://facebook.com",
   instagram: "https://www.instagram.com/umangcareer2022/",
   youtube: "https://youtube.com",
