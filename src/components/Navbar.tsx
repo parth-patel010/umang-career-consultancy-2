@@ -142,16 +142,6 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                       >
                         Our Vision and Our Mission
                       </Link>
-                      <Link
-                        href="/careers"
-                        onClick={() => {
-                          setActiveItem("About Us");
-                          setOpenDropdown(null);
-                        }}
-                        className="block pb-2.5 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
-                      >
-                        Career
-                      </Link>
                     </div>
 
                     {/* Column 3 */}
@@ -781,7 +771,6 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                     { label: "Founder's Message", href: "/founder-message" },
                     { label: "Gallery", href: "/gallery" },
                     { label: "Our Vision and Our Mission", href: "/about-us/vision-mission" },
-                    { label: "Career", href: "/careers" },
                     { label: "Our Team", href: "/our-team" },
                   ].map((sub) => (
                     <Link
