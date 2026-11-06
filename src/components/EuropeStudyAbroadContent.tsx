@@ -34,8 +34,21 @@ function ChevronDownIcon({ isOpen }: { isOpen: boolean }) {
 /* European Flag Badge */
 function EUFlagBadge() {
   return (
-    <div className="w-6 h-4 bg-[#003399] rounded flex items-center justify-center shadow-xs overflow-hidden">
-      <span className="text-[9px] text-[#ffcc00] leading-none font-bold">★</span>
+    <div className="w-6 h-4 bg-[#003399] rounded flex items-center justify-center shadow-xs overflow-hidden shrink-0">
+      <svg className="w-3.5 h-3.5 text-[#ffcc00]" viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="12" cy="3.5" r="1" />
+        <circle cx="16.2" cy="4.6" r="1" />
+        <circle cx="19.4" cy="7.8" r="1" />
+        <circle cx="20.5" cy="12" r="1" />
+        <circle cx="19.4" cy="16.2" r="1" />
+        <circle cx="16.2" cy="19.4" r="1" />
+        <circle cx="12" cy="20.5" r="1" />
+        <circle cx="7.8" cy="19.4" r="1" />
+        <circle cx="4.6" cy="16.2" r="1" />
+        <circle cx="3.5" cy="12" r="1" />
+        <circle cx="4.6" cy="7.8" r="1" />
+        <circle cx="7.8" cy="4.6" r="1" />
+      </svg>
     </div>
   );
 }
@@ -620,7 +633,11 @@ export default function EuropeStudyAbroadContent() {
                   </p>
 
                   <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 text-xs font-semibold text-slate-800 flex items-start gap-2">
-                    <span className="text-emerald-600 mt-0.5 font-black shrink-0">✓</span>
+                    <span className="text-emerald-600 mt-0.5 shrink-0">
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.8} strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
                     <span>{dest.highlight}</span>
                   </div>
                 </div>

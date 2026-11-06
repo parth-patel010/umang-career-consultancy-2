@@ -264,32 +264,45 @@ export default function VisionMissionContent() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/50 hover:bg-white/10 transition-all text-center group">
-              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-black text-base mb-3 group-hover:scale-110 transition-transform">
-                ✦
+              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                <svg className="w-5 h-5 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="currentColor" fillOpacity={0.2} />
+                </svg>
               </div>
               <h4 className="text-lg font-black text-white">Clear Truth.</h4>
               <p className="text-red-400 font-bold text-sm mt-0.5">Confident Journeys.</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/50 hover:bg-white/10 transition-all text-center group">
-              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-black text-base mb-3 group-hover:scale-110 transition-transform">
-                ✦
+              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                <svg className="w-5 h-5 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <polyline points="9 12 11 14 15 10" />
+                </svg>
               </div>
               <h4 className="text-lg font-black text-white">Real Dreams.</h4>
               <p className="text-red-400 font-bold text-sm mt-0.5">Zero Stress.</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/50 hover:bg-white/10 transition-all text-center group">
-              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-black text-base mb-3 group-hover:scale-110 transition-transform">
-                ✦
+              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                <svg className="w-5 h-5 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="8" r="6" />
+                  <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                </svg>
               </div>
               <h4 className="text-lg font-black text-white">Honest Guidance.</h4>
               <p className="text-red-400 font-bold text-sm mt-0.5">Approved Futures.</p>
             </div>
 
             <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-red-500/50 hover:bg-white/10 transition-all text-center group">
-              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center font-black text-base mb-3 group-hover:scale-110 transition-transform">
-                ✦
+              <div className="w-10 h-10 mx-auto rounded-full bg-red-500/20 text-red-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                <svg className="w-5 h-5 text-red-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
               </div>
               <h4 className="text-lg font-black text-white">Your Global Journey,</h4>
               <p className="text-red-400 font-bold text-sm mt-0.5">Simplified.</p>

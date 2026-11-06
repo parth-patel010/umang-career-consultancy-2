@@ -611,8 +611,11 @@ export default function AboutUsContent() {
                 <div className="space-y-4">
                   {/* Pillar 1 */}
                   <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-xs">
-                    <div className="w-10 h-10 rounded-xl bg-red-100 text-[#e52928] flex items-center justify-center flex-shrink-0 font-bold">
-                      🎓
+                    <div className="w-10 h-10 rounded-xl bg-red-100 text-[#e52928] flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-[#e52928]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                      </svg>
                     </div>
                     <div>
                       <h5 className="font-bold text-[#0a1e38] text-sm sm:text-base">
@@ -626,8 +629,10 @@ export default function AboutUsContent() {
 
                   {/* Pillar 2 */}
                   <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-xs">
-                    <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 font-bold">
-                      🏛️
+                    <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 3l9 7H3l9-7z" />
+                      </svg>
                     </div>
                     <div>
                       <h5 className="font-bold text-[#0a1e38] text-sm sm:text-base">
@@ -641,8 +646,10 @@ export default function AboutUsContent() {
 
                   {/* Pillar 3 */}
                   <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-xs">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 font-bold">
-                      ✈️
+                    <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z" />
+                      </svg>
                     </div>
                     <div>
                       <h5 className="font-bold text-[#0a1e38] text-sm sm:text-base">
@@ -690,8 +697,10 @@ export default function AboutUsContent() {
 
             <div className="p-6 sm:p-8 bg-white/10 backdrop-blur-md rounded-3xl border border-white/15 text-left space-y-4 shadow-xl">
               <div className="flex items-start gap-3.5">
-                <span className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 font-bold mt-1">
-                  ✓
+                <span className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
                 </span>
                 <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
                   <strong className="text-white">Direct, Honest &amp; Realistic Profile Evaluation:</strong> When you sit down with us, you receive a direct, honest, and realistic evaluation of your profile.
@@ -699,8 +708,10 @@ export default function AboutUsContent() {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <span className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 font-bold mt-1">
-                  ✓
+                <span className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
                 </span>
                 <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
                   <strong className="text-white">Open About Challenges:</strong> If your application faces challenges, we will tell you openly and offer viable alternative strategies.
@@ -708,8 +719,10 @@ export default function AboutUsContent() {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <span className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 font-bold mt-1">
-                  ✓
+                <span className="w-6 h-6 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
                 </span>
                 <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
                   <strong className="text-white">Preventing Financial Loss:</strong> This &quot;crystal-clear&quot; approach saves you time, prevents unnecessary financial loss, and maximizes your chances of ultimate approval.

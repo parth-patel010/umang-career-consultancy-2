@@ -159,7 +159,7 @@ const DOMESTIC_PACKAGES = [
 ];
 
 const DOMESTIC_INCLUSIONS = [
-  "Handpicked Premium Accommodations (4★ & 5★ Resorts/Hotels)",
+  "Handpicked Premium Accommodations (4-Star & 5-Star Resorts/Hotels)",
   "Flight Bookings with Free Automated Web Check-In",
   "Dedicated Private Chauffeur & AC Ground Vehicle",
   "Curated Sightseeing Tours & Monument Entry Coordination",
@@ -221,7 +221,7 @@ const INTERNATIONAL_PACKAGES = [
 const INTERNATIONAL_INCLUSIONS = [
   "Professional Tourist Visa Processing & Document Lodgement",
   "Competitive International Airfares with Extra Baggage Options",
-  "Luxury Stays at Verified 4★ / 5★ Hotels & Beachfront Resorts",
+  "Luxury Stays at Verified 4-Star & 5-Star Hotels & Beachfront Resorts",
   "Certified Local English-Speaking Tour Guides",
   "Curated Daily Meals (Jain, Pure Vegetarian & International)",
   "Seamless Airport Lounge Access Coordination",
@@ -261,7 +261,7 @@ const UMANG_ADVANTAGES = [
 const FAQS = [
   {
     q: "Can I customize the day-by-day itinerary of my holiday package?",
-    a: "Absolutely! At Umang Career Consultancy, bespoke travel is our specialty. We can adjust the travel dates, hotel categories (3★, 4★, 5★, or boutique villas), flight timings, sightseeing activities, and private vehicle options to suit your preferences and budget.",
+    a: "Absolutely! At Umang Career Consultancy, bespoke travel is our specialty. We can adjust the travel dates, hotel categories (3-Star, 4-Star, 5-Star, or boutique villas), flight timings, sightseeing activities, and private vehicle options to suit your preferences and budget.",
   },
   {
     q: "Do your international holiday packages include tourist visas and insurance?",
@@ -540,8 +540,12 @@ export default function ToursAndTravelsContent() {
                     {pkg.title}
                   </h3>
 
-                  <div className="text-xs font-bold text-slate-700 mt-1 mb-3">
-                    📍 {pkg.highlights}
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 mt-1 mb-3">
+                    <svg className="w-3.5 h-3.5 text-[#e52928] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>{pkg.highlights}</span>
                   </div>
 
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">
@@ -635,8 +639,12 @@ export default function ToursAndTravelsContent() {
                     {pkg.title}
                   </h3>
 
-                  <div className="text-xs font-bold text-slate-700 mt-1 mb-3">
-                    📍 {pkg.highlights}
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-slate-700 mt-1 mb-3">
+                    <svg className="w-3.5 h-3.5 text-[#e52928] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>{pkg.highlights}</span>
                   </div>
 
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">
@@ -953,7 +961,7 @@ export default function ToursAndTravelsContent() {
                   </label>
                   <textarea
                     rows={2}
-                    placeholder="Tell us about your preferred hotel rating (4★/5★), pure veg/Jain food requirements, specific attractions you want to visit..."
+                    placeholder="Tell us about your preferred hotel rating (4-Star / 5-Star), pure veg/Jain food requirements, specific attractions you want to visit..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#e52928] focus:ring-2 focus:ring-red-100 text-slate-800 text-sm outline-hidden transition-all resize-none"

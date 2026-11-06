@@ -682,7 +682,11 @@ export default function UAEStudyAbroadContent() {
                     </div>
                     {uni.highlights.map((h, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-slate-600">
-                        <span className="text-emerald-500 font-bold mt-0.5">✓</span>
+                        <span className="text-emerald-500 mt-0.5 shrink-0">
+                          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.8} strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                          </svg>
+                        </span>
                         <span>{h}</span>
                       </div>
                     ))}
@@ -719,15 +723,27 @@ export default function UAEStudyAbroadContent() {
                 </p>
                 <div className="space-y-2.5 text-xs text-slate-200 mb-6">
                   <div className="flex items-center gap-2">
-                    <span className="text-emerald-400 font-bold">✓</span>
+                    <span className="text-emerald-400 shrink-0">
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.8} strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
                     <span>100% University Sponsored Visas</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-emerald-400 font-bold">✓</span>
+                    <span className="text-emerald-400 shrink-0">
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.8} strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
                     <span>Merit Scholarships up to 50% Available</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-emerald-400 font-bold">✓</span>
+                    <span className="text-emerald-400 shrink-0">
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.8} strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
                     <span>Direct Vadodara Office Assistance</span>
                   </div>
                 </div>
@@ -1026,26 +1042,34 @@ export default function UAEStudyAbroadContent() {
 
               <div className="p-5 bg-white rounded-2xl border border-slate-200 space-y-3 text-left shadow-sm">
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>Direct Admissions to British &amp; Australian Branch Campuses</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>Strategic Pathway &amp; UK / Australia Transfer Programs</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>100% University-Sponsored Visa Assistance</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>English MOI Admissions &amp; Scholarship Guidance</span>
                 </div>

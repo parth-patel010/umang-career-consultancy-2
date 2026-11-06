@@ -677,11 +677,16 @@ export default function USAStudyAbroadContent() {
           </div>
 
           {/* Quick Notice Banner */}
-          <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-5 text-center max-w-3xl mx-auto">
-            <span className="text-sm font-bold text-red-300">
-              ⚡ Important Advisory for Indian Applicants:
+          <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-5 text-center max-w-3xl mx-auto flex items-center justify-center gap-2 flex-wrap sm:flex-nowrap">
+            <span className="inline-flex items-center gap-1.5 text-sm font-bold text-red-300">
+              <svg className="w-4 h-4 text-red-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              Important Advisory for Indian Applicants:
             </span>
-            <span className="text-xs sm:text-sm text-slate-200 ml-2">
+            <span className="text-xs sm:text-sm text-slate-200">
               Consular appointments fill rapidly for Fall (August) and Spring (January) intakes. Early Form I-20 issuance and DS-160 lodgement are strongly recommended.
             </span>
           </div>
@@ -953,26 +958,34 @@ export default function USAStudyAbroadContent() {
 
               <div className="p-5 bg-white rounded-2xl border border-slate-200 space-y-3 text-left shadow-sm">
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>Direct I-20 Processing at Top SEVP-Accredited Universities</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>SEVIS Fee &amp; Zero-Error DS-160 Filing Support</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>Intensive 1-on-1 Consular Mock Interview Drills</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm font-semibold text-slate-800">
-                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
-                    ✓
+                  <span className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
                   </span>
                   <span>Four-Year Authorized Cap &amp; STEM OPT Roadmap Planning</span>
                 </div>
