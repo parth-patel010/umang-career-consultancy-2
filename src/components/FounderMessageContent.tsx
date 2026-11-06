@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import founderPhoto from "../../public/founder-photo-v4.jpg";
+import founderPhoto from "../../public/founder-photo-v5.jpg";
 
 function PhoneIcon() {
   return (
@@ -106,12 +106,12 @@ export default function FounderMessageContent() {
                 isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="relative w-full max-w-[360px] aspect-[703/726] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-50 p-1 group anim-gentle-float">
+              <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-50 p-1 group anim-gentle-float">
                 <Image
                   src={founderPhoto}
                   alt="Sudip Parikh - Founder of Umang Career Consultancy"
                   fill
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />

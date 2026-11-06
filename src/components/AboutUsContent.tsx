@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import officeBanner from "../../public/umang-office-banner-v3.jpg";
-import founderPhoto from "../../public/founder-photo-v4.jpg";
+import founderPhoto from "../../public/founder-photo-v5.jpg";
 
 /* -------------------------------------------------------------
    SVG ICONS
@@ -536,12 +536,12 @@ export default function AboutUsContent() {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <div className="relative w-full max-w-[340px] aspect-[703/726] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-50 p-1 group">
+              <div className="relative w-full max-w-[340px] aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 bg-slate-50 p-1 group">
                 <Image
                   src={founderPhoto}
                   alt="Sudip Parikh - Founder of Umang Career Consultancy"
                   fill
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />

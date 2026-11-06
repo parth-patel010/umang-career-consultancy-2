@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import founderPhoto from "../../public/founder-photo-v4.jpg";
+import founderPhoto from "../../public/founder-photo-v5.jpg";
 
 export default function VisionMissionContent() {
   const [bannerLoaded, setBannerLoaded] = useState(false);
@@ -405,12 +405,12 @@ export default function VisionMissionContent() {
                   : "opacity-0 translate-y-8 scale-95"
               }`}
             >
-              <div className="relative w-full max-w-[340px] aspect-[703/726] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white p-1.5 group">
+              <div className="relative w-full max-w-[340px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border border-slate-100 bg-white p-1.5 group">
                 <Image
                   src={founderPhoto}
                   alt="Sudip Parikh - Founder of Umang Career Consultancy"
                   fill
-                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
