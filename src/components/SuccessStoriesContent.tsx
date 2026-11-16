@@ -36,7 +36,7 @@ export default function SuccessStoriesContent() {
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-            Success Stories
+            Gallery
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
             Real students, real visas, real dreams fulfilled. See how Umang
@@ -59,7 +59,7 @@ export default function SuccessStoriesContent() {
             >
               <polyline points="9 18 15 12 9 6" />
             </svg>
-            <span className="text-white">Success Stories</span>
+            <span className="text-white">Gallery</span>
           </div>
         </div>
       </section>
@@ -138,10 +138,10 @@ export default function SuccessStoriesContent() {
               Get Free Consultation
             </Link>
             <Link
-              href="/gallery"
+              href="/about-us"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 border border-white/20 transition-colors"
             >
-              View Gallery
+              About Us
             </Link>
           </div>
         </div>
