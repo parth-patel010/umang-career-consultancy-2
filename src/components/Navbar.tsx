@@ -119,20 +119,6 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                         About Us
                       </Link>
                       <Link
-                        href="/gallery"
-                        onClick={() => {
-                          setActiveItem("About Us");
-                          setOpenDropdown(null);
-                        }}
-                        className="block pb-2.5 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
-                      >
-                        Gallery
-                      </Link>
-                    </div>
-
-                    {/* Column 2 */}
-                    <div className="space-y-4">
-                      <Link
                         href="/about-us/vision-mission"
                         onClick={() => {
                           setActiveItem("About Us");
@@ -144,8 +130,18 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                       </Link>
                     </div>
 
-                    {/* Column 3 */}
+                    {/* Column 2 */}
                     <div className="space-y-4">
+                      <Link
+                        href="/founder-message"
+                        onClick={() => {
+                          setActiveItem("About Us");
+                          setOpenDropdown(null);
+                        }}
+                        className="block pb-2.5 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
+                      >
+                        Founder&apos;s Message
+                      </Link>
                       <Link
                         href="/our-team"
                         onClick={() => {
@@ -156,15 +152,29 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                       >
                         Our Team
                       </Link>
+                    </div>
+
+                    {/* Column 3 */}
+                    <div className="space-y-4">
                       <Link
-                        href="/founder-message"
+                        href="/gallery"
                         onClick={() => {
                           setActiveItem("About Us");
                           setOpenDropdown(null);
                         }}
                         className="block pb-2.5 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
                       >
-                        Founder&apos;s Message
+                        Gallery
+                      </Link>
+                      <Link
+                        href="/success-stories"
+                        onClick={() => {
+                          setActiveItem("About Us");
+                          setOpenDropdown(null);
+                        }}
+                        className="block pb-2.5 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
+                      >
+                        Success Stories
                       </Link>
                     </div>
                   </div>
@@ -770,6 +780,7 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                     { label: "About Us", href: "/about-us" },
                     { label: "Founder's Message", href: "/founder-message" },
                     { label: "Gallery", href: "/gallery" },
+                    { label: "Success Stories", href: "/success-stories" },
                     { label: "Our Vision and Our Mission", href: "/about-us/vision-mission" },
                     { label: "Our Team", href: "/our-team" },
                   ].map((sub) => (
