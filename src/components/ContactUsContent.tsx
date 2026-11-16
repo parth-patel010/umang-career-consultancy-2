@@ -165,9 +165,7 @@ export default function ContactUsContent({
                       </React.Fragment>
                     ))}
                   </p>
-                  <div className="pt-2 text-[11px] text-slate-400 border-t border-white/10">
-                    <span className="font-semibold text-slate-300">{content.vipBranchLabel}</span> {content.vipBranchAddress}
-                  </div>
+
                 </div>
               </div>
 

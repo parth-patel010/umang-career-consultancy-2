@@ -365,9 +365,6 @@ export const contactContent = {
   companyLine: "Umang Career Consultancy",
   headOfficeAddress:
     "First Floor 25 Shree Siddeshwar Plaza,\nBeside Super Bakery, New VIP road,\nVadodara, Gujarat 390019",
-  vipBranchLabel: "Head Office Address:",
-  vipBranchAddress:
-    "First Floor 25 Shree Siddeshwar Plaza, Beside Super Bakery, New VIP road, Vadodara Gujarat. 390019",
   advisorsTitle: "Meet Career Advisors:",
   hotlineLabel: "Hotline / WhatsApp:",
   mailTitle: "Mail us for information",
