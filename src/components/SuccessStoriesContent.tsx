@@ -4,6 +4,7 @@ import successStory1 from "../../public/success-story-1.jpg";
 import successStory2 from "../../public/success-story-2.jpg";
 import successStory3 from "../../public/success-story-3.jpg";
 import successStory4 from "../../public/success-story-4.jpg";
+import successStory5 from "../../public/success-story-5.jpg";
 
 const stories = [
   {
@@ -33,6 +34,13 @@ const stories = [
     from: "Vadodara, Gujarat",
     visa: "France Student Visa",
     image: successStory4,
+  },
+  {
+    id: 5,
+    name: "Chandreshbhai & Bhartiben Kansara",
+    from: "Vadodara, Gujarat",
+    visa: "Canada Visa",
+    image: successStory5,
   },
 ];
 
@@ -85,7 +93,7 @@ export default function SuccessStoriesContent() {
             <div className="mt-4 w-16 h-1 bg-[#e52928] mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {stories.map((story) => (
               <div
                 key={story.id}
@@ -97,7 +105,7 @@ export default function SuccessStoriesContent() {
                     alt={`${story.name} - ${story.visa} approved`}
                     fill
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
                 <div className="p-5">
