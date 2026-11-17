@@ -5,6 +5,9 @@ import successStory2 from "../../public/success-story-2.jpg";
 import successStory3 from "../../public/success-story-3.jpg";
 import successStory4 from "../../public/success-story-4.jpg";
 import successStory5 from "../../public/success-story-5.jpg";
+import successStory6 from "../../public/success-story-6.jpg";
+import successStory7 from "../../public/success-story-7.jpg";
+import successStory8 from "../../public/success-story-8.jpg";
 
 const stories = [
   {
@@ -17,7 +20,7 @@ const stories = [
   {
     id: 2,
     name: "Mukeshbhai Soni",
-    from: "India",
+    from: "Vadodara, Gujarat",
     visa: "Australia Visitor Visa",
     image: successStory2,
   },
@@ -30,7 +33,7 @@ const stories = [
   },
   {
     id: 4,
-    name: "France Student Visa Success",
+    name: "Kunal Tayade",
     from: "Vadodara, Gujarat",
     visa: "France Student Visa",
     image: successStory4,
@@ -39,8 +42,29 @@ const stories = [
     id: 5,
     name: "Chandreshbhai & Bhartiben Kansara",
     from: "Vadodara, Gujarat",
-    visa: "Canada Visa",
+    visa: "Canada Visitor Visa",
     image: successStory5,
+  },
+  {
+    id: 6,
+    name: "Jay Pinakin Vyas",
+    from: "Vadodara, Gujarat",
+    visa: "Canada Visa",
+    image: successStory6,
+  },
+  {
+    id: 7,
+    name: "Shivam Patel",
+    from: "Baroda, Gujarat • Ravensbourne Univ. London",
+    visa: "UK Student Visa",
+    image: successStory7,
+  },
+  {
+    id: 8,
+    name: "Premkumar Suthar",
+    from: "Bangor University, UK • 19-Yr Study Gap",
+    visa: "UK Student Visa",
+    image: successStory8,
   },
 ];
 
@@ -93,27 +117,29 @@ export default function SuccessStoriesContent() {
             <div className="mt-4 w-16 h-1 bg-[#e52928] mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {stories.map((story) => (
               <div
                 key={story.id}
-                className="group bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                className="group bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-100">
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-slate-50">
                   <Image
                     src={story.image}
                     alt={`${story.name} - ${story.visa} approved`}
                     fill
-                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain p-1 group-hover:scale-[1.02] transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-[#0a1e38]">
-                    {story.name}
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">{story.from}</p>
-                  <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-xs font-semibold">
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-base sm:text-lg font-bold text-[#0a1e38]">
+                      {story.name}
+                    </h3>
+                    <p className="mt-1 text-xs sm:text-sm text-gray-500">{story.from}</p>
+                  </div>
+                  <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-xs font-semibold self-start">
                     <svg
                       width="14"
                       height="14"
