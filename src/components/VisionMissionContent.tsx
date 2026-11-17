@@ -57,21 +57,23 @@ export default function VisionMissionContent() {
     <div className="w-full bg-white overflow-hidden">
       
       {/* ================= 1ST SECTION: TOP VISION BANNER ================= */}
-      <section className="w-full relative overflow-hidden bg-white shadow-sm">
+      <section className="w-full relative overflow-hidden bg-white shadow-sm border-b border-slate-100">
         <div
           className={`w-full relative transition-all duration-1000 ease-out transform ${
-            bannerLoaded ? "opacity-100 scale-100" : "opacity-0 scale-[1.03]"
+            bannerLoaded ? "opacity-100 scale-100" : "opacity-0 scale-[1.01]"
           }`}
         >
-          <Image
-            src="/vision-banner.png"
-            alt="Our Vision and Our Mission - Umang Career Consultancy"
-            width={1920}
-            height={630}
-            priority
-            quality={95}
-            className="w-full h-auto object-cover block"
-          />
+          <div className="w-full max-h-[220px] sm:max-h-[280px] md:max-h-[320px] lg:max-h-[360px] overflow-hidden flex items-center justify-center bg-slate-900">
+            <Image
+              src="/vision-banner.avif"
+              alt="Our Vision and Our Mission - Umang Career Consultancy"
+              width={2048}
+              height={684}
+              priority
+              quality={100}
+              className="w-full h-auto max-h-[220px] sm:max-h-[280px] md:max-h-[320px] lg:max-h-[360px] object-cover object-center block"
+            />
+          </div>
         </div>
       </section>
 
