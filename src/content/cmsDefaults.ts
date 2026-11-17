@@ -344,14 +344,6 @@ export const homepageContent = {
         university: "Bangor University, UK",
         tag: "UK Student Visa",
       },
-      {
-        id: "shivam-patel",
-        title: "Shivam Patel - UK Visa Approval",
-        imageSrc: "/achiever-poster-2.jpg",
-        studentName: "Shivam Patel",
-        university: "Ravensbourne University London",
-        tag: "UK Student Visa",
-      },
     ],
   },
 };

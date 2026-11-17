@@ -63,17 +63,15 @@ export default function VisionMissionContent() {
             bannerLoaded ? "opacity-100 scale-100" : "opacity-0 scale-[1.01]"
           }`}
         >
-          <div className="w-full max-h-[220px] sm:max-h-[280px] md:max-h-[320px] lg:max-h-[360px] overflow-hidden flex items-center justify-center bg-slate-900">
-            <Image
-              src="/vision-banner.avif"
-              alt="Our Vision and Our Mission - Umang Career Consultancy"
-              width={2048}
-              height={684}
-              priority
-              quality={100}
-              className="w-full h-auto max-h-[220px] sm:max-h-[280px] md:max-h-[320px] lg:max-h-[360px] object-cover object-center block"
-            />
-          </div>
+          <Image
+            src="/vision-banner.avif"
+            alt="Our Vision and Our Mission - Umang Career Consultancy"
+            width={2048}
+            height={684}
+            priority
+            quality={100}
+            className="w-full h-auto max-h-[480px] lg:max-h-[520px] object-cover sm:object-contain block"
+          />
         </div>
       </section>
 
