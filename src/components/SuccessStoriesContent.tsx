@@ -3,6 +3,7 @@ import Link from "next/link";
 import successStory1 from "../../public/success-story-1.jpg";
 import successStory2 from "../../public/success-story-2.jpg";
 import successStory3 from "../../public/success-story-3.jpg";
+import successStory4 from "../../public/success-story-4.jpg";
 
 const stories = [
   {
@@ -25,6 +26,13 @@ const stories = [
     from: "Bangladesh",
     visa: "France Student Visa",
     image: successStory3,
+  },
+  {
+    id: 4,
+    name: "France Student Visa Success",
+    from: "Vadodara, Gujarat",
+    visa: "France Student Visa",
+    image: successStory4,
   },
 ];
 
@@ -77,19 +85,19 @@ export default function SuccessStoriesContent() {
             <div className="mt-4 w-16 h-1 bg-[#e52928] mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {stories.map((story) => (
               <div
                 key={story.id}
                 className="group bg-white rounded-2xl border border-gray-100 shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
-                <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <div className="relative aspect-[3/4] w-full overflow-hidden bg-slate-100">
                   <Image
                     src={story.image}
                     alt={`${story.name} - ${story.visa} approved`}
                     fill
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
                 <div className="p-5">
