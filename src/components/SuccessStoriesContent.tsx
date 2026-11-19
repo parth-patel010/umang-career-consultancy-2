@@ -7,6 +7,7 @@ import successStory4 from "../../public/success-story-4.jpg";
 import successStory5 from "../../public/success-story-5.jpg";
 import successStory6 from "../../public/success-story-6.jpg";
 import successStory7 from "../../public/success-story-7.jpg";
+import successStory8 from "../../public/success-story-8.jpg";
 
 const stories = [
   {
@@ -57,6 +58,13 @@ const stories = [
     from: "Bangor University, UK • 19-Yr Study Gap",
     visa: "UK Student Visa",
     image: successStory7,
+  },
+  {
+    id: 8,
+    name: "Mrunal Patel",
+    from: "Vadodara, Gujarat",
+    visa: "UK Student Visa",
+    image: successStory8,
   },
 ];
 
