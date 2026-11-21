@@ -419,6 +419,10 @@ const UNIVERSITY_LOGOS: Record<string, string> = {
   "Auckland University of Technology (AUT)": "/universities/nz/aut.avif"
 };
 
+export function generateStaticParams() {
+  return Object.keys(COUNTRIES_DATA).map((country) => ({ country }));
+}
+
 export default async function CountryDetailPage({
   params,
 }: {

@@ -10,8 +10,6 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import { homepageContent, type HomepageContent } from "@/content/cmsDefaults";
 import { getMergedPageData } from "@/lib/cms/content";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: "Best Study Abroad & Student Visa Consultants in Vadodara | Umang Career",
   description:

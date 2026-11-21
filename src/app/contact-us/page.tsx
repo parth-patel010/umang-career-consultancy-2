@@ -3,8 +3,6 @@ import ContactUsContent from "@/components/ContactUsContent";
 import { contactContent, siteContent, type ContactContent, type SiteContent } from "@/content/cmsDefaults";
 import { getMergedPageData } from "@/lib/cms/content";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: "Contact Us | Head Office Vadodara | Umang Career Consultancy",
   description:
