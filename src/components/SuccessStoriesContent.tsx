@@ -8,6 +8,7 @@ import successStory5 from "../../public/success-story-5.jpg";
 import successStory6 from "../../public/success-story-6.jpg";
 import successStory7 from "../../public/success-story-7.jpg";
 import successStory8 from "../../public/success-story-8.jpg";
+import successStory9 from "../../public/success-story-9.jpg";
 
 const stories = [
   {
@@ -65,6 +66,13 @@ const stories = [
     from: "Vadodara, Gujarat",
     visa: "UK Student Visa",
     image: successStory8,
+  },
+  {
+    id: 9,
+    name: "Devika Shah",
+    from: "IPSA University • Aerospace Engineering",
+    visa: "France Student Visa",
+    image: successStory9,
   },
 ];
 
