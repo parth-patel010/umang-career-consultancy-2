@@ -23,6 +23,7 @@ export default function AdminDashboardPage() {
   }, []);
 
   const cards = [
+    { href: "/admin/poster-generator", title: "AI Poster Generator", detail: "Generate visa achievement posters using AI" },
     { href: "/admin/content", title: "Page Content", detail: `${pageCount} editable areas` },
     { href: "/admin/media", title: "Images", detail: "Replace photos and logos" },
     { href: "/admin/inquiries", title: "Inquiries", detail: `${unread} unread of ${inquiryCount}` },
@@ -33,7 +34,7 @@ export default function AdminDashboardPage() {
       <p className="mb-6 text-sm text-slate-600">
         Update homepage text, contact details, and images here. Changes appear on the public site after you save.
       </p>
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {cards.map((card) => (
           <Link
             key={card.href}
