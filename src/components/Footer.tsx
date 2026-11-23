@@ -255,7 +255,8 @@ export default function Footer({ site = siteContent }: { site?: SiteContent }) {
           {/* Quick Legal Links */}
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <Link href="/about-us" className="hover:text-white transition-colors">About Us</Link>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/gallery" className="hover:text-white transition-colors">Gallery</Link>
+            <Link href="/testimonials" className="hover:text-white transition-colors">Google Reviews</Link>
             <Link href="/contact-us" className="hover:text-white transition-colors">Contact Us</Link>
             <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>

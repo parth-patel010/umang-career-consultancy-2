@@ -166,6 +166,16 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                       >
                         Gallery
                       </Link>
+                      <Link
+                        href="/testimonials"
+                        onClick={() => {
+                          setActiveItem("About Us");
+                          setOpenDropdown(null);
+                        }}
+                        className="block pb-2.5 text-[15px] font-medium text-slate-700 hover:text-[#e52928] border-b border-dotted border-gray-300 transition-colors"
+                      >
+                        Google Reviews
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -770,6 +780,7 @@ export default function Navbar({ site = siteContent }: { site?: SiteContent }) {
                     { label: "About Us", href: "/about-us" },
                     { label: "Founder's Message", href: "/founder-message" },
                     { label: "Gallery", href: "/gallery" },
+                    { label: "Google Reviews", href: "/testimonials" },
                     { label: "Our Vision and Our Mission", href: "/about-us/vision-mission" },
                     { label: "Our Team", href: "/our-team" },
                   ].map((sub) => (

@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about-us`, priority: 0.85, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/founder-message`, priority: 0.85, changeFrequency: "weekly" as const },
     { url: `${BASE_URL}/vision-mission`, priority: 0.85, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/gallery`, priority: 0.85, changeFrequency: "weekly" as const },
+    { url: `${BASE_URL}/testimonials`, priority: 0.85, changeFrequency: "weekly" as const },
   ];
 
   // Tier 2: Study Abroad Country Destination Portals
